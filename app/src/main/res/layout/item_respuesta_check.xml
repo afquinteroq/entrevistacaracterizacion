@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llRespuestaTexto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/emc_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <TextView
+        android:id="@+id/tvNombrePersonaRespuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Nombres"/>
+
+    <EditText
+        android:id="@+id/etTextoPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border_radius"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/lvRespuestas"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"></ListView>
+
+    <TextView
+        android:id="@+id/cod_hogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/per_IdPersona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/res_IdRespuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/rxp_TipoPreguntaRespuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvTipoCampo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapCharacters"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/ins_IdInstrumento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/idPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</LinearLayout>

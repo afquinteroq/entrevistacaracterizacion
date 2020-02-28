@@ -1,0 +1,969 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="7dp"
+    tools:context="co.com.rni.encuestadormovil.conformarHogar">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llMensajeInicioNRC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/emc_white"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="vertical">>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/emc_red"
+                    android:textColor="@color/emc_white"
+                    android:text="INICIO"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ahora vamos a conversar sobre los miembros de su núcleo familiar cercano. Sólo si usted lo desea, podría mencionar los nombres y apellidos de las personas que conforman su núcleo familiar cercano, es decir, con las que usted mantiene un intercambio regular de tipo económico y/o con las que sostiene vinculos afectivos. Estas personas pueden o no estar en colombia."
+                    android:background="@color/emc_red"
+                    android:textColor="@color/emc_white"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llMensajeInicioACNUR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_radius_red"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Sr/ Sra (Nombre del informante) será que muy amablemente nos colabora con los números de identificación de cada uno de los miembros de este hogar?  (pedir documentos en físico),"
+                    android:textColor="@color/emc_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llParametricas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border_radius"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/etNumDocumento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="6"
+                    android:background="@color/emc_pregunta"
+                    android:hint="Número de documento"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textSize="12dp" />
+
+                <com.github.johnkil.print.PrintView
+                    android:id="@+id/pvBuscarVictima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    app:iconColor="@color/emc_red"
+                    app:iconFont="fonts/material-icon-font.ttf"
+                    app:iconSize="20dp"
+                    app:iconText="@string/f_search" />
+
+            </LinearLayout>
+
+            <!-- 13/02/2020-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_filepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pick a file" />
+
+            </LinearLayout>
+
+            <!-- 13/02/2020-->
+
+
+            <LinearLayout
+                android:id="@+id/llBuscando"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textoBuscando"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buscando..."
+                    android:textColor="@color/drawer_background"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPresentacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/emc_white"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PRESENTACION"
+                    android:background="@color/emc_red"
+                    android:textColor="@color/emc_white"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El Consejo Noruego para Refugiados y la Unidad para las Víctimas, realizan en la actualidad la presente encuesta de caracterización de las víctimas del conflicto armado en Colombia que se encuentran viviendo en el extranjero. Con esta encuesta se busca contar con información fundamental que permita una mejor ejecución de las políticas y de la destinación de recursos en beneficio de las condiciones de vida de las víctimas colombianas en el extranjero.  Es por ello que su participación en este estudio es muy importante."
+                    android:background="@color/emc_red"
+                    android:textColor="@color/emc_white"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPresentacionP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/emc_white"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="vertical">>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/emc_red"
+                    android:textColor="@color/emc_white"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Podría usted dedicar un tiempo para responder algunas preguntas? (Esta encuesta tomará aproximadamente 40 minutos)."
+                    android:background="@color/emc_red"
+                    android:textColor="@color/emc_white"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/btAceptarNoAceptar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btAceptar"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Acepto"
+                    android:textColor="@color/emc_white"
+                    android:background="@drawable/border_radius_red"
+                    android:layout_margin="10dp"/>
+
+
+                <Button
+                    android:id="@+id/btNoAceptar"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="No acepto"
+                    android:textColor="@color/emc_white"
+                    android:background="@drawable/border_radius_red"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+            <!--Presentación acnur!-->
+
+
+            <LinearLayout
+                android:id="@+id/llPresentacionAcnur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_radius_red"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Muy buenos días/ tardes/ (Sr.) / (Sra.) (Nombre del informante). Mi nombre es (nombre y apellido). ISEGORÍA, es la entidad contratada por el ACNUR Y LA UNIDAD PARA LAS VÍCTIMAS , para llevar a cabo el estudio que tiene como propósito “Realizar el levantamiento de información e identificar problemáticas de articulación de la política pública de víctimas  del orden nacional, victimas del ámbito local e Identificar la situación de las víctimas y comunidad de acogida en términos de condiciones de vida, capacidad para exigir derechos, habilidad para generar ingresos de manera sostenible y necesidades en materia de legalización de predios”. Su participación es voluntaria, y su identidad y las respuestas suministradas serán de carácter confidencial, el tiempo estimado para contestar las preguntas es de aproximadamente una hora-
+                    Con estas precisiones, le pido su autorización para tomar sus datos y hacer la encuesta.       Autoriza:      Sí______        No______
+                    Los datos se utilizarán para fines estadísticos, para hacer seguimiento al proyecto.. Le agradezco de antemano su valiosa colaboración. Para cualquier inquietud puede comunicarse con la Isegoría, teléfono 320 902 05 18 de Bogotá.
+                    ."
+                    android:textColor="@color/emc_white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llaUTORIZA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_radius_red"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:visibility="gone">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Autoriza:"
+                    android:textColor="@color/emc_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btAceptarNoAceptarAcnur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btAceptarAcnur"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Sí"
+                    android:textColor="@color/emc_white"
+                    android:background="@drawable/border_radius_red"
+                    android:layout_margin="10dp"/>
+
+
+                <Button
+                    android:id="@+id/btNoAceptarAcnur"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/emc_white"
+                    android:background="@drawable/border_radius_red"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+            <!-- fin presentación acnur !-->
+
+            <LinearLayout
+                android:id="@+id/llResultados"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/emc_white"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/barra_resultados"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="TIPO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="DOCUMENTO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="NOMBRE"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="FEC NAC"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="ESTADO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                   <!-- <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+                        -->
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lvResultadoVictimas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/emc_white"></ListView>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/llHogar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/emc_white"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btAgregarPersona"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar miembro al hogar"
+                    android:background="@drawable/border_radius_red"
+                    android:textColor="@color/emc_white"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estructura preliminar del hogar"
+                    android:background="@color/emc_red"
+                    android:textColor="@color/emc_white"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/barra_resultados"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="TIPO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="DOCUMENTO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="NOMBRE"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+                    <!--
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="RESPONSABLE"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+                    -->
+
+                    <!--17/02/2020-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="TIPO PESONA"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <!--17/02/2020-->
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="ESTADO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                  <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lvMiembrosHogar"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/emc_white"></ListView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llAgregarMHogar"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/barra_resultados"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="TIPO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="DOCUMENTO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="NOMBRE"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="RESPONSABLE"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="ESTADO"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                  <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="9dp"/>
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/lvAgregarMHogar"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/emc_white"
+                    ></ListView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNuevaPersona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:background="@color/emc_white"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NUEVA PERSONA"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/emc_red"
+                    android:textSize="15dp"
+                    android:padding="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo documento"/>
+
+                    <Spinner
+                        android:id="@+id/spTipoDoc"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"></Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:text="Número documento"/>
+
+                    <EditText
+                        android:id="@+id/etNumDoc"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:hint="Maximo 11 digitos"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llvaletNumDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/valetNumDoc"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_red"
+                        android:text="Valor incorrecto"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre 1"/>
+
+                    <EditText
+                        android:id="@+id/etNombre1"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llvaltNombre1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/valtNombre1"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_red"
+                        android:text="Valor incorrecto"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre 2"/>
+
+                    <EditText
+                        android:id="@+id/etNombre2"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido 1"/>
+
+                    <EditText
+                        android:id="@+id/etApellido1"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llvaltApellido1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/valtApellido1"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_red"
+                        android:text="Valor incorrecto"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido 2"/>
+
+                    <EditText
+                        android:id="@+id/etApellido2"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de nacimiento"/>
+
+                    <EditText
+                        android:id="@+id/etFecNac"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:hint="dd/mm/aaaa"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llvaletFecNac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/valFecNac"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textSize="9dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/emc_red"
+                        android:text="Valor incorrecto"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btAgregarNP"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="Agregar"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"
+                        android:layout_margin="10dp"/>
+
+
+                    <Button
+                        android:id="@+id/btCancelarNP"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".conformarHogar">
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
+
+
+
+

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".configuracionencuestas.Agregartema">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <!--Ir inicio!-->
+            <LinearLayout
+                android:id="@+id/llIrInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border_radius_red"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:paddingTop="10dp"
+                tools:layout_editor_absoluteX="20dp">
+
+
+                <com.github.johnkil.print.PrintView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconColor="@color/emc_white"
+                    app:iconFont="fonts/material-icon-font.ttf"
+                    app:iconSize="20dp"
+                    app:iconText="@string/f_parametricas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Ir a menú principal"
+                    android:textColor="@color/emc_white" />
+
+            </LinearLayout>
+
+            <!--Agregar tema!-->
+            <LinearLayout
+            android:id="@+id/llNuevoTema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:background="@color/emc_white"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NUEVO TEMA"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/emc_red"
+                android:textSize="15dp"
+                android:padding="10dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese nombre de tema"/>
+
+                <EditText
+                    android:id="@+id/etTema"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btAgregarTema"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"
+                    android:textColor="@color/emc_white"
+                    android:background="@drawable/border_radius_red"
+                    android:layout_margin="10dp"/>
+
+
+                <Button
+                    android:id="@+id/btCancelarTema"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar"
+                    android:textColor="@color/emc_white"
+                    android:background="@drawable/border_radius_red"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <!--Agregar pregunta!-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llNuevaPregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:background="@color/emc_white"
+                    android:padding="10dp"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nueva Pregunta"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/emc_red"
+                        android:textSize="15dp"
+                        android:padding="10dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione Tema"/>
+
+                        <Spinner
+                            android:id="@+id/spTipoTema"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:background="@drawable/spinner_selector"></Spinner>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ingrese Pregunta"/>
+
+                        <EditText
+                            android:id="@+id/etPregunta"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:hint=""
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo de pregunta"/>
+
+                        <RadioGroup
+                            android:id="@+id/rgTipoPregunta"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:hint=""
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rdGeneral"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="General"/>
+
+                            <RadioButton
+                                android:id="@+id/rdIndividual"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Individual"/>
+
+
+                        </RadioGroup>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo campo:"
+                            android:textSize="12dp"
+                            android:gravity="center"/>
+
+                        <RadioGroup
+                            android:id="@+id/rgTipoCampo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp">
+
+                            <RadioButton
+                                android:id="@+id/rdDeptoMuni"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Listado Municipio"/>
+
+                            <RadioButton
+                                android:id="@+id/rdVereda"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Listado Veredas"/>
+
+                            <RadioButton
+                                android:id="@+id/rdCampoAbierto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Campo abierto"/>
+
+                            <RadioButton
+                                android:id="@+id/rdSeleccionUnica"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selección unica"/>
+
+                            <RadioButton
+                                android:id="@+id/rdSeleccionMultiple"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selección multiple"/>
+
+                            <RadioButton
+                                android:id="@+id/rdObservacionCapitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Observación capítulo"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:text="Observación Pregunta"/>
+
+                        <EditText
+                            android:id="@+id/etObservacionPregunta"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:hint=""
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btAgregarPregunta"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="Agregar"
+                            android:textColor="@color/emc_white"
+                            android:background="@drawable/border_radius_red"
+                            android:layout_margin="10dp"/>
+
+
+                        <Button
+                            android:id="@+id/btCancelarPregunta"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="Cancelar"
+                            android:textColor="@color/emc_white"
+                            android:background="@drawable/border_radius_red"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <!--Agregar respuesta!-->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llNuevaRespuesta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:background="@color/emc_white"
+                    android:padding="10dp"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nueva Respuesta"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/emc_red"
+                        android:textSize="15dp"
+                        android:padding="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione Pregunta"/>
+
+                        <Spinner
+                            android:id="@+id/spTipoTemaPre"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:background="@drawable/spinner_selector"></Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione Pregunta"/>
+
+                        <Spinner
+                            android:id="@+id/spTipoPregunta"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:background="@drawable/spinner_selector"></Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ingrese Respuesta"/>
+
+                        <EditText
+                            android:id="@+id/etRespuesta"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:hint=""
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btAgregarRespuesta"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="Agregar"
+                            android:textColor="@color/emc_white"
+                            android:background="@drawable/border_radius_red"
+                            android:layout_margin="10dp"/>
+
+
+                        <Button
+                            android:id="@+id/btCancelarRespuesta"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="Cancelar"
+                            android:textColor="@color/emc_white"
+                            android:background="@drawable/border_radius_red"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <!-- acá iria el listview!-->
+
+
+        </LinearLayout>
+
+
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+

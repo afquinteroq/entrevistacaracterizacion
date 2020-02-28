@@ -1,0 +1,398 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DiligenciarPregunta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/emc_white">
+
+    <LinearLayout android:id="@+id/lyContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout android:id="@+id/lyInicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione un tema para inciar su diligenciamiento"
+                    android:textColor="@color/emc_header"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/lyFinTema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ha finalizado este tema, seleccione un nuevo tema para diligenciar"
+                    android:textColor="@color/emc_header"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout android:id="@+id/llSalirEntrevista"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione la razón por la que desea abandonar la entrevista:"
+                    android:textColor="@color/emc_header"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <RadioGroup
+                    android:id="@+id/rgEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+
+                    <RadioButton
+                        android:id="@+id/estAnulaHogar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="El Hogar no desea contestar la entrevista"/>
+
+                    <RadioButton
+                        android:id="@+id/estIncompleta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retomar entrevista después (Aplazar)"/>
+
+                    <RadioButton
+                        android:id="@+id/estCerrada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cerrar entrevista"/>
+
+                    <RadioButton
+                        android:id="@+id/estAnulada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anular entrevista"/>
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/btnSalir"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Confirmar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+
+                    <Button
+                        android:id="@+id/btnCancelar"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llConfirmarSalirEncuesta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esta seguro de  finalizar la encuesta?"
+                    android:textColor="@color/emc_header"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/btnConfirmarSalirEncuesta"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Confirmar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+
+                    <Button
+                        android:id="@+id/btnCancelarSalirEncuesta"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llConfirmarReiniciarCapitulo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recuerde que si reinicia el capítulo debera diligenciarlo de nuevo:"
+                    android:textColor="@color/emc_header"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/btnSalirReinicio"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Confirmar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+
+                    <Button
+                        android:id="@+id/btnCancelarReinicio"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llTomarImagenSoporte"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recuerde tomar una foto para guardarla como imagen de soporte de la encuesta"
+                    android:textColor="@color/emc_header"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <ImageView android:id="@+id/ivCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/btnTomarImagenSoporte"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Tomar Foto"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+
+                    <Button
+                        android:id="@+id/btnSalvarImagenSoporte"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Salvar Imagen"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+                    <Button
+                        android:id="@+id/btnCancelarTomarImagenSoporte"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout android:id="@+id/llMostrarPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/emc_header"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvIdTema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capitulo 1"
+                    android:textColor="@color/emc_white"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llMensajeInicioCapituloAcrnur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_radius_red"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="8dp">
+
+
+                <TextView
+                    android:id="@+id/tvMensajeInicioCapituloAcrnur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sr/ Sra (Nombre del informante), ahora pasaremos al módulo final de la encuesta, en donde las preguntas se enfocarán en sus opiniones personales,"
+                    android:textColor="@color/emc_white"
+                    android:textSize="20dp"
+
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llPreguntaTexto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:background="@color/emc_white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTextoPregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombres:"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/tvObservacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Observación"
+                    android:textColor="@color/emc_header"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llRespuestas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="3dp"
+                android:background="@color/emc_white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="@color/drawer_background"/>
+
+</android.support.v4.widget.DrawerLayout>

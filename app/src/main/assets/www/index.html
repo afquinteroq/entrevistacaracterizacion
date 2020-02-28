@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+<head>
+    <title>Sitio con Reponsive Web Desing en HTML5, CSS3 y jQuery</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bienvenido a mi portafolio Web hecho en HTML5, CSS3 y jQuery con Responsive
+              Web Desing">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="Img/icono.ico"/>
+    <link rel="author" type="text/plain" href="Txts/humans.txt"/>
+    <link href="CSS/flexslider.css" rel="stylesheet"/>
+    <link href="CSS/estilos.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="Js/jquery.flexslider.js"></script>
+    <script src="app.js"></script>
+    <script>
+            $(window).load(function(){
+                $(".flexslider").flexslider();
+            });
+
+        </script>
+
+    <!--[if lt IE9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+
+</head>
+<body>
+<header>
+    <h1 >
+
+        <a href="index.html">
+            <img class="fade" alt="bextlan.com | lugar de... bits, vectores y pixeles." src="Img/logo.jpg"/>
+        </a>
+        <!--ROVADORS-->
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="trabajos.html">Trabajos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="contenido">
+    <section id="principal">
+        <article id="galeria-inicio">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <a href="http://bextlan.com"><img src="Img/slide-1.jpg"/></a>
+                        <p class="flex-caption">bextlan.com | lugar de... bits, vectores y pixeles.</p>
+                    </li>
+                    <li>
+                        <img src="Img/slide-2.jpg"/>
+                        <p class="flex-caption">Curso HTML5</p>
+                    </li>
+                    <li>
+                        <img src="Img/slide-3.jpg"/>
+                    </li>
+                    <li>
+                        <a href="http://bextlan.com"> <img src="Img/slide-4.png"/></a>
+                        <p class="flex-caption">Curso PHP</p>
+                    </li>
+
+                </ul>
+
+            </div>
+        </article>
+    </section>
+    <aside>
+        Widgets Sociales <br/>
+    </aside>
+
+    <aside>
+        <input id="name" value="" placeholder="enter your name..." />
+        <button onclick="sayhello()"> say hello!</button>
+    </aside>
+
+    <aside>
+
+        <input type="button" name='create' onClick="initDatabase()" value='create table'>
+    </aside>
+
+
+
+</section>
+
+<footer>
+    Aprendiendo HTML5, CSS3, jQuery y Responsive Web Design con
+    <a rel="authos" href="http://twitter.com/bextlan" target="_blank">@bextlan</a>
+</footer>
+</body>
+</html>

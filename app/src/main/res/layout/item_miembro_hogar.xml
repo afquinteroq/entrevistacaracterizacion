@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/emc_white">
+
+    <TextView
+        android:id="@+id/tvIDMiebro"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:gravity="center"
+        android:textSize="9dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvTipoDocMiebro"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="TIPO"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <TextView
+        android:id="@+id/tvDocumentoMiebro"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="DOCUMENTO"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <TextView
+        android:id="@+id/tvNombreMiebro"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+
+
+    <RadioButton
+        android:id="@+id/rbEsJefe"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+
+
+    <Spinner
+        android:id="@+id/spTipoPersona"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"></Spinner>
+
+    <TextView
+        android:id="@+id/tvEstadoMiebro"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="ESTADO"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <com.github.johnkil.print.PrintView
+        android:id="@+id/pvVerGrupoMiebro"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:iconText="@string/f_grupo"
+        app:iconColor="@color/emc_estado_ok"
+        app:iconSize="20dp"
+        app:iconFont="fonts/material-icon-font.ttf"
+
+        />
+    <!-- app:iconText="@string/f_grupo"-->
+
+
+    <com.github.johnkil.print.PrintView
+        android:id="@+id/pvEliminarMiebro"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:iconText="@string/f_delete"
+        app:iconColor="@color/emc_red"
+        app:iconSize="20dp"
+        app:iconFont="fonts/material-icon-font.ttf"/>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/emc_white"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/valID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <CheckBox
+        android:id="@+id/chIdentificador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/valNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto"
+        android:layout_marginLeft="15dp"/>
+
+    <EditText
+        android:id="@+id/textOtro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:singleLine="true"
+        android:visibility="gone"/>
+</LinearLayout>

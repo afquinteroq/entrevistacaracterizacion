@@ -1,0 +1,266 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="30dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/emc_background"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".Login"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/sms_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logo_vivanto_splash" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/llIngreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:id="@+id/llUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.github.johnkil.print.PrintView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:iconText="@string/f_usuario"
+                app:iconColor="@color/emc_front"
+                app:iconSize="25dp"
+                app:iconFont="fonts/material-icon-font.ttf"/>
+
+            <EditText
+                android:id="@+id/edUsuario"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Usuario"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+
+            <com.github.johnkil.print.PrintView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:iconText="@string/f_password"
+                app:iconColor="@color/emc_front"
+                app:iconSize="25dp"
+                app:iconFont="fonts/material-icon-font.ttf"/>
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:password="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llcbShowPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+
+        <CheckBox
+
+            android:id="@+id/cbShowPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etPassword"
+            android:layout_below="@+id/etPassword"
+            android:text="Mostrar Contraseña" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Ingresar"
+            android:textSize="18dp"
+            android:textColor="@color/emc_white"
+            android:background="@drawable/border_radius_red"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btLoginSAB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Isab"
+            android:textSize="18dp"
+            android:textColor="@color/emc_white"
+            android:background="@drawable/border_radius_red"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/tvDescargarBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Descargar base  "
+            android:textSize="25dp"
+            android:textColor="@color/emc_white"
+            android:background="@drawable/border_radius_red"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/tvActualizarBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Actualizar base  "
+            android:textSize="18dp"
+            android:textColor="@color/emc_white"
+            android:background="@drawable/border_radius_red"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llTexVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvTextoVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/emc_red"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/llBaseVersion"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.20">
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Versión"
+            android:textColor="@color/emc_red"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <!--Boton para descargar la base de la encuesta-->
+    <!--android:visibility="gone"-->
+    <TextView
+        android:id="@+id/DescargarVivanto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descargar vivanto"
+        android:textColor="@color/emc_red"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+
+
+    <!--Boton para actualizar la base descargada-->
+    <!--android:visibility="gone"-->
+    <TextView
+        android:id="@+id/ActualizarVivanto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar vivanto"
+        android:textColor="@color/emc_red"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+
+    />
+
+
+
+    <TextView
+        android:id="@+id/backupVivanto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generar backup Vivanto"
+        android:textColor="@color/emc_red"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        />
+    <!--android:visibility="gone"-->
+
+
+    <ProgressBar
+        android:id="@+id/pbEstado"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/tvEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+</LinearLayout>
+

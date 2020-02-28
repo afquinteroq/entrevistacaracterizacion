@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="emc_background">#fff</color>
+    <color name="emc_front">#000</color>
+    <color name="emc_red">#9E1714</color>
+    <color name="emc_gren">#009f00</color>
+    <color name="emc_white">#fff</color>
+    <color name="emc_pink">#ed7c7c</color>
+    <color name="emc_header">#666</color>
+    <color name="emc_pregunta">#ccc</color>
+
+
+    <color name="emc_estado_inicial">#FFFF00</color>
+    <color name="emc_red_pressed">#DD4B39</color>
+    <color name="emc_estado_ok">#009f00</color>
+    <color name="emc_estado_delete">#ff0000</color>
+
+    <color name="drawer_background">#444</color>
+    <color name="drawer_front">#fff</color>
+
+    <color name="barra_resultados">#905353</color>
+
+</resources>

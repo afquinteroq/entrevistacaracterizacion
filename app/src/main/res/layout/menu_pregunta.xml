@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/emc_red"
+    android:gravity="center_vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:textStyle="bold"
+            android:textColor="@color/emc_white"
+            android:layout_marginLeft="10dp"/>
+
+
+
+        <com.github.johnkil.print.PrintView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="@string/f_siguiente"
+            app:iconColor="@color/emc_background"
+            app:iconSize="25dp"
+            app:iconFont="fonts/material-icon-font.ttf"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAnterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/llSiguiente"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+
+        <com.github.johnkil.print.PrintView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="@string/f_anterior"
+            app:iconColor="@color/emc_background"
+            app:iconSize="25dp"
+            app:iconFont="fonts/material-icon-font.ttf"/>
+
+        <TextView
+            android:id="@+id/edUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anterior"
+            android:textStyle="bold"
+            android:textColor="@color/emc_white"
+            android:layout_marginLeft="10dp"/>
+
+         </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llReiniciarCapitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/llSiguiente"
+                android:layout_marginRight="120dp"
+                android:visibility="gone"
+            android:background="@drawable/border_radios_pink">
+
+                <com.github.johnkil.print.PrintView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconColor="@color/emc_background"
+                    app:iconSize="25dp"
+                    app:iconFont="fonts/material-icon-font.ttf"/>
+
+
+                <TextView
+                    android:id="@+id/edReiniciarCapitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reiniciar Capitulo"
+                    android:textStyle="bold"
+                    android:textColor="@color/emc_white"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="30dp"/>
+
+
+       </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/llFinalizarEncuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/llSiguiente"
+        android:layout_marginRight="120dp"
+        android:visibility="gone"
+        android:background="@drawable/border_radios_pink">
+
+        <com.github.johnkil.print.PrintView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconColor="@color/emc_background"
+            app:iconSize="25dp"
+            app:iconFont="fonts/material-icon-font.ttf"/>
+
+
+        <TextView
+            android:id="@+id/edFinalizarEncuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalizar Encuesta"
+            android:textStyle="bold"
+            android:textColor="@color/emc_white"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="30dp"/>
+
+
+    </LinearLayout>-->
+
+   </RelativeLayout>

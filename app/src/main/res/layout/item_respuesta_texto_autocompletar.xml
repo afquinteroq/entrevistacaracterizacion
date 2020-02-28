@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llRespuestaTexto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <TextView android:id="@+id/tvNombrePersonaRespuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Nombres"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <AutoCompleteTextView android:id="@+id/etTextoPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border_radius"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:capitalize="characters"
+        android:inputType="textCapCharacters"/>
+
+    <TextView android:id="@+id/cod_hogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/per_IdPersona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/res_IdRespuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/rxp_TipoPreguntaRespuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/tvTipoCampo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/ins_IdInstrumento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView android:id="@+id/idPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout android:id="@+id/llDeptoMun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Departamento"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/spDepto"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"></Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Municipio"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/spMunicipio"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"></Spinner>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/llResguardo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tituloVereda"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Vereda"
+                android:textSize="9dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/spResguardos"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"></Spinner>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/llNomsApls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Primer nombre"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etNom1"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_radius"
+                android:layout_marginLeft="10dp"
+                android:capitalize="characters"
+                android:inputType="textCapCharacters"
+                android:textSize="10dp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Segundo nombre"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etNom2"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_radius"
+                android:layout_marginLeft="10dp"
+                android:capitalize="characters"
+                android:inputType="textCapCharacters"
+                android:textSize="10dp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Primer apellido"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etApl1"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_radius"
+                android:layout_marginLeft="10dp"
+                android:capitalize="characters"
+                android:inputType="textCapCharacters"
+                android:textSize="10dp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Segundo apellido"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etApl2"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_radius"
+                android:layout_marginLeft="10dp"
+                android:capitalize="characters"
+                android:inputType="textCapCharacters"
+                android:textSize="10dp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

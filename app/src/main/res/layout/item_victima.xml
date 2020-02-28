@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/emc_white">
+
+    <TextView
+        android:id="@+id/tvIdVictima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvTipoDocVictima"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="TIPO"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <TextView
+        android:id="@+id/tvDocumentoVictima"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="DOCUMENTO"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <TextView
+        android:id="@+id/tvNombreVictima"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <TextView
+        android:id="@+id/tvFecNacVictima"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="FEC NAC"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <TextView
+        android:id="@+id/tvEstadoVictima"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="ESTADO"
+        android:gravity="center"
+        android:textSize="9dp"/>
+
+    <com.github.johnkil.print.PrintView
+        android:id="@+id/pvAgregarVictima"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:iconText="@string/f_agregar"
+        app:iconColor="@color/emc_gren"
+        app:iconSize="20dp"
+        app:iconFont="fonts/material-icon-font.ttf"/>
+
+
+
+    <com.github.johnkil.print.PrintView
+        android:id="@+id/pvAgregarGRUPOFAMILIAR"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:iconText="@string/f_grupo"
+        app:iconColor="@color/emc_estado_ok"
+        app:iconSize="20dp"
+        app:iconFont="fonts/material-icon-font.ttf"
+        />
+
+</LinearLayout>
