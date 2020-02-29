@@ -155,7 +155,7 @@ public class asyncCrearHogar extends AsyncTask<String, Integer, Boolean> {
                         }
 
 
-                        //24/02/2020 inserta validador tipopersona
+                        //24/02/2020 inserta validador tipopersona esta fue la ultima modificación que se hizo
                         gestionEncuestas.GIC_INSERT_VALIDADOR_PERFIL_USUARIO(Integer.valueOf(miembro.getPer_idpersona()), miembro.getHog_codigo(), "5005",usuarioLogin.getIdPerfil(), 1);
                         gestionEncuestas.GIC_INSERT_VALIDADOR_TIPO_PERSONA(Integer.valueOf(miembro.getPer_idpersona()), miembro.getHog_codigo(), miembro.getTipoPersona(), 1);
                         //24/02/2020
