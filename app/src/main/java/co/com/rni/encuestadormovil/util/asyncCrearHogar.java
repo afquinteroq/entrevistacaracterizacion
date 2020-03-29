@@ -96,6 +96,7 @@ public class asyncCrearHogar extends AsyncTask<String, Integer, Boolean> {
                     hogar.setUsu_usuariocreacion(usuarioLogin.getNombreusuario());
                     hogar.setUsu_fechacreacion(fechaActual());
                     hogar.setEstado("Incompleta");
+                    hogar.setId_perfil_usuario(usuarioLogin.getIdPerfil());
 
                     boolean validadorEstado = false;
 

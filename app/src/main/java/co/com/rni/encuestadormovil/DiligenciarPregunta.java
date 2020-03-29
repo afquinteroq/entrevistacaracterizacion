@@ -179,7 +179,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             public void onDrawerOpened(View drawerView) {
                 abActivity.setTitle("Temas  ");
                 llFinalizarEncuesta.setVisibility(View.VISIBLE);
-                //ULTIMA 13062016
+
                 llConfirmarReiniciarCapitulo.setVisibility(View.GONE);
                 invalidateOptionsMenu();
                 if(llSiguiente != null)
@@ -192,11 +192,6 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         lvDrawer = (ListView) findViewById(R.id.lvDrawer);
-
-
-        //Lista los temas por perfil
-        //listaTemas = emc_temas.find(emc_temas.class, null, null);
-        //List<emc_hogares> lsHogar = emc_hogares.find(emc_hogares.class, "UPPER(HOGCODIGO) = ? ", hogCodigo.toUpperCase() );
 
 
         List<emc_version> lsHo= emc_version.find(emc_version.class,"UPPER(VERNOMBRE) = ?",hogCodigo.toUpperCase());
@@ -1183,7 +1178,54 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 }
             });
 
-        }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
+        }
+        /////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.VISIBLE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDepto.setAdapter(adDepto);
+            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
+            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
+            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+            spMunicipio.setAdapter(adMunicipio);
+
+            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_departamento selDepto = lsDeptos.get(position);
+                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
+                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+                    spMunicipio.setAdapter(adMunicipio);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_municipio munSel = lsMunicipios.get(position);
+                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+        }
+        //////////////
+        else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
@@ -1478,6 +1520,51 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 }
             });
 
+        }
+        /////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.VISIBLE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDepto.setAdapter(adDepto);
+            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
+            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
+            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+            spMunicipio.setAdapter(adMunicipio);
+
+            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_departamento selDepto = lsDeptos.get(position);
+                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
+                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+                    spMunicipio.setAdapter(adMunicipio);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_municipio munSel = lsMunicipios.get(position);
+                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
         }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
             tituloVereda.setVisibility(View.GONE);
@@ -1720,6 +1807,8 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         llDeptoMun = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDeptoMun);
         spDepto = (Spinner) llRespuestaTexto.findViewById(R.id.spDepto);
         spMunicipio = (Spinner) llRespuestaTexto.findViewById(R.id.spMunicipio);
+
+
         if(tmPregPersona.getPre_tipocampo().equals("DP")){
             llResguardo.setVisibility(View.GONE);
             llDeptoMun.setVisibility(View.VISIBLE);
@@ -1762,7 +1851,54 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 }
             });
 
-        }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
+        }
+        /////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.VISIBLE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDepto.setAdapter(adDepto);
+            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
+            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
+            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+            spMunicipio.setAdapter(adMunicipio);
+
+            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_departamento selDepto = lsDeptos.get(position);
+                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
+                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+                    spMunicipio.setAdapter(adMunicipio);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_municipio munSel = lsMunicipios.get(position);
+                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+        }
+        ///
+        else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
@@ -2005,7 +2141,54 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 }
             });
 
-        }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
+        }/////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+
+            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.VISIBLE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDepto.setAdapter(adDepto);
+            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
+            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
+            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+            spMunicipio.setAdapter(adMunicipio);
+
+            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_departamento selDepto = lsDeptos.get(position);
+                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
+                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
+                    spMunicipio.setAdapter(adMunicipio);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    emc_municipio munSel = lsMunicipios.get(position);
+                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+        }
+        ///////////
+        else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);

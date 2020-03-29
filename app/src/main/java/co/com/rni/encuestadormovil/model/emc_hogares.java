@@ -23,6 +23,7 @@ public class emc_hogares extends SugarRecord<emc_hogares> {
     private String usu_fechacreacion;
     private String hog_tipo;
     public String estado;
+    public String id_perfil_usuario;
 
     /*
     public String getHog_codigo() {
