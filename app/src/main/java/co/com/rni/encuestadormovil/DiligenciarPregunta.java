@@ -82,12 +82,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
     private LinearLayout llPreguntaTexto;
     private emc_usuarios usuarioLogin;
     private LinearLayout llDeptoMun;
+    private LinearLayout llDTDireccionTerritorial, llDTdepartamento, llDTPuntoAtencion, llDTMunicipio;
+    private TextView tituloDireccionTerritorial, tituloDTdepartamento, tituloDTPuntoAtencion, tituloDTMunicipio;
     private LinearLayout llResguardo;
     private EditText etNom1, etNom2, etApl1, etApl2;
     private LinearLayout llNomsApls;
     private Spinner spDepto;
     private Spinner spMunicipio;
     private Spinner spResguardos;
+    private Spinner spDTDireccionTerritorial, spDTdepartamento, spDTPuntoAtencion, spDTMunicipio;
     private List<emc_municipio> lsMunicipios;
     private municipiosAdapter adMunicipio;
     private String pIDJEFE = null;
@@ -1132,11 +1135,27 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         tituloVereda = (TextView) llRespuestaTexto.findViewById(R.id.tituloVereda);
 
 
+        llDTDireccionTerritorial = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTDireccionTerritorial);
+        llDTdepartamento = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTdepartamento);
+        llDTPuntoAtencion = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTPuntoAtencion);
+        llDTMunicipio = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTMunicipio);
+
+        tituloDireccionTerritorial = (TextView) llRespuestaTexto.findViewById(R.id.tituloDireccionTerritorial);
+        tituloDTdepartamento = (TextView) llRespuestaTexto.findViewById(R.id.tituloDTdepartamento);
+        tituloDTPuntoAtencion = (TextView) llRespuestaTexto.findViewById(R.id.tituloDTPuntoAtencion);
+        tituloDTMunicipio = (TextView) llRespuestaTexto.findViewById(R.id.tituloDTMunicipio);
 
 
         spDepto = (Spinner) llRespuestaTexto.findViewById(R.id.spDepto);
         spMunicipio = (Spinner) llRespuestaTexto.findViewById(R.id.spMunicipio);
         spResguardos = (Spinner) llRespuestaTexto.findViewById(R.id.spResguardos);
+
+        spDTDireccionTerritorial = (Spinner) llRespuestaTexto.findViewById(R.id.spDTDireccionTerritorial);
+        spDTdepartamento = (Spinner) llRespuestaTexto.findViewById(R.id.spDTdepartamento);
+        spDTPuntoAtencion = (Spinner) llRespuestaTexto.findViewById(R.id.spDTPuntoAtencion);
+        spDTMunicipio = (Spinner) llRespuestaTexto.findViewById(R.id.spDTMunicipio);
+
+
         if(tmPregPersona.getPre_tipocampo().equals("DP")){
             llResguardo.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
@@ -1183,9 +1202,19 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         else if (tmPregPersona.getPre_tipocampo().equals("DT")){
             List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
             llResguardo.setVisibility(View.GONE);
-            llDeptoMun.setVisibility(View.VISIBLE);
+            llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
 
 
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
@@ -1525,9 +1554,19 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         else if (tmPregPersona.getPre_tipocampo().equals("DT")){
             List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
             llResguardo.setVisibility(View.GONE);
-            llDeptoMun.setVisibility(View.VISIBLE);
+            llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
 
 
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
@@ -1856,9 +1895,19 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         else if (tmPregPersona.getPre_tipocampo().equals("DT")){
             List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
             llResguardo.setVisibility(View.GONE);
-            llDeptoMun.setVisibility(View.VISIBLE);
+            llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
 
 
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
@@ -2146,9 +2195,19 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
             List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
             llResguardo.setVisibility(View.GONE);
-            llDeptoMun.setVisibility(View.VISIBLE);
+            llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
 
 
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
@@ -2285,7 +2344,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     emc_departamento selDepto = lsDeptos.get(position);
-                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
+                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto());
                     adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
                     spMunicipio.setAdapter(adMunicipio);
                 }

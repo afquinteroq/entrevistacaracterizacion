@@ -147,6 +147,142 @@
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout android:id="@+id/llDTDireccionTerritorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tituloDireccionTerritorial"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Dirección Territorial Atención"
+                android:textSize="9dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/spDTDireccionTerritorial"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"></Spinner>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/llDTdepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tituloDTdepartamento"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Departamento Atención"
+                android:textSize="9dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/spDTdepartamento"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"></Spinner>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/llDTPuntoAtencion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tituloDTPuntoAtencion"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Punto Atención"
+                android:textSize="9dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/spDTPuntoAtencion"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"></Spinner>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/llDTMunicipio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tituloDTMunicipio"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Municipio Atención"
+                android:textSize="9dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/spDTMunicipio"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"></Spinner>
+
+        </LinearLayout>
+    </LinearLayout>
+
     <LinearLayout android:id="@+id/llNomsApls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
