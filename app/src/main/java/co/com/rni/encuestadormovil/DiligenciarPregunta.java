@@ -40,6 +40,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.orm.query.Select;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -109,12 +111,18 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
     private Integer contadorRespuestasRatio;
     private Integer contadorRespuestasCheck;
     private List<emc_departamento> lsDeptos;
+    private List<EMC_DTPUNTOSATENCION> lsDts;
+    private List<EMC_DTPUNTOSATENCION> lsdeptoDts, lsPuntosAtencion, lsmunsDts;
     private List<emc_resguardosindigenas> lsResguardos;
     private List<emc_ruinosas_catastroficas> lsEnfermedades;
     private List<emc_veredas> lsVeredas;
     private veredasAdapter adVeredas;
     private List<emc_comunidadesnegras> lsComunidadesNegras;
     private deptosAdapter adDepto;
+    private dtsAdapter adDTS;
+    private deptosDTAdapter adDeptosDT;
+    private puntosDTAdapter adPuntosDT;
+    private municipiosDTAdapter adMunsDT;
     private resguardosAdapter adResguardo;
     private enfermedadesAdapter adEnfermedades;
     private comunidadesnegrasAdapter adComunidadesNegras;
@@ -874,7 +882,8 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         lsComunidadesNegras = emc_comunidadesnegras.find(emc_comunidadesnegras.class,null,null);
         adComunidadesNegras = new comunidadesnegrasAdapter(getBaseContext(),R.id.valID,lsComunidadesNegras);
 
-
+        lsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class, "SELECT DISTINCT IDDT,DT FROM EMCDTPUNTOSATENCION ORDER BY IDDT");
+        adDTS = new dtsAdapter(getBaseContext(),R.id.valID, lsDts);
 
     }
 
@@ -988,6 +997,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                     LinearLayout llRespuesta;
                     switch (tmPregPersona.getPre_tipocampo()){
                         case "DP":
+                        case "DT":
                         case "TE":
                         case "AT":
                         case "TA":
@@ -1042,6 +1052,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         LinearLayout llRespuesta;
                         switch (tmPregPersona.getPre_tipocampo()){
                             case "DP":
+                            case "DT":
                             case "TE":
                             case "AT":
                             case "TA":
@@ -1188,7 +1199,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     emc_municipio munSel = lsMunicipios.get(position);
-                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
+                    etTextoPregunta.setText(munSel.getId_muni_depto());
                 }
 
                 @Override
@@ -1200,7 +1211,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         }
         /////
         else if (tmPregPersona.getPre_tipocampo().equals("DT")){
-            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
             llResguardo.setVisibility(View.GONE);
             llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
@@ -1215,23 +1226,78 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             llDTdepartamento.setVisibility(View.VISIBLE);
             llDTPuntoAtencion.setVisibility(View.VISIBLE);
             llDTMunicipio.setVisibility(View.VISIBLE);
-
-
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
 
-            spDepto.setAdapter(adDepto);
-            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
-            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
-            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-            spMunicipio.setAdapter(adMunicipio);
-
-            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_departamento selDepto = lsDeptos.get(position);
-                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
-                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-                    spMunicipio.setAdapter(adMunicipio);
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
                 }
 
                 @Override
@@ -1239,18 +1305,8 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                 }
             });
-            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_municipio munSel = lsMunicipios.get(position);
-                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
-                }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
 
-                }
-            });
 
         }
         //////////////
@@ -1552,7 +1608,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         }
         /////
         else if (tmPregPersona.getPre_tipocampo().equals("DT")){
-            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
             llResguardo.setVisibility(View.GONE);
             llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
@@ -1567,23 +1623,76 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             llDTdepartamento.setVisibility(View.VISIBLE);
             llDTPuntoAtencion.setVisibility(View.VISIBLE);
             llDTMunicipio.setVisibility(View.VISIBLE);
-
-
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
 
-            spDepto.setAdapter(adDepto);
-            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
-            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
-            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-            spMunicipio.setAdapter(adMunicipio);
-
-            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_departamento selDepto = lsDeptos.get(position);
-                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
-                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-                    spMunicipio.setAdapter(adMunicipio);
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
                 }
 
                 @Override
@@ -1591,18 +1700,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                 }
             });
-            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_municipio munSel = lsMunicipios.get(position);
-                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
-                }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            });
 
         }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
@@ -1893,7 +1991,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         }
         /////
         else if (tmPregPersona.getPre_tipocampo().equals("DT")){
-            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
             llResguardo.setVisibility(View.GONE);
             llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
@@ -1908,23 +2006,76 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             llDTdepartamento.setVisibility(View.VISIBLE);
             llDTPuntoAtencion.setVisibility(View.VISIBLE);
             llDTMunicipio.setVisibility(View.VISIBLE);
-
-
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
 
-            spDepto.setAdapter(adDepto);
-            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
-            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
-            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-            spMunicipio.setAdapter(adMunicipio);
-
-            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_departamento selDepto = lsDeptos.get(position);
-                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
-                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-                    spMunicipio.setAdapter(adMunicipio);
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
                 }
 
                 @Override
@@ -1932,19 +2083,6 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                 }
             });
-            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_municipio munSel = lsMunicipios.get(position);
-                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            });
-
         }
         ///
         else if (tmPregPersona.getPre_tipocampo().equals("RES")){
@@ -2192,8 +2330,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
         }/////
         else if (tmPregPersona.getPre_tipocampo().equals("DT")){
-
-            List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,null,null);
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
             llResguardo.setVisibility(View.GONE);
             llDeptoMun.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
@@ -2208,23 +2345,76 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             llDTdepartamento.setVisibility(View.VISIBLE);
             llDTPuntoAtencion.setVisibility(View.VISIBLE);
             llDTMunicipio.setVisibility(View.VISIBLE);
-
-
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
 
-            spDepto.setAdapter(adDepto);
-            emc_departamento depSel = lsDeptos.get(spDepto.getSelectedItemPosition());
-            lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", depSel.getId_depto().toString());
-            adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-            spMunicipio.setAdapter(adMunicipio);
-
-            spDepto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_departamento selDepto = lsDeptos.get(position);
-                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
-                    adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
-                    spMunicipio.setAdapter(adMunicipio);
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
                 }
 
                 @Override
@@ -2232,18 +2422,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                 }
             });
-            spMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    emc_municipio munSel = lsMunicipios.get(position);
-                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
-                }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            });
 
         }
         ///////////
@@ -2771,6 +2950,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             TextView tvTipoCampo = (TextView) llRespuestaTexto.findViewById(R.id.tvTipoCampo);
             switch (tvTipoCampo.getText().toString()){
                 case "DP":
+                case "DT":
                 case "TE":
                 case "AT":
                 case "TA":
@@ -3239,6 +3419,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
             switch (tvTipoCampo.getText().toString()){
                 case "DP":
+                case "DT":
                 case "TE":
                 case "AT":
                 case "TA":

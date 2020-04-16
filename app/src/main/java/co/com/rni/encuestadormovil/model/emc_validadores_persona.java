@@ -22,6 +22,7 @@ public class emc_validadores_persona extends SugarRecord<emc_validadores_persona
     String pre_valor;
     String hog_codigo;
     String comodin;
+    String fechahecho;
     /*
     public emc_validadores_persona(String ins_idinstrumento, String per_idpersona, String val_idvalidador, String pre_valor, String hog_codigo) {
         this.ins_idinstrumento = ins_idinstrumento;

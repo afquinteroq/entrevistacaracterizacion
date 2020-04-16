@@ -1257,7 +1257,7 @@ public final class gestionEncuestas {
                 tmValPer.save();
             }
         }
-
+        SP_INS_ETNIA_ARES(pcod_hogar);
         //CAMBIA EL ESTADO EN LA TABLA GIC_N_PREGUNTASDERIVADAS A 1
         SP_CAMBIAR_ESTADOGUARDADO(pcod_hogar, pins_IdInstrumento, pper_IdPersona, pper_idPreguntaPadre);
 
@@ -1271,7 +1271,7 @@ public final class gestionEncuestas {
         String p = null;
         if (IDPERSONA != null)
             p = IDPERSONA.toString();
-        emc_validadores_persona tmValTD = new emc_validadores_persona(IDINSTRUMENTO.toString(), p,VAL_IDVALIDADOR, PREVALOR.trim(), CODHOGAR, "0");
+        emc_validadores_persona tmValTD = new emc_validadores_persona(IDINSTRUMENTO.toString(), p,VAL_IDVALIDADOR, PREVALOR.trim(), CODHOGAR, "0","");
         tmValTD.save();
     }
 
@@ -1303,7 +1303,7 @@ public final class gestionEncuestas {
         String p = null;
         if (IDPERSONA != null)
             p = IDPERSONA.toString();
-        emc_validadores_persona tmValTD = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), prevalor.trim(), CODHOGAR, "0");
+        emc_validadores_persona tmValTD = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), prevalor.trim(), CODHOGAR, "0","");
         tmValTD.save();
     }
 
@@ -1338,7 +1338,7 @@ public final class gestionEncuestas {
         String p = null;
         if (IDPERSONA != null)
             p = IDPERSONA.toString();
-        emc_validadores_persona tmValTD = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim(), CODHOGAR, "0");
+        emc_validadores_persona tmValTD = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim(), CODHOGAR, "0","");
         tmValTD.save();
     }
 
@@ -1357,7 +1357,7 @@ public final class gestionEncuestas {
         String p = null;
         if (IDPERSONA != null)
             p = IDPERSONA.toString();
-        emc_validadores_persona tmValPer = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim(), CODHOGAR, "0");
+        emc_validadores_persona tmValPer = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim(), CODHOGAR, "0","");
         tmValPer.save();
 
     }
@@ -1375,7 +1375,7 @@ public final class gestionEncuestas {
         String p = null;
         if (IDPERSONA != null)
             p = IDPERSONA.toString();
-        emc_validadores_persona tmValPer = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim(), CODHOGAR, "0");
+        emc_validadores_persona tmValPer = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim(), CODHOGAR, "0","");
         tmValPer.save();
     }
 
@@ -1453,7 +1453,7 @@ public final class gestionEncuestas {
             if (IDPERSONA != null)
                 p = IDPERSONA.toString();
 
-            emc_validadores_persona tmValPer = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim().toUpperCase(), CODHOGAR, "0");
+            emc_validadores_persona tmValPer = new emc_validadores_persona(IDINSTRUMENTO.toString(), p, VALIDADOR_P.toString(), VALIDADOR.trim().toUpperCase(), CODHOGAR, "0","");
             tmValPer.save();
         }
     }
@@ -2308,6 +2308,12 @@ public final class gestionEncuestas {
         emc_preguntas_derivadas.deleteAll(emc_preguntas_derivadas.class,
                 "TEMIDTEMA = '"+ TemIDTema.toString() +"' AND HOGCODIGO = '"+hogCodigo+"' AND INSIDINSTRUMENTO ="+pINS_IDINSTRUMENTO );
 
+        if(Integer.valueOf(TemIDTema) == 1){
+            EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                    "HOGARCODIGO = '"+hogCodigo+"'");
+        }
+
+
     }
 
     //13/02/2020
@@ -2328,12 +2334,238 @@ public final class gestionEncuestas {
 
     }
 
-    public int FN_RETORNA_TIPO_PERSONA(){
-        return 0;
+    public int FN_RETORNA_TIPO_PERSONA(String pHOG_CODIGO){
+
+        String idpersona ;
+        String[] parValPer = {pHOG_CODIGO};
+
+        List<emc_validadores_persona> lsValPersona = emc_validadores_persona.find(emc_validadores_persona.class,
+                "HOGCODIGO = ? AND VALIDVALIDADOR IN ('5001','5002','5003')", parValPer);
+        Integer total = lsValPersona.size();
+
+        if (total > 0) {
+            emc_validadores_persona tmValPersona = lsValPersona.get(0);
+            idpersona = tmValPersona.getPer_idpersona();
+        }else{
+            idpersona = "0";
+        }
+
+        return Integer.valueOf(idpersona);
     }
 
-    public void SP_INS_ETNIA_ARES(){
-        int y = 0;
+    public static void SP_INS_ETNIA_ARES(String pHOG_CODIGO){
+        int TOTAL_PERSONA_TUTOR = 0;
+        int TOTAL_DES_5001_5004 = 0;
+        int ID_PERSONA_TUTOR = 0;
+        int ID_PERSONA_T = 0;
+        int TOTAL_T = 0;
+        String CODHOGAR_T = pHOG_CODIGO;
+        int T_TOTALCOMODIN = 0;
+        int TOTAL_IND = 0;
+        int TOTAL_GIT = 0;
+        int TOTAL_RAI = 0;
+        int TOTAL_PAL = 0;
+        int TOTAL_NEG = 0;
+        int TOTAL_DES = 0;
+        int TOTAL_NIN = 0;
+        int TOTAL_267_266_173 = 0;
+        String VALOR_267_266_173 = "";
+
+        try {
+
+
+            emc_validadores_persona.deleteAll(emc_validadores_persona.class,
+                    "DELETE FROM  EMCVALIDADORESPERSONA  WHERE HOGCODIGO = ? AND VALIDVALIDADOR IN ('5007','5008','5009','5010','5011','5012','506') AND COMODIN = '1';", CODHOGAR_T);
+
+            emc_validadores_persona.deleteAll(emc_validadores_persona.class,
+                    "DELETE FROM  EMCVALIDADORESPERSONA  WHERE HOGCODIGO = ? AND VALIDVALIDADOR IN ('267','266','173') AND COMODIN = '2';", CODHOGAR_T);
+
+            List<emc_validadores_persona> lsValPersona = emc_validadores_persona.find(emc_validadores_persona.class,
+                    "HOGCODIGO = ? AND VALIDVALIDADOR IN ('5001','5002','5003')", CODHOGAR_T);
+            TOTAL_T = lsValPersona.size();
+
+            List<emc_validadores_persona> lsValPersonaTutor = emc_validadores_persona.find(emc_validadores_persona.class,
+                    "HOGCODIGO = ? AND VALIDVALIDADOR IN ('5001')", CODHOGAR_T);
+
+            TOTAL_PERSONA_TUTOR = lsValPersonaTutor.size();
+
+
+            if (TOTAL_T > 0) {
+                emc_validadores_persona tmValPersona = lsValPersona.get(0);
+                ID_PERSONA_T = Integer.valueOf(tmValPersona.getPer_idpersona());
+                if (TOTAL_PERSONA_TUTOR > 0) {
+                    emc_validadores_persona tmValPersonaTutor = lsValPersonaTutor.get(0);
+                    ID_PERSONA_TUTOR = Integer.valueOf(tmValPersonaTutor.getPer_idpersona());
+                }
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_IND FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (163) AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_IND = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('163')", CODHOGAR_T);
+                emc_validadores_persona tmValPersonaTOTAL_IND = lsValPersonaTOTAL_IND.get(0);
+                TOTAL_IND = Integer.valueOf(tmValPersonaTOTAL_IND.getPer_idpersona());
+
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_GIT FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (164) AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_GIT = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('164')", CODHOGAR_T);
+                emc_validadores_persona tmValPersonaTOTAL_GIT = lsValPersonaTOTAL_GIT.get(0);
+                TOTAL_GIT = Integer.valueOf(tmValPersonaTOTAL_GIT.getPer_idpersona());
+
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_RAI FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (165) AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_RAI = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('165')", CODHOGAR_T);
+                emc_validadores_persona tmValPersonaTOTAL_RAI = lsValPersonaTOTAL_GIT.get(0);
+                TOTAL_RAI = Integer.valueOf(tmValPersonaTOTAL_RAI.getPer_idpersona());
+
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_PAL FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (166) AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_PAL = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('166')", CODHOGAR_T);
+                emc_validadores_persona tmValPersonaTOTAL_PAL = lsValPersonaTOTAL_PAL.get(0);
+                TOTAL_PAL = Integer.valueOf(tmValPersonaTOTAL_PAL.getPer_idpersona());
+
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_NEG FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (167) AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_NEG = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('167')", CODHOGAR_T);
+                emc_validadores_persona tmValPersonaTOTAL_NEG = lsValPersonaTOTAL_NEG.get(0);
+                TOTAL_NEG = Integer.valueOf(tmValPersonaTOTAL_NEG.getPer_idpersona());
+
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_DES FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (105) AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_DES = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('105')", CODHOGAR_T);
+                emc_validadores_persona tmValPersonaTOTAL_DES = lsValPersonaTOTAL_DES.get(0);
+                TOTAL_DES = Integer.valueOf(tmValPersonaTOTAL_DES.getPer_idpersona());
+
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_NIN FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (272) AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_NIN = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('272')", CODHOGAR_T);
+                emc_validadores_persona tmValPersonaTOTAL_NIN = lsValPersonaTOTAL_NIN.get(0);
+                TOTAL_NIN = Integer.valueOf(tmValPersonaTOTAL_NIN.getPer_idpersona());
+
+                //SELECT COUNT(GVP.PER_IDPERSONA) INTO TOTAL_267_266_173 FROM GIC_N_VALIDADORESXPERSONA GVP WHERE GVP.VAL_IDVALIDADOR IN (267,266,173)  AND GVP.HOG_CODIGO = CODHOGAR_T ;
+                List<emc_validadores_persona> lsValPersonaTOTAL_267_266_173 = emc_validadores_persona.find(emc_validadores_persona.class,
+                        "HOGCODIGO = ? AND VALIDVALIDADOR IN ('267','26','173')", CODHOGAR_T);
+                TOTAL_267_266_173 = lsValPersonaTOTAL_267_266_173.size();
+
+
+                if (TOTAL_267_266_173 > 0) {
+                    emc_validadores_persona tmValPersonaTOTAL_267_266_173 = lsValPersonaTOTAL_267_266_173.get(0);
+                    TOTAL_267_266_173 = Integer.valueOf(tmValPersonaTOTAL_267_266_173.getPer_idpersona());
+                    VALOR_267_266_173 = tmValPersonaTOTAL_267_266_173.getPre_valor();
+                    List<emc_validadores_persona> lsCUR_DATOS = emc_validadores_persona.findWithQuery(emc_validadores_persona.class,
+                            "SELECT PERIDPERSONA, VALIDVALIDADOR, HOGCODIGO FROM \n" +
+                                    " (SELECT  T.PERIDPERSONA, T.VALIDVALIDADOR, T.HOGCODIGO FROM EMCVALIDADORESPERSONA T WHERE T.HOGCODIGO = ? AND T.VALIDVALIDADOR IN ('5001','5002','5003','5004'))\n" +
+                                    " X WHERE X.VALIDVALIDADOR = '5004';", CODHOGAR_T);
+                    for (emc_validadores_persona CUR_DATOS : lsCUR_DATOS) {
+                        emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                        emc_validadores_persona.setIns_idinstrumento("1");
+                        emc_validadores_persona.setPer_idpersona(CUR_DATOS.getPer_idpersona());
+                        emc_validadores_persona.setVal_idvalidador(Integer.toString(TOTAL_267_266_173));
+                        emc_validadores_persona.setPre_valor(VALOR_267_266_173);
+                        emc_validadores_persona.setHog_codigo(CUR_DATOS.getHog_codigo());
+                        emc_validadores_persona.setComodin("2");
+                        emc_validadores_persona.setFechahecho("");
+                        emc_validadores_persona.save();
+                    }
+                }
+                if (TOTAL_IND > 0) {
+                    emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                    emc_validadores_persona.setIns_idinstrumento("1");
+                    emc_validadores_persona.setPer_idpersona(Integer.toString(ID_PERSONA_T));
+                    emc_validadores_persona.setVal_idvalidador("5007");
+                    emc_validadores_persona.setPre_valor("INDIGENA");
+                    emc_validadores_persona.setHog_codigo(CODHOGAR_T);
+                    emc_validadores_persona.setComodin("1");
+                    emc_validadores_persona.setFechahecho("");
+                    emc_validadores_persona.save();
+                }
+                if (TOTAL_GIT > 0) {
+                    emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                    emc_validadores_persona.setIns_idinstrumento("1");
+                    emc_validadores_persona.setPer_idpersona(Integer.toString(ID_PERSONA_T));
+                    emc_validadores_persona.setVal_idvalidador("5008");
+                    emc_validadores_persona.setPre_valor("GITANO");
+                    emc_validadores_persona.setHog_codigo(CODHOGAR_T);
+                    emc_validadores_persona.setComodin("1");
+                    emc_validadores_persona.setFechahecho("");
+                    emc_validadores_persona.save();
+                }
+                if (TOTAL_RAI > 0) {
+                    emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                    emc_validadores_persona.setIns_idinstrumento("1");
+                    emc_validadores_persona.setPer_idpersona(Integer.toString(ID_PERSONA_T));
+                    emc_validadores_persona.setVal_idvalidador("5009");
+                    emc_validadores_persona.setPre_valor("RAIZAL");
+                    emc_validadores_persona.setHog_codigo(CODHOGAR_T);
+                    emc_validadores_persona.setComodin("1");
+                    emc_validadores_persona.setFechahecho("");
+                    emc_validadores_persona.save();
+                }
+                if (TOTAL_PAL > 0) {
+                    emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                    emc_validadores_persona.setIns_idinstrumento("1");
+                    emc_validadores_persona.setPer_idpersona(Integer.toString(ID_PERSONA_T));
+                    emc_validadores_persona.setVal_idvalidador("5010");
+                    emc_validadores_persona.setPre_valor("PALENQUERO");
+                    emc_validadores_persona.setHog_codigo(CODHOGAR_T);
+                    emc_validadores_persona.setComodin("1");
+                    emc_validadores_persona.setFechahecho("");
+                    emc_validadores_persona.save();
+                }
+                if (TOTAL_NEG > 0) {
+                    emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                    emc_validadores_persona.setIns_idinstrumento("1");
+                    emc_validadores_persona.setPer_idpersona(Integer.toString(ID_PERSONA_T));
+                    emc_validadores_persona.setVal_idvalidador("5011");
+                    emc_validadores_persona.setPre_valor("NEGRO");
+                    emc_validadores_persona.setHog_codigo(CODHOGAR_T);
+                    emc_validadores_persona.setComodin("1");
+                    emc_validadores_persona.setFechahecho("");
+                    emc_validadores_persona.save();
+                }
+                if (TOTAL_DES > 0) {
+                    List<emc_validadores_persona> lsTOTAL_DES_5001_5004 = emc_validadores_persona.findWithQuery(emc_validadores_persona.class,
+                            "SELECT * FROM EMCVALIDADORESPERSONA VP WHERE VP.PERIDPERSONA IN \n" +
+                                    "                        (\n" +
+                                    "                        SELECT GVP.PERIDPERSONA\n" +
+                                    "                        FROM EMCVALIDADORESPERSONA GVP WHERE GVP.VALIDVALIDADOR IN (105) \n" +
+                                    "                        AND GVP.HOGCODIGO = ?\n" +
+                                    "                        ) AND VP.HOGCODIGO = ? AND VP.VALIDVALIDADOR IN (5001,5004)", CODHOGAR_T);
+                    TOTAL_DES = lsTOTAL_DES_5001_5004.size();
+
+                    if (TOTAL_DES > 0) {
+
+                        List<emc_validadores_persona> lsID_PERSONA_TUTOR = emc_validadores_persona.findWithQuery(emc_validadores_persona.class,
+                                "SELECT GVP.* FROM EMCVALIDADORESPERSONA GVP WHERE GVP.VALIDVALIDADOR IN (5001,5002,5003) AND GVP.HOGCODIGO = ?;", CODHOGAR_T);
+
+                        emc_validadores_persona tmemc_validadores_persona = lsID_PERSONA_TUTOR.get(0);
+                        ID_PERSONA_TUTOR = Integer.valueOf(tmemc_validadores_persona.getPer_idpersona());
+                        emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                        emc_validadores_persona.setIns_idinstrumento("1");
+                        emc_validadores_persona.setPer_idpersona(Integer.toString(ID_PERSONA_TUTOR));
+                        emc_validadores_persona.setVal_idvalidador("506");
+                        emc_validadores_persona.setPre_valor("DESPLAZAMIENTO FORZADO");
+                        emc_validadores_persona.setHog_codigo(CODHOGAR_T);
+                        emc_validadores_persona.setComodin("1");
+                        emc_validadores_persona.setFechahecho("");
+                        emc_validadores_persona.save();
+                    }
+                    if (TOTAL_NIN > 0) {
+                        emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
+                        emc_validadores_persona.setIns_idinstrumento("1");
+                        emc_validadores_persona.setPer_idpersona(Integer.toString(ID_PERSONA_T));
+                        emc_validadores_persona.setVal_idvalidador("5012");
+                        emc_validadores_persona.setPre_valor("NINGUNADELASANTERIORES");
+                        emc_validadores_persona.setHog_codigo(CODHOGAR_T);
+                        emc_validadores_persona.setComodin("1");
+                        emc_validadores_persona.setFechahecho("");
+                        emc_validadores_persona.save();
+                    }
+                }
+
+
+            }
+        }catch (Exception e){
+            e.getMessage();
+        }
+
     }
 
     public void SP_CONSTANCIA(){
