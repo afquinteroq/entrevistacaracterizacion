@@ -30,6 +30,7 @@ import android.widget.QuickContactBadge;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.github.johnkil.print.PrintView;
 
 import java.io.File;
@@ -43,6 +44,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
 import co.com.rni.encuestadormovil.adapter.*;
 import co.com.rni.encuestadormovil.model.*;
 import co.com.rni.encuestadormovil.sqlite.*;
@@ -53,9 +55,7 @@ import static co.com.rni.encuestadormovil.util.general.fechaActualSinHora;
 import static co.com.rni.encuestadormovil.util.general.fechaValida;
 
 
-
-
-public class conformarHogar extends AppCompatActivity    {
+public class conformarHogar extends AppCompatActivity {
 
     private ActionBar abActivity;
     private PrintView pvBuscarVictima;
@@ -67,7 +67,7 @@ public class conformarHogar extends AppCompatActivity    {
     private List<emc_personas_encuestas_no_sugar> lsPersonasEncuestadas;
     private String UIDhogar;
     private ArrayList<emc_miembros_hogar> miembrosHogar;
-    private LinearLayout llHogar,llPresentacion, llPresentacionP, btAceptarNoAceptar, llMensajeInicioNRC,llParametricas;
+    private LinearLayout llHogar, llPresentacion, llPresentacionP, btAceptarNoAceptar, llMensajeInicioNRC, llParametricas;
     private LinearLayout llPresentacionAcnur, llaUTORIZA, btAceptarNoAceptarAcnur, llMensajeInicioACNUR;
     private miembrosHogarAdapter adMiembros;
     private Integer hlOrigen;
@@ -112,22 +112,18 @@ public class conformarHogar extends AppCompatActivity    {
     private static final int ACTIVITY_CHOOSE_FILE = 3;
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conformar_hogar);
 
 
-
         usuarioLogin = Session.LoadCookie(getApplication());
         String fch = fechaActual().replace("/", "");
-        fch = fch.replace(" ","");
-        fch = fch.replace(":","");
+        fch = fch.replace(" ", "");
+        fch = fch.replace(":", "");
         UIDhogar = UUID.randomUUID().toString();
-        UIDhogar = UIDhogar.substring(0,4) + "-"+usuarioLogin.getIdusuario() + "-"+fch;
+        UIDhogar = UIDhogar.substring(0, 4) + "-" + usuarioLogin.getIdusuario() + "-" + fch;
         miembrosHogar = new ArrayList<>();
 
         pdBuscando = new ProgressDialog(this);
@@ -150,7 +146,6 @@ public class conformarHogar extends AppCompatActivity    {
                 dialog.cancel();
             }
         });
-
 
 
         pdIniciandoEncuesta = new ProgressDialog(this);
@@ -191,8 +186,6 @@ public class conformarHogar extends AppCompatActivity    {
         llvaletFecNac = (LinearLayout) findViewById(R.id.llvaletFecNac);
 
 
-
-
         abActivity = getSupportActionBar();
         abActivity.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.emc_red)));
         abActivity.setHomeAsUpIndicator(R.mipmap.ic_launcher);
@@ -202,15 +195,12 @@ public class conformarHogar extends AppCompatActivity    {
         abActivity.setHomeButtonEnabled(true);
 
 
-
         myDB = new DbHelper(this);
 
         LayoutInflater mInflater = LayoutInflater.from(this);
         View mCustomView = mInflater.inflate(R.layout.menu_hogar, null);
         abActivity.setCustomView(mCustomView);
         abActivity.setDisplayShowCustomEnabled(true);
-
-
 
 
         llBuscando = (LinearLayout) findViewById(R.id.llBuscando);
@@ -243,8 +233,7 @@ public class conformarHogar extends AppCompatActivity    {
 
         //498 ANDAGUEDAMOVIL
         //if(usuarioLogin.getIdPerfil().toUpperCase().equals("498"))
-        if( usuarioLogin.getNombrePerfil().toUpperCase().equals("NRC"))
-        {
+        if (usuarioLogin.getNombrePerfil().toUpperCase().equals("NRC")) {
 
             llParametricas.setVisibility(View.GONE);
             llPresentacion.setVisibility(View.VISIBLE);
@@ -253,8 +242,7 @@ public class conformarHogar extends AppCompatActivity    {
 
         }
 
-        if( usuarioLogin.getIdPerfil().toUpperCase().equals("710"))
-        {
+        if (usuarioLogin.getIdPerfil().toUpperCase().equals("710")) {
 
             llParametricas.setVisibility(View.GONE);
             llaUTORIZA.setVisibility(View.VISIBLE);
@@ -264,12 +252,10 @@ public class conformarHogar extends AppCompatActivity    {
         }
 
 
-        if(usuarioLogin.getNombrePerfil().toUpperCase().equals("ANDAGUEDAMOVIL") )
-        {
+        if (usuarioLogin.getNombrePerfil().toUpperCase().equals("ANDAGUEDAMOVIL")) {
             llHogar.setVisibility(View.VISIBLE);
 
         }
-
 
 
         btAceptar.setOnClickListener(new View.OnClickListener() {
@@ -319,7 +305,6 @@ public class conformarHogar extends AppCompatActivity    {
         });
 
 
-
         llAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -334,38 +319,37 @@ public class conformarHogar extends AppCompatActivity    {
 
                 final View vi = v;
 
-                if(usuarioLogin.getIdPerfil().equals("710")){
+                if (usuarioLogin.getIdPerfil().equals("710")) {
 
                     responseVictimas responseVi = new responseVictimas() {
                         @Override
                         public void resultadoVictimas(List<emc_victimas_nosugar> lsVictimasRP, List<emc_personas_encuestas_no_sugar> lsResultadoPersonasEncuestadas) {
 
-                            if(lsResultadoPersonasEncuestadas.size()>0){
+                            if (lsResultadoPersonasEncuestadas.size() > 0) {
                                 capitulo12 = true;
-                            }
-                            else{
+                            } else {
                                 capitulo12 = false;
                             }
 
                             responseCrearHogar responsecrearHogar = new responseCrearHogar() {
                                 @Override
                                 public void resultado(boolean exito, emc_hogares hogar) {
-                                    if(exito) {
+                                    if (exito) {
                                         Session.SaveHogarActual(getApplication(), hogar);
                                         Intent dilPregunta = new Intent(vi.getContext(), DiligenciarPregunta.class);
                                         startActivity(dilPregunta);
                                         finish();
 
-                                    }else{
-                                            pdIniciandoEncuesta.hide();
-                                            Toast.makeText(getBaseContext(), "Debe seleccionar el responsable del hogar", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        pdIniciandoEncuesta.hide();
+                                        Toast.makeText(getBaseContext(), "Debe seleccionar el responsable del hogar", Toast.LENGTH_SHORT).show();
 
 
                                     }
                                 }
                             };
 
-                            asyncCrearHogar atCrearHogar = new asyncCrearHogar(getBaseContext(), responsecrearHogar, miembrosHogar, UIDhogar,usuarioLogin,  lsVictimas,  myDB,capitulo12);
+                            asyncCrearHogar atCrearHogar = new asyncCrearHogar(getBaseContext(), responsecrearHogar, miembrosHogar, UIDhogar, usuarioLogin, lsVictimas, myDB, capitulo12);
                             atCrearHogar.execute();
 
                         }
@@ -375,46 +359,44 @@ public class conformarHogar extends AppCompatActivity    {
                     atBDocumento.execute();
 
 
-                }else{
+                } else {
                     responseCrearHogar responsecrearHogar = new responseCrearHogar() {
                         @Override
                         public void resultado(boolean exito, emc_hogares hogar) {
-                            if(exito) {
+                            if (exito) {
                                 Session.SaveHogarActual(getApplication(), hogar);
                                 Intent dilPregunta = new Intent(vi.getContext(), DiligenciarPregunta.class);
                                 startActivity(dilPregunta);
                                 finish();
 
-                            }else{
-                                    pdIniciandoEncuesta.hide();
-                                    Toast.makeText(getBaseContext(), "Debe seleccionar el responsable del hogar", Toast.LENGTH_SHORT).show();
+                            } else {
+                                pdIniciandoEncuesta.hide();
+                                Toast.makeText(getBaseContext(), "Debe seleccionar el responsable del hogar", Toast.LENGTH_SHORT).show();
                             }
                         }
                     };
-                    asyncCrearHogar atCrearHogar = new asyncCrearHogar(getBaseContext(), responsecrearHogar, miembrosHogar, UIDhogar,usuarioLogin,  lsVictimas,  myDB,capitulo12);
+                    asyncCrearHogar atCrearHogar = new asyncCrearHogar(getBaseContext(), responsecrearHogar, miembrosHogar, UIDhogar, usuarioLogin, lsVictimas, myDB, capitulo12);
                     atCrearHogar.execute();
                 }
 
 
-
-
-                }
+            }
         });
 
         vicResponse = new conformarHogarResponse() {
             @Override
             public void onClickAgregarVictimaResponse(Integer position) {
-                if(lsVictimas.size() > 0){
+                if (lsVictimas.size() > 0) {
                     llResultados.setVisibility(View.GONE);
                     boolean agregar = true;
                     emc_victimas_nosugar vicSeleccion = lsVictimas.get(position);
 
-                    for(Integer conMH = 0; conMH < miembrosHogar.size(); conMH++){
-                        if(miembrosHogar.get(conMH).getPer_idpersona().equals(String.valueOf(vicSeleccion.getConsPersona())))
+                    for (Integer conMH = 0; conMH < miembrosHogar.size(); conMH++) {
+                        if (miembrosHogar.get(conMH).getPer_idpersona().equals(String.valueOf(vicSeleccion.getConsPersona())))
                             agregar = false;
                     }
 
-                    if(agregar){
+                    if (agregar) {
                         emc_miembros_hogar nuevoMiembro = new emc_miembros_hogar();
                         nuevoMiembro.setHog_codigo(UIDhogar);
                         nuevoMiembro.setPer_idpersona(String.valueOf(vicSeleccion.getConsPersona()));
@@ -425,10 +407,10 @@ public class conformarHogar extends AppCompatActivity    {
                         nuevoMiembro.setApellido1(vicSeleccion.getApellido1());
                         nuevoMiembro.setApellido2(vicSeleccion.getApellido2());
                         String fecNac = "01/01/0001";
-                        if(!vicSeleccion.getFecNacimiento().equals(""))
+                        if (!vicSeleccion.getFecNacimiento().equals(""))
                             fecNac = vicSeleccion.getFecNacimiento();
 
-                        if(fecNac.length()>2){
+                        if (fecNac.length() > 2) {
                             fecNac = fecNac.replace("ENE", "01");
                             fecNac = fecNac.replace("FEB", "02");
                             fecNac = fecNac.replace("MAR", "03");
@@ -464,26 +446,26 @@ public class conformarHogar extends AppCompatActivity    {
 
             @Override
             public void onDeleteMiembroHogar(Integer position) {
-                if(miembrosHogar.size() > position){
+                if (miembrosHogar.size() > position) {
 
-                    String[] parRes = { miembrosHogar.get(position).documento,miembrosHogar.get(position).getPer_idpersona(),
-                                        miembrosHogar.get(position).documento,miembrosHogar.get(position).getPer_idpersona()};
+                    String[] parRes = {miembrosHogar.get(position).documento, miembrosHogar.get(position).getPer_idpersona(),
+                            miembrosHogar.get(position).documento, miembrosHogar.get(position).getPer_idpersona()};
                     emc_miembros_hogar.deleteAll(emc_miembros_hogar.class,
                             "DOCUMENTO = ? " +
                                     "AND PERIDPERSONA = ? AND USUFECHACREACION = " +
                                     "(SELECT MAX(USUFECHACREACION) FROM  EMCMIEMBROSHOGAR WHERE DOCUMENTO = ? AND PERIDPERSONA = ? )", parRes);
 
 
-                    String[] parP = { miembrosHogar.get(position).getPer_idpersona(),miembrosHogar.get(position).documento};
-                    emc_victimas.deleteAll(emc_victimas.class, "CONS_PERSONA = ? AND DOCUMENTO = ?",parP);
+                    String[] parP = {miembrosHogar.get(position).getPer_idpersona(), miembrosHogar.get(position).documento};
+                    emc_victimas.deleteAll(emc_victimas.class, "CONS_PERSONA = ? AND DOCUMENTO = ?", parP);
 
                     miembrosHogar.remove(miembrosHogar.get(position));
 
 
-                    if(miembro.size() > 0){
+                    if (miembro.size() > 0) {
                         try {
                             miembro.remove(miembro.get(position));
-                        }catch (Exception e){
+                        } catch (Exception e) {
 
                         }
 
@@ -491,7 +473,7 @@ public class conformarHogar extends AppCompatActivity    {
 
                     adMiembros.notifyDataSetChanged();
 
-                    if(miembrosHogar.size() == 0 && ( !usuarioLogin.getIdPerfil().toUpperCase().equals("638") &&   !usuarioLogin.getIdPerfil().toUpperCase().equals("658") &&   !usuarioLogin.getIdPerfil().toUpperCase().equals("710")) )
+                    if (miembrosHogar.size() == 0 && (!usuarioLogin.getIdPerfil().toUpperCase().equals("638") && !usuarioLogin.getIdPerfil().toUpperCase().equals("658") && !usuarioLogin.getIdPerfil().toUpperCase().equals("710")))
 
                         llHogar.setVisibility(View.GONE);
                 }
@@ -500,34 +482,35 @@ public class conformarHogar extends AppCompatActivity    {
             @Override
             public void onSelectTipoPersona(Integer position) {
 
-                if(miembrosHogar.size() > position){
-                    for(int conM = 0; conM < miembrosHogar.size(); conM++){
-                        if(conM == position){
+                int mayoresedad = 0;
+                int menoresedad = 0;
+
+                if (miembrosHogar.size() > position) {
+                    for (int conM = 0; conM < miembrosHogar.size(); conM++) {
+                        if (conM == position) {
 
                             emc_miembros_hogar vicSeleccion = miembrosHogar.get(position);
-                            String fecha =  vicSeleccion.getFecNacimiento();
+                            String fecha = vicSeleccion.getFecNacimiento();
 
                             String dia = "";
                             String mes = "";
                             String anio = null;
-                            if(fecha.equals("--") || fecha.equals("-")){
+                            if (fecha.equals("--") || fecha.equals("-")) {
                                 dia = "01";
                                 mes = "01";
                                 anio = "1970";
 
 
-                            }else{
+                            } else {
                                 dia = fecha.substring(0, 2);
                                 mes = fecha.substring(3, 5);
 
                             }
 
-                            if(fecha.length() == 9)
-                            {
+                            if (fecha.length() == 9) {
                                 String mesV = fecha.substring(3, 6);
 
-                                switch( mesV )
-                                {
+                                switch (mesV) {
                                     case "JAN":
                                         mes = "01";
                                         break;
@@ -569,22 +552,21 @@ public class conformarHogar extends AppCompatActivity    {
                                 }
 
                                 anio = fecha.substring(7, 9);
-                                if(Integer.valueOf(anio) > 16){
+                                if (Integer.valueOf(anio) > 16) {
                                     anio = "19" + anio;
-                                }else{
+                                } else {
                                     anio = "20" + anio;
                                 }
 
-                            }else if(fecha.length() == 8)
-                            {
-                                mes= fecha.substring(3, 5);
+                            } else if (fecha.length() == 8) {
+                                mes = fecha.substring(3, 5);
                                 anio = fecha.substring(6, 8);
-                                if(Integer.valueOf(anio) > 16){
+                                if (Integer.valueOf(anio) > 16) {
                                     anio = "19" + anio;
-                                }else{
+                                } else {
                                     anio = "20" + anio;
                                 }
-                            }else if(fecha.length() == 10){
+                            } else if (fecha.length() == 10) {
                                 anio = fecha.substring(6, 10);
 
                             }
@@ -594,38 +576,59 @@ public class conformarHogar extends AppCompatActivity    {
                             for (Integer cMHFv = 0; cMHFv < miembrosHogar.size(); cMHFv++) {
                                 emc_miembros_hogar miembroFv = miembrosHogar.get(cMHFv);
                                 String estado = miembroFv.getEstado().toUpperCase();
-                                if(estado.equals("INCLUIDO")){
+                                if (estado.equals("INCLUIDO")) {
                                     validadorEstado = true;
                                     break;
                                 }
                             }
 
 
-                            if(anio != null){
-                                Integer edad = general.CalcularEdad(Integer.valueOf(anio), Integer.valueOf(mes), Integer.valueOf(dia) );
-                                if(usuarioLogin.getIdPerfil().equals("710" ) && validadorEstado==false){
+                            if (anio != null) {
+                                Integer edad = general.CalcularEdad(Integer.valueOf(anio), Integer.valueOf(mes), Integer.valueOf(dia));
+                                if (edad >= 18) {
+                                    mayoresedad++;
+                                }
+                                if (edad < 18) {
+                                    menoresedad++;
+                                }
 
-                                    if(edad >= 18){
-                                        //Toast.makeText(getBaseContext(), "Selecciono como jefe de hogar a : "+vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1() , Toast.LENGTH_SHORT).show();
-                                        String nombre = vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1();
+                                if (edad < 18 && (miembrosHogar.get(position).getTipoPersona().equals("AUTORIZADO") || miembrosHogar.get(position).getTipoPersona().equals("TUTOR")
+                                        || miembrosHogar.get(position).getTipoPersona().equals("CUIDADOR PERMANENTE"))) {
+                                    Toast.makeText(getBaseContext(), "El Autorizado, Tutor y Cuidador Permanente no puede ser menor de edad", Toast.LENGTH_SHORT).show();
+                                }
+                                if (miembrosHogar.get(0).getEstado().equals("NO INCLUIDO") && miembrosHogar.get(position).getTipoPersona().equals("AUTORIZADO")) {
+                                    Toast.makeText(getBaseContext(), "El Autorizado debe estar Incluido en el RUV", Toast.LENGTH_SHORT).show();
+                                }
+                                if (miembrosHogar.size() < 2 && miembrosHogar.get(position).getTipoPersona().equals("TUTOR")) {
+                                    Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 2 miembros de hogar en el grupo familiar", Toast.LENGTH_SHORT).show();
+                                }
+                                if (miembrosHogar.size() > 1 && miembrosHogar.get(position).getTipoPersona().equals("TUTOR") && menoresedad < 1) {
+                                    Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 1 menor de edad en el grupo familiar", Toast.LENGTH_SHORT).show();
+                                }
+                                if (miembrosHogar.get(position).getTipoPersona().equals("CUIDADOR PERMANENTE") && mayoresedad < 2) {
+                                    Toast.makeText(getBaseContext(), "Para seleccionar Cuidador Permanente debe haber minimo un miembro de hogar mayor de edad diferente del Cuidador", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    if (usuarioLogin.getIdPerfil().equals("710") && validadorEstado == false) {
+
+                                        if (edad >= 18) {
+
+                                            String nombre = vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1();
+                                            miembrosHogar.get(conM).setInd_jefe("SI");
+
+                                        } else {
+                                            Toast.makeText(getBaseContext(), "El jefe de hogar debe ser mayor a 18 años", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                    } else if (edad > 17) {
                                         miembrosHogar.get(conM).setInd_jefe("SI");
-                                        //Toast.makeText(getBaseContext(), "Selecciono como jefe de hogar a : "+vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1() , Toast.LENGTH_SHORT).show();
-                                    }else{
+                                    } else {
                                         Toast.makeText(getBaseContext(), "El jefe de hogar debe ser mayor a 18 años", Toast.LENGTH_SHORT).show();
                                     }
-
-                                }else if(edad > 17)
-                                {
-                                    //Toast.makeText(getBaseContext(), "Selecciono como jefe de hogar a : "+vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1() , Toast.LENGTH_SHORT).show();
-                                    //String nombre = vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1();
-                                    miembrosHogar.get(conM).setInd_jefe("SI");
-                                }else
-                                {
-                                    Toast.makeText(getBaseContext(), "El jefe de hogar debe ser mayor a 18 años", Toast.LENGTH_SHORT).show();
                                 }
+
                             }
 
-                        }else{
+                        } else {
                             miembrosHogar.get(conM).setInd_jefe("");
                         }
                     }
@@ -638,36 +641,35 @@ public class conformarHogar extends AppCompatActivity    {
             public void onSelectJefeHogar(Integer position, Integer tipoPersona) {
 
                 boolean hogarvalido = true;
+                int mayoresedad = 0;
+                int menoresedad = 0;
 
-                    if(miembrosHogar.size() > position){
-                        for(int conM = 0; conM < miembrosHogar.size(); conM++){
-                            if(tipoPersona == 1 || tipoPersona == 2 || tipoPersona == 3){
-                                if(conM == position){
+                if (miembrosHogar.size() > position) {
+                    for (int conM = 0; conM < miembrosHogar.size(); conM++) {
+                        if (tipoPersona == 1 || tipoPersona == 2 || tipoPersona == 3) {
+                            if (conM == position) {
 
                                 emc_miembros_hogar vicSeleccion = miembrosHogar.get(position);
-                                String fecha =  vicSeleccion.getFecNacimiento();
+                                String fecha = vicSeleccion.getFecNacimiento();
 
                                 String dia = "";
                                 String mes = "";
                                 String anio = null;
-                                if(fecha.equals("--") || fecha.equals("-")){
+                                if (fecha.equals("--") || fecha.equals("-")) {
                                     dia = "01";
                                     mes = "01";
                                     anio = "1970";
 
-
-                                }else{
+                                } else {
                                     dia = fecha.substring(0, 2);
                                     mes = fecha.substring(3, 5);
 
                                 }
 
-                                if(fecha.length() == 9)
-                                {
+                                if (fecha.length() == 9) {
                                     String mesV = fecha.substring(3, 6);
 
-                                    switch( mesV )
-                                    {
+                                    switch (mesV) {
                                         case "JAN":
                                             mes = "01";
                                             break;
@@ -709,22 +711,21 @@ public class conformarHogar extends AppCompatActivity    {
                                     }
 
                                     anio = fecha.substring(7, 9);
-                                    if(Integer.valueOf(anio) > 16){
+                                    if (Integer.valueOf(anio) > 16) {
                                         anio = "19" + anio;
-                                    }else{
+                                    } else {
                                         anio = "20" + anio;
                                     }
 
-                                }else if(fecha.length() == 8)
-                                {
-                                    mes= fecha.substring(3, 5);
+                                } else if (fecha.length() == 8) {
+                                    mes = fecha.substring(3, 5);
                                     anio = fecha.substring(6, 8);
-                                    if(Integer.valueOf(anio) > 16){
+                                    if (Integer.valueOf(anio) > 16) {
                                         anio = "19" + anio;
-                                    }else{
+                                    } else {
                                         anio = "20" + anio;
                                     }
-                                }else if(fecha.length() == 10){
+                                } else if (fecha.length() == 10) {
                                     anio = fecha.substring(6, 10);
 
                                 }
@@ -734,43 +735,70 @@ public class conformarHogar extends AppCompatActivity    {
                                 for (Integer cMHFv = 0; cMHFv < miembrosHogar.size(); cMHFv++) {
                                     emc_miembros_hogar miembroFv = miembrosHogar.get(cMHFv);
                                     String estado = miembroFv.getEstado().toUpperCase();
-                                    if(estado.equals("INCLUIDO")){
+                                    if (estado.equals("INCLUIDO")) {
                                         validadorEstado = true;
                                         break;
                                     }
                                 }
+                                //Verifica la edad por cada miembro de hogar
+                                for (Integer cMHFv = 0; cMHFv < miembrosHogar.size(); cMHFv++) {
+                                    emc_miembros_hogar miembroFv = miembrosHogar.get(cMHFv);
+                                    String fecNacimiento = miembroFv.getFecNacimiento();
+                                    Integer edadnacimiento = general.CalcularEdad(fecNacimiento);
+                                    if (edadnacimiento >= 18) {
+                                        mayoresedad++;
+                                    }
+                                    if (edadnacimiento < 18) {
+                                        menoresedad++;
+                                    }
+                                }
+
+                                if (anio != null) {
+                                    Integer edad = general.CalcularEdad(Integer.valueOf(anio), Integer.valueOf(mes), Integer.valueOf(dia));
 
 
-                                if(anio != null){
-                                    Integer edad = general.CalcularEdad(Integer.valueOf(anio), Integer.valueOf(mes), Integer.valueOf(dia) );
-                                    if(usuarioLogin.getIdPerfil().equals("710" ) && validadorEstado==false){
+                                    if (edad < 18 && (tipoPersona == 1 || tipoPersona == 2 || tipoPersona == 3)) {
+                                        adMiembros.notifyDataSetChanged();
+                                        Toast.makeText(getBaseContext(), "El Autorizado, Tutor y Cuidador Permanente no puede ser menor de edad", Toast.LENGTH_SHORT).show();
+                                    } else if (miembrosHogar.get(0).getEstado().equals("NO INCLUIDO") && tipoPersona == 1) {
+                                        adMiembros.notifyDataSetChanged();
+                                        Toast.makeText(getBaseContext(), "El Autorizado debe estar Incluido en el RUV", Toast.LENGTH_SHORT).show();
+                                    } else if (miembrosHogar.size() < 2 && tipoPersona == 2) {
+                                        adMiembros.notifyDataSetChanged();
+                                        Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 2 miembros de hogar en el grupo familiar", Toast.LENGTH_SHORT).show();
+                                    } else if (miembrosHogar.size() > 1 && tipoPersona == 2 && menoresedad < 1) {
+                                        adMiembros.notifyDataSetChanged();
+                                        Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 1 menor de edad en el grupo familiar", Toast.LENGTH_SHORT).show();
+                                    } else if (tipoPersona == 3 && mayoresedad < 2) {
+                                        adMiembros.notifyDataSetChanged();
+                                        Toast.makeText(getBaseContext(), "Para seleccionar Cuidador Permanente debe haber minimo un miembro de hogar mayor de edad diferente del Cuidador", Toast.LENGTH_SHORT).show();
+                                    } else if (usuarioLogin.getIdPerfil().equals("710") && validadorEstado == false) {
 
-                                        if(edad >= 18){
-                                            //Toast.makeText(getBaseContext(), "Selecciono como jefe de hogar a : "+vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1() , Toast.LENGTH_SHORT).show();
-                                            String nombre = vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1();
+                                        if (edad >= 18) {
+
+                                            String nombre = vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1();
                                             miembrosHogar.get(conM).setInd_jefe("SI");
-                                        }else{
+                                        } else {
                                             hogarvalido = false;
                                             miembrosHogar.get(conM).setInd_jefe("");
                                             adMiembros.notifyDataSetChanged();
                                             Toast.makeText(getBaseContext(), "El jefe de hogar debe ser mayor a 18 años", Toast.LENGTH_SHORT).show();
                                         }
 
-                                    }else if(edad > 17)
-                                    {
-                                        Toast.makeText(getBaseContext(), "Selecciono como responsable de hogar a : "+vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1() , Toast.LENGTH_SHORT).show();
-                                        //String nombre = vicSeleccion.getNombre1() + " " +vicSeleccion.getApellido1();
+                                    } else if (edad > 17) {
+                                        Toast.makeText(getBaseContext(), "Selecciono como responsable de hogar a : " + vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1(), Toast.LENGTH_SHORT).show();
+
                                         miembrosHogar.get(conM).setInd_jefe("SI");
                                         miembrosHogar.get(conM).setTipoPersona(tipoPersona.toString());
-                                    }else
-                                    {
+                                    } else {
                                         hogarvalido = false;
                                         adMiembros.notifyDataSetChanged();
                                         miembrosHogar.get(conM).setInd_jefe("");
                                         Toast.makeText(getBaseContext(), "El jefe de hogar debe ser mayor a 17 años", Toast.LENGTH_SHORT).show();
                                     }
+
                                 }
-                                }/*else{
+                            }/*else{
                             miembrosHogar.get(conM).setInd_jefe("");
                         }*/
                         }
@@ -783,24 +811,24 @@ public class conformarHogar extends AppCompatActivity    {
                 }
 
                 int totaljefe = 0;
-                List<emc_miembros_hogar>  lismi =adMiembros.getItems();
+                List<emc_miembros_hogar> lismi = adMiembros.getItems();
 
-                if(hogarvalido == false){
-                    for(int i = 0; i < lismi.size(); i++){
+                if (hogarvalido == false) {
+                    for (int i = 0; i < lismi.size(); i++) {
                         emc_miembros_hogar mi = lismi.get(i);
                         mi.setInd_jefe("");
                     }
                 }
 
-                if(hogarvalido){
-                    for(int i = 0; i < lismi.size(); i++){
+                if (hogarvalido) {
+                    for (int i = 0; i < lismi.size(); i++) {
                         emc_miembros_hogar mi = lismi.get(i);
-                        if(mi.getInd_jefe().equals("SI")){
+                        if (mi.getInd_jefe().equals("SI")) {
                             totaljefe = totaljefe + 1;
                         }
                     }
-                    if(totaljefe > 1 ){
-                        for(int i = 0; i < lismi.size(); i++){
+                    if (totaljefe > 1) {
+                        for (int i = 0; i < lismi.size(); i++) {
                             emc_miembros_hogar mi = lismi.get(i);
                             mi.setInd_jefe("");
                         }
@@ -846,19 +874,19 @@ public class conformarHogar extends AppCompatActivity    {
         miemResponse = new conformarHogarResponse() {
             @Override
             public void onClickAgregarVictimaResponse(Integer position) {
-                if(lsVicHogar.size() > 0){
+                if (lsVicHogar.size() > 0) {
                     llAgregarMHogar.setVisibility(View.GONE);
                     llResultados.setVisibility(View.GONE);
                     llHogar.setVisibility(View.VISIBLE);
                     boolean agregar = true;
                     emc_victimas_nosugar vicSeleccion = lsVicHogar.get(position);
 
-                    for(Integer conMH = 0; conMH < miembrosHogar.size(); conMH++){
-                        if(miembrosHogar.get(conMH).getPer_idpersona().equals(String.valueOf(vicSeleccion.getConsPersona())))
+                    for (Integer conMH = 0; conMH < miembrosHogar.size(); conMH++) {
+                        if (miembrosHogar.get(conMH).getPer_idpersona().equals(String.valueOf(vicSeleccion.getConsPersona())))
                             agregar = false;
                     }
 
-                    if(agregar){
+                    if (agregar) {
                         emc_miembros_hogar nuevoMiembro = new emc_miembros_hogar();
                         nuevoMiembro.setHog_codigo(UIDhogar);
                         nuevoMiembro.setPer_idpersona(String.valueOf(vicSeleccion.getConsPersona()));
@@ -869,7 +897,7 @@ public class conformarHogar extends AppCompatActivity    {
                         nuevoMiembro.setApellido1(general.remoAcents(vicSeleccion.getApellido1()));
                         nuevoMiembro.setApellido2(general.remoAcents(vicSeleccion.getApellido2()));
                         String fecNac = "01/01/0001";
-                        if(!vicSeleccion.getFecNacimiento().equals(""))
+                        if (!vicSeleccion.getFecNacimiento().equals(""))
                             fecNac = vicSeleccion.getFecNacimiento();
                         nuevoMiembro.setFecNacimiento(fecNac);
                         nuevoMiembro.setEstado(vicSeleccion.getEstado());
@@ -904,7 +932,7 @@ public class conformarHogar extends AppCompatActivity    {
             }
 
             @Override
-            public void onSelectTipoPersona(Integer position){
+            public void onSelectTipoPersona(Integer position) {
 
             }
 
@@ -934,20 +962,17 @@ public class conformarHogar extends AppCompatActivity    {
                 btAceptarNoAceptar.setVisibility(View.GONE);
 
 
-                int lND =  etNumDocumento.length();
+                int lND = etNumDocumento.length();
 
-                if(etNumDocumento.equals("Número de documento"))
-                {
+                if (etNumDocumento.equals("Número de documento")) {
                     llBuscando.setVisibility(View.GONE);
                     pdBuscando.hide();
                     Toast.makeText(getBaseContext(), "Debe ingresar un número de documento", Toast.LENGTH_SHORT).show();
-                }
-                else if (lND<=0)
-                {
+                } else if (lND <= 0) {
                     llBuscando.setVisibility(View.GONE);
                     pdBuscando.hide();
                     Toast.makeText(getBaseContext(), "Debe ingresar un número de documento", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
 
                     llBuscando.setVisibility(View.VISIBLE);
                     //lsVictimas = emc_victimas.find(emc_victimas.class, "documento = ?", etNumDocumento.getText().toString());
@@ -958,9 +983,9 @@ public class conformarHogar extends AppCompatActivity    {
 
                             lsVicHogar = lsVictimasRP;
 
-                            if(lsResultadoPersonasEncuestadas !=null){
+                            if (lsResultadoPersonasEncuestadas != null) {
 
-                                if(lsResultadoPersonasEncuestadas.size()>0){
+                                if (lsResultadoPersonasEncuestadas.size() > 0) {
 
                                     textoBuscando.setTextColor(getResources().getColor(R.color.emc_red));
                                     StringBuilder builder = new StringBuilder();
@@ -1002,7 +1027,7 @@ public class conformarHogar extends AppCompatActivity    {
                                         llNuevaPersona.setVisibility(View.VISIBLE);
                                     }
 
-                                }else{
+                                } else {
 
                                     lsVictimas = lsVictimasRP;
                                     if (lsVictimas.size() > 0) {
@@ -1031,7 +1056,7 @@ public class conformarHogar extends AppCompatActivity    {
                                     }
                                 }
 
-                            }else{
+                            } else {
 
                                 lsVictimas = lsVictimasRP;
                                 if (lsVictimas.size() > 0) {
@@ -1121,24 +1146,22 @@ public class conformarHogar extends AppCompatActivity    {
         spTipoDoc = (Spinner) findViewById(R.id.spTipoDoc);
 
 
-        ArrayAdapter<String> adTipoDoc =  new ArrayAdapter<String>(this,  android.R.layout.simple_spinner_item, lsTipoDoc);
+        ArrayAdapter<String> adTipoDoc = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, lsTipoDoc);
         spTipoDoc.setAdapter(adTipoDoc);
 
 
         spTipoDoc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id)
-            {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
 
-                if(adapterView.getItemAtPosition(pos).toString().equals("INDOCUMENTADO")){
+                if (adapterView.getItemAtPosition(pos).toString().equals("INDOCUMENTADO")) {
                     etNumDoc.setText("000");
                 }
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
@@ -1180,7 +1203,6 @@ public class conformarHogar extends AppCompatActivity    {
             public void onClick(View v) {
 
 
-
                 pgMensajeCrearPersona.setCancelable(false);
                 pgMensajeCrearPersona.setCanceledOnTouchOutside(false);
                 pgMensajeCrearPersona.show();
@@ -1197,10 +1219,10 @@ public class conformarHogar extends AppCompatActivity    {
 
                 idPersona = gestionEncuestas.execCalculos("SELECT MAX(CONS_PERSONA) FROM EMCVICTIMAS;");
 
-                if(idPersona == null){
+                if (idPersona == null) {
                     idPersona = 90000000;
                 }
-                if(idPersona < 90000000){
+                if (idPersona < 90000000) {
                     idPersona = 90000000;
                 }
 
@@ -1286,124 +1308,118 @@ public class conformarHogar extends AppCompatActivity    {
                                     && !etFecNac.getText().toString().equals("") && valFecha==true
                                     && etFecNac.length() == 10) {*/
 
-                            responseAgregarPNoIncluido callback = new responseAgregarPNoIncluido() {
+                responseAgregarPNoIncluido callback = new responseAgregarPNoIncluido() {
 
 
-                                @Override
-                                public void resultado(boolean exito, emc_miembros_hogar nuevaPersona, String idPersona, emc_victimas nuevaPersonaNoIncluido, int reultdoconsult) {
+                    @Override
+                    public void resultado(boolean exito, emc_miembros_hogar nuevaPersona, String idPersona, emc_victimas nuevaPersonaNoIncluido, int reultdoconsult) {
 
-                                    if(exito){
-                                        miembrosHogar.add(nuevaPersona);
-                                        nuevaPersona.save();
+                        if (exito) {
+                            miembrosHogar.add(nuevaPersona);
+                            nuevaPersona.save();
 
-                                        adMiembros.notifyDataSetChanged();
-                                        llNuevaPersona.setVisibility(View.GONE);
+                            adMiembros.notifyDataSetChanged();
+                            llNuevaPersona.setVisibility(View.GONE);
 
-                                        nuevaPersonaNoIncluido.save();
-                                        llAgregar.setVisibility(View.VISIBLE);
+                            nuevaPersonaNoIncluido.save();
+                            llAgregar.setVisibility(View.VISIBLE);
 
-                                        etNumDoc.setText("");
-                                        etNombre1.setText("");
-                                        etNombre2.setText("");
-                                        etApellido1.setText("");
-                                        etApellido2.setText("");
-                                        etFecNac.setText("");
+                            etNumDoc.setText("");
+                            etNombre1.setText("");
+                            etNombre2.setText("");
+                            etApellido1.setText("");
+                            etApellido2.setText("");
+                            etFecNac.setText("");
 
-                                        pgMensajeCrearPersona.hide();
+                            pgMensajeCrearPersona.hide();
 
-                                    }else if(exito == false){
+                        } else if (exito == false) {
 
-                                        if(etNumDoc.getText().toString().equals(""))
-                                        {
-                                            valetNumDoc.setText("Número documento no puede ser vacio");
-                                            llvaletNumDoc.setVisibility(View.VISIBLE);
-                                        }
+                            if (etNumDoc.getText().toString().equals("")) {
+                                valetNumDoc.setText("Número documento no puede ser vacio");
+                                llvaletNumDoc.setVisibility(View.VISIBLE);
+                            }
 
-                                        int lengetNumDoc = etNumDoc.getText().toString().length();
+                            int lengetNumDoc = etNumDoc.getText().toString().length();
 
-                                        if( lengetNumDoc > 11)
-                                        {
-                                            valetNumDoc.setText("Logitud del documento no puede ser mayor a 11 digitos");
-                                            llvaletNumDoc.setVisibility(View.VISIBLE);
+                            if (lengetNumDoc > 11) {
+                                valetNumDoc.setText("Logitud del documento no puede ser mayor a 11 digitos");
+                                llvaletNumDoc.setVisibility(View.VISIBLE);
 
-                                        }
-                                        if(etApellido1.getText().toString().equals(""))
-                                        {
-                                            valtApellido1.setText("Primer apellido no puede estar vacio");
-                                            llvaltApellido1.setVisibility(View.VISIBLE);
+                            }
+                            if (etApellido1.getText().toString().equals("")) {
+                                valtApellido1.setText("Primer apellido no puede estar vacio");
+                                llvaltApellido1.setVisibility(View.VISIBLE);
 
 
-
-                                        }if(etNombre1.getText().toString().equals(""))
-                                        {
-                                            valtNombre1.setText("Primer nombre no puede ser vacio");
-                                            llvaltNombre1.setVisibility(View.VISIBLE);
-                                            pgMensajeCrearPersona.hide();
-
-
-                                        }
-                                        if(etFecNac.getText().toString().equals(""))
-                                        {
+                            }
+                            if (etNombre1.getText().toString().equals("")) {
+                                valtNombre1.setText("Primer nombre no puede ser vacio");
+                                llvaltNombre1.setVisibility(View.VISIBLE);
+                                pgMensajeCrearPersona.hide();
 
 
-                                            valFecNac.setText("Debe ingresar fecha de nacimiento, si no la sabe, ingresar una fecha aproximada");
-                                            llvaletFecNac.setVisibility(View.VISIBLE);
-                                            pgMensajeCrearPersona.hide();
-
-                                        }
-
-                                        boolean valFecha = fechaValida(etFecNac.getText().toString());
-
-                                        if((!etFecNac.getText().toString().equals("") && valFecha==false) || etFecNac.length() != 10 )
-                                        {
-
-                                            valFecNac.setText("Formato de fecha incorrecto");
-                                            llvaletFecNac.setVisibility(View.VISIBLE);
-                                            pgMensajeCrearPersona.hide();
+                            }
+                            if (etFecNac.getText().toString().equals("")) {
 
 
-                                        }
+                                valFecNac.setText("Debe ingresar fecha de nacimiento, si no la sabe, ingresar una fecha aproximada");
+                                llvaletFecNac.setVisibility(View.VISIBLE);
+                                pgMensajeCrearPersona.hide();
 
-                                        String fechaHoy  = fechaActualSinHora();
+                            }
 
-                                        try {
-                                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                                            if(sdf.parse(etFecNac.getText().toString()).before(sdf.parse(fechaHoy))== false) {
+                            boolean valFecha = fechaValida(etFecNac.getText().toString());
+
+                            if ((!etFecNac.getText().toString().equals("") && valFecha == false) || etFecNac.length() != 10) {
+
+                                valFecNac.setText("Formato de fecha incorrecto");
+                                llvaletFecNac.setVisibility(View.VISIBLE);
+                                pgMensajeCrearPersona.hide();
 
 
-                                                valFecNac.setText("Fecha no puede ser mayor a "+fechaHoy);
-                                                llvaletFecNac.setVisibility(View.VISIBLE);
-                                                pgMensajeCrearPersona.hide();
+                            }
 
-                                            }
-                                        }catch (Exception e){
-                                            valFecNac.setText("Fecha no puede ser mayor a "+fechaHoy);
-                                            llvaletFecNac.setVisibility(View.VISIBLE);
-                                            pgMensajeCrearPersona.hide();
-                                        }
+                            String fechaHoy = fechaActualSinHora();
 
-                                        pgMensajeCrearPersona.hide();
+                            try {
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                                if (sdf.parse(etFecNac.getText().toString()).before(sdf.parse(fechaHoy)) == false) {
 
-                                        if(reultdoconsult>0){
 
-                                            etNumDoc.setText("");
-                                            valetNumDoc.setText("Documento registrado como incluido puede consultar el documento en el campo de busqueda");
-                                            llvaletNumDoc.setVisibility(View.VISIBLE);
-                                            Toast.makeText(getBaseContext(), "Documento registrado como incluido puede consultar el documento en el campo de busqueda", Toast.LENGTH_SHORT).show();
-
-                                        }
-
-                                    }
+                                    valFecNac.setText("Fecha no puede ser mayor a " + fechaHoy);
+                                    llvaletFecNac.setVisibility(View.VISIBLE);
+                                    pgMensajeCrearPersona.hide();
 
                                 }
-                            };
+                            } catch (Exception e) {
+                                valFecNac.setText("Fecha no puede ser mayor a " + fechaHoy);
+                                llvaletFecNac.setVisibility(View.VISIBLE);
+                                pgMensajeCrearPersona.hide();
+                            }
 
-                            asyncAgregarNoIncluido auANI = new asyncAgregarNoIncluido(nuevaPersona, UIDhogar, idPersona.toString(), usuarioLogin,spTipoDoc.getSelectedItem().toString(),
-                                    etNumDoc.getText().toString().toUpperCase(),general.remoAcents(etNombre1.getText().toString().toUpperCase()),
-                                    general.remoAcents(etNombre2.getText().toString().toUpperCase()),
-                                    etApellido1.getText().toString().toUpperCase(), etApellido2.getText().toString().toUpperCase(),
-                                    etFecNac.getText().toString(),  callback, myDB,nuevaPersonaNoIncluido);
-                            auANI.execute();
+                            pgMensajeCrearPersona.hide();
+
+                            if (reultdoconsult > 0) {
+
+                                etNumDoc.setText("");
+                                valetNumDoc.setText("Documento registrado como incluido puede consultar el documento en el campo de busqueda");
+                                llvaletNumDoc.setVisibility(View.VISIBLE);
+                                Toast.makeText(getBaseContext(), "Documento registrado como incluido puede consultar el documento en el campo de busqueda", Toast.LENGTH_SHORT).show();
+
+                            }
+
+                        }
+
+                    }
+                };
+
+                asyncAgregarNoIncluido auANI = new asyncAgregarNoIncluido(nuevaPersona, UIDhogar, idPersona.toString(), usuarioLogin, spTipoDoc.getSelectedItem().toString(),
+                        etNumDoc.getText().toString().toUpperCase(), general.remoAcents(etNombre1.getText().toString().toUpperCase()),
+                        general.remoAcents(etNombre2.getText().toString().toUpperCase()),
+                        etApellido1.getText().toString().toUpperCase(), etApellido2.getText().toString().toUpperCase(),
+                        etFecNac.getText().toString(), callback, myDB, nuevaPersonaNoIncluido);
+                auANI.execute();
 
 
                                 /*nuevaPersona.setHog_codigo(UIDhogar);
@@ -1448,12 +1464,12 @@ public class conformarHogar extends AppCompatActivity    {
                                 llAgregar.setVisibility(View.VISIBLE);*/
 
 
-                            //}
+                //}
 
-                        }
+            }
 
-                  //  }
-               // }
+            //  }
+            // }
 
             //}
         });
@@ -1474,14 +1490,14 @@ public class conformarHogar extends AppCompatActivity    {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id==android.R.id.home) {
-           // finish();
+        if (id == android.R.id.home) {
+            // finish();
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public boolean crearHogar(){
+    public boolean crearHogar() {
 
         emc_hogares hogar = new emc_hogares();
 
@@ -1489,14 +1505,14 @@ public class conformarHogar extends AppCompatActivity    {
 
         for (Integer cMH = 0; cMH < miembrosHogar.size(); cMH++) {
             emc_miembros_hogar miembro = miembrosHogar.get(cMH);
-            if(miembro.getInd_jefe().equals("SI")){
+            if (miembro.getInd_jefe().equals("SI")) {
                 tieneJefe = true;
                 break;
             }
 
         }
 
-        if(tieneJefe==true){
+        if (tieneJefe == true) {
 
             hogar.setHog_codigo(UIDhogar);
             hogar.setUsu_usuariocreacion(usuarioLogin.getNombreusuario());
@@ -1508,7 +1524,7 @@ public class conformarHogar extends AppCompatActivity    {
             for (Integer cMH = 0; cMH < miembrosHogar.size(); cMH++) {
                 emc_miembros_hogar miembro = miembrosHogar.get(cMH);
                 miembro.save();
-                if (miembro.getInd_jefe().equals("SI")){
+                if (miembro.getInd_jefe().equals("SI")) {
                     tieneJefe = true;
                 }
 
@@ -1517,8 +1533,7 @@ public class conformarHogar extends AppCompatActivity    {
 
 
                 String valJefe = "NO JEFE";
-                if (miembro.getInd_jefe().equals("SI"))
-                {
+                if (miembro.getInd_jefe().equals("SI")) {
                     valJefe = "JEFE";
                 }
 
@@ -1527,15 +1542,16 @@ public class conformarHogar extends AppCompatActivity    {
                 gestionEncuestas.GIC_INSERT_VALIDADOR_TD(Integer.valueOf(miembro.getPer_idpersona()), miembro.getHog_codigo(), miembro.getTipoDoc(), 1);
 
 
-                lsVictimas = myDB.getlistaVictimasCons_persona(miembro.getDocumento(),miembro.getPer_idpersona().toString());
+                lsVictimas = myDB.getlistaVictimasCons_persona(miembro.getDocumento(), miembro.getPer_idpersona().toString());
                 final String hogarcodigo = miembro.getHog_codigo();
                 if (lsVictimas.size() > 0) {
-                    emc_victimas_nosugar tmPer =  lsVictimas.get(0);
+                    emc_victimas_nosugar tmPer = lsVictimas.get(0);
                     if (tmPer.hv1 != null) {
 
                         if (tmPer.getHv1() == 1) {
                             gestionEncuestas.GIC_INSERT_VALIDADOR_HECHO_AUX(Integer.valueOf(tmPer.getConsPersona()), hogarcodigo, 1, 1);
-                        }if (tmPer.hv2 != null) {
+                        }
+                        if (tmPer.hv2 != null) {
 
                             if (tmPer.getHv2() == 1) {
                                 gestionEncuestas.GIC_INSERT_VALIDADOR_HECHO_AUX(Integer.valueOf(tmPer.getConsPersona()), hogarcodigo, 2, 1);
@@ -1629,17 +1645,17 @@ public class conformarHogar extends AppCompatActivity    {
             return true;
 
 
-        }else{
+        } else {
 
-            try{
+            try {
                 pdIniciandoEncuesta.dismiss();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.getMessage();
             }
 
-            try{
+            try {
                 pdIniciandoEncuesta.hide();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.getMessage();
             }
 
@@ -1656,7 +1672,7 @@ public class conformarHogar extends AppCompatActivity    {
         if (resultCode == RESULT_CANCELED) {
             //Cancelado por el usuario
         }
-        if ((resultCode == RESULT_OK) && (requestCode == ACTIVITY_CHOOSE_FILE )) {
+        if ((resultCode == RESULT_OK) && (requestCode == ACTIVITY_CHOOSE_FILE)) {
             //Procesar el resultado
             Uri uri = data.getData();
 
@@ -1670,10 +1686,9 @@ public class conformarHogar extends AppCompatActivity    {
             try {
 
 
-
                 File forigs = new File(uri.getPath());
                 InputStream in = new FileInputStream(forigs);
-                File forig = new File(Environment.getExternalStorageDirectory(),"soportescuidadortutor/" + forigs.getName());
+                File forig = new File(Environment.getExternalStorageDirectory(), "soportescuidadortutor/" + forigs.getName());
                 OutputStream out = new FileOutputStream(forig);
 
                 try {
@@ -1700,8 +1715,6 @@ public class conformarHogar extends AppCompatActivity    {
             }
 
 
-
-
             //obtener el uri content
 
         /*
@@ -1713,8 +1726,8 @@ public class conformarHogar extends AppCompatActivity    {
 
         }*/
 
+        }
     }
-}
     /*
     public String getRealPathFromURI(Uri contentUri) {
         String realPath = "prueba";
@@ -1723,7 +1736,7 @@ public class conformarHogar extends AppCompatActivity    {
     //13/02/2020
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener  = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@android.support.annotation.NonNull MenuItem item) {
@@ -1751,7 +1764,6 @@ public class conformarHogar extends AppCompatActivity    {
         startActivity(irMainActividy);
         finish();
     }
-
 
 
     //todo sobre el ide https://www.youtube.com/watch?v=XP8weEhPJmA
