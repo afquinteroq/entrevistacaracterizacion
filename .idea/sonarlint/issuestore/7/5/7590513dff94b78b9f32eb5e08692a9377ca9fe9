@@ -1,0 +1,107 @@
+
+\
+java:S1155”">Use isEmpty() to check whether the collection is empty or not.(şÈ×’8¢ı¬‹¨.
+A
+java:S1172g"+Remove this unused method parameter "view".(Šÿó
+u
+java:S1450F"SRemove the "myDB" field and declare it as a local variable in the relevant methods.(îËĞıÿÿÿÿ8“¨Ê¤­.
+[
+java:S3252«"8Use static access with "com.orm.SugarRecord" for "find".(ÙæÑúüÿÿÿÿ8¢ı¬‹¨.
+s
+java:S1192²"WDefine a constant instead of duplicating this literal "USUUSUARIOCREACION = '" 3 times.(×¹¤üÿÿÿÿ
+j
+java:S1104B"OMake pgC a static final constant or non-public and provide accessors if needed.(ƒŠ˜èûÿÿÿÿ
+Y	java:S125Ã"<This block of commented-out lines of code should be removed.(ê§˜İ8ƒ×î‡¡.
+l
+java:S1871“"IThis case's code block is the same as the block for the case on line 525.(ˆÂöìıÿÿÿÿ8ƒ×î‡¡.
+E
+java:S10683"*Remove this unused "mTitle" private field.(’•äÑÿÿÿÿÿ
+^	java:S125—"<This block of commented-out lines of code should be removed.(“³„¬úÿÿÿÿ8»ÛÎ¤­.
+s	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©à¿äüÿÿÿÿ8ƒ×î‡¡.
+X
+java:S18742"=Remove this use of "ActionBarDrawerToggle"; it is deprecated.(°ÅßŸıÿÿÿÿ
+^	java:S125µ"<This block of commented-out lines of code should be removed.(Ãëùÿÿÿÿ8ƒ×î‡¡.
+Y	java:S125"<This block of commented-out lines of code should be removed.(½ğ›ã8ƒ×î‡¡.
+Y
+java:S1854ÿ"6Remove this useless assignment to local variable "lp".(î‘éùÿÿÿÿ8ƒ×î‡¡.
+p
+java:S14504"[Remove the "mDrawerTitle" field and declare it as a local variable in the relevant methods.(·ª†
+[
+java:S3252Ù"8Use static access with "com.orm.SugarRecord" for "find".(şåÆúÿÿÿÿ8¢ı¬‹¨.
+q
+java:S14500"VRemove the "aDrawer" field and declare it as a local variable in the relevant methods.(€ûÂÔüÿÿÿÿ
+Y	java:S125Ì"<This block of commented-out lines of code should be removed.(Ò”Ó­8ƒ×î‡¡.
+O
+java:S1874r"9Remove this use of "setDrawerListener"; it is deprecated.(îÓ“ş
+g
+java:S1871"IThis case's code block is the same as the block for the case on line 525.(šÍä—8ƒ×î‡¡.
+Y	java:S125…"<This block of commented-out lines of code should be removed.(Ü¤İª8ƒ×î‡¡.
+j
+java:S1192·"SDefine a constant instead of duplicating this literal "and indjefe = 'SI'" 3 times.(Ø‡î¢
+L
+java:S1172k"1Remove this unused method parameter "drawerView".(°Ï¦ÿÿÿÿÿ
+p
+java:S14503"URemove the "mTitle" field and declare it as a local variable in the relevant methods.(’•äÑÿÿÿÿÿ
+t
+java:S14508"YRemove the "tvFecLogin" field and declare it as a local variable in the relevant methods.(÷ÿõ“ûÿÿÿÿ
+V
+java:S3252“"8Use static access with "com.orm.SugarRecord" for "find".(Ø‡î¢8¢ı¬‹¨.
+V
+java:S3252·"8Use static access with "com.orm.SugarRecord" for "find".(Ø‡î¢8¢ı¬‹¨.
+s
+java:S1450?"]Remove the "llTransferidas" field and declare it as a local variable in the relevant methods.(îÇÎû
+s
+java:S14507"XRemove the "tvUsuario" field and declare it as a local variable in the relevant methods.(óİãşÿÿÿÿ
+J
+java:S1481ÿ"'Remove this unused "lp" local variable.(î‘éùÿÿÿÿ8ƒ×î‡¡.
+Y	java:S125™"<This block of commented-out lines of code should be removed.(ä¢Âå8ƒ×î‡¡.
+o
+java:S14509"YRemove the "tvFecToken" field and declare it as a local variable in the relevant methods.(™Å
+Y	java:S125º"<This block of commented-out lines of code should be removed.(ä¢Âå8ƒ×î‡¡.
+u
+java:S1450."_Remove the "lvDrawerOpciones" field and declare it as a local variable in the relevant methods.(£°ê²
+\
+java:S1155­">Use isEmpty() to check whether the collection is empty or not.(ë³õÆ8¢ı¬‹¨.
+|
+java:S1450@"aRemove the "llMensajePrimerUso" field and declare it as a local variable in the relevant methods.(¶ˆêÊüÿÿÿÿ
+x
+java:S1450D"bRemove the "llverAdminEncuestas" field and declare it as a local variable in the relevant methods.(Ìê¥Û
+Y	java:S125»"<This block of commented-out lines of code should be removed.(Ä¢¿ê8ƒ×î‡¡.
+a
+java:S1155¸">Use isEmpty() to check whether the collection is empty or not.(ÑæëÊøÿÿÿÿ8¢ı¬‹¨.
+m
+java:S3776K"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(¨Œşÿÿÿÿ
+n
+java:S14506"XRemove the "llAgregar" field and declare it as a local variable in the relevant methods.(°Ÿ´˜
+V
+java:S3252Æ"8Use static access with "com.orm.SugarRecord" for "find".(ÍÕ¼Ï8¢ı¬‹¨.
+J
+java:S1481–",Remove this unused "paramsV" local variable.(ÒÊÛÄ8»ÛÎ¤­.
+Y	java:S125Ç"<This block of commented-out lines of code should be removed.(¢¤ëù8ƒ×î‡¡.
+[
+java:S3252²"8Use static access with "com.orm.SugarRecord" for "find".(×¹¤üÿÿÿÿ8¢ı¬‹¨.
+^	java:S125¼"<This block of commented-out lines of code should be removed.(ù…ıšüÿÿÿÿ8ƒ×î‡¡.
+o
+java:S1450>"YRemove the "llTransfer" field and declare it as a local variable in the relevant methods.(‡Åê
+V
+java:S3252µ"8Use static access with "com.orm.SugarRecord" for "find".(Ø‡î¢8¢ı¬‹¨.
+D
+java:S1068E".Remove this unused "llOpciones" private field.(ÚÚÆÔ
+Y	java:S125Ó"<This block of commented-out lines of code should be removed.(ØÇÛ8ƒ×î‡¡.
+Y	java:S125¬"<This block of commented-out lines of code should be removed.(½ğ›ã8ƒ×î‡¡.
+u
+java:S1450;"ZRemove the "tvVersionBD" field and declare it as a local variable in the relevant methods.(ı£À²üÿÿÿÿ
+e
+java:S1192·"NDefine a constant instead of duplicating this literal "hogcodigo = '" 3 times.(Ø‡î¢
+n
+java:S1450-"YRemove the "abActivity" field and declare it as a local variable in the relevant methods.(â»
+^	java:S125à"<This block of commented-out lines of code should be removed.(«¾Çüÿÿÿÿÿ8ƒ×î‡¡.
+V
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(Â·óÇ8¢ı¬‹¨.
+Y
+java:S1854–";Remove this useless assignment to local variable "paramsV".(ÒÊÛÄ8»ÛÎ¤­.
+D	java:S131Œ""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8ƒ×î‡¡.
+^	java:S125Ø"<This block of commented-out lines of code should be removed.(«¾Çüÿÿÿÿÿ8ƒ×î‡¡.
+Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ä¢Âå8ƒ×î‡¡.
+x
+java:S1450:"]Remove the "tvCerrarSesion" field and declare it as a local variable in the relevant methods.(±š¸Óøÿÿÿÿ

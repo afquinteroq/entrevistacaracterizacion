@@ -1,0 +1,12 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(š³äğ
+t
+java:S1104"YMake ver_idversion a static final constant or non-public and provide accessors if needed.(‡Â‡úÿÿÿÿ
+q
+java:S1104"VMake ver_nombre a static final constant or non-public and provide accessors if needed.(Ø¯ôœşÿÿÿÿ
+r
+java:S1104"WMake ver_version a static final constant or non-public and provide accessors if needed.(æşãùÿÿÿÿÿ
+r	java:S116"XRename this field "ver_idversion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Â‡úÿÿÿÿ
+o	java:S116"URename this field "ver_nombre" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¯ôœşÿÿÿÿ
+p	java:S116"VRename this field "ver_version" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æşãùÿÿÿÿÿ
+T	java:S125"<This block of commented-out lines of code should be removed.(ë¼™„şÿÿÿÿ

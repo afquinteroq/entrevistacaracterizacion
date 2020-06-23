@@ -1,0 +1,8 @@
+
+h	java:S116"SRename this field "cod_dpto" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ç›ô
+l	java:S116"RRename this field "nom_dep" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Åôƒùÿÿÿÿ
+h	java:S116"TRename this field "dane_mpio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤°Ö{
+m	java:S116"SRename this field "nom_mpio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡³Çóþÿÿÿÿ
+p	java:S116"VRename this field "coddane_ver" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ý”°úÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(å€¶ðüÿÿÿÿ
+g	java:S116"RRename this field "nom_ver" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß€‹Ë

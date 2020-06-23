@@ -19,33 +19,4 @@ public class emc_resumen_encuestas_x_usuario extends SugarRecord<emc_resumen_enc
     private String usuario;
     private String estado;
     private String total;
-
-    /*
-    public emc_resumen_encuestas_x_usuario() {
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getTotal() {
-        return total;
-    }
-
-    public void setTotal(String total) {
-        this.total = total;
-    }
-    */
 }

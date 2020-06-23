@@ -1,0 +1,59 @@
+
+‡
+java:S4165È"kRemove this useless assignment; "_Mantener_ZIP" already holds the assigned value along all execution paths.(é••¬ùÿÿÿÿ
+l	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á€˜ïıÿÿÿÿ
+k	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Á¼øÿÿÿÿ
+U
+java:S18545":Remove this useless assignment to local variable "client".(øš¥áıÿÿÿÿ
+i
+java:S2095°"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(£ÕÃŒ
+S
+java:S32522"8Use static access with "com.orm.SugarRecord" for "find".(Ëíşôıÿÿÿÿ
+V	java:S125l"<This block of commented-out lines of code should be removed.(ü‹©´ùÿÿÿÿ
+d
+java:S2095u"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(½Ñº¤
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¬‰Â…
+Q	java:S899Æ";Do something with the "boolean" value returned by "delete".(Ú¨÷
+P	java:S125n"<This block of commented-out lines of code should be removed.(ã‡å?
+F
+java:S14815"+Remove this unused "client" local variable.(øš¥áıÿÿÿÿ
+i
+java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¨æú¸ûÿÿÿÿ
+Q
+java:S1141œ"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨æú¸ûÿÿÿÿ
+e
+java:S2095®"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ãœÒ¹
+Q	java:S125;"<This block of commented-out lines of code should be removed.(Ñ›†Ğ
+T
+java:S1155J">Use isEmpty() to check whether the collection is empty or not.(å¬áµ
+i	java:S100Û"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·˜­’üÿÿÿÿ
+W	java:S125Ï"<This block of commented-out lines of code should be removed.(¼³ÑÒıÿÿÿÿ
+T	java:S106î"9Replace this use of System.out or System.err by a logger.( óµùÿÿÿÿ
+g	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙßöÈ
+Z
+java:S2583Å"DChange this condition so that it does not always evaluate to "false"(Ğ÷Ì5
+h
+java:S2095o"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ÆÁõ¡øÿÿÿÿ
+`
+java:S1128"JRemove this unused import 'co.com.rni.encuestadormovil.model.emc_version'.(ÇààÎ
+e
+java:S4042Æ"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(Ú¨÷
+j
+java:S4042ë"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(ä¥µŞøÿÿÿÿ
+b
+java:S1192:"LDefine a constant instead of duplicating this literal "/data/data/" 3 times.(º¦Ü¡
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜•Ûô
+>
+java:S1148Y"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£«ìà
+f	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±öÊ
+S
+java:S3252H"8Use static access with "com.orm.SugarRecord" for "find".(¶Ûºüıÿÿÿÿ
+O	java:S106ì"9Replace this use of System.out or System.err by a logger.(ûíğ
+V	java:S125""<This block of commented-out lines of code should be removed.(ãô…÷şÿÿÿÿ
+l	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥†¾¡øÿÿÿÿ
+Y
+java:S1155B">Use isEmpty() to check whether the collection is empty or not.(Í¸ä—ùÿÿÿÿ
+c
+java:S2095 "LUse try-with-resources or close this "ZipInputStream" in a "finally" clause.(ÙßöÈ

@@ -14,6 +14,7 @@ import java.util.List;
 
 import co.com.rni.encuestadormovil.model.emc_usuarios;
 import co.com.rni.encuestadormovil.model.emc_version;
+import co.com.rni.encuestadormovil.sqlite.DbHelper;
 import it.sauronsoftware.ftp4j.FTPClient;
 
 
@@ -30,6 +31,7 @@ public class asyncValidateVersions   extends AsyncTask<String, Integer, Boolean>
     String user;
     String password;
     private String version;
+    private DbHelper myDB;
 
     public String getVersion() {
         return version;
@@ -45,6 +47,7 @@ public class asyncValidateVersions   extends AsyncTask<String, Integer, Boolean>
         this.ftpServer = ftpServer;
         this.user = user;
         this.password = password;
+        myDB = new DbHelper(ctx);
 
     }
     public asyncValidateVersions(){}
@@ -85,17 +88,17 @@ public class asyncValidateVersions   extends AsyncTask<String, Integer, Boolean>
             }
             b.close();
 
-            String[] paramsV = {"BASE"};
-            final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
+            //String[] paramsV = {"BASE"};
+            //final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
 
-            if(Integer.parseInt(tmIdVersion.get(0).getVer_version()) >= Integer.parseInt(getVersion()))
+
+            if(myDB.getlistaVesionBaseRuv("BASE") >= Integer.parseInt(getVersion()))
             {
                 return true;
             }else{
                 return false;
 
             }
-
 
         } catch (Exception e) {
             e.printStackTrace();

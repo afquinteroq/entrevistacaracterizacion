@@ -1,0 +1,11 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¦áòúÿÿÿÿ
+m
+java:S3776&"RRefactor this method to reduce its Cognitive Complexity from 56 to the 15 allowed.(¨ÿÊÊûÿÿÿÿ
+R
+java:S1068"0Remove this unused "usuarioLogin" private field.(ßá¡Ôùÿÿÿÿ8óÚïÏŸ.
+f	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èí”‚
+[
+java:S18542"9Remove this useless assignment to local variable "itemT".(Ó¿÷şÿÿÿÿ8ì£ğÏŸ.
+L
+java:S14812"*Remove this unused "itemT" local variable.(Ó¿÷şÿÿÿÿ8ì£ğÏŸ.

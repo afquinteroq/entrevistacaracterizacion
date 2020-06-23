@@ -1,0 +1,13 @@
+
+m	java:S116"XRename this field "id_entrevista" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¢·Ş
+n	java:S116"YRename this field "APELLIDO_1_RUV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ÓÛñ
+l	java:S116"WRename this field "NOMBRE_1_RUV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áö¤—
+s	java:S116"_Rename this field "NUMERO_DOCU_ENCUESTA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¾‘`
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(„ÀÛÏüÿÿÿÿ
+k	java:S116"VRename this field "id_personas" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß±¶Í
+q	java:S116"WRename this field "NOMBRE_2_RUV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôı¹Îúÿÿÿÿ
+j	java:S116"URename this field "ESTADO_RUV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óâ•ñ
+l	java:S116"WRename this field "fin_encuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î…Ö‡
+q	java:S116"WRename this field "NUM_DOCU_RUV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯Ûâúÿÿÿÿ
+o	java:S116"ZRename this field "inicio_encuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÛõ¥
+n	java:S116"YRename this field "APELLIDO_2_RUV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ôø

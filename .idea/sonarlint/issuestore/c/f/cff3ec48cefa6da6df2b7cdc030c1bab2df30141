@@ -1,0 +1,21 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‚‡«ÿÿÿÿÿ
+y	java:S116#"_Rename this field "per_idepersonafuente" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â•³‡ÿÿÿÿÿ
+t	java:S116%"ZRename this field "per_idsiniestro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªšùØùÿÿÿÿ
+o	java:S116'"URename this field "per_estado" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ËÉåÿÿÿÿÿ
+r	java:S116 "XRename this field "per_numerodoc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢Øøüşÿÿÿÿ
+m	java:S116"XRename this field "per_idpersona" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„úó¸
+s	java:S116"^Rename this field "per_segundoapellido" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¤¨
+q	java:S116"\Rename this field "per_segundonombre" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯éÅã
+p	java:S116"VRename this field "per_tipodoc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßØâöøÿÿÿÿ
+x	java:S116"^Rename this field "per_fechanacimiento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ ÈÚşÿÿÿÿ
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘éÅî
+v	java:S116""\Rename this field "per_iddeclaracion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğöúˆøÿÿÿÿ
+r	java:S116"]Rename this field "per_primerapellido" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ÖÖ¡
+q	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÓï
+l	java:S116!"WRename this field "per_relacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ú•ü
+t	java:S116$"ZRename this field "per_tipovictima" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Õ¤ÿÿÿÿÿ
+o	java:S116&"URename this field "per_fuente" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïøÿÿÿÿ
+@
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
+u	java:S116"[Rename this field "per_primernombre" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÂûÈıÿÿÿÿ

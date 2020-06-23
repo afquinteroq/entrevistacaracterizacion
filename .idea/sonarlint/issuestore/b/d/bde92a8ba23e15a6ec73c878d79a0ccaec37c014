@@ -1,0 +1,11 @@
+
+m	java:S116"XRename this field "per_idpersona" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„úó¸
+v	java:S116"aRename this field "rxp_idrespuestapersona" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ’şÊ
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘éÅî
+q	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÓï
+q	java:S116"\Rename this field "ins_idinstrumento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç
+o	java:S116"ZRename this field "res_idrespuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÍ¤«
+o	java:S116"URename this field "hog_codigo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùïˆûÿÿÿÿ
+u	java:S116"[Rename this field "rxp_tipopregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‘Øúÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ğ¦“Óûÿÿÿÿ
+r	java:S116"]Rename this field "rxp_textorespuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯”Äö

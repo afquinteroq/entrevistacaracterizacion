@@ -1,0 +1,734 @@
+
+c
+java:S1192•9"LDefine a constant instead of duplicating this literal "Sabanalarga" 3 times.(ı‡ü
+d	java:S100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Õ¶ö
+`
+java:S1192À"IDefine a constant instead of duplicating this literal "No sabe" 66 times.(Ï‘âó
+R	java:S125­#"<This block of commented-out lines of code should be removed.(Ìşáæ
+W	java:S125•*"<This block of commented-out lines of code should be removed.(Ş»Ëºûÿÿÿÿ
+R	java:S125ğ1"<This block of commented-out lines of code should be removed.(éË‹
+h
+java:S1192ï
+"QDefine a constant instead of duplicating this literal "Metros cuadrados" 5 times.(í¢óà
+b
+java:S1192Ù"FDefine a constant instead of duplicating this literal "42405" 9 times.(§£Ôªùÿÿÿÿ
+R	java:S125Í""<This block of commented-out lines of code should be removed.(ğÖÛã
+‹
+java:S1192É"oDefine a constant instead of duplicating this literal "(Si recibio pero no sabe el monto registre 98)" 3 times.(İß‰ïúÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(·ÜĞ‰
+a
+java:S1192ğ
+"JDefine a constant instead of duplicating this literal "Fanegadas" 5 times.(À®£Š
+\
+java:S1192´"FDefine a constant instead of duplicating this literal "NEGRO" 3 times.(å· {
+\
+java:S1192B"FDefine a constant instead of duplicating this literal "admin" 3 times.(åœÒ²
+R	java:S125Ø#"<This block of commented-out lines of code should be removed.(‡–îÍ
+d
+java:S1192 6"HDefine a constant instead of duplicating this literal "Bolivar" 4 times.(µõ×Ïşÿÿÿÿ
+i	java:S100À6"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¼ı¼ÿÿÿÿÿ
+–
+java:S1192á "Define a constant instead of duplicating this literal "(162,163) OR (164,164) OR (165,165) OR (166,166) OR (167,167)" 13 times.(îê£
+İ
+java:S1192İ"ÀDefine a constant instead of duplicating this literal "AlgÃºn miembro del hogar ha solicitado protecciÃ³n y/o restituciÃ³n de este bien inmueble a alguna de las siguientes entidades:" 3 times.(ˆßÔ±úÿÿÿÿ
+c
+java:S1192²"GDefine a constant instead of duplicating this literal "RAIZAL" 3 times.(¯—ì÷úÿÿÿÿ
+y
+java:S1192ö
+"bDefine a constant instead of duplicating this literal "Arrendatario con contrato escrito" 5 times.(ˆÑì
+|
+java:S1192öY"eDefine a constant instead of duplicating this literal "Actividades financieras y de seguros" 3 times.(±ôí‚
+f
+java:S1192†8"JDefine a constant instead of duplicating this literal "Guadalupe" 3 times.(à¸×Áùÿÿÿÿ
+u
+java:S1192é
+"YDefine a constant instead of duplicating this literal "Tierra/Lote sin vivienda" 5 times.(ú¹¢£øÿÿÿÿ
+t
+java:S1192‚
+"XDefine a constant instead of duplicating this literal "SÃ­ Â¿CuÃ¡nto recibiÃ³?" 6 times.(Â¡¥Üùÿÿÿÿ
+`
+java:S1192±"IDefine a constant instead of duplicating this literal "Amenaza" 11 times.(ä·Ğ“
+n
+java:S1192™"RDefine a constant instead of duplicating this literal "C13P1ROPCOMUNIDAD" 3 times.(ÍÖÄ­ıÿÿÿÿ
+b
+java:S1192Õ"KDefine a constant instead of duplicating this literal "01/01/14" 152 times.(­˜ÂÔ
+~
+java:S1192÷
+"bDefine a constant instead of duplicating this literal "Arrendatario sin contrato escrito" 5 times.(³–Ùøÿÿÿÿ
+b
+java:S1192ä"FDefine a constant instead of duplicating this literal "42439" 4 times.(ü÷¬¥ıÿÿÿÿ
+}
+java:S1192í	"aDefine a constant instead of duplicating this literal "ExplotaciÃ³n de minas y canteras" 5 times.(º¶„ùÿÿÿÿ
+R	java:S125­""<This block of commented-out lines of code should be removed.(•ÈãÁ
+M
+java:S1144‘"6Remove this unused private "cargarEMC_VEREDAS" method.(Ï¤îè
+n
+java:S1192µR"RDefine a constant instead of duplicating this literal "Entre 2 y 5 aÃ±os" 5 times.(ÁËÕşşÿÿÿÿ
+d
+java:S1192‚"MDefine a constant instead of duplicating this literal "Ante un Juez" 5 times.(ôÄâÁ
+c
+java:S1192ê"LDefine a constant instead of duplicating this literal "ContraseÃ±a" 3 times.(Œ¸¿æ
+i	java:S100³@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰£²öùÿÿÿÿ
+‚
+java:S1192Å"fDefine a constant instead of duplicating this literal "Perdida de Bienes Muebles o Inmuebles" 9 times.(ß¸¯‹ÿÿÿÿÿ
+Ò
+java:S1192Ó"ºDefine a constant instead of duplicating this literal "Â¿CuÃ¡les cursos de capacitaciÃ³n usted ha desarrollado para desempeÃ±ar los trabajos que usted relacionÃ³ anteriormente?" 3 times.(ŒˆúĞ
+c
+java:S1192ş"GDefine a constant instead of duplicating this literal "42513" 88 times.(èÖ·¬ùÿÿÿÿ
+v
+java:S1192ÿ
+"ZDefine a constant instead of duplicating this literal "Unidad para las vÃ­ctimas" 5 times.(ŞìÁñüÿÿÿÿ
+c
+java:S1192¢["LDefine a constant instead of duplicating this literal "17/05/2018" 25 times.(ø½»™
+g
+java:S1192Ú"KDefine a constant instead of duplicating this literal "01/03/2016" 3 times.(…ÔÇûÿÿÿÿ
+_
+java:S1192İ"HDefine a constant instead of duplicating this literal "NO SABE" 3 times.(­ìâã
+‚
+java:S1192é	"fDefine a constant instead of duplicating this literal "Trabajador familiar sin remuneraciÃ³n" 4 times.(í†©×ıÿÿÿÿ
+d	java:S100êB"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ™áÊ
+n
+java:S1192™"RDefine a constant instead of duplicating this literal "PolicÃ­a Nacional" 4 times.(¢¼±Ôúÿÿÿÿ
+f
+java:S1192­"ODefine a constant instead of duplicating this literal "Otra, Â¿cuÃ¡l?" 6 times.(˜Úòƒ
+W	java:S125®"<This block of commented-out lines of code should be removed.(Ã”ïÀşÿÿÿÿ
+`
+java:S1192”"IDefine a constant instead of duplicating this literal "9999999" 14 times.(ƒ±£ê
+k
+java:S1192ç	"TDefine a constant instead of duplicating this literal "PatrÃ³n o empleador" 4 times.(ÙŸ¥©
+c
+java:S1192Å"GDefine a constant instead of duplicating this literal "42305" 14 times.(×¼°«ıÿÿÿÿ
+W	java:S125#"<This block of commented-out lines of code should be removed.(ßÙ¿ûÿÿÿÿ
+i	java:S100µD"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş¦Ñøÿÿÿÿÿ
+{
+java:S1192ã	"_Define a constant instead of duplicating this literal "Obrero o empleado del gobierno" 4 times.(èÙ›Çüÿÿÿÿ
+w
+java:S1192‡"`Define a constant instead of duplicating this literal "Porque no confÃ­a en el proceso" 5 times.(‚õçÕ
+i	java:S100«Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œü•óúÿÿÿÿ
+_
+java:S1192Î8"HDefine a constant instead of duplicating this literal "Argelia" 3 times.(öºú—
+j
+java:S1192È"SDefine a constant instead of duplicating this literal "Minas Antipersonal" 9 times.(’ïÙ«
+p
+java:S1192è
+"YDefine a constant instead of duplicating this literal "Tierra/Lote con vivienda" 5 times.(¢À±‘
+i	java:S100¯C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹„ãÊúÿÿÿÿ
+i
+java:S1192ØZ"MDefine a constant instead of duplicating this literal "InstituciÃ³n" 3 times.(¹´øÔøÿÿÿÿ
+R	java:S125¡!"<This block of commented-out lines of code should be removed.(±è¦
+q
+java:S1192û"UDefine a constant instead of duplicating this literal "Territorio Colectivo" 5 times.(Ü—×öúÿÿÿÿ
+i	java:S100ş"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÃÉÿÿÿÿÿ
+T
+java:S1854ØE"8Remove this useless assignment to local variable "year".(ÔÆü“ùÿÿÿÿ
+a
+java:S1192­"JDefine a constant instead of duplicating this literal "Usufructo" 7 times.(®·×§
+_
+java:S1192ò
+"HDefine a constant instead of duplicating this literal "Cuadras" 5 times.(œä›´
+€
+java:S1192À"dDefine a constant instead of duplicating this literal "Â¿CuÃ¡l es su identidad de gÃ©nero?" 3 times.(ûÜ°Ôûÿÿÿÿ
+c
+java:S1192ğ"GDefine a constant instead of duplicating this literal "42486" 20 times.(†Ğ¡ïøÿÿÿÿ
+o
+java:S1192Õ"XDefine a constant instead of duplicating this literal "TIENEEXPERIENCIALABORAL" 3 times.(­˜ÂÔ
+e
+java:S1192Ø	"ODefine a constant instead of duplicating this literal "Otro, Â¿cuÃ¡l?" 6 times.(ùÓ¾C
+g
+java:S1192İ"KDefine a constant instead of duplicating this literal "02/03/2016" 4 times.(€—¡²ÿÿÿÿÿ
+c
+java:S1192á"GDefine a constant instead of duplicating this literal "LUZ_SI" 3 times.( ºıÿÿÿÿ
+W	java:S125ê0"<This block of commented-out lines of code should be removed.(ú¬ãïşÿÿÿÿ
+W	java:S125…"<This block of commented-out lines of code should be removed.(©«—œûÿÿÿÿ
+d
+java:S1192»"MDefine a constant instead of duplicating this literal "Otra, CuÃ¡l?" 6 times.(ıù©
+
+java:S1192ÁO"éDefine a constant instead of duplicating this literal "Califique de 0 a 5, siendo 0 lo menos importante y 5 lo mÃ¡s importante, las dificultades que usted y su nÃºcleo familiar cercano  tienen en el lugar donde viven ahora:" 9 times.(›Ä€—
+g
+java:S1192Œ:"KDefine a constant instead of duplicating this literal "Buenavista" 4 times.(îÖŒıûÿÿÿÿ
+f
+java:S1192³R"PDefine a constant instead of duplicating this literal "Menos de 1 aÃ±o" 4 times.(Â©®@
+k
+java:S1192¯"ODefine a constant instead of duplicating this literal "Otro Â¿CuÃ¡l?" 10 times.(‡À¬Íÿÿÿÿÿ
+j
+java:S1192÷	"NDefine a constant instead of duplicating this literal "ConstrucciÃ³n" 4 times.(øËêëıÿÿÿÿ
+f
+java:S1192""KDefine a constant instead of duplicating this literal "vivanto.db" 3 times.(¯§à“üÿÿÿÿ
+~
+java:S1192‰Z"bDefine a constant instead of duplicating this literal "Alojamiento y servicios de comida" 3 times.(¹ó¦ûÿÿÿÿ
+T
+java:S1155F">Use isEmpty() to check whether the collection is empty or not.(““çõ
+œ
+java:S1192ê	"…Define a constant instead of duplicating this literal "Trabajador sin remuneraciÃ³n en empresas o negocios de otros hogares" 4 times.(Ù‚ß
+]
+java:S1144µ"ARemove this unused private "cargaEMC_VALIDADORES_PERSONA" method.(‚ÙÅ¥ÿÿÿÿÿ
+W	java:S125´2"<This block of commented-out lines of code should be removed.(†‹Šúÿÿÿÿ
+c
+java:S1192ì6"LDefine a constant instead of duplicating this literal "La Victoria" 3 times.(ûÆ£„
+_
+java:S1192¬"IDefine a constant instead of duplicating this literal "SUPER" 2050 times.(í¯2
+W	java:S125‰"<This block of commented-out lines of code should be removed.(‡‚åöùÿÿÿÿ
+^
+java:S1192Ğ"GDefine a constant instead of duplicating this literal "42314" 10 times.(¼Î™ì
+d	java:S1006"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¾–¿
+h	java:S100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“´ßûÿÿÿÿ
+R	java:S125É#"<This block of commented-out lines of code should be removed.(Šòæ¤
+c
+java:S1192¸"LDefine a constant instead of duplicating this literal "JSVARGASG" 188 times.(¡ò—
+R	java:S125ò*"<This block of commented-out lines of code should be removed.(æœĞ´
+d
+java:S1192Ù6"HDefine a constant instead of duplicating this literal "110000" 56 times.(œòª™üÿÿÿÿ
+m
+java:S1192ü"QDefine a constant instead of duplicating this literal "No puede hacerlo" 9 times.(¥õÙÀşÿÿÿÿ
+e
+java:S1192²"IDefine a constant instead of duplicating this literal "EMBARAZO" 3 times.(Çï¥Ãøÿÿÿÿ
+R	java:S125»-"<This block of commented-out lines of code should be removed.(¢çï¯
+Á
+java:S1192Ş"¤Define a constant instead of duplicating this literal "Â¿CuÃ¡l fue la razon principal para no solicitar la protecciÃ³n y/o restituciÃ³n del bien inmueble?" 3 times.(ã´ğİÿÿÿÿÿ
+}
+java:S1192ç["gDefine a constant instead of duplicating this literal "Rutas de trÃ¡nsito de drogas y/o armas" 3 times.(¸ˆ‰h
+h
+java:S1192Ê"LDefine a constant instead of duplicating this literal "29/02/2016" 16 times.(¬±ˆ‘şÿÿÿÿ
+b
+java:S1192ÿ"KDefine a constant instead of duplicating this literal "EducaciÃ³n" 5 times.(„‰éÜ
+€
+java:S1192ˆ"dDefine a constant instead of duplicating this literal "Porque el trÃ¡mite era muy difÃ­cil" 5 times.(¦¾ç’üÿÿÿÿ
+u
+java:S1192÷Y"^Define a constant instead of duplicating this literal "InformaciÃ³n y comunicaciones" 3 times.(ùÊá•
+v
+java:S1192şY"_Define a constant instead of duplicating this literal "Otras actividades de servicios" 3 times.(ÿå“Æ
+†
+java:S1192›O"oDefine a constant instead of duplicating this literal "CuÃ¡ntas veces se desplazÃ³ de este municipio?" 5 times.(ş‹˜ç
+W	java:S125·"<This block of commented-out lines of code should be removed.(áĞºÕıÿÿÿÿ
+Ï
+java:S1192šP"²Define a constant instead of duplicating this literal "(Recuerde que por miembros de grupo familiar cercano se hace referencia a las personas con las que mantiene un intercambio regular de tipo econÃ³mico y/o con las que sostiene vinculos afectivos. Estas personas pueden o no estar en COLOMBIA.)" 4 times.(¸Í˜úşÿÿÿÿ
+f
+java:S1192Ù"JDefine a constant instead of duplicating this literal "MOVILIDAD" 6 times.(ç›ìÍÿÿÿÿÿ
+l
+java:S1192Ü7"PDefine a constant instead of duplicating this literal "Zona de UrabÃ¡" 14 times.(ÊôØíøÿÿÿÿ
+d
+java:S1192è"MDefine a constant instead of duplicating this literal "ACUEDUCTO_SI" 3 times.(ØíŒÀ
+b
+java:S1192•"KDefine a constant instead of duplicating this literal "25/01/2019" 4 times.(˜­Òë
+v
+java:S1192ö"_Define a constant instead of duplicating this literal "Observaciones a este capÃ­tulo" 3 times.(„ßÍ›
+R	java:S125§%"<This block of commented-out lines of code should be removed.(çÙ§™
+ƒ
+java:S1192¾"gDefine a constant instead of duplicating this literal "Porque se siente parte de la comunidad" 4 times.(µ‰«³øÿÿÿÿ
+e
+java:S1192¤9"NDefine a constant instead of duplicating this literal "Santa Barbara" 3 times.(æÅ¨é
+`
+java:S1192Â6"IDefine a constant instead of duplicating this literal "CALIDO" 787 times.(„ß³
+c
+java:S1192Ù"GDefine a constant instead of duplicating this literal "41878" 14 times.(ç›ìÍÿÿÿÿÿ
+R	java:S125û1"<This block of commented-out lines of code should be removed.(ôäÜ‘
+Q	java:S125Î#"<This block of commented-out lines of code should be removed.(ó ÿ
+c
+java:S1192ˆ["LDefine a constant instead of duplicating this literal "22/05/2018" 19 times.(ùÒ¨Ô
+R	java:S125ë'"<This block of commented-out lines of code should be removed.(İ÷ŠÉ
+W	java:S125¦2"<This block of commented-out lines of code should be removed.(ô‡Ü©üÿÿÿÿ
+X	java:S125Q"<This block of commented-out lines of code should be removed.(é†éö8ğ¬®§­.
+f
+java:S1192€"ODefine a constant instead of duplicating this literal "AcciÃ³n social" 5 times.(ìë£¾
+R	java:S125—""<This block of commented-out lines of code should be removed.(¡Ñ‚î
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹µöÅûÿÿÿÿ
+s
+java:S1192ş"\Define a constant instead of duplicating this literal "Puede con alguna dificultad" 9 times.(€Í³°
+v
+java:S1192š"ZDefine a constant instead of duplicating this literal "Ninguna de las anteriores" 6 times.(îÅÚ şÿÿÿÿ
+Ş
+java:S1192…Z"ÁDefine a constant instead of duplicating this literal "DistribuciÃ³n de agua; evacuaciÃ³n y tratamiento de aguas residuales, gestiÃ³n de desechos y actividades de saneamiento ambienta" 3 times.(˜±«¾şÿÿÿÿ
+p
+java:S1192ä	"TDefine a constant instead of duplicating this literal "Empleado domÃ©stico" 4 times.(ãüÎÏüÿÿÿÿ
+e
+java:S1192"NDefine a constant instead of duplicating this literal "Otra Â¿CuÃ¡l?" 4 times.(ñÃ³•
+ 
+java:S1192üY"ƒDefine a constant instead of duplicating this literal "Actividades de atenciÃ³n de la salud humana y de asistencia social" 3 times.(†õÖ°ûÿÿÿÿ
+k
+java:S1192Œ"TDefine a constant instead of duplicating this literal "Productor agrÃ­cola" 3 times.(ÈÚ¿Æ
+f
+java:S1192ØY"ODefine a constant instead of duplicating this literal "SÃ­ Â¿CuÃ¡les?" 3 times.(Òê 
+b
+java:S1192û!"KDefine a constant instead of duplicating this literal "10/11/2015" 3 times.(¦ÂœÑ
+‰
+java:S1192ã"rDefine a constant instead of duplicating this literal "En cuanto estima su valor durante el Ãºltimo mes?" 4 times.(Ôã¥
+r
+java:S1192—"VDefine a constant instead of duplicating this literal "C13P1ROFICIOSDELHOGAR" 3 times.(Õçèùÿÿÿÿ
+r
+java:S1192à["VDefine a constant instead of duplicating this literal "Combates o bombardeos" 3 times.(éµÍ üÿÿÿÿ
+d
+java:S1192¾"MDefine a constant instead of duplicating this literal "20/06/2018" 253 times.(ÖÏÊü
+t
+java:S1192Á"XDefine a constant instead of duplicating this literal "Desplazamiento forzado" 10 times.(È‘È›üÿÿÿÿ
+j
+java:S1192‰"NDefine a constant instead of duplicating this literal "Otro, CuÃ¡l?" 15 times.(À©œàúÿÿÿÿ
+b
+java:S1192Œ"KDefine a constant instead of duplicating this literal "23/01/2019" 6 times.(ÈÚ¿Æ
+e
+java:S1192ú"NDefine a constant instead of duplicating this literal "10/08/2017" 1020 times.(í§ìâ
+Q	java:S125G"<This block of commented-out lines of code should be removed.(àùıæ
+W	java:S125Ú"<This block of commented-out lines of code should be removed.(Í»§ûùÿÿÿÿ
+z
+java:S1192†"^Define a constant instead of duplicating this literal "Porque no conocÃ­a el proceso" 5 times.(ìøä§şÿÿÿÿ
+i	java:S100µ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÙÅ¥ÿÿÿÿÿ
+R	java:S125—$"<This block of commented-out lines of code should be removed.(ÊÅîø
+W	java:S125„6"<This block of commented-out lines of code should be removed.(çôÉŒıÿÿÿÿ
+W	java:S125¿#"<This block of commented-out lines of code should be removed.(öˆÖàúÿÿÿÿ
+b
+java:S1192ç8"FDefine a constant instead of duplicating this literal "10919" 4 times.(çş¸ùÿÿÿÿ
+·
+java:S1192úY"šDefine a constant instead of duplicating this literal "AdministraciÃ³n pÃºblica y defensa; planes de seguridad social de afiliaciÃ³n obligatoria" 3 times.(”»Ë†øÿÿÿÿ
+
+java:S1192â	"hDefine a constant instead of duplicating this literal "Obrero o empleado de empresa particular" 4 times.(Ó¸Æ
+R	java:S125ò"<This block of commented-out lines of code should be removed.(¾£öÌ
+
+java:S1192À"cDefine a constant instead of duplicating this literal "Falta de oportunidades econÃ³micas" 3 times.(æéõáùÿÿÿÿ
+W	java:S125ˆN"<This block of commented-out lines of code should be removed.(¸šÁ³ùÿÿÿÿ
+`
+java:S11929"IDefine a constant instead of duplicating this literal "La Union" 4 times.(’Üá
+`
+java:S1192Ã6"IDefine a constant instead of duplicating this literal "90000" 1125 times.(„êÎ
+k	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“´ßûÿÿÿÿ
+i	java:S100€]"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¨Ä‡øÿÿÿÿ
+g
+java:S1192"KDefine a constant instead of duplicating this literal "09/02/2016" 4 times.(¶­ŠÅÿÿÿÿÿ
+W	java:S125·2"<This block of commented-out lines of code should be removed.(è­‹¼øÿÿÿÿ
+c
+java:S1192º"LDefine a constant instead of duplicating this literal "PROPIETARIO" 3 times.(‹Ç¶¹
+d
+java:S1192™"HDefine a constant instead of duplicating this literal "Consumo" 4 times.(ôÃ™úÿÿÿÿ
+r	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¨°¶üÿÿÿÿ8…‚¨¦­.
+p
+java:S1192î	"ZDefine a constant instead of duplicating this literal "Industrias manufactureras" 5 times.(â¶I
+–
+java:S1192ü
+"zDefine a constant instead of duplicating this literal "Habitado o utilizado por un tercero con su consentimiento" 5 times.(«Ö–¡üÿÿÿÿ
+R	java:S125’N"<This block of commented-out lines of code should be removed.(¯¡ù¤
+v
+java:S1192ß9"ZDefine a constant instead of duplicating this literal "Montes de Maria (Bolivar)" 7 times.(Ô‰íÄúÿÿÿÿ
+R	java:S125´S"<This block of commented-out lines of code should be removed.(ÕƒÅ
+^
+java:S1192À8"GDefine a constant instead of duplicating this literal "140000" 4 times.(•—Õ
+l
+java:S1192„
+"UDefine a constant instead of duplicating this literal "No sabe / No informa" 3 times.(êíç©
+J
+java:S1128"/Remove this unused import 'java.io.FileReader'.(Â¡¢äşÿÿÿÿ
+g
+java:S1192Û""KDefine a constant instead of duplicating this literal "11/11/2015" 5 times.(¸Å²úÿÿÿÿ
+b
+java:S1192™:"FDefine a constant instead of duplicating this literal "15212" 3 times.(”ßûœùÿÿÿÿ
+k
+java:S1192¿"UDefine a constant instead of duplicating this literal "Si Â¿CuÃ¡ntas dosis?" 3 times.(ÅöºD
+W	java:S125 "<This block of commented-out lines of code should be removed.(Ë˜ÿÿÿÿÿ
+÷
+java:S1192¶O"ÚDefine a constant instead of duplicating this literal "Califique de 0 a 5, siendo 0 lo menos importante y 5 lo mÃ¡s importante, las razones por las que usted y su nÃºcleo familiar cercano viven en este lugar:" 8 times.(üÕ§¨ûÿÿÿÿ
+Q	java:S125‚"<This block of commented-out lines of code should be removed.(ä°Í	
+W	java:S125¼$"<This block of commented-out lines of code should be removed.(´ï›äúÿÿÿÿ
+[
+java:S1144° "DRemove this unused private "cargarEMC_PREGUNTAS_INSTRUMENTO" method.(¼ô„à
+…
+java:S1192ÖN"iDefine a constant instead of duplicating this literal "Â¿Cada cuÃ¡nto tiempo envÃ­a ese dinero?" 4 times.(Š…éÒøÿÿÿÿ
+W	java:S125œ%"<This block of commented-out lines of code should be removed.(Ÿ³Œƒûÿÿÿÿ
+R	java:S125¥'"<This block of commented-out lines of code should be removed.(«Õİş
+g	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¤îè
+g
+java:S1192Ö "KDefine a constant instead of duplicating this literal "26/08/2014" 6 times.(ƒª¦¶øÿÿÿÿ
+j
+java:S1192š9"NDefine a constant instead of duplicating this literal "San Francisco" 3 times.(™ÖúÌøÿÿÿÿ
+\
+java:S1192²6"FDefine a constant instead of duplicating this literal "Sucre" 4 times.(Ä¤Ÿ'
+b
+java:S1192á "KDefine a constant instead of duplicating this literal "28/10/2015" 9 times.(îê£
+x
+java:S1192ƒ"\Define a constant instead of duplicating this literal "Ante el Ministerio PÃºblico" 5 times.(àßİøÿÿÿÿ
+b
+java:S1192Û "KDefine a constant instead of duplicating this literal "23/05/2016" 4 times.(¡¬Ÿ±
+b
+java:S1192î
+"KDefine a constant instead of duplicating this literal "HectÃ¡reas" 5 times.(Àíà¢
+]
+java:S1192è"GDefine a constant instead of duplicating this literal "42485" 10 times.(ƒšÒ
+‰
+java:S1192Ê"mDefine a constant instead of duplicating this literal "VinculaciÃ³n de NiÃ±os NiÃ±as y Adolescentes" 9 times.(ĞÈ¦©üÿÿÿÿ
+W	java:S125Ø"<This block of commented-out lines of code should be removed.(Í»§ûùÿÿÿÿ
+W	java:S125¾J"<This block of commented-out lines of code should be removed.(©Ğ”˜úÿÿÿÿ
+
+java:S1192Ú"eDefine a constant instead of duplicating this literal "Â¿En quÃ© unidades de medida? (Lote)" 5 times.(±®Êíûÿÿÿÿ
+j
+java:S1192‚"NDefine a constant instead of duplicating this literal "Observaciones" 6 times.( ş†œûÿÿÿÿ
+c
+java:S1192¢6"GDefine a constant instead of duplicating this literal "Caldas" 3 times.(ÍÙ¹£úÿÿÿÿ
+b
+java:S1192ê"FDefine a constant instead of duplicating this literal "42431" 7 times.(–ŞÃÄûÿÿÿÿ
+t
+java:S1192Ÿ"XDefine a constant instead of duplicating this literal "Observaciones Iniciales" 3 times.(’Æ¹°úÿÿÿÿ
+f
+java:S1192š"ODefine a constant instead of duplicating this literal "Si y la tiene" 10 times.(¿âú÷
+R	java:S125àU"<This block of commented-out lines of code should be removed.(Èù³ñ
+
+java:S1192øY"tDefine a constant instead of duplicating this literal "Actividades profesionales, cientÃ­ficas y tÃ©cnicas" 3 times.(Š Ôıùÿÿÿÿ
+i	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‹Œéıÿÿÿÿ
+k
+java:S1192ä["UDefine a constant instead of duplicating this literal "GanaderÃ­a extensiva" 3 times.(û¬Ö3
+g
+java:S1192­8"KDefine a constant instead of duplicating this literal "Villanueva" 4 times.(êÒõ…üÿÿÿÿ
+i	java:S100Ç@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ºßµÿÿÿÿÿ
+R	java:S125·C"<This block of commented-out lines of code should be removed.(‚ÀÂ’
+n
+java:S1192á"WDefine a constant instead of duplicating this literal "ACTIVIDADES_COTIDIANAS" 6 times.(Ó»í
+g
+java:S1192•"QDefine a constant instead of duplicating this literal "BUSCANDO_TRABAJO" 3 times.(ÀôÚ0
+j
+java:S1192¢"SDefine a constant instead of duplicating this literal "Alcaldia Municipal" 5 times.(è‘¬õ
+W	java:S125Ó!"<This block of commented-out lines of code should be removed.(Î†œ„üÿÿÿÿ
+R	java:S125˜"<This block of commented-out lines of code should be removed.(Ÿ›¯æ
+y
+java:S1192ÉO"bDefine a constant instead of duplicating this literal "No domina el idioma de este paÃ­s" 3 times.(å†¨ö
+‘
+java:S1192ıY"zDefine a constant instead of duplicating this literal "Actividades artÃ­sticas, de entretenimiento y recreaciÃ³n" 3 times.(§®˜Ù
+W	java:S125›)"<This block of commented-out lines of code should be removed.(ÏĞßÍıÿÿÿÿ
+‘
+java:S1192û
+"zDefine a constant instead of duplicating this literal "Habitado o utilizado por un tercero sin su consentimiento" 5 times.(öÚ€–
+O
+java:S1144ƒ"8Remove this unused private "cargaEMC_RESPUESTAS" method.(»–å
+^
+java:S1192"GDefine a constant instead of duplicating this literal "42514" 30 times.(³Ÿ²
+_
+java:S1192 8"HDefine a constant instead of duplicating this literal "Albania" 3 times.(¢ÕÊ
+g
+java:S1192µ"KDefine a constant instead of duplicating this literal "Secuestro" 11 times.(Èã™êúÿÿÿÿ
+l
+java:S1192Æ"PDefine a constant instead of duplicating this literal "Acto terrorista" 9 times.(®ˆ«ùÿÿÿÿ
+R	java:S125‚%"<This block of commented-out lines of code should be removed.(Ÿ¾Éæ
+W	java:S125¿C"<This block of commented-out lines of code should be removed.(¢ì‘øÿÿÿÿ
+e
+java:S1192À "IDefine a constant instead of duplicating this literal "02/03/16" 4 times.(§×Áùÿÿÿÿ
+R	java:S125ÈU"<This block of commented-out lines of code should be removed.(ªé„¬
+b
+java:S1192›["KDefine a constant instead of duplicating this literal "18/05/2018" 7 times.(çµâ®
+b
+java:S1192ê "KDefine a constant instead of duplicating this literal "29/10/2015" 3 times.(ˆÛáà
+^
+java:S1192¹"HDefine a constant instead of duplicating this literal "NariÃ±o" 5 times.(Ïÿô?
+{
+java:S1192¼"_Define a constant instead of duplicating this literal "Si Â¿CuÃ¡ntos refuerzos tiene?" 3 times.(îâ¶üÿÿÿÿ
+b
+java:S1192!"KDefine a constant instead of duplicating this literal "05/11/2015" 7 times.(¯Æş÷
+i	java:S100®?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÒÖêıÿÿÿÿ
+R	java:S125ª"<This block of commented-out lines of code should be removed.(–üëĞ
+i	java:S100º"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÏÙúÿÿÿÿ
+e
+java:S1192¯"IDefine a constant instead of duplicating this literal "Poseedor" 6 times.(ÂÑ›Êûÿÿÿÿ
+I
+java:S1481¶"2Remove this unused "temValPersona" local variable.(Ë•ëÉ
+_
+java:S1144º"CRemove this unused private "cargaEMC_INSTRUMENTO_VALIDADOR" method.(ıÏÙúÿÿÿÿ
+u
+java:S1192ı"YDefine a constant instead of duplicating this literal "Si, con mucha dificultad" 9 times.(ÓçŸÕüÿÿÿÿ
+`
+java:S1192í"IDefine a constant instead of duplicating this literal "Ninguno" 26 times.(ƒ¼óˆ
+Q	java:S125‘("<This block of commented-out lines of code should be removed.(…¡¬z
+W	java:S125Ú"<This block of commented-out lines of code should be removed.(‹¯Õûÿÿÿÿ
+Œ
+java:S1192ßN"pDefine a constant instead of duplicating this literal "CuÃ¡ntas veces se desplazÃ³ de este municipio? " 5 times.(úªÆÅúÿÿÿÿ
+X	java:S125S"<This block of commented-out lines of code should be removed.(–„‰è8÷Ğ‚ì­.
+R	java:S125’"<This block of commented-out lines of code should be removed.(€Æà¡
+W	java:S125¹"<This block of commented-out lines of code should be removed.(–ËŒ’ùÿÿÿÿ
+l
+java:S1192…"UDefine a constant instead of duplicating this literal "Por miedo o amenazas" 5 times.(ÿ…¹Ô
+g
+java:S1192¸R"QDefine a constant instead of duplicating this literal "MÃ¡s de 20 aÃ±os" 3 times.(Ù“®.
+v
+java:S1192§"_Define a constant instead of duplicating this literal "Observaciones a este capitulo" 24 times.(ÙÏ¸æ
+•
+java:S1192¼"yDefine a constant instead of duplicating this literal "(Si recibiÃ³ pero no sabe estimar el monto, registre 98)" 3 times.(­Ìùÿÿÿÿ
+t
+java:S1192ã;"XDefine a constant instead of duplicating this literal "Montes de Maria (Sucre)" 8 times.(¤¬ùÿÿÿÿ
+m
+java:S1192„"QDefine a constant instead of duplicating this literal "No ha solicitado" 5 times.(ÇÜ‹úşÿÿÿÿ
+W	java:S125ÙX"<This block of commented-out lines of code should be removed.(ÂÓŒ²ùÿÿÿÿ
+¸
+java:S1192‡Z"›Define a constant instead of duplicating this literal "Comercio al por mayor y al por menor; reparaciÃ³n de vehÃ­culos automotores y motocicletas" 3 times.(˜ÚÃØıÿÿÿÿ
+t
+java:S1192ş"XDefine a constant instead of duplicating this literal "Si puede sin dificultad" 9 times.(èÖ·¬ùÿÿÿÿ
+i
+java:S1192¯"MDefine a constant instead of duplicating this literal "25/05/2018" 372 times.(ËØ¾’øÿÿÿÿ
+
+java:S1192ÿY"óDefine a constant instead of duplicating this literal "Actividades de los hogares individuales en calidad de empleadores; actividades no diferenciadas de los hogares individuales como productores de bienes y servicios para uso propio" 3 times.(ûÆÅÕùÿÿÿÿ
+c
+java:S1192ñ
+"GDefine a constant instead of duplicating this literal "Plazas" 5 times.(Ëû­øÿÿÿÿ
+^
+java:S1192„"GDefine a constant instead of duplicating this literal "41877" 20 times.(šŠß
+”
+java:S1192""~Define a constant instead of duplicating this literal "(164,164) OR (165,165) OR (166,166) OR (167,167) OR (162,163)" 4 times.(˜Ã¨5
+W	java:S125¿"<This block of commented-out lines of code should be removed.(Óƒ¹Òÿÿÿÿÿ
+u
+java:S1192š "YDefine a constant instead of duplicating this literal "DESPLAZAMIENTOFORZADONRC" 3 times.(äÄìÏıÿÿÿÿ
+€
+java:S1192•"dDefine a constant instead of duplicating this literal "Â¿CuÃ¡l es el nombre del Resguardo?" 5 times.(û¯ÖÊùÿÿÿÿ
+i	java:S100­D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªºÿ†ûÿÿÿÿ
+v
+java:S1192ˆ6"ZDefine a constant instead of duplicating this literal "INSTR('CADENA','112',1)>0" 7 times.(Û´Éæøÿÿÿÿ
+d	java:S100•)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”™òô
+>
+java:S1148:"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+]
+java:S1192½"FDefine a constant instead of duplicating this literal "41765" 6 times.(ÜÇø‡
+l
+java:S1192Ú"UDefine a constant instead of duplicating this literal "SÃ­ Â¿CuÃ¡ntos dias?" 7 times.(òØä­
+k
+java:S1192ô"TDefine a constant instead of duplicating this literal "Si Â¿CuÃ¡ntos dias?" 3 times.(¯Ç¥»
+h
+java:S1192¨"LDefine a constant instead of duplicating this literal "05/02/2016" 27 times.(¼ŠÄ©üÿÿÿÿ
+j
+java:S1192…"NDefine a constant instead of duplicating this literal "22/03/2016" 1306 times.(¢æ„­ûÿÿÿÿ
+d	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»–å
+z
+java:S1192’P"cDefine a constant instead of duplicating this literal "Â¿CuÃ¡les han sido estas ciudades?" 5 times.(²ÈµË
+R	java:S125Æ"<This block of commented-out lines of code should be removed.(ÂûÊö
+k
+java:S1192¨"TDefine a constant instead of duplicating this literal "No sabe, no informa" 3 times.(°³¨¨
+i
+java:S1192å"RDefine a constant instead of duplicating this literal "ALCANTARILLADO_SI" 3 times.(–±»ñ
+s
+java:S1192ñ	"\Define a constant instead of duplicating this literal "Transporte y almacenamiento" 5 times.(´Æ¥ç
+m
+java:S1192…	"VDefine a constant instead of duplicating this literal "SÃ­ Â¿CuÃ¡ntos dÃ­as?" 8 times.(¯œ‚Í
+Q	java:S125¥$"<This block of commented-out lines of code should be removed.(›£Äv
+W	java:S125ÜC"<This block of commented-out lines of code should be removed.(´ñãÍúÿÿÿÿ
+g
+java:S1192¿"KDefine a constant instead of duplicating this literal "ANDRESQ" 2718 times.(·Ù„¥ùÿÿÿÿ
+W	java:S125¯$"<This block of commented-out lines of code should be removed.(Õ”Ñçúÿÿÿÿ
+h
+java:S1192ı"RDefine a constant instead of duplicating this literal "SABELEERYESCRIBIR" 3 times.(åÁ¯b
+e
+java:S1192¶"IDefine a constant instead of duplicating this literal "Tortura" 11 times.( ôÏ‡øÿÿÿÿ
+˜
+java:S1192ó	"|Define a constant instead of duplicating this literal "Suministro de electricidad, gas, vapor y aire acondicionado" 5 times.(ê·µşÿÿÿÿ
+Œ
+java:S1192áN"pDefine a constant instead of duplicating this literal "Â¿En quÃ© aÃ±o se desplazÃ³ de este municipio?" 25 times.(ŞÈ÷Œıÿÿÿÿ
+W	java:S125ÚC"<This block of commented-out lines of code should be removed.(¯Ÿ¢ıÿÿÿÿ
+c	java:S100±B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÂû_
+y
+java:S1192"bDefine a constant instead of duplicating this literal "Unidad de RestituciÃ³n de Tierras" 5 times.(ÇãÖ
+o
+java:S1192¶R"SDefine a constant instead of duplicating this literal "Entre 5 y 10 aÃ±os" 4 times.(Ó‡ˆÜúÿÿÿÿ
+m
+java:S1192–"QDefine a constant instead of duplicating this literal "C13P1RESTUDIANDO" 3 times.(¤ı§Ìşÿÿÿÿ
+y
+java:S1192æ	"]Define a constant instead of duplicating this literal "Trabajador por cuenta propia" 4 times.(áù±ûÿÿÿÿ
+i
+java:S1192—"MDefine a constant instead of duplicating this literal "Otra. CuÃ¡l?" 7 times.(«ˆŞÛûÿÿÿÿ
+Q	java:S1254"<This block of commented-out lines of code should be removed.(ˆê¸Õ
+d	java:S100° "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ô„à
+J
+java:S1172?"/Remove this unused method parameter "context_".(“´ßûÿÿÿÿ
+ƒ
+java:S1192×"ëDefine a constant instead of duplicating this literal "Mencione cuÃ¡les han sido los principales cargos u oficios que usted ha desempeÃ±ado desde que iniciÃ³ su experiencia laboral, especificando el tiempo en nÃºmero de meses" 6 times.(ÉÍ ˜
+W	java:S125""<This block of commented-out lines of code should be removed.(ÄÄùÌøÿÿÿÿ
+f
+java:S1192›"ODefine a constant instead of duplicating this literal "DISCAPACIDADSI" 3 times.(‡ƒâØ
+e
+java:S1192"ODefine a constant instead of duplicating this literal "Otro, Â¿CuÃ¡l?" 3 times.(ñ£;
+e
+java:S1192ª"NDefine a constant instead of duplicating this literal "AFQUINTEROQ" 858 times.(ïÍ‡š
+_
+java:S1192¦6"HDefine a constant instead of duplicating this literal "Cordoba" 4 times.(ËÍÀÔ
+Ÿ
+java:S1192ß["‡Define a constant instead of duplicating this literal "Presencia de campamentos de actores armados ilegales o bases militares" 3 times.(äûÑ
+w
+java:S1192‚"`Define a constant instead of duplicating this literal "Miembro/autoridad del colectivo" 5 times.(×½›Å
+”
+java:S1192€Z"}Define a constant instead of duplicating this literal "Actividades de organizaciones y entidades extraterritoriales" 3 times.(¦½–Õ
+g
+java:S1192ı
+"KDefine a constant instead of duplicating this literal "Abandonado" 5 times.(¶¯Ş×üÿÿÿÿ
+b
+java:S1192˜"FDefine a constant instead of duplicating this literal "Venta" 4 times.(›³Æïúÿÿÿÿ
+m
+java:S11929"VDefine a constant instead of duplicating this literal "Zona Magdalena Medio" 20 times.(¸ô‰Ÿ
+Q	java:S1252"<This block of commented-out lines of code should be removed.(ƒí¼è
+f
+java:S1192x"KDefine a constant instead of duplicating this literal "9999999999" 3 times.(¾Æ•åıÿÿÿÿ
+R	java:S125²D"<This block of commented-out lines of code should be removed.(ëÁ—Ä
+R	java:S125˜!"<This block of commented-out lines of code should be removed.(İ‡½
+c
+java:S1192ñ"LDefine a constant instead of duplicating this literal "DALADINOM" 177 times.(¼£Üë
+k
+java:S1192å"ODefine a constant instead of duplicating this literal "DOLOR_MALESTAR" 6 times.(İÈ­ôøÿÿÿÿ
+Q	java:S1250"<This block of commented-out lines of code should be removed.(ƒí¼è
+b
+java:S1192Ù"KDefine a constant instead of duplicating this literal "10/08/17" 812 times.(² Üæ
+‘
+java:S1192¸"zDefine a constant instead of duplicating this literal "Porque estÃ¡ cerca de familiares y/o amigos que lo apoyan" 4 times.(•¹ŞÆ
+‰
+java:S1192İ"ìDefine a constant instead of duplicating this literal "Mencione cuÃ¡les han sido los principales cargos u oficios que usted ha desempeÃ±ado desde que iniciÃ³ su experiencia laboral, especificando el tiempo en nÃºmero de meses " 3 times.(¡ÂÙ²ùÿÿÿÿ
+l
+java:S1192óM"PDefine a constant instead of duplicating this literal "Â¿En quÃ© aÃ±o?" 5 times.(°Óß©üÿÿÿÿ
+W	java:S125’'"<This block of commented-out lines of code should be removed.(íøèœùÿÿÿÿ
+d
+java:S1192µ"HDefine a constant instead of duplicating this literal "NINGUNO" 3 times.(ôÅş™ûÿÿÿÿ
+N
+java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ
+i	java:S100¾P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î§ïÚûÿÿÿÿ
+W	java:S125£J"<This block of commented-out lines of code should be removed.(›¹‘Æúÿÿÿÿ
+\
+java:S1192è"FDefine a constant instead of duplicating this literal "42430" 3 times.(¾B
+`
+java:S1192º"IDefine a constant instead of duplicating this literal "Ninguna" 15 times.(Åªûæ
+‰
+java:S1192š"mDefine a constant instead of duplicating this literal "Â¿Con cuÃ¡ntos espacios contaba la vivienda?" 5 times.(µÌ÷¬ùÿÿÿÿ
+e
+java:S1192°"IDefine a constant instead of duplicating this literal "INDIGENA" 3 times.(°„î¥úÿÿÿÿ
+}
+java:S1192·M"fDefine a constant instead of duplicating this literal "(Si la persona no lo sabe, continÃºe)" 5 times.(áŒ÷
+`
+java:S1192Ã6"IDefine a constant instead of duplicating this literal "70000" 1069 times.(„êÎ
+W	java:S125ï"<This block of commented-out lines of code should be removed.(¬Æø’ÿÿÿÿÿ
+b
+java:S1192"FDefine a constant instead of duplicating this literal "42318" 4 times.(²Ïòšùÿÿÿÿ
+~
+java:S1192Ë"gDefine a constant instead of duplicating this literal "Abandono o Despojo Forzado de Tierras" 10 times.(¶ é·
+
+java:S1192ùY"tDefine a constant instead of duplicating this literal "Actividades de servicios administrativos y de apoyo" 3 times.(ÔÑÈÄıÿÿÿÿ
+b
+java:S1192ş$"KDefine a constant instead of duplicating this literal "17/09/17" 104 times.(§ó÷ß
+W	java:S125Î!"<This block of commented-out lines of code should be removed.(«›èúÿÿÿÿ
+f
+java:S1192×6"JDefine a constant instead of duplicating this literal "El PeÃ±on" 3 times.(½©…Éüÿÿÿÿ
+\
+java:S1192ı"FDefine a constant instead of duplicating this literal "42317" 4 times.(åÁ¯b
+c
+java:S1192ª"GDefine a constant instead of duplicating this literal "Propia" 3 times.(Â˜ã²şÿÿÿÿ
+E
+java:S1481ØE")Remove this unused "year" local variable.(ÔÆü“ùÿÿÿÿ
+W	java:S125¡F"<This block of commented-out lines of code should be removed.(Á¼Ğÿıÿÿÿÿ
+^
+java:S1192±"GDefine a constant instead of duplicating this literal "GITANO" 3 times.(üüõÂ
+d
+java:S1192©"HDefine a constant instead of duplicating this literal "41640" 470 times.(·•Ûâøÿÿÿÿ
+c
+java:S1192á"GDefine a constant instead of duplicating this literal "42313" 10 times.( ºıÿÿÿÿ
+i	java:S100¨M"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ãîØşÿÿÿÿ
+_
+java:S1192ä6"HDefine a constant instead of duplicating this literal "Granada" 3 times.(Õ‡›ß
+d
+java:S1192ş"HDefine a constant instead of duplicating this literal "SYSDATE" 6 times.(ÿ¸· øÿÿÿÿ
+R	java:S125«3"<This block of commented-out lines of code should be removed.(¹´‡ğ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·ÜĞ‰
+s
+java:S1192³"WDefine a constant instead of duplicating this literal "DesapariciÃ³n forzada" 11 times.(³øá¾øÿÿÿÿ
+W	java:S125Ä"<This block of commented-out lines of code should be removed.(‘À—ÿúÿÿÿÿ
+]
+java:S1192»"FDefine a constant instead of duplicating this literal "RURAL" 3 times.(î¨éØ
+a
+java:S1144Ú"ERemove this unused private "cargaEMC_VALIDADORES_INSTRUMENTO" method.(ÀÁƒøÿÿÿÿ
+y
+java:S1192Ø"]Define a constant instead of duplicating this literal "Â¿Que tamaÃ±o tenia el lote?" 8 times.(¸ÒÑ‚úÿÿÿÿ
+i	java:S100š6"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÛËşûÿÿÿÿ
+
+java:S1192ì	"tDefine a constant instead of duplicating this literal "Agricultura, ganaderÃ­a, caza, silvicultura y pesca" 4 times.(ñïó¬ÿÿÿÿÿ
+W	java:S125áT"<This block of commented-out lines of code should be removed.(å©‘ºıÿÿÿÿ
+W	java:S125ÁC"<This block of commented-out lines of code should be removed.(¦±´ƒùÿÿÿÿ
+k
+java:S1192˜"TDefine a constant instead of duplicating this literal "C13P1ROTRAACTIVIDAD" 3 times.(ºéÅ½
+
+java:S1192²"sDefine a constant instead of duplicating this literal "Delitos contra la libertad y la integridad sexual" 10 times.(­¾äËúÿÿÿÿ
+o
+java:S1192›"SDefine a constant instead of duplicating this literal "SÃ­ pero no tiene" 11 times.(æ˜îûúÿÿÿÿ
+R	java:S125¤2"<This block of commented-out lines of code should be removed.(ûÁ‰²
+v
+java:S1192ŠZ"ZDefine a constant instead of duplicating this literal "Actividades inmobiliarias" 3 times.(½Òÿ²şÿÿÿÿ
+W	java:S125î"<This block of commented-out lines of code should be removed.(®±“¸ûÿÿÿÿ
+c
+java:S1192ó"GDefine a constant instead of duplicating this literal "42312" 10 times.(¿¥ÓÇıÿÿÿÿ
+g
+java:S1192ş"KDefine a constant instead of duplicating this literal "01/01/1914" 6 times.(ÿ¸· øÿÿÿÿ
+Q	java:S125‹3"<This block of commented-out lines of code should be removed.(ÓÍœh
+R	java:S125í0"<This block of commented-out lines of code should be removed.(äóÇë
+Q	java:S125j"<This block of commented-out lines of code should be removed.(ŒÁñ
+i	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸èùÜıÿÿÿÿ
+S
+java:S3252E"8Use static access with "com.orm.SugarRecord" for "find".(ˆ›¶•ûÿÿÿÿ
+i
+java:S1192´R"RDefine a constant instead of duplicating this literal "Entre 1 y 2 aÃ±os" 5 times.(ñ¤å›
+V	java:S125#"<This block of commented-out lines of code should be removed.(ÿÉšüÿÿÿÿ
+W	java:S125º "<This block of commented-out lines of code should be removed.(¢à•½øÿÿÿÿ
+R	java:S125ô!"<This block of commented-out lines of code should be removed.(øš¡İ
+i
+java:S1192Â"RDefine a constant instead of duplicating this literal "Homicidio/Masacre" 9 times.(’Ó£­
+c
+java:S1192Ù6"GDefine a constant instead of duplicating this literal "80000" 52 times.(œòª™üÿÿÿÿ
+c
+java:S1192ì"GDefine a constant instead of duplicating this literal "42319" 12 times.(ÛëÅªÿÿÿÿÿ
+W	java:S125ë"<This block of commented-out lines of code should be removed.(¦´ì¾ÿÿÿÿÿ
+R	java:S125ê1"<This block of commented-out lines of code should be removed.(ÜË›ª
+`
+java:S1192Ã6"IDefine a constant instead of duplicating this literal "60000" 1069 times.(„êÎ
+|
+java:S1192ú
+"eDefine a constant instead of duplicating this literal "Habitado o utilizado por usted mismo" 5 times.(­…ü„
+l
+java:S1192ç
+"PDefine a constant instead of duplicating this literal "Vivienda Urbana" 5 times.(÷¨ñïûÿÿÿÿ
+R	java:S125š"<This block of commented-out lines of code should be removed.(€ù İ
+i
+java:S1192äZ"RDefine a constant instead of duplicating this literal "Jornalero o peÃ³n" 3 times.(¶í¦‘
+Z
+java:S1144ª">Remove this unused private "cargarEMC_PREGUNTAS_TEMAS" method.(¸èùÜıÿÿÿÿ
+R	java:S125Å2"<This block of commented-out lines of code should be removed.(¸Ğ¿‡
+h
+java:S1192¯Y"LDefine a constant instead of duplicating this literal "28/05/2018" 30 times.(ûé­ùùÿÿÿÿ
+W	java:S125İL"<This block of commented-out lines of code should be removed.(˜ºÊ¼ÿÿÿÿÿ
+
+java:S1192ô
+"eDefine a constant instead of duplicating this literal "Propietario con documento registrado" 5 times.(¡Œ¹úÿÿÿÿ
+i
+java:S2095,"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ˆÚåÃıÿÿÿÿ
+c
+java:S1192¿["LDefine a constant instead of duplicating this literal "15/05/2018" 13 times.(ş©å—
+c
+java:S1192˜"LDefine a constant instead of duplicating this literal "PERTENECEFP" 3 times.(æçº
+R	java:S125ë""<This block of commented-out lines of code should be removed.(Ş¤„¬
+h
+java:S1192©Q"LDefine a constant instead of duplicating this literal "No responde" 3 times.(ƒ Î©ıÿÿÿÿ
+k
+java:S1192è"UDefine a constant instead of duplicating this literal "Tarjeta de identidad" 4 times.(Œ²¡-
+
+java:S1192ó"tDefine a constant instead of duplicating this literal "Â¿En cuanto estima su valor durante el Ãºltimo mes?" 4 times.(ß¼ˆ÷üÿÿÿÿ
+o
+java:S1192é"SDefine a constant instead of duplicating this literal "ANGUSTIA_DEPRESION" 6 times.(ö–úïÿÿÿÿÿ
+W	java:S125…"<This block of commented-out lines of code should be removed.(ëò–¢ıÿÿÿÿ
+i	java:S100Ú"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÁƒøÿÿÿÿ
+c
+java:S1192º""LDefine a constant instead of duplicating this literal "24/05/2016" 10 times.(ÔÛ¾×
+W	java:S125—"<This block of commented-out lines of code should be removed.(ıŠ´‡ûÿÿÿÿ
+i
+java:S1192Ò"MDefine a constant instead of duplicating this literal "Heterosexual" 3 times.(½ºõœüÿÿÿÿ
+W	java:S125ÿ"<This block of commented-out lines of code should be removed.(¨æÃûÿÿÿÿ
+b
+java:S1192³"KDefine a constant instead of duplicating this literal "PALENQUERO" 3 times.(ø£Ø†
+d	java:S100‘"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¤îè
+c
+java:S1192ğ"GDefine a constant instead of duplicating this literal "42306" 15 times.(ñ†ÚŠûÿÿÿÿ
+W	java:S125®%"<This block of commented-out lines of code should be removed.(¼Âîøÿÿÿÿ
+W	java:S125•."<This block of commented-out lines of code should be removed.(¿œÉüÿÿÿÿ
+x
+java:S1192¡
+"\Define a constant instead of duplicating this literal "SÃ­ Â¿Valor del mes pasado?" 8 times.(ÃÓÎûÿÿÿÿ
+W	java:S125ÒC"<This block of commented-out lines of code should be removed.(¹ŞÇ¥ûÿÿÿÿ
+c
+java:S1192Ğ"LDefine a constant instead of duplicating this literal "05/10/2016" 42 times.(ËâÊ¶
+W	java:S125Ÿ&"<This block of commented-out lines of code should be removed.(¼³Ÿìşÿÿÿÿ
+U
+java:S1128	":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ
+h
+java:S1192ÖZ"QDefine a constant instead of duplicating this literal "Nombre del curso" 3 times.(’Ğ°„
+m
+java:S1192İ"QDefine a constant instead of duplicating this literal "CUIDADO_PERSONAL" 6 times.(İºïëúÿÿÿÿ
+h
+java:S1192»"LDefine a constant instead of duplicating this literal "04/10/2016" 59 times.(Ã‘£åüÿÿÿÿ

@@ -1,0 +1,18 @@
+
+h	java:S116"SRename this field "UIDhogar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©‰„å
+h
+java:S3776;"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÊêêÕ
+I
+java:S1128".Remove this unused import 'android.view.View'.(Ø½­äþÿÿÿÿ
+?
+java:S1125]")Remove the literal "false" boolean value.(…ÇÛ‡
+R	java:S125“"<This block of commented-out lines of code should be removed.(æôÉ¢
+a	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¥¡³}
+W	java:S107)"BConstructor has 14 parameters, which is greater than 7 authorized.(ÉœÏè
+f	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉœÏè
+W
+java:S1126w"AReplace this if-then-else statement by a single return statement.(ª °å
+C
+java:S1125r"(Remove the literal "true" boolean value.(±ëÃÞûÿÿÿÿ
+D
+java:S1125j")Remove the literal "false" boolean value.(÷Êý“ùÿÿÿÿ

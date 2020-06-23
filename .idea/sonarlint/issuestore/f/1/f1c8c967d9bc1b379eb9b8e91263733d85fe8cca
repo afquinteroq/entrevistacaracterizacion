@@ -1,0 +1,8 @@
+
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘éÅî
+o	java:S116"URename this field "res_activa" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒùÛâşÿÿÿÿ
+q	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÓï
+m	java:S116"YRename this field "pre_idpregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü«âw
+o	java:S116"ZRename this field "res_idrespuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áô¤
+m	java:S116"XRename this field "res_respuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸óŒâ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(³ø‚œ

@@ -1,0 +1,12 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ä…ùæûÿÿÿÿ
+r	java:S116"XRename this field "id_muni_depto" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¹Â¤ÿÿÿÿÿ
+m	java:S116"SRename this field "id_depto" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÆ‹Üúÿÿÿÿ
+q	java:S116"WRename this field "id_municipio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û–­¬ùÿÿÿÿ
+r	java:S116"XRename this field "nom_municipio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò€àöÿÿÿÿÿ
+p	java:S116"VRename this field "no_personas" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¸´ûıÿÿÿÿ
+k	java:S116"QRename this field "tipo_a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïëêœûÿÿÿÿ
+f	java:S116"QRename this field "tipo_b" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëöä÷
+f	java:S116"QRename this field "tipo_c" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñëà
+n	java:S116"YRename this field "grupo_especial" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜–Ÿ
+O	java:S125"<This block of commented-out lines of code should be removed.(¯½ê‡

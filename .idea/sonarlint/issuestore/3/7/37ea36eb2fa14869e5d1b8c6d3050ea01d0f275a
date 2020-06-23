@@ -1,0 +1,22 @@
+
+x
+java:S1104"]Make usu_fechacreacion a static final constant or non-public and provide accessors if needed.(¤¢ßüşÿÿÿÿ
+u
+java:S1104"_Make usu_usuariocreacion a static final constant or non-public and provide accessors if needed.(Œ±’ğ
+v	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¢ßüşÿÿÿÿ
+l
+java:S1104"VMake tem_activo a static final constant or non-public and provide accessors if needed.(ñÅÒ
+j	java:S116"URename this field "tem_activo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÅÒ
+p
+java:S1104"UMake tem_orden a static final constant or non-public and provide accessors if needed.(§¤é¦ıÿÿÿÿ
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ±’ğ
+q
+java:S1104"VMake tem_idtema a static final constant or non-public and provide accessors if needed.(åææ¾ÿÿÿÿÿ
+@
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ùçÓºüÿÿÿÿ
+n	java:S116"TRename this field "tem_orden" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§¤é¦ıÿÿÿÿ
+s	java:S116"YRename this field "tem_nombretema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šêùûÿÿÿÿ
+u
+java:S1104"ZMake tem_nombretema a static final constant or non-public and provide accessors if needed.(Šêùûÿÿÿÿ
+o	java:S116"URename this field "tem_idtema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åææ¾ÿÿÿÿÿ

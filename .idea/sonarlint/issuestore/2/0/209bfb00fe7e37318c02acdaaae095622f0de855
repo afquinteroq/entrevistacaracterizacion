@@ -1,0 +1,10 @@
+
+@
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(İ–—Œıÿÿÿÿ
+s	java:S116"^Rename this field "pre_idpreguntapadre" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—¸ÇÊ
+q	java:S116"\Rename this field "ins_idinstrumento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç
+j	java:S116"URename this field "tem_idtema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úÿ†¦
+m	java:S116"XRename this field "per_idpersona" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„úó¸
+o	java:S116"URename this field "hog_codigo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùïˆûÿÿÿÿ
+m	java:S116"YRename this field "pre_idpregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü«âw

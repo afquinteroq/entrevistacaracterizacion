@@ -3,12 +3,10 @@ package co.com.rni.encuestadormovil;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -19,7 +17,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -39,9 +36,6 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.orm.query.Select;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -49,7 +43,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
 import co.com.rni.encuestadormovil.adapter.*;
 import co.com.rni.encuestadormovil.model.*;
 import co.com.rni.encuestadormovil.util.*;
@@ -146,6 +139,12 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
     private Button btnbtnSalirReinicio, btnCancelarReinicio;
     private emc_hogares hogarActual;
+
+    private static final String CONS_CAPITULO_YA_FUE_DILIGENCIADO = "El capítulo ya fue diligenciado";
+    private static final String CONS_ESTADO_CERRADA = "Cerrada";
+    private static final String CONS_ESTADO_INCOMPLETA = "Incompleta";
+    private static final String CONS_ESTADO_ANULADA = "Anulada";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -320,7 +319,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                         if (lsCapTer.size() > 0) {
                             //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                            Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                             llFinalizarEncuesta.setVisibility(View.VISIBLE);
                             val = false;
 
@@ -356,7 +355,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                         if (lsCapTer.size() > 0) {
                             //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                            Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                             llFinalizarEncuesta.setVisibility(View.VISIBLE);
                             val = false;
 
@@ -392,7 +391,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                             List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                             if (lsCapTer.size() > 0) {
                                 //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                                Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                                 llFinalizarEncuesta.setVisibility(View.VISIBLE);
                                 val = false;
 
@@ -429,7 +428,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                         if (lsCapTer.size() > 0) {
                             //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                            Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                             llFinalizarEncuesta.setVisibility(View.VISIBLE);
                             val = false;
 
@@ -575,15 +574,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                         String est = "";
                         if (rgEstado.getCheckedRadioButtonId() == R.id.estIncompleta)
-                            est = "Incompleta";
+                            est = CONS_ESTADO_INCOMPLETA;
                         if (rgEstado.getCheckedRadioButtonId() == R.id.estAnulada || rgEstado.getCheckedRadioButtonId() == R.id.estAnulaHogar)
-                            est = "Anulada";
+                            est = CONS_ESTADO_ANULADA;
                         if (rgEstado.getCheckedRadioButtonId() == R.id.estCerrada)
-                            est = "Cerrada";
+                            est = CONS_ESTADO_CERRADA;
 
                         if (est.equals("")) {
                             Toast.makeText(getBaseContext(), "Debe seleccionar un estado", Toast.LENGTH_SHORT).show();
-                        } else if (est.equals("Cerrada"))
+                        } else if (est.equals("CONS_ESTADO_CERRADA"))
                         {
                             String[] parCapT = {hogCodigo};
                             List<emc_capitulos_terminados> lsCapTerT = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? ", parCapT);
@@ -3648,15 +3647,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 public void onClick(View v) {
                     String est = "";
                     if (rgEstado.getCheckedRadioButtonId() == R.id.estIncompleta)
-                        est = "Incompleta";
+                        est = CONS_ESTADO_INCOMPLETA;
                     if (rgEstado.getCheckedRadioButtonId() == R.id.estAnulada || rgEstado.getCheckedRadioButtonId() == R.id.estAnulaHogar)
-                        est = "Anulada";
+                        est = CONS_ESTADO_ANULADA;
                     if (rgEstado.getCheckedRadioButtonId() == R.id.estCerrada)
-                        est = "Cerrada";
+                        est = CONS_ESTADO_CERRADA;
 
                     if (est.equals("")) {
                         Toast.makeText(getBaseContext(), "Debe seleccionar un estado", Toast.LENGTH_SHORT).show();
-                    } else if (est.equals("Cerrada")) {
+                    } else if (est.equals(CONS_ESTADO_CERRADA)) {
                         String[] parCapT = {hogCodigo};
                         List<emc_capitulos_terminados> lsCapTerT = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? ", parCapT);
                         if (lsCapTerT.size() > 3) {
@@ -3693,12 +3692,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                                 }});
 
-                            /*hogarActual.setEstado(est);
-                            hogarActual.save();
-                            //modificacion javier
-                            Intent mainI = new Intent(getBaseContext(), MainActivity.class);
-                            startActivity(mainI);
-                            finish();*/
+
 
                         } else {
                             Toast.makeText(getBaseContext(), "Debe diligencia los tres primeros capítulos y un capítulo adicional", Toast.LENGTH_SHORT).show();
@@ -3734,12 +3728,6 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                 llSalirEntrevista.setVisibility(View.VISIBLE);
 
                             }});
-
-                       /* hogarActual.setEstado(est);
-                        hogarActual.save();
-                        Intent mainI = new Intent(getBaseContext(), MainActivity.class);
-                        startActivity(mainI);
-                        finish();*/
                     }
                 }
             });

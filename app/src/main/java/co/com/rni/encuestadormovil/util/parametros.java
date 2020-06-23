@@ -71,52 +71,6 @@ public final class parametros {
             //callback.actualizaParametros("Carga parametros encuesta", 0);
             ArrayList<String> listaTemas = new ArrayList<>();
             listaTemas.add("IDENTIFICACION");//1
-            listaTemas.add("DATOS BASICOS");//2
-            //listaTemas.add("CARACTERISTICAS GENERALES");
-            listaTemas.add("DATOS DE LA VIVIENDA");//3
-            listaTemas.add("DATOS DE LA VIVIENDA");//4
-            listaTemas.add("HOGAR");//5
-            listaTemas.add("RETORNOS Y REUBICACIONES");//6
-            listaTemas.add("REUNIFICACION FAMILIAR");//7
-            listaTemas.add("EDUCACION");//8
-            listaTemas.add("SALUD");//9
-            listaTemas.add("REHABILITACION");//10
-            listaTemas.add("ALIMENTACION");//11
-            listaTemas.add("OTRAS TRANSACCIONES");//12
-            listaTemas.add("FUERZA DE TRABAJO");//13
-            listaTemas.add("OTROS INGRESOS");//14
-            listaTemas.add("AYUDA HUMANITARIA");//15
-            listaTemas.add("DESPOJO Y ABANDONO DE TIERRAS");//16
-            listaTemas.add("JUSTICIA");//17
-            listaTemas.add("MEDIDAS DE PROTECCION");//18
-            listaTemas.add("INDEMNIZACION");//19
-            listaTemas.add("SATISFACCION");//20
-            listaTemas.add("OTROS");//21
-            listaTemas.add("VIVIENDA ANDAGUEDA");//22
-            listaTemas.add("MODULO SAN ANDRES");//23
-            listaTemas.add("NRC-DATOS DEMOGRÁFICOS");//24
-            listaTemas.add("NRC-CONDICIONES DE VICTIMIZACIÓN");//25
-            listaTemas.add("NRC-DINÁNIMCA MIGRATORIA");//26
-            listaTemas.add("NRC-CONDICIONES DE INSERCIÓN E INTENCIÓN DE RETORNO ");//27
-            listaTemas.add("NRC-CONDICIONES EN EL DESTINO");//28
-            listaTemas.add("NRC-CARACTERISTICAS SOCIALES.   RIESGOS ASOCIADOS A LA MIGRACIÓN");//29
-            listaTemas.add("NRC-G CONDICIONES ECONOMICAS");//30
-            listaTemas.add("PERFIL LABORAL");//31
-            listaTemas.add("FUERZA PUBLICA");//32
-            listaTemas.add("ACCESO A TERRITORIO");//33
-
-            listaTemas.add("Preguntas sociodemograficas");//34
-            listaTemas.add("I. Conocimiento del programa");//35
-            listaTemas.add("I.a Extranjeros");//36
-            listaTemas.add("II. Protección");//37
-            listaTemas.add("III. Participación");//38
-            listaTemas.add("V. Empleabilidad");//39
-            listaTemas.add("VI. Fortalecimiento");//40
-            listaTemas.add("VII. Emprendimiento");//41
-            listaTemas.add("VII. Legalización del barrio");//42
-
-
-
 
             for(int cont = 0; cont < listaTemas.size(); cont++){
                 emc_temas  temaTemp = new emc_temas(cont+1, listaTemas.get(cont), estado, usr, fecha, cont+1);
@@ -124,9 +78,9 @@ public final class parametros {
             }
 
 
-            cargarEMC_Version();
+            //cargarEMC_Version();
 
-            cargarEMC_TEMA_PERFILS();
+            //cargarEMC_TEMA_PERFILS();
             /*cargarEMC_PREGUNTAS_TEMAS(fecha);
             cargarEMC_PREGUNTAS_INSTRUMENTO();
             cargaEMC_VALIDADORES_INSTRUMENTO();
@@ -167,6 +121,10 @@ public final class parametros {
             sanandres.save();
             emc_usuarios acnur = new emc_usuarios("7777777777", "acnur", "Acnur759*", "acnur", formattedDate, formattedDate2,"710","MODULO_ACNUR");
             acnur.save();
+            emc_usuarios saah = new emc_usuarios("999999999999", "saah", "Saah", "saah", formattedDate, formattedDate2,"1190","SAAH");
+            saah.save();
+            emc_usuarios SaahS = new emc_usuarios("99999999999", "saahs", "SaahS", "saahsupervisor", formattedDate, formattedDate2,"1230","SAAHSUPERVISOR");
+            SaahS.save();
 
             // Carga las víctimas */
             /*asyncCargaVictimas loader = new asyncCargaVictimas(context_, callback);

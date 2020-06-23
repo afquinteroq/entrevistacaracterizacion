@@ -1,0 +1,8 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ßĞßÛ
+q	java:S116"\Rename this field "ins_idinstrumento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç
+m	java:S116"XRename this field "per_idpersona" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„úó¸
+o	java:S116"ZRename this field "val_idvalidador" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¡–
+i	java:S116"TRename this field "pre_valor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í÷‚¾
+o	java:S116"URename this field "hog_codigo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùïˆûÿÿÿÿ
+T	java:S125"<This block of commented-out lines of code should be removed.(ö ·ıÿÿÿÿ

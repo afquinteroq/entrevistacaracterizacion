@@ -1,0 +1,20 @@
+
+v	java:S116"\Rename this field "pre_validador_min" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¥Î’øÿÿÿÿ
+n	java:S116"TRename this field "res_padre" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á¬€éÿÿÿÿÿ
+w	java:S116"]Rename this field "res_ordenrespuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í‚®ûÿÿÿÿ
+m	java:S116"XRename this field "pre_validador" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÖ½û
+q	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÓï
+x	java:S116"^Rename this field "val_idvalidador_def" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ø‘€ıÿÿÿÿ
+{	java:S116$"aRename this field "res_respuestashbilitar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òö†ªüÿÿÿÿ
+l	java:S116"WRename this field "pre_campotex" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€øúÎ
+t	java:S116 "ZRename this field "res_obligatorio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÏÑŞùÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(´ç¡×úÿÿÿÿ
+q	java:S116"\Rename this field "pre_validador_max" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“´ø‚
+l	java:S116""WRename this field "res_finaliza" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÄØÛ
+o	java:S116"ZRename this field "res_idrespuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áô¤
+v	java:S116#"\Rename this field "res_autocompletar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‡ÿ¿ùÿÿÿÿ
+q	java:S116"\Rename this field "ins_idinstrumento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç
+q	java:S116!"WRename this field "res_habilita" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëË§Œıÿÿÿÿ
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘éÅî
+r	java:S116"XRename this field "pre_longcampo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äú¶úıÿÿÿÿ
+o	java:S116"ZRename this field "val_idvalidador" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¡–

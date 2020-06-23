@@ -19,29 +19,4 @@ public class emc_comunidadesnegras  extends SugarRecord<emc_comunidadesnegras> {
     String idcomunidad;
     String nombrecomunidad;
 
-    /*
-    public emc_comunidadesnegras() {
-    }
-
-    public emc_comunidadesnegras(String idcomunidad, String nombrecomunidad) {
-        this.idcomunidad = idcomunidad;
-        this.nombrecomunidad = nombrecomunidad;
-    }
-
-    public String getIdcomunidad() {
-        return idcomunidad;
-    }
-
-    public void setIdcomunidad(String idcomunidad) {
-        this.idcomunidad = idcomunidad;
-    }
-
-    public String getNombrecomunidad() {
-        return nombrecomunidad;
-    }
-
-    public void setNombrecomunidad(String nombrecomunidad) {
-        this.nombrecomunidad = nombrecomunidad;
-    }
-    */
 }

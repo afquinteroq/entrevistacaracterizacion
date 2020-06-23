@@ -1,0 +1,67 @@
+
+X
+java:S1128"=Remove this unused import 'android.content.res.AssetManager'.(ÜÅÕıÿÿÿÿ
+i
+java:S2095¢"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(£ÕÃŒ
+g
+java:S1192B"LDefine a constant instead of duplicating this literal "/data/data/" 3 times.(Ø¾ÍĞıÿÿÿÿ
+O
+java:S1128":Remove this unused import 'java.io.ByteArrayOutputStream'.(Î‡È
+h
+java:S2095c"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ÆÁõ¡øÿÿÿÿ
+I
+java:S1128"3Remove this unused import 'java.io.BufferedReader'.(€é²Å
+F
+java:S1481="+Remove this unused "client" local variable.(øš¥áıÿÿÿÿ
+V	java:S125`"<This block of commented-out lines of code should be removed.(ü‹©´ùÿÿÿÿ
+P	java:S125b"<This block of commented-out lines of code should be removed.(ã‡å?
+W	java:S125Á"<This block of commented-out lines of code should be removed.(¼³ÑÒıÿÿÿÿ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+k	java:S117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á€˜ïıÿÿÿÿ
+Q
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+j
+java:S4042à"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(ä¥µŞøÿÿÿÿ
+l	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥†¾¡øÿÿÿÿ
+T	java:S106ã"9Replace this use of System.out or System.err by a logger.( óµùÿÿÿÿ
+g	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙßöÈ
+D
+java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ
+J
+java:S1128"/Remove this unused import 'java.io.FileReader'.(Â¡¢äşÿÿÿÿ
+k	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯¿Ö¼øÿÿÿÿ
+i
+java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¨æú¸ûÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜•Ûô
+i	java:S100Í"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·˜­’üÿÿÿÿ
+‡
+java:S4165º"kRemove this useless assignment; "_Mantener_ZIP" already holds the assigned value along all execution paths.(é••¬ùÿÿÿÿ
+g	java:S101""MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(§Ÿœøÿÿÿÿ
+k	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Á¼øÿÿÿÿ
+c
+java:S2095’"LUse try-with-resources or close this "ZipInputStream" in a "finally" clause.(ÙßöÈ
+f	java:S117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£«ìà
+Q	java:S899¸";Do something with the "boolean" value returned by "delete".(Ú¨÷
+Z
+java:S2583·"DChange this condition so that it does not always evaluate to "false"(Ğ÷Ì5
+I
+java:S1128"3Remove this unused import 'java.net.URLConnection'.(š¿šó
+G
+java:S1128",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ
+U
+java:S1854=":Remove this useless assignment to local variable "client".(øš¥áıÿÿÿÿ
+V	java:S125)"<This block of commented-out lines of code should be removed.(ãô…÷şÿÿÿÿ
+Q	java:S125C"<This block of commented-out lines of code should be removed.(Ñ›†Ğ
+e
+java:S2095 "NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ãœÒ¹
+O	java:S106á"9Replace this use of System.out or System.err by a logger.(ûíğ
+>
+java:S1148M"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+d
+java:S2095i"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(½Ñº¤
+g
+java:S1128"JRemove this unused import 'co.com.rni.encuestadormovil.model.emc_version'.(ÇààÎ8•íæ§­.
+e
+java:S4042¸"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(Ú¨÷
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨æú¸ûÿÿÿÿ

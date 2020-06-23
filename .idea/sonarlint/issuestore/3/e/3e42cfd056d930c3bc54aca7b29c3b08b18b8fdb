@@ -1,0 +1,9 @@
+
+o	java:S116"URename this field "hog_codigo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕôÙûÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Æ€
+s	java:S116"YRename this field "pre_idpregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÅØ“şÿÿÿÿ
+n	java:S116"TRename this field "ixp_orden" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û©™“üÿÿÿÿ
+m	java:S116"XRename this field "per_idpersona" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À›¤Î
+q	java:S116"]Rename this field "validacion_persona" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆúÅ,
+r	java:S116"XRename this field "pre_tipocampo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²†£ıÿÿÿÿ
+u	java:S116"[Rename this field "pre_tipopregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù«×ùÿÿÿÿ

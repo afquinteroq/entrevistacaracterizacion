@@ -1,0 +1,22 @@
+
+p	java:S116"[Rename this field "pre_tipopregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Ãäú
+t	java:S116"_Rename this field "val_idvalidador_dato" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òáØ—
+t	java:S116!"_Rename this field "val_pregunta_general" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÚî
+@
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(àÁìøÿÿÿÿ
+o	java:S116"URename this field "tem_idtema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãó¬Àùÿÿÿÿ
+r	java:S116$"]Rename this field "val_diferenciadonu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÜî´
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘éÅî
+n	java:S116"TRename this field "ixp_orden" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èÉÀÔşÿÿÿÿ
+l	java:S116#"XRename this field "val_todohogar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÆÄx
+i	java:S116%"TRename this field "r_defualt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰úÇ¡
+q	java:S116"\Rename this field "ins_idinstrumento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç
+p	java:S116"[Rename this field "val_diferenciado" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢éğŠ
+r	java:S116"XRename this field "pre_tipocampo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®¼¶”úÿÿÿÿ
+q	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÓï
+p	java:S116"VRename this field "pre_depende" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏĞî¥øÿÿÿÿ
+v	java:S116""aRename this field "val_respuesta_multiple" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­‚˜‰
+m	java:S116"YRename this field "pre_idpregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü«âw
+o	java:S116"URename this field "pre_activa" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­ÅŒ˜ùÿÿÿÿ
+u	java:S116 "[Rename this field "val_preg_general" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö÷ûêıÿÿÿÿ

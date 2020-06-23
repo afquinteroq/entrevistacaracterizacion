@@ -1,0 +1,31 @@
+
+?
+java:S1148"#Use a logger to log this exception.(‰œ‰Õúÿÿÿÿ
+?
+java:S1148Š"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+N	java:S106V"9Replace this use of System.out or System.err by a logger.(¡ü¯¸
+^
+java:S2095~"HUse try-with-resources or close this "FileReader" in a "finally" clause.(Ğí›
+g
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(Ô¬†œøÿÿÿÿ
+g
+java:S2095T"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(Ô¬†œøÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(âøçÊ
+a
+java:S1128"KRemove this unused import 'co.com.rni.encuestadormovil.model.emc_usuarios'.(ßş©Â
+\
+java:S1075M"ARefactor your code to get this URI from a customizable parameter.(­ş¶ıÿÿÿÿ
+^
+java:S2095S"HUse try-with-resources or close this "FileReader" in a "finally" clause.(Ğí›
+^
+java:S1126_"AReplace this if-then-else statement by a single return statement.(È»óë8†ÕÏ¦­.
+Q	java:S1259"<This block of commented-out lines of code should be removed.(Á´·Ï
+R	java:S125Œ"<This block of commented-out lines of code should be removed.(áÓòØ
+W	java:S125"<This block of commented-out lines of code should be removed.(¶–ç®ıÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(¡ü¯¸
+>
+java:S1148h"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îÿµ¢
+B
+java:S1068"'Remove this unused "ctx" private field.(ÖÖ¾­şÿÿÿÿ
+]	java:S125["<This block of commented-out lines of code should be removed.(ÎßÕÃÿÿÿÿÿ8‚×¦­.

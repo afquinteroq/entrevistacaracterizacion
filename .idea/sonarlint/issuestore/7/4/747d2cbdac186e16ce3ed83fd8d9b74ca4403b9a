@@ -1,0 +1,8 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÿèÏÑ
+@
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
+o	java:S116"URename this field "hog_codigo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕŽôÙûÿÿÿÿ
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÏ†Ñ
+v	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÝËÙ ûÿÿÿÿ
+O	java:S125"<This block of commented-out lines of code should be removed.(¡©ŸÏ

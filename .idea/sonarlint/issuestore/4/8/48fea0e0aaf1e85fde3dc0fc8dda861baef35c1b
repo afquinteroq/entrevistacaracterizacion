@@ -1,0 +1,9 @@
+
+q	java:S116"\Rename this field "pre_validador_max" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“´ø‚
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ì›­íøÿÿÿÿ
+q	java:S116"\Rename this field "ins_idinstrumento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç
+i	java:S116"TRename this field "pre_valor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í÷‚¾
+r	java:S116"XRename this field "pre_longcampo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äú¶úıÿÿÿÿ
+o	java:S116"ZRename this field "val_idvalidador" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¡–
+m	java:S116"XRename this field "pre_validador" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÖ½û
+v	java:S116"\Rename this field "pre_validador_min" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¥Î’øÿÿÿÿ

@@ -1,0 +1,39 @@
+
+E
+java:S1148>"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ªôŞ‡¡.
+R	java:S125¢"<This block of commented-out lines of code should be removed.(ñÖŞË
+Z
+java:S1854¿">Remove this useless assignment to local variable "contrasena".(Ç¢–—şÿÿÿÿ
+
+java:S5527x"wEnable server hostname verification on this SSL/TLS connection, by setting "mail.smtp.ssl.checkserveridentity" to true.(’ß‡ƒ
+c
+java:S2095I"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(öª†—
+\
+java:S11260"AReplace this if-then-else statement by a single return statement.(ÈÄğÀúÿÿÿÿ
+“
+java:S5527Æ"wEnable server hostname verification on this SSL/TLS connection, by setting "mail.smtp.ssl.checkserveridentity" to true.(£Ó±ùÿÿÿÿ
+?
+java:S1148ä"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+>
+java:S1148d"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(–š½°ÿÿÿÿÿ
+R	java:S125–"<This block of commented-out lines of code should be removed.(ÖŸµë
+i
+java:S2095S"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(™­å˜øÿÿÿÿ
+m
+java:S1192‰"VDefine a constant instead of duplicating this literal "afquinteroq@gmail.com" 5 times.(„è»ˆ
+Q
+java:S1161Ò":Add the "@Override" annotation above this method signature(‡èú×
+Q	java:S1252"<This block of commented-out lines of code should be removed.(ÍÌ
+W	java:S125"<This block of commented-out lines of code should be removed.(ıå¥şÿÿÿÿ
+R
+java:S1854N"7Remove this useless assignment to local variable "fch".(˜µÌµüÿÿÿÿ
+Q
+java:S1161ˆ":Add the "@Override" annotation above this method signature(‡èú×
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(šÓ¾
+K
+java:S1481¿"/Remove this unused "contrasena" local variable.(Ç¢–—şÿÿÿÿ
+?
+java:S1148¶"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+d
+java:S1192‰"MDefine a constant instead of duplicating this literal "Af80857397*+" 4 times.(„è»ˆ

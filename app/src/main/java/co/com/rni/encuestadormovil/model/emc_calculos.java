@@ -17,21 +17,4 @@ import lombok.NoArgsConstructor;
 public class emc_calculos extends SugarRecord<emc_calculos> {
 
     private Integer valor;
-
-    /*
-    public emc_calculos(Integer valor) {
-        this.valor = valor;
-    }
-
-    public emc_calculos() {
-    }
-
-    public Integer getValor() {
-        return valor;
-    }
-
-    public void setValor(Integer valor) {
-        this.valor = valor;
-    }
-    */
 }
