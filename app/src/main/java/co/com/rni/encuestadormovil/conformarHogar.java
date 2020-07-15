@@ -486,6 +486,7 @@ public class conformarHogar extends AppCompatActivity {
 
                 int mayoresedad = 0;
                 int menoresedad = 0;
+                String fechaHoyanio = fechaActualSinHora();
 
                 if (miembrosHogar.size() > position) {
                     for (int conM = 0; conM < miembrosHogar.size(); conM++) {
@@ -554,7 +555,8 @@ public class conformarHogar extends AppCompatActivity {
                                 }
 
                                 anio = fecha.substring(7, 9);
-                                if (Integer.valueOf(anio) > 16) {
+                                fechaHoyanio = fechaHoyanio.substring(8, 10);
+                                if (Integer.valueOf(anio) > Integer.parseInt(fechaHoyanio)) {
                                     anio = "19" + anio;
                                 } else {
                                     anio = "20" + anio;
@@ -563,7 +565,8 @@ public class conformarHogar extends AppCompatActivity {
                             } else if (fecha.length() == 8) {
                                 mes = fecha.substring(3, 5);
                                 anio = fecha.substring(6, 8);
-                                if (Integer.valueOf(anio) > 16) {
+                                fechaHoyanio = fechaHoyanio.substring(8, 10);
+                                if (Integer.valueOf(anio) > Integer.parseInt(fechaHoyanio)) {
                                     anio = "19" + anio;
                                 } else {
                                     anio = "20" + anio;
@@ -643,6 +646,7 @@ public class conformarHogar extends AppCompatActivity {
                 boolean hogarvalido = true;
                 int mayoresedad = 0;
                 int menoresedad = 0;
+                String fechaHoyanio = fechaActualSinHora();
 
                 if (miembrosHogar.size() > position) {
                     for (int conM = 0; conM < miembrosHogar.size(); conM++) {
@@ -711,7 +715,8 @@ public class conformarHogar extends AppCompatActivity {
                                     }
 
                                     anio = fecha.substring(7, 9);
-                                    if (Integer.valueOf(anio) > 16) {
+                                    fechaHoyanio = fechaHoyanio.substring(8, 10);
+                                    if (Integer.valueOf(anio) > Integer.parseInt(fechaHoyanio)) {
                                         anio = "19" + anio;
                                     } else {
                                         anio = "20" + anio;
@@ -720,7 +725,8 @@ public class conformarHogar extends AppCompatActivity {
                                 } else if (fecha.length() == 8) {
                                     mes = fecha.substring(3, 5);
                                     anio = fecha.substring(6, 8);
-                                    if (Integer.valueOf(anio) > 16) {
+                                    fechaHoyanio = fechaHoyanio.substring(8, 10);
+                                    if (Integer.valueOf(anio) > Integer.parseInt(fechaHoyanio)) {
                                         anio = "19" + anio;
                                     } else {
                                         anio = "20" + anio;

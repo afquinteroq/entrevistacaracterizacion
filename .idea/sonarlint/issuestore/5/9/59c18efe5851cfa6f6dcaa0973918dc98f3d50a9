@@ -1,0 +1,19 @@
+
+I
+java:S1444".Make this "public static mInstant" field final(—´¶åûÿÿÿÿ
+b
+java:S2184|"GCast one of the operands of this multiplication operation to a "float".(Ð’¢þÿÿÿÿ
+b
+java:S2184}"GCast one of the operands of this multiplication operation to a "float".(Â‘¦Ÿùÿÿÿÿ
+9
+java:S1148C"#Use a logger to log this exception.(òçøì
+9
+java:S1148I"#Use a logger to log this exception.(òçøì
+>
+java:S1148f"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+`
+java:S2259d"JA "NullPointerException" could be thrown; "scaledBitmap" is nullable here.(ÒëÆŒ
+o
+java:S1104"TMake mInstant a static final constant or non-public and provide accessors if needed.(—´¶åûÿÿÿÿ
+{
+java:S1488m"eImmediately return this expression instead of assigning it to the temporary variable "updatedBitmap".(ñéÌœ

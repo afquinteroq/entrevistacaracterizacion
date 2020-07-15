@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -60,6 +61,10 @@ public class respuestasRatioAdapter extends ArrayAdapter{
 
         //EditText textOtro = (EditText) row.findViewById(R.id.textOtro);
         AutoCompleteTextView textOtro = (AutoCompleteTextView) row.findViewById(R.id.textOtro);
+
+        //Asignar Color
+        /*LinearLayout ll_item_ration_texto = (LinearLayout) row.findViewById(R.id.ll_item_ration_texto) ;
+        ll_item_ration_texto.setBackground(getContext().getDrawable(R.drawable.border_radius_gray));*/
 
         textOtro.addTextChangedListener(new TextWatcher() {
             @Override

@@ -1,0 +1,15 @@
+
+G
+java:S1153 "1Directly append the argument of String.valueOf().(ÕÿÛĞ
+–
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã€¡u
+K
+java:S1854#"5Remove this useless assignment to local variable "y".(ÂİŸ
+P
+java:S1854"5Remove this useless assignment to local variable "y".(¯üÇáúÿÿÿÿ
+V
+java:S3252 "@Use static access with "com.orm.SugarRecord" for "executeQuery".(ÕÿÛĞ
+M
+java:S3252""8Use static access with "com.orm.SugarRecord" for "find".(ÂÅ‰
+A
+java:S1481"&Remove this unused "y" local variable.(¯üÇáúÿÿÿÿ

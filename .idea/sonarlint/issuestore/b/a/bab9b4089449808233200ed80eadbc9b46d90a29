@@ -1,0 +1,63 @@
+
+x
+java:S11924"]Define a constant instead of duplicating this literal "Ocurrio un error en el login" 5 times.(Û˜–Ñþÿÿÿÿ
+k	java:S117w"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à«Þâýÿÿÿÿ
+A
+java:S1481?",Remove this unused "element" local variable.(ŠÏÈ7
+E
+java:S1172s"*Remove this unused method parameter "ctx".(Ðªýùûÿÿÿÿ
+W	java:S125Ž"<This block of commented-out lines of code should be removed.(ëÄ¶ûÿÿÿÿ
+D
+java:S1874}".Remove this use of "Header"; it is deprecated.(Ã´­ê
+[
+java:S1858H"F"getNodeValue" returns a string, there's no need to call "toString()".(ýîf
+a
+java:S1858O"F"getNodeValue" returns a string, there's no need to call "toString()".(¶°õÿÿÿÿÿ
+k	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—°°ýøÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+l
+java:S1104""QMake AppID a static final constant or non-public and provide accessors if needed.(¤²‹ªýÿÿÿÿ
+f	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ææ‹¯
+J
+java:S1128"4Remove this unused import 'android.widget.ListView'.(Œ‰Ö×
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(òôÍÙ
+>
+java:S1148i"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+D
+java:S18743".Remove this use of "Header"; it is deprecated.(Ã´­ê
+\
+java:S1858M"F"getNodeValue" returns a string, there's no need to call "toString()".(¨•øí
+@
+java:S1481>"*Remove this unused "nodes" local variable.(‘°ð§
+V	java:S125!"<This block of commented-out lines of code should be removed.(ˆñ´Øýÿÿÿÿ
+Q	java:S125-"<This block of commented-out lines of code should be removed.(¡äˆ²
+k
+java:S3008""PRename this field "AppID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤²‹ªýÿÿÿÿ
+?
+java:S1172%"*Remove this unused method parameter "ctx".(ÙÂ&
+9
+java:S11485"#Use a logger to log this exception.(Óùóÿ
+I
+java:S2755B"3Disable access to external entities in XML parsing.(…É¡
+J
+java:S1874‚".Remove this use of "Header"; it is deprecated.(¡îÍâùÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(òôÍÙ
+k	java:S117v"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—°°ýøÿÿÿÿ
+W
+java:S1075,"ARefactor your code to get this URI from a customizable parameter.(ææ‹¯
+g
+java:S3776%"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÙÂ&
+\
+java:S1858Q"F"getNodeValue" returns a string, there's no need to call "toString()".(×­è§
+F
+java:S1444""+Make this "public static AppID" field final(¤²‹ªýÿÿÿÿ
+I
+java:S18749".Remove this use of "Header"; it is deprecated.(¡îÍâùÿÿÿÿ
+\
+java:S1075x"ARefactor your code to get this URI from a customizable parameter.(å³É§øÿÿÿÿ
+M
+java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ
+E
+java:S1128"/Remove this unused import 'java.util.Calendar'.(ÿÛö´

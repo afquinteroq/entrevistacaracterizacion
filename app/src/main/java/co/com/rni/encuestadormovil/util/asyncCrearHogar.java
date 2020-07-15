@@ -15,6 +15,7 @@ import co.com.rni.encuestadormovil.model.emc_victimas_nosugar;
 import co.com.rni.encuestadormovil.sqlite.DbHelper;
 
 import static co.com.rni.encuestadormovil.util.general.fechaActual;
+import static co.com.rni.encuestadormovil.util.general.fechaActualSinHora;
 
 /**
  * Created by ASUS on 09/10/2018.
@@ -127,6 +128,29 @@ public class asyncCrearHogar extends AsyncTask<String, Integer, Boolean> {
 
                     for (Integer cMH = 0; cMH < miembrosHogar.size(); cMH++) {
                         emc_miembros_hogar miembro = miembrosHogar.get(cMH);
+                        if(miembro.getTipoPersona() == null){
+                            miembro.setTipoPersona("5004");
+                        }
+                        if(miembro.getFecNacimiento() != null){
+                            try{
+                                if(miembro.getFecNacimiento().length() ==8){
+                                    String fechaHoyanio = fechaActualSinHora();
+                                    fechaHoyanio = fechaHoyanio.substring(8, 10);
+                                    String anio = miembro.getFecNacimiento().substring(6,8);
+                                    if(Integer.parseInt(anio) > Integer.parseInt(fechaHoyanio)){
+                                        String fechan= miembro.getFecNacimiento().substring(0,6)+"19"+miembro.getFecNacimiento().substring(6);
+                                        miembro.setFecNacimiento(fechan);
+                                    }else{
+                                        String fechan= miembro.getFecNacimiento().substring(0,6)+"20"+miembro.getFecNacimiento().substring(6);
+                                        miembro.setFecNacimiento(fechan);
+                                    }
+                                }
+                            }catch (Exception e){
+                                e.getMessage();
+                            }
+
+                        }
+
                         miembro.save();
                         if (miembro.getInd_jefe().equals("SI")){
                             tieneJefe = true;

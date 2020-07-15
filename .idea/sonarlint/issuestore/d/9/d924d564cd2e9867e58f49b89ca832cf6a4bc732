@@ -1,6 +1,6 @@
 
+a	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(žºš
 M
 java:S1172'"2Remove this unused method parameter "convertView".(©ŠÜÂûÿÿÿÿ
 x
 java:S4165"bRemove this useless assignment; "tipo" already holds the assigned value along all execution paths.(ºƒÔ§
-a	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(žºš

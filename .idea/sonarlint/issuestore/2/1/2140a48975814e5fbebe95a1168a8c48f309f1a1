@@ -1,6 +1,6 @@
 
-g	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×Š†·
-d	java:S100á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§†‚ÿ
-n	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§†‚ÿ8Áá£¢­.
 ”
 java:S1319ð"xThe type of the "miembrosHogar" object should be an interface such as "List" rather than the implementation "ArrayList".(¡œôêýÿÿÿÿ
+n	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§†‚ÿ8Áá£¢­.
+g	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×Š†·
+d	java:S100á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§†‚ÿ

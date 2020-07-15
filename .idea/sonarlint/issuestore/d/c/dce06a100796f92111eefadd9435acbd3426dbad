@@ -1,6 +1,22 @@
 
-o	java:S116"ZRename this field "res_idrespuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áô¤
-l	java:S116"XRename this field "val_todohogar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÆÄx
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«úë
-p	java:S116"VRename this field "pre_depende" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏĞî¥øÿÿÿÿ
-m	java:S116"YRename this field "pre_idpregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü«âw
+r	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïøŸüÿÿÿÿ8ı»ûñ´.
+l	java:S116"XRename this field "val_todohogar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÆÄx
+i	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥—¹z8ı»ûñ´.
+i	java:S100@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êù¬8ı»ûñ´.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÊ¥ÿÿÿÿÿ8·…üñ´.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÊ¥ÿÿÿÿÿ8·…üñ´.
+j	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óõÃÏ8ı»ûñ´.
+o	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù›³‘úÿÿÿÿ8ı»ûñ´.
+o	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ñ¢œÿÿÿÿÿ8ı»ûñ´.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÊ¥ÿÿÿÿÿ8·…üñ´.
+m	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óõÃÏ8ı»ûñ´.
+l	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êù¬8ı»ûñ´.
+o	java:S100<"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÁ˜´ıÿÿÿÿ8ı»ûñ´.
+m	java:S116"YRename this field "pre_idpregunta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü«âw
+p	java:S116"VRename this field "pre_depende" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏĞî¥øÿÿÿÿ
+o	java:S116"ZRename this field "res_idrespuesta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áô¤
+o	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïøŸüÿÿÿÿ8ı»ûñ´.
+o	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œêÍùÿÿÿÿ8ı»ûñ´.
+r	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ñ¢œÿÿÿÿÿ8ı»ûñ´.
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«úë
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÊ¥ÿÿÿÿÿ8·…üñ´.

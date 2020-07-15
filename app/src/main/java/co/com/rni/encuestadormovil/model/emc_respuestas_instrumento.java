@@ -34,4 +34,7 @@ public class emc_respuestas_instrumento extends SugarRecord<emc_respuestas_instr
     String res_finaliza;
     String res_autocompletar;
     String res_respuestashbilitar;
+    String validador_oridrespuesta;
+    String tipo_tabla;
+
 }

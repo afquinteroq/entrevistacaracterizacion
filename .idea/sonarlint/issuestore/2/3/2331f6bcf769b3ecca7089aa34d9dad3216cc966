@@ -1,89 +1,94 @@
 
-A
-java:S1068?"+Remove this unused "loguear" private field.(ˆ––
-W
-java:S1068H"BRemove this unused "CAMERA_PERMISSION_REQUEST_CODE" private field.(ùç
-h
-java:S1192ß"QDefine a constant instead of duplicating this literal "encuestadormovil" 5 times.(àê”
-R	java:S125¡"<This block of commented-out lines of code should be removed.(ª¨ŞÆ
-J
-java:S1481¹",Remove this unused "paramsV" local variable.(ÒÊÛÄ8°¸½¢­.
-q	java:S116<"\Rename this field "ActualizarVivanto" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÎêí
-d
-java:S2095¼"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(­Ï
-Q	java:S125_"<This block of commented-out lines of code should be removed.(èºÀä
-i
-java:S1871‚"MThis branch's code block is the same as the block for the branch on line 639.(÷úòáûÿÿÿÿ
-e
-java:S2095½"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ê¾ıµ
-V
-java:S3252ª"8Use static access with "com.orm.SugarRecord" for "find".(Íºª8šì¨¹­.
-R
-java:S1854©"6Remove this useless assignment to local variable "id".(ªÙğúÿÿÿÿ
-o
-java:S1192p"TDefine a constant instead of duplicating this literal "Verificando usuario" 3 times.(ˆ¯¢Œúÿÿÿÿ
-R
-java:S1905‘"/Remove this unnecessary cast to "emc_usuarios".(¥£¥úÿÿÿÿ8šì¨¹­.
-C
-java:S1481©"'Remove this unused "id" local variable.(ªÙğúÿÿÿÿ
-^	java:S125²"<This block of commented-out lines of code should be removed.(°à»Äûÿÿÿÿ8´”©­.
-d
-java:S1192c"IDefine a constant instead of duplicating this literal "yyyyMMdd" 5 times.(Ñè¡ğşÿÿÿÿ
-V
-java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(Íºª8šì¨¹­.
-^	java:S125»"<This block of commented-out lines of code should be removed.(“³„¬úÿÿÿÿ8°¸½¢­.
-v
-java:S1450<"`Remove the "ActualizarVivanto" field and declare it as a local variable in the relevant methods.(àÎêí
 Y
 java:S1854¹";Remove this useless assignment to local variable "paramsV".(ÒÊÛÄ8°¸½¢­.
-S
-java:S1144Í"7Remove this unused private "permissionRejected" method.(Ã°¦¸ùÿÿÿÿ
-•
-java:S1192ö"yDefine a constant instead of duplicating this literal "Esta conectado por Datos, debe conectarse a una red WIFI" 3 times.(†ÑÆıÿÿÿÿ
-R	java:S125¥"<This block of commented-out lines of code should be removed.(¨ÎØ¦
-H
-java:S1172è"1Remove this unused method parameter "buttonView".(ãÜ›Ø
-a
-java:S1155">Use isEmpty() to check whether the collection is empty or not.(ê¥Ã›úÿÿÿÿ8šì¨¹­.
-w
-java:S1450="\Remove the "backupVivanto" field and declare it as a local variable in the relevant methods.(ØßÇÚøÿÿÿÿ
-w
-java:S3252s"\Use static access with "android.support.v4.content.ContextCompat" for "checkSelfPermission".(ø÷ÿéÿÿÿÿÿ
-Y
-java:S1854ï";Remove this useless assignment to local variable "paramsV".(ÒÊÛÄ8¡“Ğ£­.
-q
-java:S1192ß"ZDefine a constant instead of duplicating this literal "ftp.unidadvictimas.gov.co" 5 times.(àê”
-D
-java:S1125Ş"(Remove the literal "true" boolean value.(©ù×öÿÿÿÿÿ
-R	java:S125È"<This block of commented-out lines of code should be removed.(¨ÎØ¦
-R	java:S125Ÿ"<This block of commented-out lines of code should be removed.( ¹­ 
-a
-java:S1155«">Use isEmpty() to check whether the collection is empty or not.(ê¥Ã›úÿÿÿÿ8šì¨¹­.
-u	java:S116:"[Rename this field "DescargarVivanto" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ•­™úÿÿÿÿ
-W	java:S125‡"<This block of commented-out lines of code should be removed.(á’Ü†øÿÿÿÿ
-W	java:S125ª"<This block of commented-out lines of code should be removed.(›ÇÑÀşÿÿÿÿ
-R	java:S125"<This block of commented-out lines of code should be removed.( ¹­ 
-Y	java:S125«"<This block of commented-out lines of code should be removed.(²ã„õ8ñÏ’©­.
-@
-java:S1125œ")Remove the literal "false" boolean value.(„¦Ïª
-^	java:S125ğ"<This block of commented-out lines of code should be removed.(“³„¬úÿÿÿÿ8¡“Ğ£­.
-?	java:S108Ä")Either remove or fill this block of code.(”ı¾
-r
-java:S3252}"\Use static access with "android.support.v4.content.ContextCompat" for "checkSelfPermission".(íëûƒ
-J
-java:S1481ï",Remove this unused "paramsV" local variable.(ÒÊÛÄ8¡“Ğ£­.
+W
+java:S1068H"BRemove this unused "CAMERA_PERMISSION_REQUEST_CODE" private field.(ùç
+e
+java:S2095½"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ê¾ıµ
+^	java:S125»"<This block of commented-out lines of code should be removed.(“³„¬úÿÿÿÿ8°¸½¢­.
 t
 java:S1192Ç"]Define a constant instead of duplicating this literal "No tiene conexion a internet" 4 times.(¡‘ª—
-i
-java:S1871Ã"MThis branch's code block is the same as the block for the branch on line 320.(÷úòáûÿÿÿÿ
-R	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ºŒ‚
-D
-java:S1125µ"(Remove the literal "true" boolean value.(åÂè›şÿÿÿÿ
 a
-java:S1192ß"JDefine a constant instead of duplicating this literal "Kart3g3na" 5 times.(àê”
+java:S1155«">Use isEmpty() to check whether the collection is empty or not.(ê¥Ã›úÿÿÿÿ8çíì´.
+h
+java:S1192ß"QDefine a constant instead of duplicating this literal "encuestadormovil" 5 times.(àê”
 z
 java:S1450:"_Remove the "DescargarVivanto" field and declare it as a local variable in the relevant methods.(ÿ•­™úÿÿÿÿ
+q	java:S116<"\Rename this field "ActualizarVivanto" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÎêí
+i
+java:S1871Ã"MThis branch's code block is the same as the block for the branch on line 320.(÷úòáûÿÿÿÿ
+C
+java:S1481©"'Remove this unused "id" local variable.(ªÙğúÿÿÿÿ
+i
+java:S1871‚"MThis branch's code block is the same as the block for the branch on line 639.(÷úòáûÿÿÿÿ
+v
+java:S1450<"`Remove the "ActualizarVivanto" field and declare it as a local variable in the relevant methods.(àÎêí
+R
+java:S1874@"6Remove this use of "ProgressDialog"; it is deprecated.(Ä…œ	8©¦ïí´.
+X
+java:S1874o"6Remove this use of "ProgressDialog"; it is deprecated.(ù­–’øÿÿÿÿ8©¦ïí´.
+]
+java:S1161Ò":Add the "@Override" annotation above this method signature(œƒƒ©ùÿÿÿÿ8©¦ïí´.
+@
+java:S1125œ")Remove the literal "false" boolean value.(„¦Ïª
+d
+java:S1192c"IDefine a constant instead of duplicating this literal "yyyyMMdd" 5 times.(Ñè¡ğşÿÿÿÿ
+q
+java:S1192ß"ZDefine a constant instead of duplicating this literal "ftp.unidadvictimas.gov.co" 5 times.(àê”
+^	java:S1101"=This class has 10 parents which is greater than 5 authorized.(§ÿ—Ôüÿÿÿÿ8©¦ïí´.
+W	java:S125ª"<This block of commented-out lines of code should be removed.(›ÇÑÀşÿÿÿÿ
+R	java:S125Ÿ"<This block of commented-out lines of code should be removed.( ¹­ 
+R
+java:S1854©"6Remove this useless assignment to local variable "id".(ªÙğúÿÿÿÿ
+a
+java:S1192ß"JDefine a constant instead of duplicating this literal "Kart3g3na" 5 times.(àê”
+r
+java:S3252}"\Use static access with "android.support.v4.content.ContextCompat" for "checkSelfPermission".(íëûƒ
+^	java:S125ğ"<This block of commented-out lines of code should be removed.(“³„¬úÿÿÿÿ8¡“Ğ£­.
+A
+java:S1068?"+Remove this unused "loguear" private field.(ˆ––
+V
+java:S3252ª"8Use static access with "com.orm.SugarRecord" for "find".(Íºª8çíì´.
+R	java:S125¡"<This block of commented-out lines of code should be removed.(ª¨ŞÆ
+R	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ºŒ‚
+w
+java:S1450="\Remove the "backupVivanto" field and declare it as a local variable in the relevant methods.(ØßÇÚøÿÿÿÿ
+•
+java:S1192ö"yDefine a constant instead of duplicating this literal "Esta conectado por Datos, debe conectarse a una red WIFI" 3 times.(†ÑÆıÿÿÿÿ
+R	java:S125È"<This block of commented-out lines of code should be removed.(¨ÎØ¦
+a
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(ê¥Ã›úÿÿÿÿ8çíì´.
+Y
+java:S1854ï";Remove this useless assignment to local variable "paramsV".(ÒÊÛÄ8¡“Ğ£­.
+S
+java:S1144Í"7Remove this unused private "permissionRejected" method.(Ã°¦¸ùÿÿÿÿ
+Q	java:S125_"<This block of commented-out lines of code should be removed.(èºÀä
+D
+java:S1125µ"(Remove the literal "true" boolean value.(åÂè›şÿÿÿÿ
+u	java:S116:"[Rename this field "DescargarVivanto" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ•­™úÿÿÿÿ
+w
+java:S3252s"\Use static access with "android.support.v4.content.ContextCompat" for "checkSelfPermission".(ø÷ÿéÿÿÿÿÿ
+J
+java:S1481¹",Remove this unused "paramsV" local variable.(ÒÊÛÄ8°¸½¢­.
+V
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(Íºª8çíì´.
+o
+java:S1192p"TDefine a constant instead of duplicating this literal "Verificando usuario" 3 times.(ˆ¯¢Œúÿÿÿÿ
+R	java:S125¥"<This block of commented-out lines of code should be removed.(¨ÎØ¦
+J
+java:S1481ï",Remove this unused "paramsV" local variable.(ÒÊÛÄ8¡“Ğ£­.
 n
 java:S3776U"SRefactor this method to reduce its Cognitive Complexity from 104 to the 15 allowed.(¨Œşÿÿÿÿ
+R
+java:S1905‘"/Remove this unnecessary cast to "emc_usuarios".(¥£¥úÿÿÿÿ8çíì´.
 B
 java:S1068B"'Remove this unused "ctx" private field.(ÖÖ¾­şÿÿÿÿ
+W	java:S125‡"<This block of commented-out lines of code should be removed.(á’Ü†øÿÿÿÿ
+^	java:S125²"<This block of commented-out lines of code should be removed.(°à»Äûÿÿÿÿ8´”©­.
+?	java:S108Ä")Either remove or fill this block of code.(”ı¾
+Y	java:S125«"<This block of commented-out lines of code should be removed.(²ã„õ8ñÏ’©­.
+D
+java:S1125Ş"(Remove the literal "true" boolean value.(©ù×öÿÿÿÿÿ
+d
+java:S2095¼"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(­Ï
+R	java:S125"<This block of commented-out lines of code should be removed.( ¹­ 

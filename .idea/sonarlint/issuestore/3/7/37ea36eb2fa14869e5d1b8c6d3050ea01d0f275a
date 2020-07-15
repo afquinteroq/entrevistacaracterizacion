@@ -1,22 +1,46 @@
 
-x
-java:S1104"]Make usu_fechacreacion a static final constant or non-public and provide accessors if needed.(¤¢ßüşÿÿÿÿ
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸½ó8ûªšò´.
+l	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÔW8¡Â™ò´.
+j	java:S100K"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¯áè8¡Â™ò´.
+o	java:S116"URename this field "tem_idtema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åææ¾ÿÿÿÿÿ
 u
-java:S1104"_Make usu_usuariocreacion a static final constant or non-public and provide accessors if needed.(Œ±’ğ
-v	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¢ßüşÿÿÿÿ
-l
-java:S1104"VMake tem_activo a static final constant or non-public and provide accessors if needed.(ñÅÒ
-j	java:S116"URename this field "tem_activo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÅÒ
-p
-java:S1104"UMake tem_orden a static final constant or non-public and provide accessors if needed.(§¤é¦ıÿÿÿÿ
-s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ±’ğ
-q
-java:S1104"VMake tem_idtema a static final constant or non-public and provide accessors if needed.(åææ¾ÿÿÿÿÿ
+java:S1104"ZMake tem_nombretema a static final constant or non-public and provide accessors if needed.(Šêùûÿÿÿÿ
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ±’ğ
+j	java:S100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¬õª8¡Â™ò´.
+r	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì³”Ëşÿÿÿÿ8¡Â™ò´.
+j	java:S100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÙÒ©8¡Â™ò´.
+j	java:S116"URename this field "tem_activo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÅÒ
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸½ó8ûªšò´.
+r	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç×İãşÿÿÿÿ8¡Â™ò´.
+v	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¢ßüşÿÿÿÿ
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸½ó8ûªšò´.
+o	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê«üêüÿÿÿÿ8¡Â™ò´.
+n	java:S116"TRename this field "tem_orden" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§¤é¦ıÿÿÿÿ
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸½ó8ûªšò´.
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸½ó8ûªšò´.
 @
 java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
-g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ùçÓºüÿÿÿÿ
-n	java:S116"TRename this field "tem_orden" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§¤é¦ıÿÿÿÿ
-s	java:S116"YRename this field "tem_nombretema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šêùûÿÿÿÿ
+o	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒãµ‡ùÿÿÿÿ8¡Â™ò´.
+i	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤’‹\8¡Â™ò´.
+p
+java:S1104"UMake tem_orden a static final constant or non-public and provide accessors if needed.(§¤é¦ıÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ùçÓºüÿÿÿÿ
+r	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÁÏÿÿÿÿÿÿ8¡Â™ò´.
+x
+java:S1104"]Make usu_fechacreacion a static final constant or non-public and provide accessors if needed.(¤¢ßüşÿÿÿÿ
+l
+java:S1104"VMake tem_activo a static final constant or non-public and provide accessors if needed.(ñÅÒ
+i	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÔW8¡Â™ò´.
+o	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ–û‹úÿÿÿÿ8¡Â™ò´.
+m	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯éü«8¡Â™ò´.
+q
+java:S1104"VMake tem_idtema a static final constant or non-public and provide accessors if needed.(åææ¾ÿÿÿÿÿ
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸½ó8ûªšò´.
 u
-java:S1104"ZMake tem_nombretema a static final constant or non-public and provide accessors if needed.(Šêùûÿÿÿÿ
-o	java:S116"URename this field "tem_idtema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åææ¾ÿÿÿÿÿ
+java:S1104"_Make usu_usuariocreacion a static final constant or non-public and provide accessors if needed.(Œ±’ğ
+s	java:S116"YRename this field "tem_nombretema" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šêùûÿÿÿÿ
+o	java:S1007"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì³”Ëşÿÿÿÿ8¡Â™ò´.
+o	java:S100O"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÁÏÿÿÿÿÿÿ8¡Â™ò´.
+o	java:S100W"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç×İãşÿÿÿÿ8¡Â™ò´.
+j	java:S100G"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯éü«8¡Â™ò´.
+m	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¬õª8¡Â™ò´.

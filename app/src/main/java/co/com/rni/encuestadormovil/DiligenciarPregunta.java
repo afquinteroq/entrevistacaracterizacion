@@ -144,6 +144,10 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
     private static final String CONS_ESTADO_CERRADA = "Cerrada";
     private static final String CONS_ESTADO_INCOMPLETA = "Incompleta";
     private static final String CONS_ESTADO_ANULADA = "Anulada";
+    private static final String TIPO_PERSONA_AUTORIZADO = "5001";
+    private static final String TIPO_PERSONA_TUTOR = "5002";
+    private static final String TIPO_PERSONA_CUIDADOR_PERMANENTE = "5003";
+    private static final String TIPO_PERSONA_MIEMBRO_HOGAR = "5004";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1127,7 +1131,11 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             //List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ?", perIdMiembro);
             /*List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             mhPer = tmMiembroHogar.get(0);*/
+
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -1454,7 +1462,22 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 llNomsApls.setVisibility(View.GONE);
                 etTextoPregunta.setVisibility(View.VISIBLE);
             }
+
+            if((tmPregPersona.getPre_idpregunta().equals("31"))){
+                if(!TIPO_PERSONA_MIEMBRO_HOGAR.equals(mhPer.getTipoPersona()) && mhPer.getTipoPersona() != null){
+                    etTextoPregunta.setEnabled(false);
+                }
+
+
+            }
+
+
             if(tmPregPersona.getPre_idpregunta().equals("14") || tmPregPersona.getPre_idpregunta().equals("461") ||  tmPregPersona.getPre_idpregunta().equals("912") ) {
+
+                if(tmPregPersona.getPre_idpregunta().equals("14")){
+                    etTextoPregunta.setEnabled(false);
+                }
+
 
                 if(mhPer != null){
 
@@ -1547,6 +1570,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -1927,6 +1953,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -2268,6 +2297,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -2655,6 +2687,10 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             emc_miembros_hogar mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
+
         }
 
         //Carga los datos adicionales a la respuesta
@@ -2748,6 +2784,10 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             emc_miembros_hogar mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
+
         }
 
         //Carga los datos adicionales a la respuesta
@@ -2976,8 +3016,6 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                         break;
 
                                     case "NU":
-
-
                                         etTextoPregunta.requestFocus();
                                         etTextoPregunta.setInputType(InputType.TYPE_CLASS_NUMBER);
                                         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
@@ -2988,7 +3026,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                         }else{
 
                                             int t = etTextoPregunta.getText().length();
-                                            double d = Double.parseDouble(tmRes.getPre_longcampo());
+                                            //double d = Double.parseDouble(tmRes.getPre_longcampo());
                                             if(etTextoPregunta.getText().length() > Double.parseDouble(tmRes.getPre_longcampo())){
                                                 Toast.makeText(this, "Logintud incorrecta", Toast.LENGTH_SHORT).show();
                                                 valida = false;
@@ -2996,20 +3034,43 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                                 if(t > 0){
 
                                                     Double valor = Double.parseDouble(etTextoPregunta.getText().toString());
-                                                    if(tmRes.getPre_validador_min() != null){
-                                                        if(valor < Double.parseDouble(tmRes.getPre_validador_min())){
-                                                            Toast.makeText(this, "Valor debe ser superior a " + tmRes.getPre_validador_min(), Toast.LENGTH_SHORT).show();
-                                                            valida = false;
+
+                                                        if(tmRes.getValidador_oridrespuesta() != null){
+                                                            if(tmRes.getTipo_tabla().equals("1")){
+                                                                List<emc_validadores_persona> tmValPersona = emc_validadores_persona.find(emc_validadores_persona.class, "PERIDPERSONA = " + p + " AND  VALIDVALIDADOR = '"+ tmRes.getValidador_oridrespuesta()+"'" + " AND HOGCODIGO = '"+ hogCodigo+"'", null);
+                                                                emc_validadores_persona valpersona = tmValPersona.get(0);
+                                                                if(valor > Integer.parseInt(valpersona.getPre_valor())){
+                                                                    Toast.makeText(this, "El valor ingresado debe ser menor o igual a " + valpersona.getPre_valor(), Toast.LENGTH_SHORT).show();
+                                                                    valida = false;
+                                                                }
+                                                            }
+
+                                                            if(tmRes.getTipo_tabla().equals("2")){
+                                                                List<emc_respuestas_encuesta> tmRespuestaEncuesta = emc_respuestas_encuesta.find(emc_respuestas_encuesta.class, "PERIDPERSONA = " + p + " AND  RESIDRESPUESTA = '"+ tmRes.getValidador_oridrespuesta()+"'"+ " AND HOGCODIGO = '"+ hogCodigo+"'", null);
+                                                                emc_respuestas_encuesta respuestas_encuesta = tmRespuestaEncuesta.get(0);
+                                                                if(valor > Integer.parseInt(respuestas_encuesta.getRxp_textorespuesta())){
+                                                                    Toast.makeText(this, "El valor ingresado debe ser menor o igual a " + respuestas_encuesta.getRxp_textorespuesta(), Toast.LENGTH_SHORT).show();
+                                                                    valida = false;
+                                                                }
+
+                                                            }
                                                         }
-                                                    }
+
+                                                        if(tmRes.getPre_validador_min() != null){
+                                                            if(valor < Double.parseDouble(tmRes.getPre_validador_min())){
+                                                                Toast.makeText(this, "Valor debe ser superior a " + tmRes.getPre_validador_min(), Toast.LENGTH_SHORT).show();
+                                                                valida = false;
+                                                            }
+                                                        }
 
 
-                                                    if(tmRes.getPre_validador_max() != null){
-                                                        if(valor > Double.parseDouble(tmRes.getPre_validador_max())){
-                                                            Toast.makeText(this, "Valor debe ser inferior o igual a " + tmRes.getPre_validador_max(), Toast.LENGTH_SHORT).show();
-                                                            valida = false;
+                                                        if(tmRes.getPre_validador_max() != null){
+                                                            if(valor > Double.parseDouble(tmRes.getPre_validador_max())){
+                                                                Toast.makeText(this, "Valor debe ser inferior o igual a " + tmRes.getPre_validador_max(), Toast.LENGTH_SHORT).show();
+                                                                valida = false;
+                                                            }
                                                         }
-                                                    }
+
                                                 }else if(t == 0){
                                                     Toast.makeText(this, "Campo esta vacio debe diligenciarlo ", Toast.LENGTH_SHORT).show();
                                                     valida = false;
@@ -3091,7 +3152,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                         break;
 
                                     case "TI":
-                                        if(!general.isValidPhone(etTextoPregunta.getText().toString())){
+                                        if(etTextoPregunta.getText().toString().equals("") && tmRes.getRes_obligatorio().equals("NO")){
+                                            valida = true;
+                                        }else if(!general.isValidPhone(etTextoPregunta.getText().toString())){
                                             Toast.makeText(this, "Teléfono incorrecto (#########)", Toast.LENGTH_SHORT).show();
                                             valida = false;
                                         }

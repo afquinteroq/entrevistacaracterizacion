@@ -1,0 +1,96 @@
+
+K
+java:S1066Ë"/Merge this if statement with the enclosing one.(Ò²±ÿÿÿÿÿ
+K
+java:S1066ç"/Merge this if statement with the enclosing one.(·êÇÅşÿÿÿÿ
+l
+java:S2153‡"IRemove the boxing to "Integer"; The argument is already of the same type.(İÌŸêúÿÿÿÿ8ª§¾Ò´.
+K
+java:S1066†"/Merge this if statement with the enclosing one.(´‘ûÿÿÿÿ
+g
+java:S2153â"IRemove the boxing to "Integer"; The argument is already of the same type.(£¯£á8ª§¾Ò´.
+K
+java:S1066•"/Merge this if statement with the enclosing one.(Ä¨»àúÿÿÿÿ
+W
+java:S11268"AReplace this if-then-else statement by a single return statement.(š…Ëì
+d
+java:S1192k"IDefine a constant instead of duplicating this literal "INCLUIDO" 3 times.(§±Ú€ûÿÿÿÿ
+l
+java:S2153ó"IRemove the boxing to "Integer"; The argument is already of the same type.(¦œ¤æıÿÿÿÿ8ª§¾Ò´.
+C
+java:S1125^"(Remove the literal "true" boolean value.(­ø‰§øÿÿÿÿ
+“
+java:S1319'"xThe type of the "miembrosHogar" object should be an interface such as "List" rather than the implementation "ArrayList".(å…øÿÿÿÿ
+Z
+java:S1155E">Use isEmpty() to check whether the collection is empty or not.(Úı“Q8ª§¾Ò´.
+h	java:S116"SRename this field "UIDhogar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©‰„å
+g
+java:S2153Û"IRemove the boxing to "Integer"; The argument is already of the same type.(ô›å²8ª§¾Ò´.
+F
+java:S1066Ó"/Merge this if statement with the enclosing one.(è¡’Î
+Y
+java:S1854œ"=Remove this useless assignment to local variable "tieneJefe".(øË·×şÿÿÿÿ
+F
+java:S1066ò"/Merge this if statement with the enclosing one.(¬±õ
+K
+java:S1066á"/Merge this if statement with the enclosing one.(û³˜úüÿÿÿÿ
+s
+java:S1104"XMake usuarioLogin a static final constant or non-public and provide accessors if needed.(”Ğ»Öşÿÿÿÿ
+i
+java:S3776@"SRefactor this method to reduce its Cognitive Complexity from 267 to the 15 allowed.(¶Êª´
+O
+java:S1117I"9Rename "hogar" which hides the field declared at line 33.(“ƒÂ–
+l
+java:S2153Œ"IRemove the boxing to "Integer"; The argument is already of the same type.(°’Õ»ùÿÿÿÿ8ª§¾Ò´.
+g
+java:S2153€"IRemove the boxing to "Integer"; The argument is already of the same type.(ßº‹§8ª§¾Ò´.
+g
+java:S2153–"IRemove the boxing to "Integer"; The argument is already of the same type.(Ëµ÷8ª§¾Ò´.
+K
+java:S1066ø"/Merge this if statement with the enclosing one.(®û¸öıÿÿÿÿ
+D
+java:S1125r")Remove the literal "false" boolean value.(’˜èÖûÿÿÿÿ
+h
+java:S1858Á"J"getPer_idpersona" returns a string, there's no need to call "toString()".(½‡ËÏ8ª§¾Ò´.
+g
+java:S2153è"IRemove the boxing to "Integer"; The argument is already of the same type.(ñ­Õ×8ª§¾Ò´.
+g
+java:S2153ù"IRemove the boxing to "Integer"; The argument is already of the same type.(¬Œù¶8ª§¾Ò´.
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(İ±¹ª
+X
+java:S1141‡"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8³‹ÄÛ².
+`
+java:S1155H">Use isEmpty() to check whether the collection is empty or not.(²ˆ“Âÿÿÿÿÿ8ª§¾Ò´.
+K
+java:S1066í"/Merge this if statement with the enclosing one.(˜—÷ßüÿÿÿÿ
+K
+java:S1066Ú"/Merge this if statement with the enclosing one.(–¯”®şÿÿÿÿ
+@
+java:S1125ª")Remove the literal "false" boolean value.(ŸõŒ
+S
+java:S3972É"7Move this "if" to a new line or add the missing "else".(Í±Æœùÿÿÿÿ
+P	java:S125"<This block of commented-out lines of code should be removed.(àºşs
+l
+java:S2153È"IRemove the boxing to "Integer"; The argument is already of the same type.(œè¸şÿÿÿÿ8ª§¾Ò´.
+B
+java:S1068"'Remove this unused "ctx" private field.(ÖÖ¾­şÿÿÿÿ
+K
+java:S1066ÿ"/Merge this if statement with the enclosing one.(…ë” øÿÿÿÿ
+g
+java:S2153î"IRemove the boxing to "Integer"; The argument is already of the same type.(ï§«š8ª§¾Ò´.
+K
+java:S1066‹"/Merge this if statement with the enclosing one.(æåÛùÿÿÿÿ
+l
+java:S2153Ô"IRemove the boxing to "Integer"; The argument is already of the same type.(§‚›„ıÿÿÿÿ8ª§¾Ò´.
+[	java:S107'"AConstructor has 8 parameters, which is greater than 7 authorized.(å…øÿÿÿÿ
+f
+java:S2153‘"IRemove the boxing to "Integer"; The argument is already of the same type.(Ø¬øf8ª§¾Ò´.
+g
+java:S2153Ì"IRemove the boxing to "Integer"; The argument is already of the same type.(àö²È8ª§¾Ò´.
+F
+java:S1066"/Merge this if statement with the enclosing one.(¢öì–
+\
+java:S1155Ã">Use isEmpty() to check whether the collection is empty or not.(ô¼É³8ª§¾Ò´.
+k	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å…øÿÿÿÿ
+C
+java:S1125z"(Remove the literal "true" boolean value.(¯¥¼õøÿÿÿÿ

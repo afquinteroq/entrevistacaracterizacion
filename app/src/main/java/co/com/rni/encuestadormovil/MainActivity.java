@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         llMensajePrimerUso = (LinearLayout) findViewById(R.id.llMensajePrimerUso);
 
         List<emc_respuestas> lsRespuetas = emc_respuestas.find(emc_respuestas.class, null, null);
-        if(lsRespuetas.size() >= 2740)
+        if(lsRespuetas.size() >= 1000)
         {
             llTransferidas.setVisibility(View.VISIBLE);
             llTransfer.setVisibility(View.VISIBLE);
@@ -553,7 +553,5 @@ public class MainActivity extends AppCompatActivity {
         listadoOpciones.add(new opcionMenu(getResources().getString(R.string.f_config), "Configuración"));
         return listadoOpciones;
     }
-
-
 
 }

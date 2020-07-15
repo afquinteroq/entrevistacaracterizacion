@@ -1290,6 +1290,9 @@ public final class gestionEncuestas {
             }else if(VALIDADOR.trim().equals("5003")){
                 VALIDADOR_P = 5003;
                 prevalor = "CUIDADOR PERMANENTE";
+            }else if(VALIDADOR.trim().equals("5004")){
+                VALIDADOR_P = 5004;
+                prevalor = "MIEMBRO HOGAR";
             }else if (VALIDADOR.trim().equals("")){
                 VALIDADOR_P = 5004;
                 prevalor = "MIEMBRO HOGAR";
@@ -2454,7 +2457,7 @@ public final class gestionEncuestas {
                         emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
                         emc_validadores_persona.setIns_idinstrumento("1");
                         emc_validadores_persona.setPer_idpersona(CUR_DATOS.getPer_idpersona());
-                        emc_validadores_persona.setVal_idvalidador(Integer.toString(TOTAL_267_266_173));
+                        emc_validadores_persona.setVal_idvalidador((tmValPersonaTOTAL_267_266_173.getVal_idvalidador()));
                         emc_validadores_persona.setPre_valor(VALOR_267_266_173);
                         emc_validadores_persona.setHog_codigo(CUR_DATOS.getHog_codigo());
                         emc_validadores_persona.setComodin("2");

@@ -1,919 +1,923 @@
 
-d
-java:S3252Ç"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ÅÖ»‡¡.
-R
-java:S1481é"4Remove this unused "res_IdRespuesta" local variable.(¾¹ğÏ8ó‚ĞŸ.
-s	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8æŠõÏŸ.
-d
-java:S3252İ	"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ÅÖ»‡¡.
-A
-java:S1148ª"#Use a logger to log this exception.(Ç’Çê8æŠõÏŸ.
-¤
-java:S1186Á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-‰
-java:S1192Ï"fDefine a constant instead of duplicating this literal "Campo esta vacio, debe diligenciarlo" 10 times.(‹ƒÒÂûÿÿÿÿ8æŠõÏŸ.
-V
-java:S3252ı
-"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ÅÖ»‡¡.
-V
-java:S3252û"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-d
-java:S1117˜"ARename "tvObservacion" which hides the field declared at line 69.(îáÅÇüÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-z
-java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ƒÕÎ—
-M
-java:S1066ß"/Merge this if statement with the enclosing one.(Ù÷£8æŠõÏŸ.
-K
-java:S1125¶"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8ó‚ĞŸ.
-j
-java:S1858Ú
-"L"getNombrecomunidad" returns a string, there's no need to call "toString()".(Ï«ïù8ÅÖ»‡¡.
-N
-java:S4524"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8ó‚ĞŸ.
-\
-java:S1854Ğ"9Remove this useless assignment to local variable "idTem".(õ‘ÑÆúÿÿÿÿ8ó‚ĞŸ.
-[
-java:S1155À">Use isEmpty() to check whether the collection is empty or not.(áà;8ÅÖ»‡¡.
-`
-java:S1854Ò"CRemove this useless assignment to local variable "etTextoPregunta".(38ó‚ĞŸ.
-i
-java:S1858ğ"K"valOtroC" is already a string, there's no need to call "toString()" on it.(ä¸ä8ó‚ĞŸ.
-V
-java:S3252Ó"8Use static access with "com.orm.SugarRecord" for "find".(‹İï›8ÅÖ»‡¡.
-s
-java:S1192ø"WDefine a constant instead of duplicating this literal "NO SÃ‰ A QUIÃ‰N ACUDIR" 3 times.(˜çØøÿÿÿÿ
-[
-java:S1155­">Use isEmpty() to check whether the collection is empty or not.(áà;8ÅÖ»‡¡.
-a
-java:S1155”">Use isEmpty() to check whether the collection is empty or not.(˜À¤®ûÿÿÿÿ8ÅÖ»‡¡.
-Y	java:S125†"<This block of commented-out lines of code should be removed.(ãœ›8ó‚ĞŸ.
-f
-java:S2259«"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ÙĞó‰ıÿÿÿÿ8æŠõÏŸ.
-|
-java:S2293ı"YReplace the type specification in this constructor call with the diamond operator ("<>").(»ô‡Ñşÿÿÿÿ8ó‚ĞŸ.
-[
-java:S2589Ç"8Remove this expression which always evaluates to "false"(‡—ÛÖıÿÿÿÿ8ŠíˆĞŸ.
 h
-java:S1858™"J"getId_muni_depto" returns a string, there's no need to call "toString()".(ÉÚßà8ÅÖ»‡¡.
-c
-java:S2147©"ECombine this catch with the one at line 935, which has the same body.(Ãôş•8ó‚ĞŸ.
-^	java:S125¦"<This block of commented-out lines of code should be removed.(İíïÑşÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125»"<This block of commented-out lines of code should be removed.(ãœ›8ó‚ĞŸ.
-n	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8æŠõÏŸ.
+java:S1858³"J"getId_muni_depto" returns a string, there's no need to call "toString()".(ÉÚßà8ğ§¾Ò´.
+P
+java:S1068D"3Remove this unused "tvTextoPregunta" private field.(ØÖÓ‚8ğ§¾Ò´.
+Y	java:S125ß"<This block of commented-out lines of code should be removed.(ãœ›8ƒ‡Ëè±.
+Y
+java:S1659€";Declare "btnCancelarTomarImagenSoporte" on a separate line.(¦ùĞ8éèõå±.
 ¤
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-K
-java:S1659l".Declare "lsPuntosAtencion" on a separate line.(Äÿ©°8æŠõÏŸ.
-j
-java:S3973Ú"GUse indentation to denote the code conditionally executed by this "if".(º°Æúÿÿÿÿ8æŠõÏŸ.
+java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+ƒ
+java:S1192”"`Define a constant instead of duplicating this literal "Valor debe ser mayor o igual a " 3 times.(ú ”ùÿÿÿÿ8ƒ‡Ëè±.
 V
-java:S3252ƒ"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ÅÖ»‡¡.
-p
-java:S3776¯"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¸ãÀÉ8ó‚ĞŸ.
-j
-java:S1858º"L"getNombrecomunidad" returns a string, there's no need to call "toString()".(Ï«ïù8ÅÖ»‡¡.
-d
-java:S3252ô"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ÅÖ»‡¡.
-S
-java:S1854¯"5Remove this useless assignment to local variable "d".(ÿ–‚¡8ó‚ĞŸ.
+java:S3252¿"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ğ§¾Ò´.
+^	java:S125˜"<This block of commented-out lines of code should be removed.(ÔÚìÿÿÿÿÿ8éèõå±.
+m
+java:S1192¿"ODefine a constant instead of duplicating this literal "HOGCODIGO = ? " 5 times.(Í×¬8éèõå±.
+V
+java:S3252“"8Use static access with "com.orm.SugarRecord" for "find".(ÉÚßà8ğ§¾Ò´.
+U
+java:S1144"7Remove this unused private "saveImageToGallery" method.(‡øé8éèõå±.
+n	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8éèõå±.
+¡
+java:S1192ñ	"‚Define a constant instead of duplicating this literal "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " 4 times.(¬Õ¸Ï8éèõå±.
+^	java:S125å"<This block of commented-out lines of code should be removed.(»‡ó©şÿÿÿÿ8éèõå±.
+[
+java:S3252à"8Use static access with "com.orm.SugarRecord" for "find".(Úê„×úÿÿÿÿ8ğ§¾Ò´.
+`
+java:S1854ò"CRemove this useless assignment to local variable "etTextoPregunta".(38ƒ‡Ëè±.
+k
+java:S1192£	"MDefine a constant instead of duplicating this literal "IDDEPTO = ?" 16 times.(¡¼€8‚§Éè±.
+¤
+java:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+V
+java:S3252–"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+a
+java:S1155Ë">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ğ§¾Ò´.
+M
+java:S1172ø"*Remove this unused method parameter "esT".(Õ±€øÿÿÿÿ8ƒ‡Ëè±.
+
+java:S1157›"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ñ…–ø8éèõå±.
+¤
+java:S1186‹"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
 Z
-java:S1854"7Remove this useless assignment to local variable "val".(ÊñÅìÿÿÿÿÿ8ó‚ĞŸ.
-^	java:S125­"<This block of commented-out lines of code should be removed.(®¼ÿÿÿÿÿ8ó‚ĞŸ.
-a
-java:S1155Ç">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ÅÖ»‡¡.
-V
-java:S3252ó
-"8Use static access with "com.orm.SugarRecord" for "find".(õ˜¹®8ÅÖ»‡¡.
-V
-java:S3252‹"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ÅÖ»‡¡.
-V
-java:S3252Ì"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ÅÖ»‡¡.
-n	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8æŠõÏŸ.
-g	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô
-c
-java:S1858î
-"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-g
-java:S1858š"D"getNom_ver" returns a string, there's no need to call "toString()".(™ÇÕûÿÿÿÿ8ÅÖ»‡¡.
-y
-java:S1157‘"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ì‚{
-u
-java:S3776ó"RRefactor this method to reduce its Cognitive Complexity from 48 to the 15 allowed.(”—ëğùÿÿÿÿ8ó‚ĞŸ.
-[
-java:S1155ˆ">Use isEmpty() to check whether the collection is empty or not.(áà;8ÅÖ»‡¡.
-j
-java:S1858¸"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ÅÖ»‡¡.
-^	java:S125¿"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ó‚ĞŸ.
-^	java:S125‡"<This block of commented-out lines of code should be removed.(°Å¯¨úÿÿÿÿ8ó‚ĞŸ.
-g	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã
-q
-java:S1192Ø"SDefine a constant instead of duplicating this literal "Logitud incorrecta" 3 times.(—ÍÑš8æŠõÏŸ.
-H
-java:S1659Q"2Declare "tituloDTdepartamento" on a separate line.(§ÜöÆ
-Y	java:S125´"<This block of commented-out lines of code should be removed.(Œïè8ó‚ĞŸ.
-[
-java:S3252ß"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ÅÖ»‡¡.
-V
-java:S3252°"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ÅÖ»‡¡.
-a
-java:S1155¶">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ÅÖ»‡¡.
-u
-java:S3776î"RRefactor this method to reduce its Cognitive Complexity from 47 to the 15 allowed.(‚İÎÃıÿÿÿÿ8ó‚ĞŸ.
-_
-java:S3252à"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ÅÖ»‡¡.
-[
-java:S3252„"8Use static access with "com.orm.SugarRecord" for "find".(˜ò íøÿÿÿÿ8ÅÖ»‡¡.
-‰
-java:S1192å"fDefine a constant instead of duplicating this literal "Campo esta vacio, debe diligenciarlo " 3 times.(‹ƒÒÂûÿÿÿÿ8æŠõÏŸ.
-U
-java:S1144‰"7Remove this unused private "saveImageToGallery" method.(‡øé8ó‚ĞŸ.
-V
-java:S3252ß"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ÅÖ»‡¡.
-†
-java:S1192Á"cDefine a constant instead of duplicating this literal "Valor debe ser inferior o igual a " 4 times.(Ş…¶¿ÿÿÿÿÿ8æŠõÏŸ.
-R
-java:S1066—"/Merge this if statement with the enclosing one.(„Õ¨şÿÿÿÿ8æŠõÏŸ.
-n	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8æŠõÏŸ.
-q
-java:S1871±"NThis branch's code block is the same as the block for the branch on line 3224.(á„»ûşÿÿÿÿ8ó‚ĞŸ.
-M
-java:S1066è"/Merge this if statement with the enclosing one.(Óã£û8æŠõÏŸ.
-¤
-java:S1186ƒ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-[
-java:S3252ÿ"8Use static access with "com.orm.SugarRecord" for "find".(˜ò íøÿÿÿÿ8ÅÖ»‡¡.
-n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8æŠõÏŸ.
-a
-java:S2259ß"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Ù÷£8æŠõÏŸ.
-¤
-java:S1186ì"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-
-java:S1157‡"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ó¢·Ãùÿÿÿÿ
-[
-java:S3252î"8Use static access with "com.orm.SugarRecord" for "find".(öøÏüûÿÿÿÿ8ÅÖ»‡¡.
-g	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô
-n	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8æŠõÏŸ.
-f
-java:S2259î"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ïäÌŞÿÿÿÿÿ8æŠõÏŸ.
-[
-java:S3252ß"8Use static access with "com.orm.SugarRecord" for "find".(˜ò íøÿÿÿÿ8ÅÖ»‡¡.
-M
-java:S1659X"+Declare "spDTMunicipio" on a separate line.(¼éŞ›üÿÿÿÿ8æŠõÏŸ.
-X
-java:S1854ë"5Remove this useless assignment to local variable "p".(¦è¨ÿÿÿÿÿ8ó‚ĞŸ.
+java:S1854ğ"7Remove this useless assignment to local variable "val".(ÊñÅìÿÿÿÿÿ8ƒ‡Ëè±.
+n	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8Í…Àé±.
 N
-java:S4524¦"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186¶"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-u
-java:S3776±"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(œƒƒ©ùÿÿÿÿ8ó‚ĞŸ.
-T
-java:S1481ç"6Remove this unused "ins_IdInstrumento" local variable.(Èã®ã8ó‚ĞŸ.
-
-java:S1157’"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(üôùÊÿÿÿÿÿ
-[
-java:S3252Ü"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ÅÖ»‡¡.
-[
-java:S3252è"8Use static access with "com.orm.SugarRecord" for "find".(–¼Ñêşÿÿÿÿ8ÅÖ»‡¡.
-V
-java:S3252›	"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-Y	java:S125Š"<This block of commented-out lines of code should be removed.(ãœ›8ó‚ĞŸ.
-^	java:S125û"<This block of commented-out lines of code should be removed.(Ä¿ôÏüÿÿÿÿ8ó‚ĞŸ.
-c
-java:S1858è"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-c
-java:S1858ı
-"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ÅÖ»‡¡.
-_
-java:S1874="=Remove this use of "ActionBarDrawerToggle"; it is deprecated.(°ÅßŸıÿÿÿÿ8ó‚ĞŸ.
-^
-java:S3252ô"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(›â³V8ÅÖ»‡¡.
-c
-java:S1858ƒ"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ÅÖ»‡¡.
-a
-java:S1155ã">Use isEmpty() to check whether the collection is empty or not.(†íèøşÿÿÿÿ8ÅÖ»‡¡.
-_
-java:S1192÷"HDefine a constant instead of duplicating this literal "A NADIE" 3 times.(Ñ«İµ
-¤
-java:S1186¾"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-h
-java:S1858ö"J"getPer_idpersona" returns a string, there's no need to call "toString()".(±£Œë8ÅÖ»‡¡.
-R
-java:S1066³"/Merge this if statement with the enclosing one.(®Ê½Îüÿÿÿÿ8æŠõÏŸ.
-¤
-java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-A
-java:S1148¨"#Use a logger to log this exception.(Ç’Çê8æŠõÏŸ.
-V
-java:S3252™"8Use static access with "com.orm.SugarRecord" for "find".(ÉÚßà8ÅÖ»‡¡.
-Y	java:S125ô"<This block of commented-out lines of code should be removed.(œ¹æá8ó‚ĞŸ.
-f
-java:S2259”"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Èàé¾ùÿÿÿÿ8æŠõÏŸ.
-g
-java:S3973Ü"IUse indentation to denote the code conditionally executed by this "else".(ÔÍØ8æŠõÏŸ.
-v
-java:S1192ö"ZDefine a constant instead of duplicating this literal "NINGUNA DE LAS ANTERIORES" 3 times.(’¯¬øÿÿÿÿ
-V
-java:S3252ƒ"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ÅÖ»‡¡.
-^	java:S125Ò"<This block of commented-out lines of code should be removed.(ïµ®ıÿÿÿÿ8ó‚ĞŸ.
-c
-java:S1858‹"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ÅÖ»‡¡.
-R
-java:S1066ı"/Merge this if statement with the enclosing one.(Ïõƒ·úÿÿÿÿ8æŠõÏŸ.
-[
-java:S3252â"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ÅÖ»‡¡.
-¤
-java:S1186µ	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-‚
-java:S1192 "dDefine a constant instead of duplicating this literal "Debe registrar nÃºmero de 4 digitos" 5 times.(“Œªµ8æŠõÏŸ.
-s	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8æŠõÏŸ.
-V
-java:S3252¬"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ÅÖ»‡¡.
-g
-java:S1858ú"D"getNom_ver" returns a string, there's no need to call "toString()".(™ÇÕûÿÿÿÿ8ÅÖ»‡¡.
-Y	java:S125É"<This block of commented-out lines of code should be removed.(‹æÿ8ó‚ĞŸ.
-q
-java:S1871®"NThis branch's code block is the same as the block for the branch on line 3231.(ğİÒ·øÿÿÿÿ8ó‚ĞŸ.
-\
-java:S1481æ">Remove this unused "rxp_TipoPreguntaRespuesta" local variable.(Š»ô8ó‚ĞŸ.
-L
-java:S1066ğ"/Merge this if statement with the enclosing one.(ÂÕŸ8æŠõÏŸ.
-{
-java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ñ›òüÿÿÿÿ
-u
-java:S3776©"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(ùÄì¤øÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125œ"<This block of commented-out lines of code should be removed.(‹æÿ8ó‚ĞŸ.
-Y	java:S125û"<This block of commented-out lines of code should be removed.(­ñÒ—8ó‚ĞŸ.
-g
-java:S1858¨"D"getNom_ver" returns a string, there's no need to call "toString()".(™ÇÕûÿÿÿÿ8ÅÖ»‡¡.
-a
-java:S1155›">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ÅÖ»‡¡.
-a
-java:S1155Ò">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ÅÖ»‡¡.
-a
-java:S1117ß"CRename "tvTextoPregunta" which hides the field declared at line 68.(£õ–‰8ó‚ĞŸ.
-V
-java:S3252è"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-J
-java:S1659P".Declare "llDTdepartamento" on a separate line.(ã‰¼"8æŠõÏŸ.
-p
-java:S3776Î"RRefactor this method to reduce its Cognitive Complexity from 59 to the 15 allowed.(ªªñç8ó‚ĞŸ.
-^	java:S125ô"<This block of commented-out lines of code should be removed.(«¾Çüÿÿÿÿÿ8ó‚ĞŸ.
-`
-java:S3252ÿ"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ÅÖ»‡¡.
-Y	java:S125½
-"<This block of commented-out lines of code should be removed.(æâşƒ8ó‚ĞŸ.
-Y	java:S125Û"<This block of commented-out lines of code should be removed.(ãœ›8ó‚ĞŸ.
-
-java:S1157ƒ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(…Šè®ùÿÿÿÿ
-F
-java:S1659~")Declare "btnCancelar" on a separate line.(§Ã¸Î8æŠõÏŸ.
-z
-java:S1157õ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ùø¦
-V
-java:S3252î
-"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-u
-java:S1192Ü"RDefine a constant instead of duplicating this literal "PREIDPREGUNTA = ?" 6 times.(Ä±ïßûÿÿÿÿ8æŠõÏŸ.
-Q
-java:S1481•".Remove this unused "respuesta" local variable.(”Š¤Îúÿÿÿÿ8ó‚ĞŸ.
-v
-java:S3776•"SRefactor this method to reduce its Cognitive Complexity from 169 to the 15 allowed.(¨Œşÿÿÿÿ8ó‚ĞŸ.
-d
-java:S3252è	"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ÅÖ»‡¡.
-¤
-java:S1186Õ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-f
-java:S2259§"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ÙĞó‰ıÿÿÿÿ8æŠõÏŸ.
-n	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8æŠõÏŸ.
-M
-java:S1066Ó"/Merge this if statement with the enclosing one.(ıÜì8æŠõÏŸ.
-`
-java:S1854•"=Remove this useless assignment to local variable "respuesta".(”Š¤Îúÿÿÿÿ8ó‚ĞŸ.
-¥
-java:S2681º"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(ÖÑÌĞ8ŠíˆĞŸ.
-
-java:S1157Œ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(¿Î¦8æŠõÏŸ.
-I
-java:S1659Q"3Declare "tituloDTPuntoAtencion" on a separate line.(§ÜöÆ
-n	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8æŠõÏŸ.
-K
-java:S1125›"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186ˆ
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-_
-java:S3252á"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ÅÖ»‡¡.
-c
-java:S1858¯"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ÅÖ»‡¡.
-U
-java:S3252ß"8Use static access with "com.orm.SugarRecord" for "find".(ùâÅA8ÅÖ»‡¡.
-¤
-java:S1186›"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125Ê"<This block of commented-out lines of code should be removed.(‹æÿ8ó‚ĞŸ.
-p
-java:S3776Ä"RRefactor this method to reduce its Cognitive Complexity from 48 to the 15 allowed.(Èêä8ó‚ĞŸ.
-V
-java:S3252¯"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ÅÖ»‡¡.
-^	java:S125Ç"<This block of commented-out lines of code should be removed.(¤—¼»ûÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125î"<This block of commented-out lines of code should be removed.(«¼©Ñ8ó‚ĞŸ.
-d
-java:S3252¼"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ÅÖ»‡¡.
-a
-java:S1117–"CRename "tvTextoPregunta" which hides the field declared at line 68.(£õ–‰8ó‚ĞŸ.
-¤
-java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-
-java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(İŠ•Şşÿÿÿÿ
-
-java:S1157á"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ıãñš8ŠíˆĞŸ.
-†
-java:S1157â"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ßàÅùÿÿÿÿ8ŠíˆĞŸ.
-[
-java:S3252Ô"8Use static access with "com.orm.SugarRecord" for "find".(í®ÂÑûÿÿÿÿ8ÅÖ»‡¡.
-K
-java:S1125ö"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8ó‚ĞŸ.
+java:S4524ó"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8éèõå±.
 ¤
 java:S1186
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-^	java:S125ê"<This block of commented-out lines of code should be removed.(¤—¼»ûÿÿÿÿ8ó‚ĞŸ.
-c
-java:S1858î"E"fechaActual" returns a string, there's no need to call "toString()".(ˆ˜°¾8ÅÖ»‡¡.
-s	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8æŠõÏŸ.
-[
-java:S2589"8Remove this expression which always evaluates to "false"(‡—ÛÖıÿÿÿÿ8ŠíˆĞŸ.
-c
-java:S1858ğ"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ÅÖ»‡¡.
-^	java:S125ğ"<This block of commented-out lines of code should be removed.(µÛ›×úÿÿÿÿ8ó‚ĞŸ.
-R
-java:S1066¾"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8æŠõÏŸ.
-s	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïşìªüÿÿÿÿ8æŠõÏŸ.
-¤
-java:S1186Ş
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125Ù"<This block of commented-out lines of code should be removed.(‘×èğ8ó‚ĞŸ.
-m
-java:S1858ş"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ÅÖ»‡¡.
-^	java:S125×"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8ó‚ĞŸ.
-n
-java:S1858ú"K"getPre_idpregunta" returns a string, there's no need to call "toString()".(í„Ÿÿÿÿÿÿ8ÅÖ»‡¡.
-[
-java:S1155ä">Use isEmpty() to check whether the collection is empty or not.(áà;8ÅÖ»‡¡.
-P
-java:S1659X".Declare "spDTdepartamento" on a separate line.(¼éŞ›üÿÿÿÿ8æŠõÏŸ.
-^	java:S125Ù"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ó‚ĞŸ.
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+V
+java:S3252¥"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ğ§¾Ò´.
+p
+java:S3776³"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¸ãÀÉ8éèõå±.
+n	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8ƒ‡Ëè±.
 F
-java:S1659S"$Declare "etNom2" on a separate line.(Î›û•ıÿÿÿÿ8æŠõÏŸ.
-Q
-java:S1659X"/Declare "spDTPuntoAtencion" on a separate line.(¼éŞ›üÿÿÿÿ8æŠõÏŸ.
-¤
-java:S1186¡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
+java:S1659S"$Declare "etNom2" on a separate line.(Î›û•ıÿÿÿÿ8éèõå±.
+N
+java:S4524ª"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8éèõå±.
+c
+java:S1858£"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ğ§¾Ò´.
 a
-java:S1155Ã">Use isEmpty() to check whether the collection is empty or not.(˜À¤®ûÿÿÿÿ8ÅÖ»‡¡.
-s	java:S117å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±‡éÈÿÿÿÿÿ8æŠõÏŸ.
-n	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”­œ–8æŠõÏŸ.
+java:S1155Å">Use isEmpty() to check whether the collection is empty or not.(†íèøşÿÿÿÿ8ğ§¾Ò´.
+n	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8ÚËœè±.
+y
+java:S1104ˆ"VMake pgDMensaje a static final constant or non-public and provide accessors if needed.(é ŒÃùÿÿÿÿ8éèõå±.
+q
+java:S1871â"NThis branch's code block is the same as the block for the branch on line 3287.(Å‘—ûÿÿÿÿ8ÚËœè±.
+Y	java:S125"<This block of commented-out lines of code should be removed.(œ¹æá8ƒ‡Ëè±.
+V
+java:S3252õ"8Use static access with "com.orm.SugarRecord" for "find".(Œñú8ğ§¾Ò´.
+Y	java:S125ô"<This block of commented-out lines of code should be removed.(‹÷ÔŒ8éèõå±.
+f
+java:S2259É"CA "NullPointerException" could be thrown; "tmRes" is nullable here.(„Õ¨şÿÿÿÿ8ƒ‡Ëè±.
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8ÚËœè±.
+¤
+java:S1186±	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+R
+java:S1066¼"/Merge this if statement with the enclosing one.(Ïõƒ·úÿÿÿÿ8ƒ‡Ëè±.
+¤
+java:S1186Ñ
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+^	java:S125â"<This block of commented-out lines of code should be removed.(÷ğ‰İüÿÿÿÿ8éèõå±.
+Q
+java:S1481Ô".Remove this unused "respuesta" local variable.(”Š¤Îúÿÿÿÿ8ƒ‡Ëè±.
+`
+java:S3252™"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ğ§¾Ò´.
+Q
+java:S1659b"4Declare "valOtroRespuestasRatio" on a separate line.(õœéá8éèõå±.
+¤
+java:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+†
+java:S1157š"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ä÷ÉÚúÿÿÿÿ8éèõå±.
+[
+java:S3252Ø"8Use static access with "com.orm.SugarRecord" for "find".(í®ÂÑûÿÿÿÿ8ğ§¾Ò´.
+‚
+java:S1192ß"dDefine a constant instead of duplicating this literal "Debe registrar nÃºmero de 4 digitos" 5 times.(“Œªµ8ƒ‡Ëè±.
+‰
+java:S1192¤"fDefine a constant instead of duplicating this literal "Campo esta vacio, debe diligenciarlo " 3 times.(‹ƒÒÂûÿÿÿÿ8ƒ‡Ëè±.
+f
+java:S1854Ó"CRemove this useless assignment to local variable "etTextoPregunta".(¨Ïë—ıÿÿÿÿ8ƒ‡Ëè±.
+
+java:S1157­"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ü¬Ÿ¸8ÚËœè±.
+V
+java:S3252Ì"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ğ§¾Ò´.
+d
+java:S3252Ü"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ğ§¾Ò´.
+c
+java:S1858¥"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ğ§¾Ò´.
+¤
+java:S1186ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+Z
+java:S1854÷"7Remove this useless assignment to local variable "val".(ÊñÅìÿÿÿÿÿ8ƒ‡Ëè±.
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8‚§Éè±.
+¤
+java:S1186Ø"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+R
+java:S1066Ì"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8Í…Àé±.
+Y	java:S125¤"<This block of commented-out lines of code should be removed.(æàÂù8éèõå±.
+¤
+java:S1186·"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+^	java:S125Û"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8éèõå±.
+¤
+java:S1186¦"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+Y	java:S125˜"<This block of commented-out lines of code should be removed.(‘×èğ8ƒ‡Ëè±.
+^	java:S125ï"<This block of commented-out lines of code should be removed.(¤—¼»ûÿÿÿÿ8ƒ‡Ëè±.
+O
+java:S1659Œ"1Declare "btnCancelarReinicio" on a separate line.(Ì¶´œ8éèõå±.
+V
+java:S3252ã"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ğ§¾Ò´.
+¤
+java:S1186¦"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+^	java:S125ú"<This block of commented-out lines of code should be removed.(¿‹¾¦ıÿÿÿÿ8ƒ‡Ëè±.
+A
+java:S1148®"#Use a logger to log this exception.(Ç’Çê8éèõå±.
+[
+java:S2589“"8Remove this expression which always evaluates to "false"(‡—ÛÖıÿÿÿÿ8éèõå±.
+f
+java:S2259ñ"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ñßÕÄüÿÿÿÿ8ƒ‡Ëè±.
+a
+java:S1155ú">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ğ§¾Ò´.
+R
+java:S1659€"4Declare "btnSalvarImagenSoporte" on a separate line.(¦ùĞ8éèõå±.
+m
+java:S1858Ø"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ğ§¾Ò´.
+m
+java:S1858›"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ğ§¾Ò´.
+[
+java:S3252Ã"8Use static access with "com.orm.SugarRecord" for "find".(˜ò íøÿÿÿÿ8ğ§¾Ò´.
+V
+java:S3252Ã"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ğ§¾Ò´.
+V
+java:S3252î"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+s	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8ƒ‡Ëè±.
+V
+java:S3252…"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+R
+java:S1481î"4Remove this unused "res_IdRespuesta" local variable.(¿ã¨Ï8ƒ‡Ëè±.
+s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªşï±ùÿÿÿÿ8ƒ‡Ëè±.
+c
+java:S1858Â"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+
+java:S1157Ÿ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ñ«İµ8ÚËœè±.
+_
+java:S3252ı"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ğ§¾Ò´.
+
+java:S1157»"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(óö£“8ƒ‡Ëè±.
+V
+java:S3252Ù"8Use static access with "com.orm.SugarRecord" for "find".(äÊ¼8ğ§¾Ò´.
 M
-java:S1172¹"*Remove this unused method parameter "esT".(Õ±€øÿÿÿÿ8ó‚ĞŸ.
-\
-java:S1155¼">Use isEmpty() to check whether the collection is empty or not.(ŠÒ°ş8ÅÖ»‡¡.
-V
-java:S3252Ï"8Use static access with "com.orm.SugarRecord" for "find".(¶î”º8ÅÖ»‡¡.
-¤
-java:S1186’"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-R
-java:S1481Æ"4Remove this unused "res_IdRespuesta" local variable.(¿ã¨Ï8ó‚ĞŸ.
-
-java:S1157à"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ƒÓãï8ŠíˆĞŸ.
-`
-java:S3252ş"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ÅÖ»‡¡.
-N
-java:S1068E"1Remove this unused "tvObservacion" private field.(­üïŒ8ÅÖ»‡¡.
-I
-java:S1172«"+Remove this unused method parameter "view".(Šÿó8ó‚ĞŸ.
-[
-java:S3252ç"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ÅÖ»‡¡.
-‡
-java:S1192Û"dDefine a constant instead of duplicating this literal "PERIDPERSONA = ? AND HOGCODIGO = ? " 6 times.(Î»ÃÌøÿÿÿÿ8æŠõÏŸ.
-¤
-java:S1186¾"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252ü"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-f
-java:S1854¯"CRemove this useless assignment to local variable "etTextoPregunta".(¨Ïë—ıÿÿÿÿ8ó‚ĞŸ.
-U
-java:S1144—"2Remove this unused private "guardarImagen" method.(»•Ùıüÿÿÿÿ8ó‚ĞŸ.
-D	java:S131˜""Add a default case to this switch.(ˆÜ„Êşÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125 "<This block of commented-out lines of code should be removed.(æàÂù8ó‚ĞŸ.
-€
-java:S1450\"^Remove the "lsMiembrosHogar" field and declare it as a local variable in the relevant methods.(ëõÔÁÿÿÿÿÿ8ŠíˆĞŸ.
-^	java:S125‰"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8ó‚ĞŸ.
-R
-java:S1066"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8æŠõÏŸ.
-V
-java:S3252Õ"8Use static access with "com.orm.SugarRecord" for "find".(äÊ¼8ÅÖ»‡¡.
-Y
-java:S1659€";Declare "btnCancelarTomarImagenSoporte" on a separate line.(¦ùĞ8æŠõÏŸ.
-c
-java:S1858§"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-
-java:S1157ø"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(˜çØøÿÿÿÿ
-n	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8æŠõÏŸ.
-j
-java:S1858º"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ÅÖ»‡¡.
-F	java:S108Õ")Either remove or fill this block of code.(”ı¾8ó‚ĞŸ.
-V
-java:S3252ã"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ÅÖ»‡¡.
-[
-java:S3252‹"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ÅÖ»‡¡.
-
-java:S1157ö"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(’¯¬øÿÿÿÿ
-q
-java:S1871ª"NThis branch's code block is the same as the block for the branch on line 3224.(äÄö¯ÿÿÿÿÿ8ó‚ĞŸ.
-^	java:S125”"<This block of commented-out lines of code should be removed.(ÔÚìÿÿÿÿÿ8ó‚ĞŸ.
-L
-java:S1066¸"/Merge this if statement with the enclosing one.(íäòg8æŠõÏŸ.
-f
-java:S2259©"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ñßÕÄüÿÿÿÿ8æŠõÏŸ.
-V
-java:S3252Ì"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ÅÖ»‡¡.
-R
-java:S1066µ"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8æŠõÏŸ.
-`
-java:S3252ó	"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ÅÖ»‡¡.
-†
-java:S1157ß"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(æ Ü–ùÿÿÿÿ8ŠíˆĞŸ.
-¤
-java:S1186Â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-_
-java:S3252³"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ÅÖ»‡¡.
-s	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡·âïûÿÿÿÿ8ŠíˆĞŸ.
-^	java:S125‘"<This block of commented-out lines of code should be removed.(ÎÇÉ×şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252‹"8Use static access with "com.orm.SugarRecord" for "find".(ÉÚßà8ÅÖ»‡¡.
-Y	java:S125"<This block of commented-out lines of code should be removed.(¢Ü—ö8ó‚ĞŸ.
-q
-java:S3776Ô"SRefactor this method to reduce its Cognitive Complexity from 420 to the 15 allowed.(¢§¢8ó‚ĞŸ.
+java:S1066"/Merge this if statement with the enclosing one.(Ù÷£8ƒ‡Ëè±.
 a
-java:S1854Æ"CRemove this useless assignment to local variable "res_IdRespuesta".(¿ã¨Ï8ó‚ĞŸ.
-¤
-java:S1186•"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-s	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8æŠõÏŸ.
-k
-java:S1858Ñ"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ÅÖ»‡¡.
-z
-java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ôêëƒ
-n	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8æŠõÏŸ.
-¤
-java:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-c
-java:S1858£	"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ÅÖ»‡¡.
-n	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8æŠõÏŸ.
-_
-java:S1192ó"HDefine a constant instead of duplicating this literal "NO SABE" 3 times.(ñ…–ø
-n	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8æŠõÏŸ.
-z
-java:S1450I"XRemove the "mInflater" field and declare it as a local variable in the relevant methods.(ÉÁ’ïúÿÿÿÿ8ŠíˆĞŸ.
-n	java:S117÷	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8æŠõÏŸ.
-F
-java:S1659S"$Declare "etApl1" on a separate line.(Î›û•ıÿÿÿÿ8æŠõÏŸ.
-^	java:S125Ò"<This block of commented-out lines of code should be removed.(¿‹¾¦ıÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186É
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-z
-java:S1157ó"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ñ…–ø
-z
-java:S1157„"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ÕëæÇ
-s	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8æŠõÏŸ.
-K
-java:S1125ë"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8ó‚ĞŸ.
-h
-java:S1858‹"J"getId_muni_depto" returns a string, there's no need to call "toString()".(ÉÚßà8ÅÖ»‡¡.
-[
-java:S3252¸"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ÅÖ»‡¡.
-n	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áæ„ª8æŠõÏŸ.
+java:S1155Ÿ">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ğ§¾Ò´.
+^	java:S125²"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8éèõå±.
+f
+java:S1192›"HDefine a constant instead of duplicating this literal "NO SABE" 3 times.(ñ…–ø8éèõå±.
 ^
-java:S1854í";Remove this useless assignment to local variable "respEsp".(ïË´µÿÿÿÿÿ8ó‚ĞŸ.
-a
-java:S2259Ó"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ıÜì8æŠõÏŸ.
-s	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªşï±ùÿÿÿÿ8æŠõÏŸ.
-f
-java:S2259Õ"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ÙĞó‰ıÿÿÿÿ8æŠõÏŸ.
+java:S3252ø"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(›â³V8ğ§¾Ò´.
+p
+java:S3776ë"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(·ˆôÕ8ƒ‡Ëè±.
 V
-java:S3252»"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ÅÖ»‡¡.
-¤
-java:S1186ö"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186ô"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
+java:S3252Â"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+n	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8ƒ‡Ëè±.
 k
-java:S1858¥"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ÅÖ»‡¡.
-v
-java:S3776º"SRefactor this method to reduce its Cognitive Complexity from 172 to the 15 allowed.(ò“üîøÿÿÿÿ8ó‚ĞŸ.
-^	java:S125Œ"<This block of commented-out lines of code should be removed.(½Ñæãıÿÿÿÿ8ó‚ĞŸ.
+java:S1858Í
+"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ğ§¾Ò´.
+q
+java:S1871æ"NThis branch's code block is the same as the block for the branch on line 3294.(›Î‹ùÿÿÿÿ8Ëïîç±.
 R
-java:S1066”"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8æŠõÏŸ.
-_
-java:S3252Ô	"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ÅÖ»‡¡.
-f
-java:S2259×"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ñßÕÄüÿÿÿÿ8æŠõÏŸ.
+java:S1066¿"/Merge this if statement with the enclosing one.(„Õ¨şÿÿÿÿ8ƒ‡Ëè±.
+†
+java:S1157ã"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(æ Ü–ùÿÿÿÿ8éèõå±.
+¤
+java:S1186Ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+Y	java:S125Å	"<This block of commented-out lines of code should be removed.(‹æÿ8Í…Àé±.
+h
+java:S1858‹"J"getId_muni_depto" returns a string, there's no need to call "toString()".(ÉÚßà8ğ§¾Ò´.
+d
+java:S3252†"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ğ§¾Ò´.
 ]
-java:S1192ô"FDefine a constant instead of duplicating this literal "NS/NR" 3 times.(†µîá
-m
-java:S1858¾"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ÅÖ»‡¡.
-Y	java:S125æ"<This block of commented-out lines of code should be removed.(´ñÑê8ó‚ĞŸ.
-Y	java:S125"<This block of commented-out lines of code should be removed.(½‘Ñ³8ó‚ĞŸ.
-^	java:S125å"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8ó‚ĞŸ.
-n
-java:S1858Ú"K"getPre_idpregunta" returns a string, there's no need to call "toString()".(í„Ÿÿÿÿÿÿ8ÅÖ»‡¡.
-O
-java:S1659Œ"1Declare "btnCancelarReinicio" on a separate line.(Ì¶´œ8æŠõÏŸ.
-U
-java:S1854÷"7Remove this useless assignment to local variable "lp3".(çãÃ»8ó‚ĞŸ.
-†
-java:S1157â"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ßàÅùÿÿÿÿ8ŠíˆĞŸ.
-c
-java:S1854ç"ERemove this useless assignment to local variable "ins_IdInstrumento".(Èã®ã8ó‚ĞŸ.
-a
-java:S1155à">Use isEmpty() to check whether the collection is empty or not.(ƒúãóûÿÿÿÿ8ÅÖ»‡¡.
+java:S1854¹"@Remove this useless assignment to local variable "lvRespuestas".(ÔºÇ|8ƒ‡Ëè±.
+u
+java:S1192à"RDefine a constant instead of duplicating this literal "PREIDPREGUNTA = ?" 6 times.(Ä±ïßûÿÿÿÿ8éèõå±.
+k
+java:S1192û
+"MDefine a constant instead of duplicating this literal "DANEMPIO = ?" 6 times.(õ˜¹®8‚§Éè±.
+n	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8Í…Àé±.
 Q
-java:S1172—".Remove this unused method parameter "context".(»•Ùıüÿÿÿÿ8ó‚ĞŸ.
-ƒ
-java:S1192Õ"`Define a constant instead of duplicating this literal "Valor debe ser mayor o igual a " 3 times.(ú ”ùÿÿÿÿ8æŠõÏŸ.
-[
-java:S3252´"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ÅÖ»‡¡.
-N
-java:S4524å"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8ó‚ĞŸ.
-k
-java:S1192›	"MDefine a constant instead of duplicating this literal "IDDEPTO = ?" 16 times.(¡¼€8æŠõÏŸ.
-
-java:S1157‚"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(‡âÍúÿÿÿÿ
-¤
-java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-n	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8æŠõÏŸ.
-n	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¹ğÏ8æŠõÏŸ.
-j
-java:S1858¬
-"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ÅÖ»‡¡.
-L
-java:S1481ä".Remove this unused "cod_Hogar" local variable.( ù‘Ö8ó‚ĞŸ.
-z
-java:S1157ô"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(†µîá
-
-java:S1157á"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ıãñš8ŠíˆĞŸ.
-a
-java:S1155€">Use isEmpty() to check whether the collection is empty or not.(ƒúãóûÿÿÿÿ8ÅÖ»‡¡.
-y
-java:S1104ˆ"VMake pgDMensaje a static final constant or non-public and provide accessors if needed.(é ŒÃùÿÿÿÿ8æŠõÏŸ.
-¤
-java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-f
-java:S2259"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Èàé¾ùÿÿÿÿ8æŠõÏŸ.
-m
-java:S1192»"ODefine a constant instead of duplicating this literal "HOGCODIGO = ? " 5 times.(Í×¬8ŠíˆĞŸ.
-¤
-java:S1186
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186å"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252ğ"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ÅÖ»‡¡.
-¤
-java:S1186—
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252ñ"8Use static access with "com.orm.SugarRecord" for "find".(Œñú8ÅÖ»‡¡.
-R
-java:S1066"/Merge this if statement with the enclosing one.(¶—€şÿÿÿÿ8æŠõÏŸ.
-n	java:S117Æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ã¨Ï8æŠõÏŸ.
-Ä
-java:S1192Õ	" Define a constant instead of duplicating this literal "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2" 4 times.(îŠĞúÿÿÿÿ8æŠõÏŸ.
-|
-java:S2293ù"YReplace the type specification in this constructor call with the diamond operator ("<>").(¢ÍÎşÿÿÿÿ8ó‚ĞŸ.
-h
-java:S1858ë"J"getId_muni_depto" returns a string, there's no need to call "toString()".(ÉÚßà8ÅÖ»‡¡.
-Y	java:S125"<This block of commented-out lines of code should be removed.(¢Ü—ö8ó‚ĞŸ.
-¤
-java:S1186‹"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252‡"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ÅÖ»‡¡.
-¤
-java:S1186©"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-n	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8æŠõÏŸ.
-c
-java:S1858°"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ÅÖ»‡¡.
-a
-java:S1155">Use isEmpty() to check whether the collection is empty or not.(†íèøşÿÿÿÿ8ÅÖ»‡¡.
+java:S1659X"/Declare "spDTPuntoAtencion" on a separate line.(¼éŞ›üÿÿÿÿ8éèõå±.
 d
-java:S3252é"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ÅÖ»‡¡.
-Y	java:S125¥
-"<This block of commented-out lines of code should be removed.(æâşƒ8ó‚ĞŸ.
-E
-java:S1659Q"/Declare "tituloDTMunicipio" on a separate line.(§ÜöÆ
+java:S1117å"ARename "tvObservacion" which hides the field declared at line 69.(îáÅÇüÿÿÿÿ8éèõå±.
 [
-java:S3252“"8Use static access with "com.orm.SugarRecord" for "find".(Ä±ïßûÿÿÿÿ8ÅÖ»‡¡.
-]
-java:S1854ú"@Remove this useless assignment to local variable "lvRespuestas".(ÔºÇ|8ó‚ĞŸ.
-n	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8æŠõÏŸ.
-^	java:S125Ç"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125å"<This block of commented-out lines of code should be removed.(Üí™•8ó‚ĞŸ.
-Y	java:S125ã"<This block of commented-out lines of code should be removed.(ÄáƒÇ8ó‚ĞŸ.
-[
-java:S2589ë"8Remove this expression which always evaluates to "false"(‡—ÛÖıÿÿÿÿ8ŠíˆĞŸ.
-¤
-java:S1186ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-
-java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ÿöô†ıÿÿÿÿ
-¤
-java:S1186í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-^	java:S125¶"<This block of commented-out lines of code should be removed.(ç©§ıÿÿÿÿÿ8ó‚ĞŸ.
-d
-java:S3252ê"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ÅÖ»‡¡.
-Q
-java:S1659"6Declare "btnCancelarSalirEncuesta" on a separate line.(£ÔÍÂúÿÿÿÿ
-f
-java:S1192ñ"HDefine a constant instead of duplicating this literal "NINGUNO" 3 times.(Õäˆš8æŠõÏŸ.
+java:S3252ş"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ğ§¾Ò´.
 V
-java:S3252£	"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ÅÖ»‡¡.
-~
-java:S1192¿"`Define a constant instead of duplicating this literal "HOGCODIGO = ? AND TEMIDTEMA = ?" 4 times.(–™Ú±8ŠíˆĞŸ.
-V
-java:S3252ë"8Use static access with "com.orm.SugarRecord" for "find".(ÉÚßà8ÅÖ»‡¡.
-O
-java:S1068†",Remove this unused "textOtro" private field.(¹¤·òşÿÿÿÿ8ó‚ĞŸ.
-d
-java:S1192ò"HDefine a constant instead of duplicating this literal "NINGUNA" 3 times.(ä÷ÉÚúÿÿÿÿ
-a
-java:S1155†">Use isEmpty() to check whether the collection is empty or not.(†íèøşÿÿÿÿ8ÅÖ»‡¡.
-¤
-java:S1186¢"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-N
-java:S4524ï"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8ó‚ĞŸ.
-W
-java:S1481¯"4Remove this unused "etTextoPregunta" local variable.(¨Ïë—ıÿÿÿÿ8ó‚ĞŸ.
-g	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã
-h
-java:S1858Ë"J"valOtro" is already a string, there's no need to call "toString()" on it.(ÔŠÚ¡8ó‚ĞŸ.
-^	java:S125á"<This block of commented-out lines of code should be removed.(»‡ó©şÿÿÿÿ8ó‚ĞŸ.
-a
-java:S1155ë">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ÅÖ»‡¡.
-F	java:S108Ö")Either remove or fill this block of code.(å¥‡8ó‚ĞŸ.
-j
-java:S1858è"L"getNombrecomunidad" returns a string, there's no need to call "toString()".(Ï«ïù8ÅÖ»‡¡.
-¤
-java:S1186°
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-[
-java:S3252Ü"8Use static access with "com.orm.SugarRecord" for "find".(Ä±ïßûÿÿÿÿ8ÅÖ»‡¡.
-[
-java:S3252Û"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ÅÖ»‡¡.
-^	java:S125Á"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8ó‚ĞŸ.
-f
-java:S2259¾"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Èàé¾ùÿÿÿÿ8æŠõÏŸ.
-^	java:S125ú"<This block of commented-out lines of code should be removed.(öÂÀ°şÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125¥"<This block of commented-out lines of code should be removed.(¡é††8ó‚ĞŸ.
-†
-java:S1157ß"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(æ Ü–ùÿÿÿÿ8ŠíˆĞŸ.
-K
-java:S1659€"4Declare "btnSalvarImagenSoporte" on a separate line.(¦ùĞ
-Y	java:S125ï"<This block of commented-out lines of code should be removed.(ØÇÛ8ó‚ĞŸ.
-Q
-java:S1481Ò"4Remove this unused "etTextoPregunta" local variable.(38ó‚ĞŸ.
-
-java:S1157à"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ƒÓãï8ŠíˆĞŸ.
-\
-java:S1155½">Use isEmpty() to check whether the collection is empty or not.(ËßÌœ8ÅÖ»‡¡.
-Q
-java:S1659b"4Declare "valOtroRespuestasRatio" on a separate line.(õœéá8æŠõÏŸ.
-V
-java:S3252¯"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ÅÖ»‡¡.
-¤
-java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252¿"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ÅÖ»‡¡.
-b
-java:S2259ç"DA "NullPointerException" could be thrown; "tmResC" is nullable here.(şÖÛõ8æŠõÏŸ.
-V
-java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(õ˜¹®8ÅÖ»‡¡.
-Y	java:S125ç"<This block of commented-out lines of code should be removed.(ãœ›8ó‚ĞŸ.
-^	java:S125Û"<This block of commented-out lines of code should be removed.(»‡ó©şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252Ó"8Use static access with "com.orm.SugarRecord" for "find".(õ˜¹®8ÅÖ»‡¡.
-}
-java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(›‘ÏÓ8æŠõÏŸ.
-m
-java:S1858‘"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ÅÖ»‡¡.
-
-java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(¤Ï‹Éÿÿÿÿÿ
-¤
-java:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-Q
-java:S1659".Declare "posicionDelPunto" on a separate line.(Ë¼“˜úÿÿÿÿ8ó‚ĞŸ.
-n	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8æŠõÏŸ.
-g	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€
-`
-java:S3252Ñ"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ÅÖ»‡¡.
-c
-java:S1858Î"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-¤
-java:S1186ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-h
-java:S1858Õ"J"getPer_idpersona" returns a string, there's no need to call "toString()".(±£Œë8ÅÖ»‡¡.
-V
-java:S3252°"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ÅÖ»‡¡.
-J
-java:S1905",Remove this unnecessary cast to "emc_temas".(¬¼ø¦8ÅÖ»‡¡.
-[
-java:S1854ä"=Remove this useless assignment to local variable "cod_Hogar".( ù‘Ö8ó‚ĞŸ.
-[
-java:S3252º"8Use static access with "com.orm.SugarRecord" for "find".(öÂ×éüÿÿÿÿ8ÅÖ»‡¡.
-z
-java:S1157÷"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ñ«İµ
-n	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªùü8æŠõÏŸ.
-^	java:S125®"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8ó‚ĞŸ.
-K
-java:S1125Ò"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186Ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-c
-java:S1858ü"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-¤
-java:S1186‰"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-l
-java:S1871¼"NThis branch's code block is the same as the block for the branch on line 3231.(£²ŸŠ8ó‚ĞŸ.
-§
-java:S1192ê	"ŠDefine a constant instead of duplicating this literal "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2" 4 times.(éœÂÁüÿÿÿÿ
-n	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠøÆ8æŠõÏŸ.
-Z
-java:S1854¸"7Remove this useless assignment to local variable "val".(ÊñÅìÿÿÿÿÿ8ó‚ĞŸ.
-¡
-java:S1192é	"‚Define a constant instead of duplicating this literal "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " 4 times.(¬Õ¸Ï8æŠõÏŸ.
-
-java:S1157ñ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Õäˆš8æŠõÏŸ.
-n	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª®§Ÿ8æŠõÏŸ.
-¤
-java:S1186ñ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-f
-java:S2259Š"CA "NullPointerException" could be thrown; "tmRes" is nullable here.(„Õ¨şÿÿÿÿ8æŠõÏŸ.
-K
-java:S1125"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8ó‚ĞŸ.
-z
-java:S1157“"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(óö£“
-c
-java:S1858›	"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-V
-java:S3252ë"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ÅÖ»‡¡.
-V
-java:S3252Ø"8Use static access with "com.orm.SugarRecord" for "find".(äÊ¼8ÅÖ»‡¡.
-n	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8æŠõÏŸ.
-K
-java:S1659P"/Declare "llDTPuntoAtencion" on a separate line.(ã‰¼"8æŠõÏŸ.
-v
-java:S1192€"SDefine a constant instead of duplicating this literal "RESIDRESPUESTA = ?" 4 times.(ŒŒŞ¾ûÿÿÿÿ8æŠõÏŸ.
-G
-java:S1659P"+Declare "llDTMunicipio" on a separate line.(ã‰¼"8æŠõÏŸ.
-
-java:S1488Ã"cImmediately return this expression instead of assigning it to the temporary variable "profesiones".(õÉĞ8æŠõÏŸ.
-V
-java:S3252„"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ÅÖ»‡¡.
-r
-java:S1192œ"TDefine a constant instead of duplicating this literal "Logintud incorrecta" 4 times.(ë‡·â8æŠõÏŸ.
-k
-java:S1858Ò"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ÅÖ»‡¡.
-¤
-java:S2681Å"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(­Ï™A8ŠíˆĞŸ.
-K
-java:S1125Ç"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8ó‚ĞŸ.
-c
-java:S1858û"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-q
-java:S1871£"NThis branch's code block is the same as the block for the branch on line 3224.(Å‘—ûÿÿÿÿ8ó‚ĞŸ.
-Z
-java:S1854±"7Remove this useless assignment to local variable "val".(ÊñÅìÿÿÿÿÿ8ó‚ĞŸ.
-q
-java:S1871µ"NThis branch's code block is the same as the block for the branch on line 3231.(ÍüŸªÿÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125ğ"<This block of commented-out lines of code should be removed.(‹÷ÔŒ8ó‚ĞŸ.
-z
-java:S1157…"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ü¬Ÿ¸
-k
-java:S1858Å
-"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ÅÖ»‡¡.
-d
-java:S1117á"ARename "tvObservacion" which hides the field declared at line 69.(îáÅÇüÿÿÿÿ8ó‚ĞŸ.
-d
-java:S3252õ"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ÅÖ»‡¡.
-n	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Æ…‚8æŠõÏŸ.
-V
-java:S3252§"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-k
-java:S1854æ"MRemove this useless assignment to local variable "rxp_TipoPreguntaRespuesta".(Š»ô8ó‚ĞŸ.
-k
-java:S1192õ"TDefine a constant instead of duplicating this literal "NO SABE/NO RESPONDE" 3 times.(ùø¦
-¤
-java:S1186Ö"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252Î"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-Y	java:S125ä"<This block of commented-out lines of code should be removed.(ÑÒ–®8ó‚ĞŸ.
-[
-java:S1155Ñ">Use isEmpty() to check whether the collection is empty or not.(¦Ã‚88ÅÖ»‡¡.
-|
-java:S2293Î"YReplace the type specification in this constructor call with the diamond operator ("<>").(»ô‡Ñşÿÿÿÿ8ó‚ĞŸ.
-¤
-java:S1186Œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-k
-java:S1192ó
-"MDefine a constant instead of duplicating this literal "DANEMPIO = ?" 6 times.(õ˜¹®8æŠõÏŸ.
-m
-java:S1858½"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ÅÖ»‡¡.
-ß
-java:S1192Ş	"»Define a constant instead of duplicating this literal "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 " 4 times.(ÌØÊØşÿÿÿÿ8æŠõÏŸ.
-ƒ
-java:S1192Ş"`Define a constant instead of duplicating this literal "Debe ingresar un nÃºmero valido" 3 times.(×”‚úÿÿÿÿ8æŠõÏŸ.
-l
-java:S1871¸"NThis branch's code block is the same as the block for the branch on line 3224.(©›Â‘8ó‚ĞŸ.
-[
-java:S3252‡"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ÅÖ»‡¡.
-P
-java:S1068D"3Remove this unused "tvTextoPregunta" private field.(ØÖÓ‚8ÅÖ»‡¡.
-f
-java:S2259­"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ñßÕÄüÿÿÿÿ8æŠõÏŸ.
-W
-java:S1874Ê"9Remove this use of "setDrawerListener"; it is deprecated.(îÓ“ş8ó‚ĞŸ.
-n	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8æŠõÏŸ.
-n	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8æŠõÏŸ.
-L
-java:S1125ø")Remove the literal "false" boolean value.(˜‰³äûÿÿÿÿ8ó‚ĞŸ.
-[
-java:S3252¼"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ÅÖ»‡¡.
-^	java:S125Ş"<This block of commented-out lines of code should be removed.(÷ğ‰İüÿÿÿÿ8ó‚ĞŸ.
-V
-java:S3252¨"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ÅÖ»‡¡.
-l
-java:S1871›"NThis branch's code block is the same as the block for the branch on line 3224.(âô€8ó‚ĞŸ.
-V
-java:S3252İ"8Use static access with "com.orm.SugarRecord" for "find".(Ë¢öæ8ÅÖ»‡¡.
-V
-java:S3252–"8Use static access with "com.orm.SugarRecord" for "find".(±ÉĞŠ8ÅÖ»‡¡.
-q
-java:S1871§"NThis branch's code block is the same as the block for the branch on line 3231.(›Î‹ùÿÿÿÿ8ó‚ĞŸ.
-U
-java:S3252ÿ"8Use static access with "com.orm.SugarRecord" for "find".(ùâÅA8ÅÖ»‡¡.
-R
-java:S1066À"/Merge this if statement with the enclosing one.(ÖğÀóùÿÿÿÿ8æŠõÏŸ.
-T
-java:S1172½"1Remove this unused method parameter "drawerView".(°Ï¦ÿÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125Ş"<This block of commented-out lines of code should be removed.(ãœ›8ó‚ĞŸ.
-n	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8æŠõÏŸ.
-s	java:S1169"RRename this field "TheThis" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ı®£øÿÿÿÿ8æŠõÏŸ.
-\
-java:S1155Ç">Use isEmpty() to check whether the collection is empty or not.(ÇŸÜì8ÅÖ»‡¡.
-s	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8æŠõÏŸ.
-^	java:S125‘"<This block of commented-out lines of code should be removed.(éŒ —üÿÿÿÿ8ó‚ĞŸ.
-Y	java:S125½	"<This block of commented-out lines of code should be removed.(‹æÿ8ó‚ĞŸ.
-D
-java:S1481¯"&Remove this unused "d" local variable.(ÿ–‚¡8ó‚ĞŸ.
-¤
-java:S1186©	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ó‚ĞŸ.
-z
-java:S1157†"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(‹—œÚ
-
-java:S1157ò"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ä÷ÉÚúÿÿÿÿ
-n	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8æŠõÏŸ.
-h
-java:S1858–"J"valOtro" is already a string, there's no need to call "toString()" on it.(ÔŠÚ¡8ó‚ĞŸ.
-D
-java:S1659l"'Declare "lsmunsDts" on a separate line.(Äÿ©°8æŠõÏŸ.
-V
-java:S3252ï"8Use static access with "com.orm.SugarRecord" for "find".(¬ïØ©8ÅÖ»‡¡.
-y
-java:S1450;"WRemove the "lvDrawer" field and declare it as a local variable in the relevant methods.(…ˆŠıøÿÿÿÿ8ŠíˆĞŸ.
-a
-java:S1854é"CRemove this useless assignment to local variable "res_IdRespuesta".(¾¹ğÏ8ó‚ĞŸ.
-O
-java:S1481í",Remove this unused "respEsp" local variable.(ïË´µÿÿÿÿÿ8ó‚ĞŸ.
-a
-java:S1155">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ÅÖ»‡¡.
-†
-java:S1157€"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ùˆ³Êıÿÿÿÿ8æŠõÏŸ.
-n	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8æŠõÏŸ.
-^	java:S125¤"<This block of commented-out lines of code should be removed.(˜·Œçıÿÿÿÿ8ó‚ĞŸ.
-c
-java:S1858¨"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ÅÖ»‡¡.
-j
-java:S1858"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ÅÖ»‡¡.
-n
-java:S1192ô	"PDefine a constant instead of duplicating this literal "HOGARCODIGO = '" 4 times.(”ÏÙõ8æŠõÏŸ.
-R
-java:S1066›"/Merge this if statement with the enclosing one.(Ú ªİøÿÿÿÿ8æŠõÏŸ.
-a
-java:S1155ö">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ÅÖ»‡¡.
-g	java:S117å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€
-R
-java:S1066î"/Merge this if statement with the enclosing one.(ïäÌŞÿÿÿÿÿ8æŠõÏŸ.
+java:S3252Ê"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ğ§¾Ò´.
 F
-java:S1659S"$Declare "etApl2" on a separate line.(Î›û•ıÿÿÿÿ8æŠõÏŸ.
+java:S1659S"$Declare "etApl2" on a separate line.(Î›û•ıÿÿÿÿ8éèõå±.
+s	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±‡éÈÿÿÿÿÿ8ƒ‡Ëè±.
+Ä
+java:S1192İ	" Define a constant instead of duplicating this literal "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2" 4 times.(îŠĞúÿÿÿÿ8‚§Éè±.
+n	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”­œ–8ƒ‡Ëè±.
+[
+java:S2589ï"8Remove this expression which always evaluates to "false"(‡—ÛÖıÿÿÿÿ8éèõå±.
+V
+java:S3252ı"8Use static access with "com.orm.SugarRecord" for "find".(Ë¢öæ8ğ§¾Ò´.
+Z
+java:S1854Ì"7Remove this useless assignment to local variable "val".(ÊñÅìÿÿÿÿÿ8ƒ‡Ëè±.
+f
+java:S2259±"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Èàé¾ùÿÿÿÿ8ƒ‡Ëè±.
+
+java:S1157ä"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ƒÓãï8éèõå±.
+c
+java:S2147­"ECombine this catch with the one at line 939, which has the same body.(Ãôş•8éèõå±.
+[
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(˜ò íøÿÿÿÿ8ğ§¾Ò´.
+n	java:S117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8Í…Àé±.
+V
+java:S3252Ä"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+N
+java:S4524¸"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8ƒ‡Ëè±.
+¤
+java:S1186¸
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+}
+java:S1149Ì"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(›‘ÏÓ8ÚËœè±.
+n
+java:S1192—"PDefine a constant instead of duplicating this literal "PERIDPERSONA = " 3 times.(¬ïØ©8ƒ‡Ëè±.
+V
+java:S3252Ê"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ğ§¾Ò´.
+O
+java:S1068†",Remove this unused "textOtro" private field.(¹¤·òşÿÿÿÿ8éèõå±.
+F
+java:S1659~")Declare "btnCancelar" on a separate line.(§Ã¸Î8éèõå±.
+v
+java:S3776™"SRefactor this method to reduce its Cognitive Complexity from 169 to the 15 allowed.(¨Œşÿÿÿÿ8éèõå±.
+s	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡·âïûÿÿÿÿ8éèõå±.
+n	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8ƒ‡Ëè±.
+n	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ã¨Ï8ƒ‡Ëè±.
+€
+java:S1450\"^Remove the "lsMiembrosHogar" field and declare it as a local variable in the relevant methods.(ëõÔÁÿÿÿÿÿ8éèõå±.
+^	java:S125•"<This block of commented-out lines of code should be removed.(éŒ —üÿÿÿÿ8éèõå±.
+v
+java:S1192¨"SDefine a constant instead of duplicating this literal "RESIDRESPUESTA = ?" 4 times.(ŒŒŞ¾ûÿÿÿÿ8ƒ‡Ëè±.
+L
+java:S1066¯"/Merge this if statement with the enclosing one.(ÂÕŸ8ÚËœè±.
+V
+java:S3252›"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+q
+java:S1871ô"NThis branch's code block is the same as the block for the branch on line 3294.(ÍüŸªÿÿÿÿÿ8Ëïîç±.
+Y	java:S125 "<This block of commented-out lines of code should be removed.(ãœ›8ƒ‡Ëè±.
+Y	java:S125ø"<This block of commented-out lines of code should be removed.(ãœ›8ƒ‡Ëè±.
+^	java:S125º"<This block of commented-out lines of code should be removed.(Ä¿ôÏüÿÿÿÿ8ƒ‡Ëè±.
+n	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8ƒ‡Ëè±.
+^	java:S125ª"<This block of commented-out lines of code should be removed.(İíïÑşÿÿÿÿ8éèõå±.
+¤
+java:S1186ƒ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8ƒ‡Ëè±.
+K
+java:S1659l".Declare "lsPuntosAtencion" on a separate line.(Äÿ©°8éèõå±.
+T
+java:S1481"6Remove this unused "ins_IdInstrumento" local variable.(Èã®ã8ƒ‡Ëè±.
+Y	java:S125À"<This block of commented-out lines of code should be removed.(¢Ü—ö8ƒ‡Ëè±.
+[
+java:S3252ò"8Use static access with "com.orm.SugarRecord" for "find".(öøÏüûÿÿÿÿ8ğ§¾Ò´.
+Y	java:S125ä"<This block of commented-out lines of code should be removed.(¡é††8ƒ‡Ëè±.
+
+java:S1157·"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ƒÕÎ—8éèõå±.
+D
+java:S1659l"'Declare "lsmunsDts" on a separate line.(Äÿ©°8éèõå±.
+g
+java:S1858š"D"getNom_ver" returns a string, there's no need to call "toString()".(™ÇÕûÿÿÿÿ8ğ§¾Ò´.
+O
+java:S1659Q"2Declare "tituloDTdepartamento" on a separate line.(§ÜöÆ8éèõå±.
+Y	java:S125ë"<This block of commented-out lines of code should be removed.(ãœ›8Í…Àé±.
+c
+java:S1858–"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+¤
+java:S1186Ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+N
+java:S4524¤"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8ƒ‡Ëè±.
+l
+java:S1871÷"NThis branch's code block is the same as the block for the branch on line 3287.(©›Â‘8ÚËœè±.
+[
+java:S3252Ô"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ğ§¾Ò´.
+q
+java:S1871ğ"NThis branch's code block is the same as the block for the branch on line 3287.(á„»ûşÿÿÿÿ8ÚËœè±.
+
+java:S1157å"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ıãñš8éèõå±.
+f
+java:S2259É"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ñßÕÄüÿÿÿÿ8ƒ‡Ëè±.
+¤
+java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+c
+java:S1858…"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+[
+java:S1854Œ"=Remove this useless assignment to local variable "cod_Hogar".( ù‘Ö8ƒ‡Ëè±.
+V
+java:S3252û
+"8Use static access with "com.orm.SugarRecord" for "find".(õ˜¹®8ğ§¾Ò´.
+K
+java:S1125Ÿ"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8éèõå±.
+l
+java:S1871Ú"NThis branch's code block is the same as the block for the branch on line 3287.(âô€8ÚËœè±.
+^	java:S125Ã"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8éèõå±.
+[
+java:S3252¡"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ğ§¾Ò´.
+n	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8ƒ‡Ëè±.
+|
+java:S2293”"YReplace the type specification in this constructor call with the diamond operator ("<>").(»ô‡Ñşÿÿÿÿ8ƒ‡Ëè±.
+s	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8ƒ‡Ëè±.
+L
+java:S1481Œ".Remove this unused "cod_Hogar" local variable.( ù‘Ö8ƒ‡Ëè±.
+v
+java:S3776ù"SRefactor this method to reduce its Cognitive Complexity from 172 to the 15 allowed.(ò“üîøÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S3252à"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ğ§¾Ò´.
+Y	java:S125¥"<This block of commented-out lines of code should be removed.(´ñÑê8ƒ‡Ëè±.
+a
+java:S1155©">Use isEmpty() to check whether the collection is empty or not.(†íèøşÿÿÿÿ8ğ§¾Ò´.
+¤
+java:S1186˜
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+n	java:S117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8ƒ‡Ëè±.
+d
+java:S3252ç"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ğ§¾Ò´.
+n	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8ƒ‡Ëè±.
+¤
+java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+u
+java:S3776ğ"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(œƒƒ©ùÿÿÿÿ8ƒ‡Ëè±.
+V
+java:S3252¤"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ğ§¾Ò´.
+X
+java:S1659"6Declare "btnCancelarSalirEncuesta" on a separate line.(£ÔÍÂúÿÿÿÿ8éèõå±.
+¤
+java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+a
+java:S1155“">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ğ§¾Ò´.
+¤
+java:S1186‰
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+s	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8ƒ‡Ëè±.
+^	java:S125ş"<This block of commented-out lines of code should be removed.(öÂÀ°şÿÿÿÿ8éèõå±.
+f
+java:S2259ï"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ÙĞó‰ıÿÿÿÿ8ƒ‡Ëè±.
+\
+java:S1155û">Use isEmpty() to check whether the collection is empty or not.(ŠÒ°ş8ğ§¾Ò´.
+g
+java:S1858¢"D"getNom_ver" returns a string, there's no need to call "toString()".(™ÇÕûÿÿÿÿ8ğ§¾Ò´.
+‡
+java:S1192ß"dDefine a constant instead of duplicating this literal "PERIDPERSONA = ? AND HOGCODIGO = ? " 6 times.(Î»ÃÌøÿÿÿÿ8‚§Éè±.
+[
+java:S3252à"8Use static access with "com.orm.SugarRecord" for "find".(Ä±ïßûÿÿÿÿ8ğ§¾Ò´.
+d
+java:S1117œ"ARename "tvObservacion" which hides the field declared at line 69.(îáÅÇüÿÿÿÿ8éèõå±.
+n	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª®§Ÿ8ƒ‡Ëè±.
+V
+java:S3252›"8Use static access with "com.orm.SugarRecord" for "find".(õ˜¹®8ğ§¾Ò´.
+`
+java:S3252›"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ğ§¾Ò´.
+V
+java:S3252ó"8Use static access with "com.orm.SugarRecord" for "find".(õ˜¹®8ğ§¾Ò´.
+q
+java:S1192—"SDefine a constant instead of duplicating this literal " AND HOGCODIGO = '" 3 times.(¬ïØ©8ƒ‡Ëè±.
+n	java:S117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8ƒ‡Ëè±.
+a
+java:S2259’"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ıÜì8ƒ‡Ëè±.
+\
+java:S1155Á">Use isEmpty() to check whether the collection is empty or not.(ËßÌœ8ğ§¾Ò´.
+K
+java:S1125ï"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8éèõå±.
+D	java:S131À""Add a default case to this switch.(ˆÜ„Êşÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S3252ù"8Use static access with "com.orm.SugarRecord" for "find".(öÂ×éüÿÿÿÿ8ğ§¾Ò´.
+V
+java:S3252×"8Use static access with "com.orm.SugarRecord" for "find".(‹İï›8ğ§¾Ò´.
+n	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8ÚËœè±.
+s	java:S1169"RRename this field "TheThis" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ı®£øÿÿÿÿ8éèõå±.
+¤
+java:S1186Ğ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+†
+java:S1157¯"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ó¢·Ãùÿÿÿÿ8ƒ‡Ëè±.
+s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïşìªüÿÿÿÿ8éèõå±.
+b
+java:S2259¦"DA "NullPointerException" could be thrown; "tmResC" is nullable here.(şÖÛõ8ƒ‡Ëè±.
+¤
+java:S1186©"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+¥
+java:S2681¾"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(ÖÑÌĞ8éèõå±.
+K
+java:S1125“"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8éèõå±.
+U
+java:S3252‡"8Use static access with "com.orm.SugarRecord" for "find".(ùâÅA8ğ§¾Ò´.
+^	java:S125±"<This block of commented-out lines of code should be removed.(®¼ÿÿÿÿÿ8éèõå±.
+a
+java:S2259"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Ù÷£8ƒ‡Ëè±.
+j
+java:S1858´
+"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ğ§¾Ò´.
+_
+java:S3252û"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ğ§¾Ò´.
+‰
+java:S1192"fDefine a constant instead of duplicating this literal "Campo esta vacio, debe diligenciarlo" 10 times.(‹ƒÒÂûÿÿÿÿ8ƒ‡Ëè±.
+†
+java:S1157¨"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ùˆ³Êıÿÿÿÿ8éèõå±.
+Q
+java:S1172›".Remove this unused method parameter "context".(»•Ùıüÿÿÿÿ8éèõå±.
+^	java:S125Ë"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8éèõå±.
+_
+java:S1874="=Remove this use of "ActionBarDrawerToggle"; it is deprecated.(°ÅßŸıÿÿÿÿ8éèõå±.
+K
+java:S1125ú"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8éèõå±.
+c
+java:S1858­"E"fechaActual" returns a string, there's no need to call "toString()".(ˆ˜°¾8ğ§¾Ò´.
+f
+java:S2259°"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Èàé¾ùÿÿÿÿ8ƒ‡Ëè±.
+a
+java:S1155º">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ğ§¾Ò´.
+l
+java:S1871û"NThis branch's code block is the same as the block for the branch on line 3294.(£²ŸŠ8ÚËœè±.
+†
+java:S1157æ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ßàÅùÿÿÿÿ8éèõå±.
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8ÚËœè±.
+M
+java:S1659X"+Declare "spDTMunicipio" on a separate line.(¼éŞ›üÿÿÿÿ8éèõå±.
+K
+java:S1125º"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8éèõå±.
+c
+java:S1858Ä"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+†
+java:S1157º"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(üôùÊÿÿÿÿÿ8ÚËœè±.
+q
+java:S1871í"NThis branch's code block is the same as the block for the branch on line 3294.(ğİÒ·øÿÿÿÿ8Ëïîç±.
+j
+java:S1858­"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ğ§¾Ò´.
+\
+java:S1481">Remove this unused "rxp_TipoPreguntaRespuesta" local variable.(Š»ô8ÚËœè±.
+Y	java:S125®"<This block of commented-out lines of code should be removed.(ØÇÛ8ƒ‡Ëè±.
+n	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªùü8ƒ‡Ëè±.
+^	java:S125ô"<This block of commented-out lines of code should be removed.(µÛ›×úÿÿÿÿ8éèõå±.
+R
+java:S1066­"/Merge this if statement with the enclosing one.(ïäÌŞÿÿÿÿÿ8ƒ‡Ëè±.
+c
+java:S1858Ì"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ğ§¾Ò´.
+Y	java:S125ä"<This block of commented-out lines of code should be removed.(‹æÿ8‚§Éè±.
+
+java:S1157¶"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ôêëƒ8éèõå±.
+n	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8ƒ‡Ëè±.
+R
+java:S1066°"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8ƒ‡Ëè±.
+f
+java:S2259Ê"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ñßÕÄüÿÿÿÿ8ƒ‡Ëè±.
+h
+java:S1858Õ"J"valOtro" is already a string, there's no need to call "toString()" on it.(ÔŠÚ¡8ƒ‡Ëè±.
+c
+java:S1858£	"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+a
+java:S1117ã"CRename "tvTextoPregunta" which hides the field declared at line 68.(£õ–‰8éèõå±.
+h
+java:S1858š"J"getPer_idpersona" returns a string, there's no need to call "toString()".(±£Œë8ğ§¾Ò´.
+[
+java:S3252Õ"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ğ§¾Ò´.
+c
+java:S1858«	"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ğ§¾Ò´.
+k
+java:S1854"MRemove this useless assignment to local variable "rxp_TipoPreguntaRespuesta".(Š»ô8ÚËœè±.
+s	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8Í…Àé±.
+h
+java:S1858ı"J"getPer_idpersona" returns a string, there's no need to call "toString()".(±£Œë8ğ§¾Ò´.
+^	java:S125"<This block of commented-out lines of code should be removed.(¤—¼»ûÿÿÿÿ8ƒ‡Ëè±.
+Y	java:S125¸"<This block of commented-out lines of code should be removed.(Œïè8éèõå±.
+¤
+java:S1186…"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+d
+java:S3252‘"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ğ§¾Ò´.
+^	java:S125Õ"<This block of commented-out lines of code should be removed.(¥óşÿÿÿÿÿ8ƒ‡Ëè±.
+N
+java:S1068E"1Remove this unused "tvObservacion" private field.(­üïŒ8ğ§¾Ò´.
+U
+java:S3252£"8Use static access with "com.orm.SugarRecord" for "find".(ùâÅA8ğ§¾Ò´.
+V
+java:S3252³"8Use static access with "com.orm.SugarRecord" for "find".(ÉÚßà8ğ§¾Ò´.
+¤
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+Y	java:S125İ"<This block of commented-out lines of code should be removed.(¢Ü—ö8ƒ‡Ëè±.
+F	java:S108ş")Either remove or fill this block of code.(å¥‡8ƒ‡Ëè±.
+V
+java:S3252‡"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ğ§¾Ò´.
+c
+java:S1858…"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ğ§¾Ò´.
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¹ğÏ8ƒ‡Ëè±.
+q
+java:S3776ü"SRefactor this method to reduce its Cognitive Complexity from 483 to the 15 allowed.(¢§¢8ƒ‡Ëè±.
+
+java:S1157å"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ıãñš8éèõå±.
+a
+java:S1854"CRemove this useless assignment to local variable "res_IdRespuesta".(¾¹ğÏ8ƒ‡Ëè±.
+i
+java:S1858¯"K"valOtroC" is already a string, there's no need to call "toString()" on it.(ä¸ä8ƒ‡Ëè±.
+^	java:S125ğ"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8Í…Àé±.
+V
+java:S3252—"8Use static access with "com.orm.SugarRecord" for "find".(¬ïØ©8ğ§¾Ò´.
+R
+java:S1066»"/Merge this if statement with the enclosing one.(¢¤¬±şÿÿÿÿ8Í…Àé±.
+r
+java:S1192"TDefine a constant instead of duplicating this literal "NO SABE/NO RESPONDE" 3 times.(ùø¦8éèõå±.
+n	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8ƒ‡Ëè±.
+n	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯®É€8ƒ‡Ëè±.
+n	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áæ„ª8ƒ‡Ëè±.
+`
+java:S1854Ô"=Remove this useless assignment to local variable "respuesta".(”Š¤Îúÿÿÿÿ8ƒ‡Ëè±.
+
+java:S1488ã"cImmediately return this expression instead of assigning it to the temporary variable "profesiones".(õÉĞ8ƒ‡Ëè±.
+[
+java:S3252ÿ"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ğ§¾Ò´.
+®
+java:S1192ò	"ŠDefine a constant instead of duplicating this literal "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2" 4 times.(éœÂÁüÿÿÿÿ8‚§Éè±.
+^	java:S125"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8éèõå±.
+P
+java:S1659X".Declare "spDTdepartamento" on a separate line.(¼éŞ›üÿÿÿÿ8éèõå±.
+Q
+java:S1481ò"4Remove this unused "etTextoPregunta" local variable.(38ƒ‡Ëè±.
+V
+java:S3252š"8Use static access with "com.orm.SugarRecord" for "find".(±ÉĞŠ8ğ§¾Ò´.
+W
+java:S1481Ó"4Remove this unused "etTextoPregunta" local variable.(¨Ïë—ıÿÿÿÿ8ƒ‡Ëè±.
+f
+java:S2259­"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ïäÌŞÿÿÿÿÿ8ƒ‡Ëè±.
+ƒ
+java:S1192"`Define a constant instead of duplicating this literal "Debe ingresar un nÃºmero valido" 3 times.(×”‚úÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S1155Õ">Use isEmpty() to check whether the collection is empty or not.(¦Ã‚88ğ§¾Ò´.
+¤
+java:S1186Ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+^
+java:S1854•";Remove this useless assignment to local variable "respEsp".(ïË´µÿÿÿÿÿ8ƒ‡Ëè±.
+V
+java:S3252é"8Use static access with "com.orm.SugarRecord" for "find".(Ò¼„–8ğ§¾Ò´.
+^	java:S125é"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8éèõå±.
+_
+java:S3252Ó"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ğ§¾Ò´.
+¤
+java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+J
+java:S1659P".Declare "llDTdepartamento" on a separate line.(ã‰¼"8éèõå±.
+L
+java:S1125µ")Remove the literal "false" boolean value.(˜‰³äûÿÿÿÿ8ƒ‡Ëè±.
+‚
+java:S1149Í"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ñ›òüÿÿÿÿ8ƒ‡Ëè±.
+d
+java:S1192œ"FDefine a constant instead of duplicating this literal "NS/NR" 3 times.(†µîá8éèõå±.
+j
+java:S1858Ú"L"getNombrecomunidad" returns a string, there's no need to call "toString()".(Ï«ïù8ğ§¾Ò´.
+€
+java:S1157¹"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ì‚{8ÚËœè±.
+s	java:S117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S1155±">Use isEmpty() to check whether the collection is empty or not.(áà;8ğ§¾Ò´.
+F	java:S108ì")Either remove or fill this block of code.(”ı¾8Í…Àé±.
+¤
+java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+R
+java:S1066ü"/Merge this if statement with the enclosing one.(ÖğÀóùÿÿÿÿ8ƒ‡Ëè±.
+L
+java:S1066ô"/Merge this if statement with the enclosing one.(íäòg8ƒ‡Ëè±.
+g
+java:S3973„"IUse indentation to denote the code conditionally executed by this "else".(ÔÍØ8ƒ‡Ëè±.
+R
+java:S1066Ø"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8ƒ‡Ëè±.
+a
+java:S1155¤">Use isEmpty() to check whether the collection is empty or not.(ƒúãóûÿÿÿÿ8ğ§¾Ò´.
+†
+java:S1157ã"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(æ Ü–ùÿÿÿÿ8éèõå±.
+†
+java:S1157¸"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(İŠ•Şşÿÿÿÿ8éèõå±.
+M
+java:S1066’"/Merge this if statement with the enclosing one.(ıÜì8ƒ‡Ëè±.
+V
+java:S3252ï"8Use static access with "com.orm.SugarRecord" for "find".(šÒ¤8ğ§¾Ò´.
+¤
+java:S1186Ÿ
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+c
+java:S1858"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ğ§¾Ò´.
+Y	java:S125æ"<This block of commented-out lines of code should be removed.(‹æÿ8ƒ‡Ëè±.
+Y	java:S125¼"<This block of commented-out lines of code should be removed.(‹æÿ8ƒ‡Ëè±.
+¤
+java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+a
+java:S1117š"CRename "tvTextoPregunta" which hides the field declared at line 68.(£õ–‰8éèõå±.
+n	java:S117ÿ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒ¦8Í…Àé±.
+j
+java:S1858â
+"L"getNombrecomunidad" returns a string, there's no need to call "toString()".(Ï«ïù8ğ§¾Ò´.
+[
+java:S3252ì"8Use static access with "com.orm.SugarRecord" for "find".(–¼Ñêşÿÿÿÿ8ğ§¾Ò´.
+V
+java:S3252…"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ğ§¾Ò´.
+¤
+java:S1186­"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+¤
+java:S1186†"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+¤
+java:S1186¾"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+R
+java:S1481"4Remove this unused "res_IdRespuesta" local variable.(¾¹ğÏ8ƒ‡Ëè±.
+^	java:S125é"<This block of commented-out lines of code should be removed.(ïµ®ıÿÿÿÿ8Í…Àé±.
+U
+java:S1144›"2Remove this unused private "guardarImagen" method.(»•Ùıüÿÿÿÿ8éèõå±.
+n	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8ƒ‡Ëè±.
+k
+java:S1192š"HDefine a constant instead of duplicating this literal "NINGUNA" 3 times.(ä÷ÉÚúÿÿÿÿ8éèõå±.
+y
+java:S1450;"WRemove the "lvDrawer" field and declare it as a local variable in the relevant methods.(…ˆŠıøÿÿÿÿ8éèõå±.
+
+java:S1157œ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(†µîá8éèõå±.
+ß
+java:S1192æ	"»Define a constant instead of duplicating this literal "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 " 4 times.(ÌØÊØşÿÿÿÿ8‚§Éè±.
+†
+java:S1157µ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ÿöô†ıÿÿÿÿ8éèõå±.
+a
+java:S1155Ö">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ğ§¾Ò´.
+n	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠøÆ8ƒ‡Ëè±.
+V
+java:S3252ç"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ğ§¾Ò´.
+†
+java:S1192ı"cDefine a constant instead of duplicating this literal "Valor debe ser inferior o igual a " 4 times.(Ş…¶¿ÿÿÿÿÿ8ƒ‡Ëè±.
+G
+java:S1659P"+Declare "llDTMunicipio" on a separate line.(ã‰¼"8éèõå±.
+k
+java:S1858ì"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ğ§¾Ò´.
+c
+java:S1858î"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+A
+java:S1148¬"#Use a logger to log this exception.(Ç’Çê8éèõå±.
+¤
+java:S1186Æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+u
+java:S3776Í"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(ùÄì¤øÿÿÿÿ8ƒ‡Ëè±.
+Y	java:S125­
+"<This block of commented-out lines of code should be removed.(æâşƒ8Í…Àé±.
+k
+java:S1858Å"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ğ§¾Ò´.
+†
+java:S1157æ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ßàÅùÿÿÿÿ8éèõå±.
+f
+java:S2259Ø"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(Èàé¾ùÿÿÿÿ8ƒ‡Ëè±.
+|
+java:S2293“"YReplace the type specification in this constructor call with the diamond operator ("<>").(¢ÍÎşÿÿÿÿ8ƒ‡Ëè±.
+_
+java:S3252Ü	"AUse static access with "com.orm.SugarRecord" for "findWithQuery".( ëÿ„8ğ§¾Ò´.
+h
+java:S1858Š"J"valOtro" is already a string, there's no need to call "toString()" on it.(ÔŠÚ¡8ƒ‡Ëè±.
+¤
+java:S1186¨"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S3252§"8Use static access with "com.orm.SugarRecord" for "find".(˜ò íøÿÿÿÿ8ğ§¾Ò´.
+^	java:S125µ"<This block of commented-out lines of code should be removed.(ÎÇÉ×şÿÿÿÿ8ƒ‡Ëè±.
+†
+java:S1157 "cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(˜çØøÿÿÿÿ8ƒ‡Ëè±.
+V
+java:S3252‹"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ğ§¾Ò´.
+R
+java:S1066Ã"/Merge this if statement with the enclosing one.(Ú ªİøÿÿÿÿ8ƒ‡Ëè±.
+d
+java:S3252ğ	"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ğ§¾Ò´.
+Y	java:S125ÿ"<This block of commented-out lines of code should be removed.(­ñÒ—8éèõå±.
+m
+java:S1858Ú"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ğ§¾Ò´.
+V
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ğ§¾Ò´.
+R
+java:S1066±"/Merge this if statement with the enclosing one.(Èàé¾ùÿÿÿÿ8ƒ‡Ëè±.
+Y	java:S125è"<This block of commented-out lines of code should be removed.(ÑÒ–®8éèõå±.
+[
+java:S3252ß"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ğ§¾Ò´.
+^	java:S125‹"<This block of commented-out lines of code should be removed.(°Å¯¨úÿÿÿÿ8éèõå±.
+a
+java:S1155ï">Use isEmpty() to check whether the collection is empty or not.(‡—ÛÖıÿÿÿÿ8ğ§¾Ò´.
+n	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8Ëïîç±.
+Y	java:S125¡"<This block of commented-out lines of code should be removed.(ãœ›8‚§Éè±.
+j
+java:S3973ñ"GUse indentation to denote the code conditionally executed by this "if".(º°Æúÿÿÿÿ8Í…Àé±.
+[
+java:S3252—"8Use static access with "com.orm.SugarRecord" for "find".(Ä±ïßûÿÿÿÿ8ğ§¾Ò´.
+Q
+java:S1659Î".Declare "posicionDelPunto" on a separate line.(Ë¼“˜úÿÿÿÿ8ƒ‡Ëè±.
+V
+java:S3252‹"8Use static access with "com.orm.SugarRecord" for "find".(ÉÚßà8ğ§¾Ò´.
+k
+java:S1858î"M"getNombreEnfermedad" returns a string, there's no need to call "toString()".(¸Ì‚û8ğ§¾Ò´.
+z
+java:S1450I"XRemove the "mInflater" field and declare it as a local variable in the relevant methods.(ÉÁ’ïúÿÿÿÿ8éèõå±.
+c
+java:S1858›"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+U
+java:S1854¶"7Remove this useless assignment to local variable "lp3".(çãÃ»8ƒ‡Ëè±.
+¤
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S3252¢"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ğ§¾Ò´.
+^	java:S125Å"<This block of commented-out lines of code should be removed.(…½¯öøÿÿÿÿ8éèõå±.
+V
+java:S3252ö
+"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+a
+java:S1155Ç">Use isEmpty() to check whether the collection is empty or not.(˜À¤®ûÿÿÿÿ8ğ§¾Ò´.
+¤
+java:S1186¹"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+W
+java:S1874Î"9Remove this use of "setDrawerListener"; it is deprecated.(îÓ“ş8éèõå±.
+|
+java:S2293ë"YReplace the type specification in this constructor call with the diamond operator ("<>").(»ô‡Ñşÿÿÿÿ8ƒ‡Ëè±.
+n
+java:S1192ü	"PDefine a constant instead of duplicating this literal "HOGARCODIGO = '" 4 times.(”ÏÙõ8‚§Éè±.
+†
+java:S1157ª"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(‡âÍúÿÿÿÿ8éèõå±.
+q
+java:S1871é"NThis branch's code block is the same as the block for the branch on line 3287.(äÄö¯ÿÿÿÿÿ8ÚËœè±.
+[
+java:S1155Œ">Use isEmpty() to check whether the collection is empty or not.(áà;8ğ§¾Ò´.
+n	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8Í…Àé±.
+f
+java:S2259È"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ÙĞó‰ıÿÿÿÿ8ƒ‡Ëè±.
+I
+java:S1172¯"+Remove this unused method parameter "view".(Šÿó8éèõå±.
+V
+java:S3252°"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8ğ§¾Ò´.
+¤
+java:S1186ğ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+n	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»ô8ƒ‡Ëè±.
+j
+java:S1858‚"L"getNombrecomunidad" returns a string, there's no need to call "toString()".(Ï«ïù8ğ§¾Ò´.
+f
+java:S1192™"HDefine a constant instead of duplicating this literal "NINGUNO" 3 times.(Õäˆš8éèõå±.
+V
+java:S3252«	"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ğ§¾Ò´.
+V
+java:S3252‹"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ğ§¾Ò´.
+n	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ù‘Ö8ƒ‡Ëè±.
+V
+java:S3252Ğ"8Use static access with "com.orm.SugarRecord" for "find".(Í×¬8ğ§¾Ò´.
+Y	java:S125Å
+"<This block of commented-out lines of code should be removed.(æâşƒ8Í…Àé±.
+a
+java:S1155˜">Use isEmpty() to check whether the collection is empty or not.(˜À¤®ûÿÿÿÿ8ğ§¾Ò´.
+n	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Æ…‚8ƒ‡Ëè±.
+¤
+java:S1186½	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+`
+java:S3252û	"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ğ§¾Ò´.
+V
+java:S3252Ó"8Use static access with "com.orm.SugarRecord" for "find".(¶î”º8ğ§¾Ò´.
+\
+java:S1854Ô"9Remove this useless assignment to local variable "idTem".(õ‘ÑÆúÿÿÿÿ8éèõå±.
+O
+java:S1481•",Remove this unused "respEsp" local variable.(ïË´µÿÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S3252ù"8Use static access with "com.orm.SugarRecord" for "find".(Î»ÃÌøÿÿÿÿ8ğ§¾Ò´.
+¤
+java:S1186ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+†
+java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(’¯¬øÿÿÿÿ8ÚËœè±.
+J
+java:S1905’",Remove this unnecessary cast to "emc_temas".(¬¼ø¦8ğ§¾Ò´.
+f
+java:S1192Ÿ"HDefine a constant instead of duplicating this literal "A NADIE" 3 times.(Ñ«İµ8ÚËœè±.
+n
+java:S1858‚"K"getPre_idpregunta" returns a string, there's no need to call "toString()".(í„Ÿÿÿÿÿÿ8ğ§¾Ò´.
+^	java:S125º"<This block of commented-out lines of code should be removed.(ç©§ıÿÿÿÿÿ8éèõå±.
+q
+java:S1192—"SDefine a constant instead of duplicating this literal "Logitud incorrecta" 3 times.(—ÍÑš8ƒ‡Ëè±.
+V
+java:S3252£	"8Use static access with "com.orm.SugarRecord" for "find".(¡¼€8ğ§¾Ò´.
+s	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´³™Ûşÿÿÿÿ8ƒ‡Ëè±.
+h
+java:S1858“"J"getId_muni_depto" returns a string, there's no need to call "toString()".(ÉÚßà8ğ§¾Ò´.
+
+java:S1157¬"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ÕëæÇ8éèõå±.
+^	java:S125³"<This block of commented-out lines of code should be removed.(«¾Çüÿÿÿÿÿ8ƒ‡Ëè±.
+`
+java:S3252ñ"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8ğ§¾Ò´.
+z
+java:S1192 "WDefine a constant instead of duplicating this literal "NO SÃ‰ A QUIÃ‰N ACUDIR" 3 times.(˜çØøÿÿÿÿ8ƒ‡Ëè±.
+u
+java:S3776ˆ"RRefactor this method to reduce its Cognitive Complexity from 50 to the 15 allowed.(‚İÎÃıÿÿÿÿ8ƒ‡Ëè±.
+[
+java:S2589Ë"8Remove this expression which always evaluates to "false"(‡—ÛÖıÿÿÿÿ8éèõå±.
+Y	java:S125ş"<This block of commented-out lines of code should be removed.(ãœ›8ƒ‡Ëè±.
+¤
+java:S2681É"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(­Ï™A8éèõå±.
+¤
+java:S1186Ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+¤
+java:S1186”"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+f
+java:S2259Ç"CA "NullPointerException" could be thrown; "mhPer" is nullable here.(ÙĞó‰ıÿÿÿÿ8ƒ‡Ëè±.
+c
+java:S1858ö
+"E"getId_depto" returns a string, there's no need to call "toString()".(¡¼€8ğ§¾Ò´.
+†
+java:S1157©"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(¤Ï‹Éÿÿÿÿÿ8éèõå±.
+†
+java:S1157«"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(…Šè®ùÿÿÿÿ8éèõå±.
+n	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èã®ã8ƒ‡Ëè±.
+Y	java:S125é"<This block of commented-out lines of code should be removed.(Üí™•8Í…Àé±.
+d
+java:S3252å	"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ğ§¾Ò´.
+d
+java:S3252"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(‡â´Îøÿÿÿÿ8ğ§¾Ò´.
+
+java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ùø¦8éèõå±.
+T
+java:S1172Á"1Remove this unused method parameter "drawerView".(°Ï¦ÿÿÿÿÿ8éèõå±.
+[
+java:S1155Ä">Use isEmpty() to check whether the collection is empty or not.(áà;8ğ§¾Ò´.
+j
+java:S1858Õ"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ğ§¾Ò´.
+c
+java:S1854"ERemove this useless assignment to local variable "ins_IdInstrumento".(Èã®ã8ƒ‡Ëè±.
+\
+java:S1155Ë">Use isEmpty() to check whether the collection is empty or not.(ÇŸÜì8ğ§¾Ò´.
+^	java:S125¨"<This block of commented-out lines of code should be removed.(˜·Œçıÿÿÿÿ8éèõå±.
+¤
+java:S1186æ
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+n
+java:S1858"K"getPre_idpregunta" returns a string, there's no need to call "toString()".(í„Ÿÿÿÿÿÿ8ğ§¾Ò´.
+a
+java:S1155¢">Use isEmpty() to check whether the collection is empty or not.(†íèøşÿÿÿÿ8ğ§¾Ò´.
+V
+java:S3252Ü"8Use static access with "com.orm.SugarRecord" for "find".(äÊ¼8ğ§¾Ò´.
+Y	java:S125‹"<This block of commented-out lines of code should be removed.(ÄáƒÇ8ƒ‡Ëè±.
+¤
+java:S1186Ü"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8‚§Éè±.
+[
+java:S3252ü"8Use static access with "com.orm.SugarRecord" for "find".(†ğÂüÿÿÿÿ8ğ§¾Ò´.
+^	java:S125ß"<This block of commented-out lines of code should be removed.(»‡ó©şÿÿÿÿ8éèõå±.
+a
+java:S1854î"CRemove this useless assignment to local variable "res_IdRespuesta".(¿ã¨Ï8ƒ‡Ëè±.
+K
+java:S1125Ë"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8éèõå±.
+d
+java:S3252„"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·•™Êúÿÿÿÿ8ğ§¾Ò´.
+¤
+java:S1186™"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Í…Àé±.
+g
+java:S1858Â"D"getNom_ver" returns a string, there's no need to call "toString()".(™ÇÕûÿÿÿÿ8ğ§¾Ò´.
+m
+java:S1858±"J"getId_muni_depto" returns a string, there's no need to call "toString()".(÷èùÿÿÿÿ8ğ§¾Ò´.
+p
+java:S3776Ò"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(ªªñç8Í…Àé±.
+Y	java:S125’"<This block of commented-out lines of code should be removed.(½‘Ñ³8éèõå±.
+
+java:S1157™"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Õäˆš8éèõå±.
+K
+java:S1659P"/Declare "llDTPuntoAtencion" on a separate line.(ã‰¼"8éèõå±.
+}
+java:S1192"ZDefine a constant instead of duplicating this literal "NINGUNA DE LAS ANTERIORES" 3 times.(’¯¬øÿÿÿÿ8ÚËœè±.
+j
+java:S1858Ô"L"getNombreresguardo" returns a string, there's no need to call "toString()".(±ê÷â8ğ§¾Ò´.
+
+java:S1157®"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(‹—œÚ8ÚËœè±.
+p
+java:S3776á"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(Èêä8ƒ‡Ëè±.
+V
+java:S3252Ì"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ğ§¾Ò´.
+V
+java:S3252£"8Use static access with "com.orm.SugarRecord" for "find".(ºÆ†×8ğ§¾Ò´.
+~
+java:S1192Ã"`Define a constant instead of duplicating this literal "HOGCODIGO = ? AND TEMIDTEMA = ?" 4 times.(–™Ú±8éèõå±.
+M
+java:S1066§"/Merge this if statement with the enclosing one.(Óã£û8ƒ‡Ëè±.
+
+java:S1157ä"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ƒÓãï8éèõå±.
+u
+java:S3776Š"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(”—ëğùÿÿÿÿ8ƒ‡Ëè±.
+^	java:S125É"<This block of commented-out lines of code should be removed.(½Ñæãıÿÿÿÿ8ƒ‡Ëè±.
+
+java:S1157´"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(¿Î¦8éèõå±.
+[
+java:S1155è">Use isEmpty() to check whether the collection is empty or not.(áà;8ğ§¾Ò´.
+F
+java:S1659S"$Declare "etApl1" on a separate line.(Î›û•ıÿÿÿÿ8éèõå±.
+K
+java:S1125Ö"(Remove the literal "true" boolean value.(‡—ÛÖıÿÿÿÿ8éèõå±.
+¤
+java:S1186É"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8ƒ‡Ëè±.
+P
+java:S1659Q"3Declare "tituloDTPuntoAtencion" on a separate line.(§ÜöÆ8éèõå±.
+r
+java:S1192Ä"TDefine a constant instead of duplicating this literal "Logintud incorrecta" 4 times.(ë‡·â8ƒ‡Ëè±.
+Y	java:S125–"<This block of commented-out lines of code should be removed.(«¼©Ñ8ƒ‡Ëè±.
+n	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª²º›8ƒ‡Ëè±.
+L
+java:S1659Q"/Declare "tituloDTMunicipio" on a separate line.(§ÜöÆ8éèõå±.
+R
+java:S1066Ê"/Merge this if statement with the enclosing one.(¶—€şÿÿÿÿ8ƒ‡Ëè±.
+c
+java:S1858Ê"E"getId_depto" returns a string, there's no need to call "toString()".(ºÆ†×8ğ§¾Ò´.
+a
+java:S1155ˆ">Use isEmpty() to check whether the collection is empty or not.(ƒúãóûÿÿÿÿ8ğ§¾Ò´.

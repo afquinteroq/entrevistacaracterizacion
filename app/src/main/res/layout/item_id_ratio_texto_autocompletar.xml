@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:background="@color/emc_white"
     android:padding="5dp"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:id="@+id/ll_item_ration_texto">
 
 
 
