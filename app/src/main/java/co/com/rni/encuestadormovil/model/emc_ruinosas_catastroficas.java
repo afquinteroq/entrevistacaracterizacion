@@ -10,15 +10,17 @@ import lombok.NoArgsConstructor;
 /**
  * Created by ASUS on 23/07/2018.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_ruinosas_catastroficas extends SugarRecord<emc_ruinosas_catastroficas> {
 
     String idEnfermedad;
     String nombreEnfermedad;
-    /*
+
     public emc_ruinosas_catastroficas() {
     }
 
@@ -42,5 +44,4 @@ public class emc_ruinosas_catastroficas extends SugarRecord<emc_ruinosas_catastr
     public void setNombreEnfermedad(String nombreEnfermedad) {
         this.nombreEnfermedad = nombreEnfermedad;
     }
-    */
 }

@@ -1,0 +1,37 @@
+
+r	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÄùÿÿÿÿ8ÜŞØñ´.
+o	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ¨ıüÿÿÿÿ8ÜŞØñ´.
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òôêşÿÿÿÿ8…¢Ùñ´.
+o	java:S1006"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ”úÒûÿÿÿÿ8ÜŞØñ´.
+o	java:S100^"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á’‰·ıÿÿÿÿ8ÜŞØñ´.
+r	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á’‰·ıÿÿÿÿ8ÜŞØñ´.
+o	java:S116"ZRename this field "val_idvalidador" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¡–
+m	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ºİâ8ÜŞØñ´.
+o	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ã¦øÿÿÿÿ8ÜŞØñ´.
+j	java:S100Z"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú‚âğ8ÜŞØñ´.
+o	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãó¦öøÿÿÿÿ8ÜŞØñ´.
+m	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¿à8ÜŞØñ´.
+i	java:S100R"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¹ˆX8ÜŞØñ´.
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òôêşÿÿÿÿ8…¢Ùñ´.
+r	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ¨ıüÿÿÿÿ8ÜŞØñ´.
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òôêşÿÿÿÿ8…¢Ùñ´.
+v	java:S116"\Rename this field "pre_validador_min" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¥Î’øÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ì›­íøÿÿÿÿ
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òôêşÿÿÿÿ8…¢Ùñ´.
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òôêşÿÿÿÿ8…¢Ùñ´.
+q	java:S116"\Rename this field "ins_idinstrumento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç
+o	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²¬„·ıÿÿÿÿ8ÜŞØñ´.
+o	java:S100V"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÄùÿÿÿÿ8ÜŞØñ´.
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òôêşÿÿÿÿ8…¢Ùñ´.
+r	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ã¦øÿÿÿÿ8ÜŞØñ´.
+r	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ”úÒûÿÿÿÿ8ÜŞØñ´.
+j	java:S100:"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şù„ 8ÜŞØñ´.
+j	java:S100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¿à8ÜŞØñ´.
+j	java:S100F"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ºİâ8ÜŞØñ´.
+r	java:S116"XRename this field "pre_longcampo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äú¶úıÿÿÿÿ
+i	java:S116"TRename this field "pre_valor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í÷‚¾
+j	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëè—8ÜŞØñ´.
+h	java:S100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×78ÜŞØñ´.
+m	java:S116"XRename this field "pre_validador" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÖ½û
+q	java:S116"\Rename this field "pre_validador_max" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“´ø‚
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òôêşÿÿÿÿ8…¢Ùñ´.

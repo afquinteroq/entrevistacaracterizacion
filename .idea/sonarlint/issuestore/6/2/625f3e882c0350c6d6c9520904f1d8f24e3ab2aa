@@ -1,0 +1,74 @@
+
+D
+java:S1905í"(Remove this unnecessary cast to "float".(ŒŠšåøÿÿÿÿ
+}
+java:S1488ß"aImmediately return this expression instead of assigning it to the temporary variable "reachable".(³€¼Òùÿÿÿÿ
+G
+java:S1128
+",Remove this unused import 'android.net.Uri'.(òêû‘ýÿÿÿÿ
+W	java:S125›"<This block of commented-out lines of code should be removed.(§Ë®¬øÿÿÿÿ
+;
+java:S1659Ž"Declare "m" on a separate line.(ÛÔ²Åûÿÿÿÿ
+>
+java:S1905î"(Remove this unnecessary cast to "float".(ãðÚ\
+i	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘´žûÿÿÿÿ
+Q	java:S125e"<This block of commented-out lines of code should be removed.(ÙÃ”‹
+R
+java:S1128"<Remove this unused import 'java.util.concurrent.FutureTask'.(Éü¡ó
+Q	java:S125x"<This block of commented-out lines of code should be removed.(ÙÃ”‹
+W
+java:S1126_"AReplace this if-then-else statement by a single return statement.(¾éªÈ
+f	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽÖ¸¦
+H
+java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ
+R	java:S125‚"<This block of commented-out lines of code should be removed.(í•²‘
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÇÎ°
+?
+java:S1148Ã"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+[
+java:S3252°"=Use static access with "com.orm.SugarRecord" for "deleteAll".(½ž ‘8¯äÔØ².
+d	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÇÎ°
+`
+java:S1128"ERemove this unused import 'android.support.v7.app.AppCompatActivity'.(«Û®ûüÿÿÿÿ
+W
+java:S1126X"AReplace this if-then-else statement by a single return statement.(ˆ¥Þß
+f	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽÖ¸¦
+?
+java:S1128")Remove this unused import 'java.io.File'.(†Ð¥Å
+Q	java:S1255"<This block of commented-out lines of code should be removed.(ï®·Þ
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÇÎ°
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÇÎ°
+K
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ
+D
+java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ
+?
+java:S1148ä"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+N
+java:S1135ã"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
+N
+java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ
+[
+java:S3252“"=Use static access with "com.orm.SugarRecord" for "deleteAll".(½ž ‘8¯äÔØ².
+;
+java:S1659Ž"Declare "d" on a separate line.(ÛÔ²Åûÿÿÿÿ
+[
+java:S1128"@Remove this unused import 'java.util.concurrent.RunnableFuture'.(§·¶ùÿÿÿÿ
+H
+java:S1128"3Remove this unused import 'android.content.Intent'.(³ð‹G
+M
+java:S1128"7Remove this unused import 'java.net.HttpURLConnection'.(¬¬˜­
+g	java:S101#"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ó…þÕûÿÿÿÿ
+?
+java:S1148¥"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+U
+java:S1118#":Add a private constructor to hide the implicit public one.(ó…þÕûÿÿÿÿ
+;
+java:S1659Ž"Declare "a" on a separate line.(ÛÔ²Åûÿÿÿÿ
+U
+java:S1128":Remove this unused import 'java.util.concurrent.Callable'.(¾×¶îûÿÿÿÿ
+V	java:S125p"<This block of commented-out lines of code should be removed.(¹ÅæÍøÿÿÿÿ
+[
+java:S3252š"=Use static access with "com.orm.SugarRecord" for "deleteAll".(½ž ‘8¯äÔØ².
+Z
+java:S1128"DRemove this unused import 'java.util.concurrent.ExecutionException'.(¡£ØÍ

@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 15/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_municipio extends SugarRecord<emc_municipio> {
 
     String id_muni_depto;
@@ -30,8 +32,6 @@ public class emc_municipio extends SugarRecord<emc_municipio> {
     String operador;
     String grupo_especial;
     String categoria;
-
-    /*
 
     public emc_municipio() {
     }
@@ -164,5 +164,4 @@ public class emc_municipio extends SugarRecord<emc_municipio> {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-    */
 }

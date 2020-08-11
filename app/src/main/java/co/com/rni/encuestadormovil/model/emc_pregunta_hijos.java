@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 16/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_pregunta_hijos extends SugarRecord<emc_pregunta_hijos> {
 
     String res_idrespuesta;
@@ -21,7 +23,6 @@ public class emc_pregunta_hijos extends SugarRecord<emc_pregunta_hijos> {
     String pre_depende;
     String val_todohogar;
 
-    /*
     public emc_pregunta_hijos() {
     }
 
@@ -63,6 +64,4 @@ public class emc_pregunta_hijos extends SugarRecord<emc_pregunta_hijos> {
     public void setVal_todohogar(String val_todohogar) {
         this.val_todohogar = val_todohogar;
     }
-    */
-
 }

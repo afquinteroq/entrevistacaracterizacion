@@ -1,0 +1,15 @@
+
+a
+java:S13018"KReplace this "switch" statement by "if" statements to increase readability.(ìß¤è
+V	java:S125"<This block of commented-out lines of code should be removed.(ë³¡»ûÿÿÿÿ
+~
+java:S1450"cRemove the "llVolverParametricas" field and declare it as a local variable in the relevant methods.(è³Û®þÿÿÿÿ
+V	java:S125u"<This block of commented-out lines of code should be removed.(–“Åýÿÿÿÿ
+b	java:S101z"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(™œ±
+g	java:S117Ž"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åáÌ‚
+>
+java:S1185‡"(Remove this method to simply inherit it.(û®«S
+Y
+java:S1128">Remove this unused import 'android.webkit.WebResourceRequest'.(ƒ’¹Šüÿÿÿÿ
+7	java:S1318""Add a default case to this switch.(ìß¤è
+V	java:S125-"<This block of commented-out lines of code should be removed.(‡…ƒ¥úÿÿÿÿ

@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 15/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_preguntas_derivadas extends SugarRecord<emc_preguntas_derivadas> {
 
     String hog_codigo;
@@ -27,8 +29,18 @@ public class emc_preguntas_derivadas extends SugarRecord<emc_preguntas_derivadas
     Integer pre_idpreguntapadre;
     Integer contador;
 
-    /*
     public emc_preguntas_derivadas() {
+    }
+
+    public emc_preguntas_derivadas(String hog_codigo, String ins_idinstrumento, String pre_idpregunta, String per_idpersona, String guardado, Integer tem_idtema, Integer pre_idpreguntapadre, Integer contador) {
+        this.hog_codigo = hog_codigo;
+        this.ins_idinstrumento = ins_idinstrumento;
+        this.pre_idpregunta = pre_idpregunta;
+        this.per_idpersona = per_idpersona;
+        this.guardado = guardado;
+        this.tem_idtema = tem_idtema;
+        this.pre_idpreguntapadre = pre_idpreguntapadre;
+        this.contador = contador;
     }
 
     public String getHog_codigo() {
@@ -39,16 +51,16 @@ public class emc_preguntas_derivadas extends SugarRecord<emc_preguntas_derivadas
         this.hog_codigo = hog_codigo;
     }
 
-    public String getPre_idpregunta() {
-        return pre_idpregunta;
-    }
-
     public String getIns_idinstrumento() {
         return ins_idinstrumento;
     }
 
     public void setIns_idinstrumento(String ins_idinstrumento) {
         this.ins_idinstrumento = ins_idinstrumento;
+    }
+
+    public String getPre_idpregunta() {
+        return pre_idpregunta;
     }
 
     public void setPre_idpregunta(String pre_idpregunta) {
@@ -94,6 +106,4 @@ public class emc_preguntas_derivadas extends SugarRecord<emc_preguntas_derivadas
     public void setContador(Integer contador) {
         this.contador = contador;
     }
-    */
-
 }

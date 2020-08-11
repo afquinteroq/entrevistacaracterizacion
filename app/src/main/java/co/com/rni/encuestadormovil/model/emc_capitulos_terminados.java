@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 15/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_capitulos_terminados extends SugarRecord<emc_capitulos_terminados> {
 
     String hog_codigo;
@@ -21,7 +23,6 @@ public class emc_capitulos_terminados extends SugarRecord<emc_capitulos_terminad
     String usu_usuariocreacion;
     String usu_fechacreacion;
 
-    /*
     public emc_capitulos_terminados() {
     }
 
@@ -62,7 +63,5 @@ public class emc_capitulos_terminados extends SugarRecord<emc_capitulos_terminad
 
     public void setUsu_fechacreacion(String usu_fechacreacion) {
         this.usu_fechacreacion = usu_fechacreacion;
-
     }
-    */
 }

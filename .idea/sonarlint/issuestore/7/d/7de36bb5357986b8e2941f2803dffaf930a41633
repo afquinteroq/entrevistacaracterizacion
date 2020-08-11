@@ -1,0 +1,15 @@
+
+I
+java:S1172.".Remove this unused method parameter "context".(»•Ùýüÿÿÿÿ
+V	java:S125""<This block of commented-out lines of code should be removed.(Šíùöùÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¯á‘¿ùÿÿÿÿ
+k	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïþìªüÿÿÿÿ
+9
+java:S1148B"#Use a logger to log this exception.(Ç’Çê
+9
+java:S1148D"#Use a logger to log this exception.(Ç’Çê
+C
+java:S1068"-Remove this unused "hogCodigo" private field.(¾ê–Ù
+Q	java:S125I"<This block of commented-out lines of code should be removed.(™•¡
+Z
+java:S2147C"DCombine this catch with the one at line 65, which has the same body.(Ãôþ•

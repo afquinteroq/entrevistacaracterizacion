@@ -10,16 +10,16 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 15/12/15.
  */
-@Data
+/*@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_admoncombos extends SugarRecord<emc_admoncombos> {
 
     String gic_idcombo;
     String gic_query;
 
-    /*
     public emc_admoncombos() {
     }
 
@@ -43,5 +43,4 @@ public class emc_admoncombos extends SugarRecord<emc_admoncombos> {
     public void setGic_query(String gic_query) {
         this.gic_query = gic_query;
     }
-    */
 }

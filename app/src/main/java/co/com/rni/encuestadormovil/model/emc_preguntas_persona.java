@@ -8,10 +8,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 17/02/16.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_preguntas_persona {
 
     private String pre_idpregunta;
@@ -23,19 +25,18 @@ public class emc_preguntas_persona {
     private String validacion_persona;
     private String ordenprioridad;
 
-    /*
     public emc_preguntas_persona() {
     }
 
-    public emc_preguntas_persona(String pre_idpregunta, String pre_tipopregunta, String pre_tipocampo, String hog_codigo, String per_idpersona, String validacion_persona, String ordenprioridad, String ixp_orden) {
+    public emc_preguntas_persona(String pre_idpregunta, String pre_tipopregunta, String pre_tipocampo, String hog_codigo, String ixp_orden, String per_idpersona, String validacion_persona, String ordenprioridad) {
         this.pre_idpregunta = pre_idpregunta;
         this.pre_tipopregunta = pre_tipopregunta;
         this.pre_tipocampo = pre_tipocampo;
         this.hog_codigo = hog_codigo;
+        this.ixp_orden = ixp_orden;
         this.per_idpersona = per_idpersona;
         this.validacion_persona = validacion_persona;
         this.ordenprioridad = ordenprioridad;
-        this.ixp_orden = ixp_orden.toString();
     }
 
     public String getPre_idpregunta() {
@@ -70,6 +71,14 @@ public class emc_preguntas_persona {
         this.hog_codigo = hog_codigo;
     }
 
+    public String getIxp_orden() {
+        return ixp_orden;
+    }
+
+    public void setIxp_orden(String ixp_orden) {
+        this.ixp_orden = ixp_orden;
+    }
+
     public String getPer_idpersona() {
         return per_idpersona;
     }
@@ -93,14 +102,4 @@ public class emc_preguntas_persona {
     public void setOrdenprioridad(String ordenprioridad) {
         this.ordenprioridad = ordenprioridad;
     }
-
-    public String getIxp_orden() {
-        return ixp_orden;
-    }
-
-    public void setIxp_orden(String ixp_orden) {
-        this.ixp_orden = String.valueOf(ixp_orden);
-    }
-    */
-
 }

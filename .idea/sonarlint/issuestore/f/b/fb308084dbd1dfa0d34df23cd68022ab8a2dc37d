@@ -1,0 +1,24 @@
+
+†
+java:S1319f"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(÷Þ
+V	java:S125>"<This block of commented-out lines of code should be removed.(­á©øÿÿÿÿ
+o
+java:S1450"YRemove the "llIrInicio" field and declare it as a local variable in the relevant methods.(„ß·
+f	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥’¦·
+Q	java:S1259"<This block of commented-out lines of code should be removed.(æ·¬Ä
+†
+java:S1319G"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ãøÅÛ
+g
+java:S1192K"LDefine a constant instead of duplicating this literal "Desconocido" 4 times.(Ø—¾ñÿÿÿÿÿ
+r
+java:S1450"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(áÓøÒ
+€
+java:S1450"eRemove the "personaCardViewAdapter" field and declare it as a local variable in the relevant methods.(ŽÝ×»úÿÿÿÿ
+Q	java:S125;"<This block of commented-out lines of code should be removed.(ÑÒ–®
+]
+java:S1128"GRemove this unused import 'android.support.v4.app.FragmentTransaction'.(´ÅŽ‰
+]
+java:S1192I"GDefine a constant instead of duplicating this literal "Tierra" 6 times.(Š§„á
+U
+java:S3252i"8Use static access with "com.orm.SugarRecord" for "find".(§­Š»8¤ý¬‹¨.
+<	java:S131x""Add a default case to this switch.(øå´¡ÿÿÿÿÿ

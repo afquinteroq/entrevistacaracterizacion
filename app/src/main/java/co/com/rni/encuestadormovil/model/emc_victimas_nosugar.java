@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 4/02/16.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_victimas_nosugar{
 
     public Integer consPersona;
@@ -27,7 +29,6 @@ public class emc_victimas_nosugar{
     public String apellido1;
     public String apellido2;
     public String fecNacimiento;
-    //public List<String> tipoPersona;
     public Integer hv1;
     public Integer hv2;
     public Integer hv3;
@@ -46,11 +47,10 @@ public class emc_victimas_nosugar{
     public Integer encuestado;
     public String fechaEncuesta;
 
-    /*
     public emc_victimas_nosugar() {
     }
 
-    public emc_victimas_nosugar(int consPersona, int hogar, String tipoDoc, String documento, String nombre1, String nombre2, String apellido1, String apellido2, String fecNacimiento, int hv1, int hv2, int hv3, int hv4, int hv5, int hv6, int hv7, int hv8, int hv9, int hv10, int hv11, int hv12, int hv13, int hv14, String estado, int encuestado, String fechaEncuesta) {
+    public emc_victimas_nosugar(Integer consPersona, Integer hogar, String tipoDoc, String documento, String nombre1, String nombre2, String apellido1, String apellido2, String fecNacimiento, Integer hv1, Integer hv2, Integer hv3, Integer hv4, Integer hv5, Integer hv6, Integer hv7, Integer hv8, Integer hv9, Integer hv10, Integer hv11, Integer hv12, Integer hv13, Integer hv14, String estado, Integer encuestado, String fechaEncuesta) {
         this.consPersona = consPersona;
         this.hogar = hogar;
         this.tipoDoc = tipoDoc;
@@ -79,19 +79,19 @@ public class emc_victimas_nosugar{
         this.fechaEncuesta = fechaEncuesta;
     }
 
-    public int getConsPersona() {
+    public Integer getConsPersona() {
         return consPersona;
     }
 
-    public void setConsPersona(int consPersona) {
+    public void setConsPersona(Integer consPersona) {
         this.consPersona = consPersona;
     }
 
-    public int getHogar() {
+    public Integer getHogar() {
         return hogar;
     }
 
-    public void setHogar(int hogar) {
+    public void setHogar(Integer hogar) {
         this.hogar = hogar;
     }
 
@@ -151,115 +151,115 @@ public class emc_victimas_nosugar{
         this.fecNacimiento = fecNacimiento;
     }
 
-    public int getHv1() {
+    public Integer getHv1() {
         return hv1;
     }
 
-    public void setHv1(int hv1) {
+    public void setHv1(Integer hv1) {
         this.hv1 = hv1;
     }
 
-    public int getHv2() {
+    public Integer getHv2() {
         return hv2;
     }
 
-    public void setHv2(int hv2) {
+    public void setHv2(Integer hv2) {
         this.hv2 = hv2;
     }
 
-    public int getHv3() {
+    public Integer getHv3() {
         return hv3;
     }
 
-    public void setHv3(int hv3) {
+    public void setHv3(Integer hv3) {
         this.hv3 = hv3;
     }
 
-    public int getHv4() {
+    public Integer getHv4() {
         return hv4;
     }
 
-    public void setHv4(int hv4) {
+    public void setHv4(Integer hv4) {
         this.hv4 = hv4;
     }
 
-    public int getHv5() {
+    public Integer getHv5() {
         return hv5;
     }
 
-    public void setHv5(int hv5) {
+    public void setHv5(Integer hv5) {
         this.hv5 = hv5;
     }
 
-    public int getHv6() {
+    public Integer getHv6() {
         return hv6;
     }
 
-    public void setHv6(int hv6) {
+    public void setHv6(Integer hv6) {
         this.hv6 = hv6;
     }
 
-    public int getHv7() {
+    public Integer getHv7() {
         return hv7;
     }
 
-    public void setHv7(int hv7) {
+    public void setHv7(Integer hv7) {
         this.hv7 = hv7;
     }
 
-    public int getHv8() {
+    public Integer getHv8() {
         return hv8;
     }
 
-    public void setHv8(int hv8) {
+    public void setHv8(Integer hv8) {
         this.hv8 = hv8;
     }
 
-    public int getHv9() {
+    public Integer getHv9() {
         return hv9;
     }
 
-    public void setHv9(int hv9) {
+    public void setHv9(Integer hv9) {
         this.hv9 = hv9;
     }
 
-    public int getHv10() {
+    public Integer getHv10() {
         return hv10;
     }
 
-    public void setHv10(int hv10) {
+    public void setHv10(Integer hv10) {
         this.hv10 = hv10;
     }
 
-    public int getHv11() {
+    public Integer getHv11() {
         return hv11;
     }
 
-    public void setHv11(int hv11) {
+    public void setHv11(Integer hv11) {
         this.hv11 = hv11;
     }
 
-    public int getHv12() {
+    public Integer getHv12() {
         return hv12;
     }
 
-    public void setHv12(int hv12) {
+    public void setHv12(Integer hv12) {
         this.hv12 = hv12;
     }
 
-    public int getHv13() {
+    public Integer getHv13() {
         return hv13;
     }
 
-    public void setHv13(int hv13) {
+    public void setHv13(Integer hv13) {
         this.hv13 = hv13;
     }
 
-    public int getHv14() {
+    public Integer getHv14() {
         return hv14;
     }
 
-    public void setHv14(int hv14) {
+    public void setHv14(Integer hv14) {
         this.hv14 = hv14;
     }
 
@@ -271,11 +271,11 @@ public class emc_victimas_nosugar{
         this.estado = estado;
     }
 
-    public int getEncuestado() {
+    public Integer getEncuestado() {
         return encuestado;
     }
 
-    public void setEncuestado(int encuestado) {
+    public void setEncuestado(Integer encuestado) {
         this.encuestado = encuestado;
     }
 
@@ -286,6 +286,4 @@ public class emc_victimas_nosugar{
     public void setFechaEncuesta(String fechaEncuesta) {
         this.fechaEncuesta = fechaEncuesta;
     }
-    */
-
 }

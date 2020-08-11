@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 16/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_preguntas_instrumento  extends SugarRecord<emc_preguntas_instrumento> {
     String ins_idinstrumento;
     String tem_idtema;
@@ -35,8 +37,6 @@ public class emc_preguntas_instrumento  extends SugarRecord<emc_preguntas_instru
     String val_todohogar;
     String val_diferenciadonu;
     String r_defualt;
-
-    /*
 
     public emc_preguntas_instrumento() {
     }
@@ -59,15 +59,6 @@ public class emc_preguntas_instrumento  extends SugarRecord<emc_preguntas_instru
         this.val_respuesta_multiple = val_respuesta_multiple;
         this.val_todohogar = val_todohogar;
         this.val_diferenciadonu = val_diferenciadonu;
-        this.r_defualt = r_defualt;
-    }
-
-
-    public String getR_defualt() {
-        return r_defualt;
-    }
-
-    public void setR_defualt(String r_defualt) {
         this.r_defualt = r_defualt;
     }
 
@@ -206,5 +197,12 @@ public class emc_preguntas_instrumento  extends SugarRecord<emc_preguntas_instru
     public void setVal_diferenciadonu(String val_diferenciadonu) {
         this.val_diferenciadonu = val_diferenciadonu;
     }
-    */
+
+    public String getR_defualt() {
+        return r_defualt;
+    }
+
+    public void setR_defualt(String r_defualt) {
+        this.r_defualt = r_defualt;
+    }
 }

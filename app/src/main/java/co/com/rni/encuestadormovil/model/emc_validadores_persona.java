@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 16/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_validadores_persona extends SugarRecord<emc_validadores_persona> {
 
     String ins_idinstrumento;
@@ -23,16 +25,18 @@ public class emc_validadores_persona extends SugarRecord<emc_validadores_persona
     String hog_codigo;
     String comodin;
     String fechahecho;
-    /*
-    public emc_validadores_persona(String ins_idinstrumento, String per_idpersona, String val_idvalidador, String pre_valor, String hog_codigo) {
+
+    public emc_validadores_persona() {
+    }
+
+    public emc_validadores_persona(String ins_idinstrumento, String per_idpersona, String val_idvalidador, String pre_valor, String hog_codigo, String comodin, String fechahecho) {
         this.ins_idinstrumento = ins_idinstrumento;
         this.per_idpersona = per_idpersona;
         this.val_idvalidador = val_idvalidador;
         this.pre_valor = pre_valor;
         this.hog_codigo = hog_codigo;
-    }
-
-    public emc_validadores_persona() {
+        this.comodin = comodin;
+        this.fechahecho = fechahecho;
     }
 
     public String getIns_idinstrumento() {
@@ -74,5 +78,20 @@ public class emc_validadores_persona extends SugarRecord<emc_validadores_persona
     public void setHog_codigo(String hog_codigo) {
         this.hog_codigo = hog_codigo;
     }
-    */
+
+    public String getComodin() {
+        return comodin;
+    }
+
+    public void setComodin(String comodin) {
+        this.comodin = comodin;
+    }
+
+    public String getFechahecho() {
+        return fechahecho;
+    }
+
+    public void setFechahecho(String fechahecho) {
+        this.fechahecho = fechahecho;
+    }
 }

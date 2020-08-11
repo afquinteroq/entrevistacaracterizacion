@@ -24,13 +24,15 @@ public class ansycGuardarSoporte extends AsyncTask<String, Integer, Boolean> {
     private String hogCodigo;
     private String nombreFoto;
     private String ruta;
+    private String folder;
 
-    public ansycGuardarSoporte(Context ctx, responseGuardarSoporte callback, Bitmap bitmap, String hogcodigo, String nombreFoto){
+    public ansycGuardarSoporte(Context ctx, responseGuardarSoporte callback, Bitmap bitmap, String hogcodigo, String nombreFoto, String folder){
         this.ctx = ctx;
         this.callback = callback;
         this.bitmap = bitmap;
         this.hogCodigo = hogcodigo;
         this.nombreFoto = nombreFoto;
+        this.folder = folder;
         //this.pgDMensaje = pgDMensaje;
 
 
@@ -46,7 +48,7 @@ public class ansycGuardarSoporte extends AsyncTask<String, Integer, Boolean> {
     private String guardarImagen (Context context, String nombre, Bitmap imagen){
 
 
-        String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Soportes";
+        String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + folder;
 
         File dir = new File(file_path);
 

@@ -1,0 +1,19 @@
+
+o	java:S116"URename this field "hog_codigo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕôÙûÿÿÿÿ
+j	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¯áè8Ò»”ñ´.
+o	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÁÏÿÿÿÿÿÿ8Ò»”ñ´.
+r	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÁÏÿÿÿÿÿÿ8Ò»”ñ´.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í´¢øÿÿÿÿ8Ï§•ñ´.
+m	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯éü«8Ò»”ñ´.
+s	java:S116"^Rename this field "usu_usuariocreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÏ†Ñ
+o	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™»´üÿÿÿÿ8Ò»”ñ´.
+r	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™»´üÿÿÿÿ8Ò»”ñ´.
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÿèÏÑ
+o	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºùÊñúÿÿÿÿ8Ò»”ñ´.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í´¢øÿÿÿÿ8Ï§•ñ´.
+@
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
+j	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯éü«8Ò»”ñ´.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í´¢øÿÿÿÿ8Ï§•ñ´.
+i	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤’‹\8Ò»”ñ´.
+v	java:S116"\Rename this field "usu_fechacreacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İËÙ ûÿÿÿÿ

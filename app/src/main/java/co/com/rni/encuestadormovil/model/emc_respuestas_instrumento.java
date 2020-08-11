@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 16/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_respuestas_instrumento extends SugarRecord<emc_respuestas_instrumento> {
 
     String ins_idinstrumento;
@@ -34,12 +36,13 @@ public class emc_respuestas_instrumento extends SugarRecord<emc_respuestas_instr
     String res_finaliza;
     String res_autocompletar;
     String res_respuestashbilitar;
+    String validador_oridrespuesta;
+    String tipo_tabla;
 
-    /*
     public emc_respuestas_instrumento() {
     }
 
-    public emc_respuestas_instrumento(String ins_idinstrumento, String res_idrespuesta, String res_padre, String pre_validador, String pre_longcampo, String pre_validador_min, String pre_validador_max, String res_ordenrespuesta, String usu_usuariocreacion, String usu_fechacreacion, String pre_campotex, String val_idvalidador, String val_idvalidador_def, String res_obligatorio, String res_habilita, String res_finaliza, String res_autocompletar, String res_respuestashbilitar) {
+    public emc_respuestas_instrumento(String ins_idinstrumento, String res_idrespuesta, String res_padre, String pre_validador, String pre_longcampo, String pre_validador_min, String pre_validador_max, String res_ordenrespuesta, String usu_usuariocreacion, String usu_fechacreacion, String pre_campotex, String val_idvalidador, String val_idvalidador_def, String res_obligatorio, String res_habilita, String res_finaliza, String res_autocompletar, String res_respuestashbilitar, String validador_oridrespuesta, String tipo_tabla) {
         this.ins_idinstrumento = ins_idinstrumento;
         this.res_idrespuesta = res_idrespuesta;
         this.res_padre = res_padre;
@@ -58,8 +61,9 @@ public class emc_respuestas_instrumento extends SugarRecord<emc_respuestas_instr
         this.res_finaliza = res_finaliza;
         this.res_autocompletar = res_autocompletar;
         this.res_respuestashbilitar = res_respuestashbilitar;
+        this.validador_oridrespuesta = validador_oridrespuesta;
+        this.tipo_tabla = tipo_tabla;
     }
-
 
     public String getIns_idinstrumento() {
         return ins_idinstrumento;
@@ -204,5 +208,20 @@ public class emc_respuestas_instrumento extends SugarRecord<emc_respuestas_instr
     public void setRes_respuestashbilitar(String res_respuestashbilitar) {
         this.res_respuestashbilitar = res_respuestashbilitar;
     }
-    */
+
+    public String getValidador_oridrespuesta() {
+        return validador_oridrespuesta;
+    }
+
+    public void setValidador_oridrespuesta(String validador_oridrespuesta) {
+        this.validador_oridrespuesta = validador_oridrespuesta;
+    }
+
+    public String getTipo_tabla() {
+        return tipo_tabla;
+    }
+
+    public void setTipo_tabla(String tipo_tabla) {
+        this.tipo_tabla = tipo_tabla;
+    }
 }

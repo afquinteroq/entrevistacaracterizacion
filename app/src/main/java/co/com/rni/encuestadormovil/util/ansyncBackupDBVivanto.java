@@ -2,8 +2,6 @@ package co.com.rni.encuestadormovil.util;
 
 import android.content.Context;
 import android.os.*;
-import android.view.View;
-import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,20 +9,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.mail.*;
 import javax.mail.Message;
-import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import co.com.rni.encuestadormovil.R;
-import co.com.rni.encuestadormovil.model.emc_usuarios;
 
 import static co.com.rni.encuestadormovil.util.general.fechaActual;
 

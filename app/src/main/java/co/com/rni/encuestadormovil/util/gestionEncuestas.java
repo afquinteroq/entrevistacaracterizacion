@@ -1290,6 +1290,9 @@ public final class gestionEncuestas {
             }else if(VALIDADOR.trim().equals("5003")){
                 VALIDADOR_P = 5003;
                 prevalor = "CUIDADOR PERMANENTE";
+            }else if(VALIDADOR.trim().equals("5004")){
+                VALIDADOR_P = 5004;
+                prevalor = "MIEMBRO HOGAR";
             }else if (VALIDADOR.trim().equals("")){
                 VALIDADOR_P = 5004;
                 prevalor = "MIEMBRO HOGAR";
@@ -1617,9 +1620,10 @@ public final class gestionEncuestas {
                     "INSIDINSTRUMENTO = ? AND RESIDRESPUESTA IN (SELECT r.RESIDRESPUESTA FROM EMCRESPUESTAS r WHERE r.PREIDPREGUNTA = ? AND r.RESACTIVA = 'SI' )", parResIns);
             for (int conR = 0; conR < lsResIns.size(); conR++) {
                 emc_respuestas_instrumento tmRes = lsResIns.get(conR);
-                if (FN_COMPROBARVALIDACIONESRESP(pID_JEFE, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1);
+                if (FN_COMPROBARVALIDACIONESRESP(pID_JEFE, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1){
+                    lsRespuestas.add(tmRes);
+                }
 
-                lsRespuestas.add(tmRes);
             }
         } else if (pPRE_GENERAL > 0) {
             lsRespuestas = SP_GET_RESPUESTASVALXCONTEO(pPRE_IDPREGUNTA, pINS_IDINSTRUMENTO, pHOG_CODIGO, pID_JEFE);
@@ -2004,8 +2008,10 @@ public final class gestionEncuestas {
                 for (int conR = 0; conR < lsResIns.size(); conR++) {
                     emc_respuestas_instrumento tmRes = lsResIns.get(conR);
 
-                    if (FN_COMPROBARVALIDACIONESRESP(pPER_IDPERSONA, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1)
+                    if (FN_COMPROBARVALIDACIONESRESP(pPER_IDPERSONA, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1){
                         lsRespuesta.add(tmRes);
+                    }
+
                 }
 
             }
@@ -2454,7 +2460,7 @@ public final class gestionEncuestas {
                         emc_validadores_persona emc_validadores_persona = new emc_validadores_persona();
                         emc_validadores_persona.setIns_idinstrumento("1");
                         emc_validadores_persona.setPer_idpersona(CUR_DATOS.getPer_idpersona());
-                        emc_validadores_persona.setVal_idvalidador(Integer.toString(TOTAL_267_266_173));
+                        emc_validadores_persona.setVal_idvalidador((tmValPersonaTOTAL_267_266_173.getVal_idvalidador()));
                         emc_validadores_persona.setPre_valor(VALOR_267_266_173);
                         emc_validadores_persona.setHog_codigo(CUR_DATOS.getHog_codigo());
                         emc_validadores_persona.setComodin("2");

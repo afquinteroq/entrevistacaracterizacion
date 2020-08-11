@@ -1,0 +1,970 @@
+
+\
+java:S1155Ü">Use isEmpty() to check whether the collection is empty or not.(ƒØÚÄ8Ñíì´.
+l	java:S117ô	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íİ­Ùüÿÿÿÿ
+q
+java:S2259ğ	"Z"NullPointerException" will be thrown when invoking method "SP_SET_PREGUNTAS_DERIVADAS()".(ïÓˆı
+c
+java:S3252æ"@Use static access with "com.orm.SugarRecord" for "executeQuery".(ÿº’½ùÿÿÿÿ8Ñíì´.
+l	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ïÿğûÿÿÿÿ
+d	java:S100Ã
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ƒò
+U
+java:S3252€"8Use static access with "com.orm.SugarRecord" for "find".(×½¡Q8Ñíì´.
+U
+java:S3252™"8Use static access with "com.orm.SugarRecord" for "find".( àôi8Ñíì´.
+R	java:S125ì"<This block of commented-out lines of code should be removed.(Æªäÿ
+[
+java:S3252À"8Use static access with "com.orm.SugarRecord" for "find".(ı¢Šéûÿÿÿÿ8Ñíì´.
+d	java:S100’"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÛÜ¹
+g	java:S117é
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç­Ì
+l	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù±’Àÿÿÿÿÿ
+g	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¨ñ
+f	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ò³§
+g	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òãî‡
+L
+java:S1172ä"5Remove this unused method parameter "pPER_IDPERSONA".(šß½È
+C
+java:S1481§",Remove this unused "pConteo" local variable.(¡ëæ
+[
+java:S3252Ã"8Use static access with "com.orm.SugarRecord" for "find".(Õå‰úÿÿÿÿ8Ñíì´.
+Q	java:S125Ê"<This block of commented-out lines of code should be removed.(™¢°"
+R	java:S125"<This block of commented-out lines of code should be removed.(©èÃ¬
+i
+java:S3776Ì"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(À‘ø¸
+g	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó‹ß”
+J
+java:S1481ğ".Remove this unused "CONDICION" local variable.(–¥®şÿÿÿÿ
+k
+java:S1192
+"NDefine a constant instead of duplicating this literal "MIEMBRO HOGAR" 3 times.(àì”b8ØˆÀŒ².
+g	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù°¯
+T
+java:S3252P"8Use static access with "com.orm.SugarRecord" for "find".(´ı—'8Ñíì´.
+g	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êı˜Ÿ
+l	java:S117Æ
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ë„¤ÿÿÿÿÿ
+\
+java:S1155Ä">Use isEmpty() to check whether the collection is empty or not.(ƒØÚÄ8Ñíì´.
+g	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶›ı
+l	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùàéîùÿÿÿÿ
+g	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹˜Œæ
+g	java:S117Ã
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ƒò
+l	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œºı‡úÿÿÿÿ
+g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡øš×
+l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À°““øÿÿÿÿ
+l	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+[
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(äƒ”ìüÿÿÿÿ8Ñíì´.
+g	java:S117ş	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¤õğ
+V
+java:S3252Ä"8Use static access with "com.orm.SugarRecord" for "find".(àş§8Ñíì´.
+[
+java:S3252í"8Use static access with "com.orm.SugarRecord" for "find".(Î“Å²ÿÿÿÿÿ8Ñíì´.
+l	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìØáİùÿÿÿÿ
+j
+java:S5669‰"MCast this argument to 'String' to pass a single element to the vararg method.(¸•¢z8¿¦ïí´.
+
+java:S1192Ğ"rDefine a constant instead of duplicating this literal " FROM EMCRESPUESTAS RE WHERE RE.RESACTIVA = 'SI' " 5 times.(£ÕÆ«şÿÿÿÿ
+l	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‡®úÿÿÿÿ
+l	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+n
+java:S3776•"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Ùàéîùÿÿÿÿ
+l	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÍ©Ãşÿÿÿÿ
+d	java:S100Ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Í·¶
+g	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛâĞÈ
+`
+java:S3252ç"=Use static access with "com.orm.SugarRecord" for "deleteAll".(‹ˆäÃøÿÿÿÿ8Ñíì´.
+C
+java:S1481í",Remove this unused "Val_RES" local variable.(€¦˜Õ
+g	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú÷¯ü
+V
+java:S3252³"8Use static access with "com.orm.SugarRecord" for "find".(Îè¸û8Ñíì´.
+K
+java:S1481¤"/Remove this unused "pTodoHogar" local variable.(û–Éûüÿÿÿÿ
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ÑÒÛ
+[
+java:S3252œ"8Use static access with "com.orm.SugarRecord" for "find".(÷àæ¯ıÿÿÿÿ8Ñíì´.
+g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï´äü
+V
+java:S3252İ"8Use static access with "com.orm.SugarRecord" for "find".(Ë©–¡8Ñíì´.
+g	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù‡«Á
+l	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ê˜úüÿÿÿÿ
+[
+java:S3252ş"8Use static access with "com.orm.SugarRecord" for "find".(­ôêøÿÿÿÿ8Ñíì´.
+V
+java:S1854¾":Remove this useless assignment to local variable "sParmE".(Ó³şÀıÿÿÿÿ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§€ïÂ
+c
+java:S1854’"ERemove this useless assignment to local variable "TOTAL_267_266_173".(“ı´ô8¦¶…².
+H
+java:S1481À",Remove this unused "RES_VAL" local variable.(ù³Œ¦ıÿÿÿÿ
+‹
+java:S2234"oParameters to SP_SET_ELIMINAR_RESP_ENCUESTA have the same names but not the same order as the method arguments.(ÇõòÛùÿÿÿÿ
+l	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×‘Öûúÿÿÿÿ
+R	java:S125š"<This block of commented-out lines of code should be removed.(¾ó¾ò
+R	java:S125”"<This block of commented-out lines of code should be removed.(¡¨ÚÙ
+W	java:S125ò"<This block of commented-out lines of code should be removed.(½Ã€¨úÿÿÿÿ
+i	java:S100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®™ëïıÿÿÿÿ
+l	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¾¦Øüÿÿÿÿ
+l	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×‘Öûúÿÿÿÿ
+[
+java:S3252á"8Use static access with "com.orm.SugarRecord" for "find".(ù±’Àÿÿÿÿÿ8Ñíì´.
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×†½ÿùÿÿÿÿ
+2
+java:S1643Ğ"Use a StringBuilder instead.(‰Æ¦d
+l	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¬÷‘øÿÿÿÿ
+f
+java:S1858Ù"O"pID_PREGUNTA" is already a string, there's no need to call "toString()" on it.(…Çüé
+i
+java:S1858÷"R"pPRE_IDPREGUNTA" is already a string, there's no need to call "toString()" on it.(¿ò¹×
+K
+java:S1481¥"/Remove this unused "pValidador" local variable.(ı¼úïúÿÿÿÿ
+W	java:S125˜"<This block of commented-out lines of code should be removed.(ÅÀ•ïüÿÿÿÿ
+[
+java:S1155”">Use isEmpty() to check whether the collection is empty or not.(™ïíf8Ñíì´.
+l	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á…î‹ûÿÿÿÿ
+U
+java:S4973ª"9Use the "equals" method if value comparison was intended.(„Ÿ·¢ÿÿÿÿÿ
+l	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®™ëïıÿÿÿÿ
+Z
+java:S3252Å"=Use static access with "com.orm.SugarRecord" for "deleteAll".(¯Ãî8Ñíì´.
+j
+java:S5669“"MCast this argument to 'String' to pass a single element to the vararg method.(¸•¢z8¿¦ïí´.
+O
+java:S1854õ"8Remove this useless assignment to local variable "par4".(ëô²‰
+g	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¶ò¨
+k
+java:S5669Õ"MCast this argument to 'String' to pass a single element to the vararg method.(òœù8¿¦ïí´.
+Q	java:S125ş"<This block of commented-out lines of code should be removed.(ß·±T
+M
+java:S1481»"1Remove this unused "ID_PERSONA_B" local variable.(ªåÑÊûÿÿÿÿ
+W	java:S125Š"<This block of commented-out lines of code should be removed.(¢Å“¹øÿÿÿÿ
+c
+java:S2259Ò
+"GA "NullPointerException" could be thrown; "VALIDADOR" is nullable here.(«¡²Şÿÿÿÿÿ
+R	java:S125½"<This block of commented-out lines of code should be removed.(øê¶
+g	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–œé“
+g	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó˜Ã
+g	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û×®Ÿ
+O
+java:S1197Ü"8Move the array designator from the variable to the type.(ÿòô
+l	java:S117 
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¹’Òûÿÿÿÿ
+c
+java:S3252æ"@Use static access with "com.orm.SugarRecord" for "executeQuery".(ÁğÂıÿÿÿÿ8Ñíì´.
+c	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸãÇ|
+[
+java:S3252ª"8Use static access with "com.orm.SugarRecord" for "find".(­Ç¦£şÿÿÿÿ8Ñíì´.
+Q	java:S125¼"<This block of commented-out lines of code should be removed.(Ú„Ô1
+i
+java:S1858¤"F"getPre_valor" returns a string, there's no need to call "toString()".(¦ ´Ğıÿÿÿÿ8Ñíì´.
+l
+java:S1858Ù"U"pINS_IDINSTRUMENTO" is already a string, there's no need to call "toString()" on it.(…Çüé
+l	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ÃÉôÿÿÿÿÿ
+g	java:S117é
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç­Ì
+i	java:S100î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ïÿğûÿÿÿÿ
+g	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë£³Â
+]
+java:S1858×"A"valueOf" returns a string, there's no need to call "toString()".(…ğ¶¸ÿÿÿÿÿ
+p
+java:S5669”"MCast this argument to 'String' to pass a single element to the vararg method.(ªà¯ûÿÿÿÿ8¿¦ïí´.
+l	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¾¦Øüÿÿÿÿ
+G
+java:S1481Õ"+Remove this unused "SALIDA" local variable.(ŒÛÙ·ùÿÿÿÿ
+l	java:S117 
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¹’Òûÿÿÿÿ
+a
+java:S1226ª"EIntroduce a new variable instead of reusing the parameter "pID_JEFE".(‹İıÅûÿÿÿÿ
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+c
+java:S3252Ä"@Use static access with "com.orm.SugarRecord" for "executeQuery".(ÁğÂıÿÿÿÿ8Ñíì´.
+[
+java:S3252Ê"8Use static access with "com.orm.SugarRecord" for "find".(ÍèÙ¤úÿÿÿÿ8Ñíì´.
+J
+java:S1481Î".Remove this unused "pPREGUNTA" local variable.(œì¶ıÿÿÿÿ
+W	java:S125‚"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+i	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‡®úÿÿÿÿ
+i
+java:S3776¸"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(ÃŞƒ
+i	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ŠƒÏøÿÿÿÿ
+l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„·³ùÿÿÿÿ
+g	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ıºï
+–
+java:S1192"zDefine a constant instead of duplicating this literal "PERIDPERSONA = ? AND HOGCODIGO = ? AND VALIDVALIDADOR = ?" 4 times.(²‰øÿÿÿÿ
+[
+java:S3252Á"8Use static access with "com.orm.SugarRecord" for "find".(Õå‰úÿÿÿÿ8Ñíì´.
+l	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øûâ„ùÿÿÿÿ
+l	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£¡·üÿÿÿÿ
+g	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œİ¯ç
+p
+java:S5669å"MCast this argument to 'String' to pass a single element to the vararg method.(“–©µøÿÿÿÿ8¿¦ïí´.
+[
+java:S3252‘"8Use static access with "com.orm.SugarRecord" for "find".(ñªö§ûÿÿÿÿ8Ñíì´.
+g	java:S117Ã
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ƒò
+\
+java:S1155€">Use isEmpty() to check whether the collection is empty or not.(‹°®®8Ñíì´.
+l	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ææŒıÿÿÿÿ
+W	java:S125ü"<This block of commented-out lines of code should be removed.(Íø¨¼úÿÿÿÿ
+l	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÂõÜşÿÿÿÿ
+g	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¡¢ß
+l	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¬÷‘øÿÿÿÿ
+:
+java:S1643‚"Use a StringBuilder instead.(œ¯–Ö8Ñíì´.
+l	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌîÓ±ùÿÿÿÿ
+l	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªåÑÊûÿÿÿÿ
+R	java:S125ş"<This block of commented-out lines of code should be removed.(È¨“ì
+U
+java:S3252ò"8Use static access with "com.orm.SugarRecord" for "find".(×½¡Q8Ñíì´.
+`
+java:S3252‹"=Use static access with "com.orm.SugarRecord" for "deleteAll".(€º™ÿÿÿÿÿ8Ñíì´.
+f	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×½¡Q
+V
+java:S3252Œ"8Use static access with "com.orm.SugarRecord" for "find".(“Ñë‹8Ñíì´.
+d
+java:S3252”"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(Øûâ„ùÿÿÿÿ8Ñíì´.
+U
+java:S3252ˆ"8Use static access with "com.orm.SugarRecord" for "find".(´ı—'8Ñíì´.
+
+java:S1157Ê
+"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(í¶£şÿÿÿÿ
+A
+java:S1481ç"*Remove this unused "valor" local variable.(Øõ˜Ú
+W	java:S125š"<This block of commented-out lines of code should be removed.(–—®øÿÿÿÿ
+g	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú÷¯ü
+R	java:S125Å"<This block of commented-out lines of code should be removed.(¦ÆôĞ
+l	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûê¶¨ÿÿÿÿÿ
+p
+java:S1192Î"TDefine a constant instead of duplicating this literal " RESIDRESPUESTA IN " 5 times.(ò¶¨ ùÿÿÿÿ
+T	java:S106ê"9Replace this use of System.out or System.err by a logger.(©ìÈ¬ıÿÿÿÿ
+l	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„­ ‚ùÿÿÿÿ
+l	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùàéîùÿÿÿÿ
+S
+java:S2589"7Remove this expression which always evaluates to "true"(¢ìã½ûÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ó×ëıÿÿÿÿ
+[
+java:S3252¸"=Use static access with "com.orm.SugarRecord" for "deleteAll".(óá¬ª8Ñíì´.
+l	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åì¼úÿÿÿÿ
+f	java:S117ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š–›:
+g	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßñÓ¥
+[
+java:S3252Ü"8Use static access with "com.orm.SugarRecord" for "find".(ü–ü‹şÿÿÿÿ8Ñíì´.
+n
+java:S3776·"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(®™ëïıÿÿÿÿ
+[
+java:S3252Ô	"=Use static access with "com.orm.SugarRecord" for "deleteAll".(Éï–8Ñíì´.
+g	java:S117ş	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¤õğ
+8
+java:S1643ã"Use a StringBuilder instead.(«Şÿøÿÿÿÿ
+l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„·³ùÿÿÿÿ
+g	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú÷¯ü
+[
+java:S3252Í"=Use static access with "com.orm.SugarRecord" for "deleteAll".(’Ø†”8Ñíì´.
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+W	java:S125Æ"<This block of commented-out lines of code should be removed.(äùúÿÿÿÿ
+Z
+java:S3252„"=Use static access with "com.orm.SugarRecord" for "deleteAll".(ÓÜÃ78Ñíì´.
+H
+java:S1481¢"1Remove this unused "pTipo_valfun" local variable.(º ‘¬
+g	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îé¿
+g	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å½ù¥
+g	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒŸÌö
+l	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+d	java:S100œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œİ¯ç
+[
+java:S3252Ÿ"8Use static access with "com.orm.SugarRecord" for "find".(¦¢Æäøÿÿÿÿ8Ñíì´.
+l
+java:S1192§"VDefine a constant instead of duplicating this literal "AND PERIDPERSONA = ? " 3 times.(±¶áq
+\
+java:S1192å"FDefine a constant instead of duplicating this literal "(x,x)" 3 times.(‰Æ¦d
+l
+java:S1871
+"NThis branch's code block is the same as the block for the branch on line 1293.(²¿ÿÖ8ØˆÀŒ².
+l	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘˜²Úùÿÿÿÿ
+l	java:S117Ø
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ±£ìıÿÿÿÿ
+P
+java:S1172Â"9Remove this unused method parameter "pins_IdInstrumento".( ·Šÿ
+p
+java:S5669ó"MCast this argument to 'String' to pass a single element to the vararg method.(ùÖ‡­úÿÿÿÿ8¿¦ïí´.
+g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Í·¶
+T	java:S106è"9Replace this use of System.out or System.err by a logger.(éĞ«şÿÿÿÿ
+g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡øš×
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+l	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ŠƒÏøÿÿÿÿ
+[
+java:S3252¿"8Use static access with "com.orm.SugarRecord" for "find".(¤Ó³¨ÿÿÿÿÿ8Ñíì´.
+l	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İÉØÀûÿÿÿÿ
+n
+java:S3776 
+"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(·¹’Òûÿÿÿÿ
+[
+java:S3252à"8Use static access with "com.orm.SugarRecord" for "find".(ÌÏ‰÷ûÿÿÿÿ8Ñíì´.
+R	java:S125"<This block of commented-out lines of code should be removed.(¼ô¬Ş
+i
+java:S3776Ì"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(Õ’ş
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§€ïÂ
+g	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Ê¢‰
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¶®¾şÿÿÿÿ
+[
+java:S3252Ö"8Use static access with "com.orm.SugarRecord" for "find".(·ê¢éùÿÿÿÿ8Ñíì´.
+g	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÌµé
+]
+java:S1858Ø"A"valueOf" returns a string, there's no need to call "toString()".(šışÿÿÿÿ
+\
+java:S1226·"EIntroduce a new variable instead of reusing the parameter "pID_JEFE".(‚°÷
+g	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÒø
+g	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œİ¯ç
+l	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÌÌÿıÿÿÿÿ
+U
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".( àôi8Ñíì´.
+g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡øš×
+d	java:S100ä"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šß½È
+g	java:S117é
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç­Ì
+8
+java:S1116×"Remove this empty statement.(ê’Êşÿÿÿÿ
+[
+java:S3252®"8Use static access with "com.orm.SugarRecord" for "find".(ı¢Šéûÿÿÿÿ8Ñíì´.
+a
+java:S1155Ì">Use isEmpty() to check whether the collection is empty or not.(§Øå‘ıÿÿÿÿ8Ñíì´.
+[
+java:S3252©"8Use static access with "com.orm.SugarRecord" for "find".(÷àæ¯ıÿÿÿÿ8Ñíì´.
+[
+java:S3252…"8Use static access with "com.orm.SugarRecord" for "find".(÷Î™¾ıÿÿÿÿ8Ñíì´.
+\
+java:S1854Í"@Remove this useless assignment to local variable "ID_PERSONA_B".(Ü……¬úÿÿÿÿ
+i
+java:S1192˜"RDefine a constant instead of duplicating this literal "AND TEMIDTEMA = ?" 4 times.(¸‰Â‘
+e
+java:S1858š"N"pHOG_CODIGO" is already a string, there's no need to call "toString()" on it.(•¦ˆ›
+l	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ïÿğûÿÿÿÿ
+U
+java:S3252¬"8Use static access with "com.orm.SugarRecord" for "find".(´ı—'8Ñíì´.
+R	java:S125Ğ"<This block of commented-out lines of code should be removed.(Ü°õş
+W	java:S125¶"<This block of commented-out lines of code should be removed.(åòñÉıÿÿÿÿ
+]
+java:S1854Ö"ARemove this useless assignment to local variable "Val_idPersona".(í¶à€úÿÿÿÿ
+p
+java:S5669"MCast this argument to 'String' to pass a single element to the vararg method.(ùÖ‡­úÿÿÿÿ8¿¦ïí´.
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ë¨ïúÿÿÿÿ
+l	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùàéîùÿÿÿÿ
+d	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§€ïÂ
+R	java:S125›"<This block of commented-out lines of code should be removed.(ÁÎ…Ë
+k
+java:S1192¦"ODefine a constant instead of duplicating this literal "HOGCODIGO = ? " 3 times.(ÖÏ«ÿÿÿÿÿ
+f	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×½¡Q
+g	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şˆéí
+X
+java:S1858µ"A"valueOf" returns a string, there's no need to call "toString()".(êĞ¬·
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îòˆúÿÿÿÿ
+x
+java:S1192Ï"\Define a constant instead of duplicating this literal " (SELECT RE.RESIDRESPUESTA " 5 times.(ŸÈ÷ˆûÿÿÿÿ
+g	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•…ú
+l	java:S117í
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ãÇƒıÿÿÿÿ
+l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„·³ùÿÿÿÿ
+l	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª›Òüÿÿÿÿ
+d	java:S100ü"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù‡«Á
+l	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+j
+java:S5669†"MCast this argument to 'String' to pass a single element to the vararg method.(‹Şm8¿¦ïí´.
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§€ïÂ
+[
+java:S3252Ù"=Use static access with "com.orm.SugarRecord" for "deleteAll".(óá¬ª8Ñíì´.
+V
+java:S3252¿"8Use static access with "com.orm.SugarRecord" for "find".(á’üç8Ñíì´.
+l	java:S117Ù
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ë„¤ÿÿÿÿÿ
+Y
+java:S1854¸"=Remove this useless assignment to local variable "parDelete".(»÷æ‘ÿÿÿÿÿ
+N
+java:S2589”
+"7Remove this expression which always evaluates to "true"(¦Ïµæ
+g	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¦˜Õ
+d	java:S100Ó"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿı°Ë
+[
+java:S1226¥"DIntroduce a new variable instead of reusing the parameter "pIDTEMA".(»ú³¸
+l	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÛª­ıÿÿÿÿ
+d	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï´äü
+l	java:S117Æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã’¬¤ûÿÿÿÿ
+U
+java:S3252“"8Use static access with "com.orm.SugarRecord" for "find".(¸•¢z8Ñíì´.
+j
+java:S1871Ê
+"NThis branch's code block is the same as the block for the branch on line 1352.(í¶£şÿÿÿÿ
+o	java:S135Ğ"YReduce the total number of break and continue statements in this loop to use at most one.(©é¨
+g	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·Šÿ
+l	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¼›Îøÿÿÿÿ
+g	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òèıå
+U
+java:S3252†"8Use static access with "com.orm.SugarRecord" for "find".(‹Şm8Ñíì´.
+p
+java:S5669"MCast this argument to 'String' to pass a single element to the vararg method.(ùÖ‡­úÿÿÿÿ8¿¦ïí´.
+l	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥®şÿÿÿÿ
+R	java:S107Ì"<Method has 9 parameters, which is greater than 7 authorized.(À‘ø¸
+l	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûê¶¨ÿÿÿÿÿ
+M
+java:S2121Ş"7Remove this "indexOf" call; it has predictable results.(Ô²¶[
+U
+java:S3252‰"8Use static access with "com.orm.SugarRecord" for "find".(¸•¢z8Ñíì´.
+G
+java:S1481¾"+Remove this unused "sParmE" local variable.(Ó³şÀıÿÿÿÿ
+g	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú÷¯ü
+R	java:S125®"<This block of commented-out lines of code should be removed.(ÏçÆÎ
+W	java:S125Â"<This block of commented-out lines of code should be removed.(ÓÙº“ûÿÿÿÿ
+W	java:S125·"<This block of commented-out lines of code should be removed.(Ì˜ùşÿÿÿÿ
+=
+java:S1172ì"&Remove these unused method parameters.(±Í·¶
+g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Âí´
+e
+java:S2153Ğ	"IRemove the boxing to "Integer"; The argument is already of the same type.(ï·âûÿÿÿÿ
+l	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª›Òüÿÿÿÿ
+[
+java:S3252Í"=Use static access with "com.orm.SugarRecord" for "deleteAll".(’Ø†”8Ñíì´.
+g	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÒø
+g	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¼îá
+V
+java:S3252ı"8Use static access with "com.orm.SugarRecord" for "find".(º§¹¬8Ñíì´.
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+R	java:S125Ü"<This block of commented-out lines of code should be removed.(£Ï¹
+¦
+java:S1192ş"‰Define a constant instead of duplicating this literal "(SELECT PREIDPREGUNTA FROM EMCPREGUNTASINSTRUMENTO WHERE PREIDPREGUNTA =" 3 times.(«ò‡şÿÿÿÿ
+e
+java:S1858¿"N"pHOG_CODIGO" is already a string, there's no need to call "toString()" on it.(Õ„”Ì
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+W	java:S125ì"<This block of commented-out lines of code should be removed.(ˆ–Ÿßûÿÿÿÿ
+g	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á’üç
+d	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ÜáØ
+s	java:S135I"YReduce the total number of break and continue statements in this loop to use at most one.(ü§è½ùÿÿÿÿ
+8
+java:S1643Î"Use a StringBuilder instead.(«Şÿøÿÿÿÿ
+g	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¼îá
+i	java:S100Œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Åùÿÿÿÿ
+E
+java:S1481".Remove this unused "pCONSULTA" local variable.(“šõÄ
+l	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÛßòùÿÿÿÿ
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞƒ
+g	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù­Äú
+Q	java:S125æ"<This block of commented-out lines of code should be removed.(èûL
+l	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü»ïäùÿÿÿÿ
+W	java:S125ù"<This block of commented-out lines of code should be removed.(ÜÄÇıùÿÿÿÿ
+g	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£»¯÷
+l	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–´–ñıÿÿÿÿ
+g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Í·¶
+B
+java:S1481“"&Remove this unused "y" local variable.(ºš¿»ùÿÿÿÿ
+l	java:S117¢
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ë„¤ÿÿÿÿÿ
+l	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¶à€úÿÿÿÿ
+l	java:S117ô	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íİ­Ùüÿÿÿÿ
+l	java:S117Ø
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ±£ìıÿÿÿÿ
+g	java:S117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û×®Ÿ
+l	java:S117ô	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íİ­Ùüÿÿÿÿ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú÷¯ü
+N
+java:S1481Ö"2Remove this unused "Val_idPersona" local variable.(í¶à€úÿÿÿÿ
+d	java:S100¡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éºŒ
+W	java:S125à"<This block of commented-out lines of code should be removed.(áâÖÍşÿÿÿÿ
+B
+java:S1481"&Remove this unused "y" local variable.(ºš¿»ùÿÿÿÿ
+_
+java:S3252¯"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(Şß¾€8Ñíì´.
+g	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ€
+p
+java:S5669À"MCast this argument to 'String' to pass a single element to the vararg method.(«ƒß×ùÿÿÿÿ8¿¦ïí´.
+c
+java:S3252Ú"@Use static access with "com.orm.SugarRecord" for "executeQuery".(ÀÕ¶ÿÿÿÿÿ8Ñíì´.
+[
+java:S3252Ğ"8Use static access with "com.orm.SugarRecord" for "find".(ı¢Šéûÿÿÿÿ8Ñíì´.
+l	java:S117Ø
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ±£ìıÿÿÿÿ
+[
+java:S3252©"8Use static access with "com.orm.SugarRecord" for "find".(¦¢Æäøÿÿÿÿ8Ñíì´.
+g	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú÷¯ü
+V
+java:S3252ò"8Use static access with "com.orm.SugarRecord" for "find".(õõÈ8Ñíì´.
+`
+java:S1854Ş"DRemove this useless assignment to local variable "ID_PERSONA_TUTOR".(ç’Ìãúÿÿÿÿ
+[
+java:S3252Ú"=Use static access with "com.orm.SugarRecord" for "deleteAll".(óá¬ª8Ñíì´.
+g	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôıã¥
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡°¤®
+g	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º ‘¬
+l	java:S117ì
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ë„¤ÿÿÿÿÿ
+c
+java:S2259Ó	"LA "NullPointerException" could be thrown; "pper_IdPersona" is nullable here.(€¿ÌÂ
+V
+java:S3252ÿ"8Use static access with "com.orm.SugarRecord" for "find".(‹˜Œæ8Ñíì´.
+R	java:S125ë"<This block of commented-out lines of code should be removed.(ô‡ñî
+V
+java:S3252°"8Use static access with "com.orm.SugarRecord" for "find".(ÒÊêˆ8Ñíì´.
+i
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 44 to the 15 allowed.(§€ïÂ
+[
+java:S3252ù"8Use static access with "com.orm.SugarRecord" for "find".(àÈÆ“ûÿÿÿÿ8Ñíì´.
+g	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÈ»©
+g	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œİ¯ç
+l	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„éñŸşÿÿÿÿ
+l	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‡®úÿÿÿÿ
+g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Í·¶
+g	java:S117å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù·ÏÚ
+[
+java:S3252î"8Use static access with "com.orm.SugarRecord" for "find".(¼‚¢êúÿÿÿÿ8Ñíì´.
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìæ³ƒ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äƒ”ìüÿÿÿÿ
+a
+java:S1155Á">Use isEmpty() to check whether the collection is empty or not.(’úñõøÿÿÿÿ8Ñíì´.
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­‹æŠ
+R	java:S125§"<This block of commented-out lines of code should be removed.(Ï‘ Î
+o
+java:S1192ó"SDefine a constant instead of duplicating this literal " PREIDPREGUNTA = '" 4 times.(ùÖ‡­úÿÿÿÿ
+g	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÷‰×
+p
+java:S5669œ"MCast this argument to 'String' to pass a single element to the vararg method.(ùÖ‡­úÿÿÿÿ8¿¦ïí´.
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ó×ëıÿÿÿÿ
+d
+java:S3252š"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(øé¾åúÿÿÿÿ8Ñíì´.
+w
+java:S1192Ò"[Define a constant instead of duplicating this literal " AND RE.RESIDRESPUESTA IN " 3 times.(ƒá»ùüÿÿÿÿ
+
+java:S1157È
+"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(–ÿ«¦ûÿÿÿÿ
+j
+java:S1858ü"N"pID_PERSONA" is already a string, there's no need to call "toString()" on it.(€ş¹Ìıÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(Ó·…±ÿÿÿÿÿ
+j
+java:S1858™"N"pHOG_CODIGO" is already a string, there's no need to call "toString()" on it.(ñÙõŞøÿÿÿÿ
+[
+java:S3252–"=Use static access with "com.orm.SugarRecord" for "deleteAll".(µí¡8Ñíì´.
+j
+java:S1192À"SDefine a constant instead of duplicating this literal "RESIDRESPUESTA = ?" 3 times.(’Ş˜
+l	java:S117ô	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íİ­Ùüÿÿÿÿ
+[
+java:S3252å"8Use static access with "com.orm.SugarRecord" for "find".(ı¢Šéûÿÿÿÿ8Ñíì´.
+l	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î“Å²ÿÿÿÿÿ
+i	java:S100š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾®ı¬ùÿÿÿÿ
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ²­Ãùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ó×ëıÿÿÿÿ
+[
+java:S3252Ê"=Use static access with "com.orm.SugarRecord" for "deleteAll".(’Ø†”8Ñíì´.
+U
+java:S4973î"9Use the "equals" method if value comparison was intended.(Í÷³¤øÿÿÿÿ
+[
+java:S3252Ğ"8Use static access with "com.orm.SugarRecord" for "find".(ª›Òüÿÿÿÿ8Ñíì´.
+g	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·Šÿ
+[
+java:S3252‹"8Use static access with "com.orm.SugarRecord" for "find".(ôî¡ºùÿÿÿÿ8Ñíì´.
+g	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÈ»©
+g	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡…çÊ
+a
+java:S1226³"EIntroduce a new variable instead of reusing the parameter "pID_JEFE".(ªØæÜşÿÿÿÿ
+d	java:S100á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÒø
+g	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šß½È
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ó×ëıÿÿÿÿ
+a
+java:S1155±">Use isEmpty() to check whether the collection is empty or not.(ŸÒ¢ƒùÿÿÿÿ8Ñíì´.
+
+java:S1157Û"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(©û§àüÿÿÿÿ
+T
+java:S3252K"8Use static access with "com.orm.SugarRecord" for "find".(–»äC8Ñíì´.
+d
+java:S1192"NDefine a constant instead of duplicating this literal "HOGCODIGO = ?" 5 times.(ó…Ù
+l	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘˜²Úùÿÿÿÿ
+i	java:S100×"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„·³ùÿÿÿÿ
+E
+java:S1481§".Remove this unused "pCONSULTA" local variable.(“šõÄ
+V
+java:S3252À"8Use static access with "com.orm.SugarRecord" for "find".(’Ş˜8Ñíì´.
+V
+java:S3252²"8Use static access with "com.orm.SugarRecord" for "find".(–´ÖÛ8Ñíì´.
+l	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëø“³øÿÿÿÿ
+l	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÛÙ·ùÿÿÿÿ
+[
+java:S3252ï"8Use static access with "com.orm.SugarRecord" for "find".(î„ß¯úÿÿÿÿ8Ñíì´.
+3
+java:S1643„"Use a StringBuilder instead.(¶ËØ¿
+_
+java:S3252İ"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(·şÇÄ8Ñíì´.
+g	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûµ£á
+l	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¨Ìüÿÿÿÿ
+l	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+C
+java:S1481Y"(Remove this unused "pre" local variable.(‹‚š¢şÿÿÿÿ
+p
+java:S1192N"ZDefine a constant instead of duplicating this literal "AND INSIDINSTRUMENTO = ? " 6 times.(¨³“
+l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„·³ùÿÿÿÿ
+l	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍèÙ¤úÿÿÿÿ
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+g	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛĞ—º
+U
+java:S3252ÿ"8Use static access with "com.orm.SugarRecord" for "find".(ØÔ¯O8Ñíì´.
+X
+java:S1858À"A"valueOf" returns a string, there's no need to call "toString()".(ù¤å–
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ó×ëıÿÿÿÿ
+K
+java:S1656Œ"/Remove or correct this useless self-assignment.(†ª×¸şÿÿÿÿ
+l	java:S117Æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+]
+java:S1858×"A"valueOf" returns a string, there's no need to call "toString()".(…ğ¶¸ÿÿÿÿÿ
+B
+java:S1481¾"+Remove this unused "cValor" local variable.(À½Â
+g	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·Šÿ
+W	java:S125·"<This block of commented-out lines of code should be removed.(ÅÆØ®úÿÿÿÿ
+g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Í·¶
+g	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œİ¯ç
+W	java:S125„"<This block of commented-out lines of code should be removed.(¥ËäŞøÿÿÿÿ
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞƒ
+j
+java:S1858™"N"pHOG_CODIGO" is already a string, there's no need to call "toString()" on it.(ñÙõŞøÿÿÿÿ
+W	java:S125ñ"<This block of commented-out lines of code should be removed.(ÜµæÇıÿÿÿÿ
+`
+java:S3252š"=Use static access with "com.orm.SugarRecord" for "deleteAll".(–¬ü¿ûÿÿÿÿ8Ñíì´.
+g	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îè¸û
+l	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„­ ‚ùÿÿÿÿ
+k
+java:S1192w"UDefine a constant instead of duplicating this literal " WHERE HOGCODIGO = '" 3 times.(ˆ»ª€
+k
+java:S5669÷"MCast this argument to 'String' to pass a single element to the vararg method.(òùİ›8¿¦ïí´.
+U
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(×½¡Q8Ñíì´.
+d	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©éğ
+U
+java:S3252ú"8Use static access with "com.orm.SugarRecord" for "find".( àôi8Ñíì´.
+B
+java:S1481›"&Remove this unused "y" local variable.(ºš¿»ùÿÿÿÿ
+B
+java:S1481 "&Remove this unused "y" local variable.(ºš¿»ùÿÿÿÿ
+W	java:S125Ü"<This block of commented-out lines of code should be removed.(ğîùïıÿÿÿÿ
+g	java:S117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¼Ù±
+l	java:S117ô	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íİ­Ùüÿÿÿÿ
+f	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äËÚK
+j
+java:S1858¢"N"pHOG_CODIGO" is already a string, there's no need to call "toString()" on it.(Ü»ïäùÿÿÿÿ
+J
+java:S1481ñ".Remove this unused "RESULTADO" local variable.(×‘Öûúÿÿÿÿ
+V
+java:S3252‡	"8Use static access with "com.orm.SugarRecord" for "find".(ü°²Ø8Ñíì´.
+R	java:S125Â"<This block of commented-out lines of code should be removed.(“ã°Ò
+l	java:S117ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥®şÿÿÿÿ
+g	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šß½È
+d	java:S100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·Šÿ
+k
+java:S5669Š"MCast this argument to 'String' to pass a single element to the vararg method.(òùİ›8¿¦ïí´.
+S
+java:S2589“"7Remove this expression which always evaluates to "true"(£¥„Àøÿÿÿÿ
+X
+java:S1858´"A"valueOf" returns a string, there's no need to call "toString()".(Åºô«
+[
+java:S3252ô"=Use static access with "com.orm.SugarRecord" for "deleteAll".(’Ø†”8Ñíì´.
+U
+java:S3252Ô"8Use static access with "com.orm.SugarRecord" for "find".(¨£Œ|8Ñíì´.
+2
+java:S1643Î"Use a StringBuilder instead.(‰Æ¦d
+g	java:S117ş	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¤õğ
+t
+java:S1858Ø"X"pId_RespuestaEncuesta" is already a string, there's no need to call "toString()" on it.(¨…–üÿÿÿÿ
+X
+java:S1858À"A"valueOf" returns a string, there's no need to call "toString()".(ù¤å–
+l	java:S117 
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¹’Òûÿÿÿÿ
+l	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ş¯úÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´¿ışÿÿÿÿ
+g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï´äü
+[
+java:S3252…"8Use static access with "com.orm.SugarRecord" for "find".(‹î¿ıÿÿÿÿ8Ñíì´.
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§€ïÂ
+V
+java:S3252ö"8Use static access with "com.orm.SugarRecord" for "find".(‘ÓÒ”8Ñíì´.
+X
+java:S1858½"A"valueOf" returns a string, there's no need to call "toString()".(–û»ı
+i	java:S100ô	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íİ­Ùüÿÿÿÿ
+R	java:S125»"<This block of commented-out lines of code should be removed.(êâÍü
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞƒ
+g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡øš×
+n
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(×†½ÿùÿÿÿÿ
+g	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§²Èğ
+R	java:S125à"<This block of commented-out lines of code should be removed.(óé°õ
+R	java:S125Í	"<This block of commented-out lines of code should be removed.(Ÿ„¿ê
+a
+java:S1155‡">Use isEmpty() to check whether the collection is empty or not.(İòîæıÿÿÿÿ8Ñíì´.
+P
+java:S1481ë"4Remove this unused "Val_Encontrados" local variable.(áÛßòùÿÿÿÿ
+l	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÜÆûÿÿÿÿ
+l	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å‰€şÿÿÿÿ
+i	java:S100Ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÌ¸ùÿÿÿÿ
+U
+java:S3252ƒ"8Use static access with "com.orm.SugarRecord" for "find".( àôi8Ñíì´.
+d	java:S100¤"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó˜Ã
+F
+java:S1066”"/Merge this if statement with the enclosing one.( ğİ
+[
+java:S3252Ä"8Use static access with "com.orm.SugarRecord" for "find".(ª›Òüÿÿÿÿ8Ñíì´.
+[
+java:S3252Ù"8Use static access with "com.orm.SugarRecord" for "find".(Õå‰úÿÿÿÿ8Ñíì´.
+l	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÈÆ“ûÿÿÿÿ
+d
+java:S3252è"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(åì¼úÿÿÿÿ8Ñíì´.
+g	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÒø
+N
+java:S1481¦"2Remove this unused "pCONTEOFILTRO" local variable.(ö¾âÖùÿÿÿÿ
+U
+java:S4973ˆ"9Use the "equals" method if value comparison was intended.(„Ÿ·¢ÿÿÿÿÿ
+E
+java:S1066Ä"/Merge this if statement with the enclosing one.(ÿÑ\
+g	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ş¯
+g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Äèù
+R
+java:S1854Å";Remove this useless assignment to local variable "p_final".(¢›ÜÆ
+d	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡øš×
+K
+java:S1066Ğ	"/Merge this if statement with the enclosing one.(ï·âûÿÿÿÿ
+t
+java:S1858î"X"pId_RespuestaEncuesta" is already a string, there's no need to call "toString()" on it.(å—•¯ûÿÿÿÿ
+V
+java:S3252ç"8Use static access with "com.orm.SugarRecord" for "find".(ÛĞ—º8Ñíì´.
+c
+java:S3252¾"@Use static access with "com.orm.SugarRecord" for "executeQuery".(«ıËşüÿÿÿÿ8Ñíì´.
+d	java:S100ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Í·¶
+R
+java:S1854Y"7Remove this useless assignment to local variable "pre".(‹‚š¢şÿÿÿÿ
+d	java:S100ş	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¤õğ
+V
+java:S3252‰"8Use static access with "com.orm.SugarRecord" for "find".(›ÑÒÛ8Ñíì´.
+g	java:S117Ã
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ƒò
+_
+java:S3252¥"AUse static access with "com.orm.SugarRecord" for "findWithQuery".(©©ôÓ8Ñíì´.
+8
+java:S1643Ì"Use a StringBuilder instead.(«Şÿøÿÿÿÿ
+g	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šß½È
+l	java:S117 
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¹’Òûÿÿÿÿ
+d	java:S100¸"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞƒ
+`
+java:S3252¥"=Use static access with "com.orm.SugarRecord" for "deleteAll".(–¬ü¿ûÿÿÿÿ8Ñíì´.
+d	java:S100Ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À‘ø¸
+C
+java:S1481¤",Remove this unused "pFILTRO" local variable.(ò­à±
+P
+java:S1481ô"9Remove this unused "Val_DiferenciadoLeng" local variable.(¿¼Ù±
+X
+java:S1858µ"A"valueOf" returns a string, there's no need to call "toString()".(êĞ¬·
+i	java:S100•"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùàéîùÿÿÿÿ
+l	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùàéîùÿÿÿÿ
+U
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(ó…Ù8Ñíì´.
+[
+java:S3252Å"8Use static access with "com.orm.SugarRecord" for "find".(›Î›Úÿÿÿÿÿ8Ñíì´.
+g	java:S117ş	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¤õğ
+V
+java:S3252õ"8Use static access with "com.orm.SugarRecord" for "find".(†Å÷8Ñíì´.
+i
+java:S3776é
+"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ç­Ì
+k
+java:S5669Ó"MCast this argument to 'String' to pass a single element to the vararg method.(òœù8¿¦ïí´.
+U
+java:S3252Í"8Use static access with "com.orm.SugarRecord" for "find".( àôi8Ñíì´.
+[
+java:S3252‹"=Use static access with "com.orm.SugarRecord" for "deleteAll".(µí¡8Ñíì´.
+V
+java:S3252Ï"8Use static access with "com.orm.SugarRecord" for "find".(¿ÓÖÉ8Ñíì´.
+ª
+java:S1192ı"”Define a constant instead of duplicating this literal "(SELECT RESIDRESPUESTA FROM EMCRESPUESTAS WHERE RESACTIVA='SI' AND PREIDPREGUNTA IN" 3 times.(½
+l	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûê±éşÿÿÿÿ
+V
+java:S3252¯"8Use static access with "com.orm.SugarRecord" for "find".(”óÇï8Ñíì´.
+g	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷–é‡
+V
+java:S3252¾"8Use static access with "com.orm.SugarRecord" for "find".(•Ê¢‰8Ñíì´.
+[
+java:S3252¶"=Use static access with "com.orm.SugarRecord" for "deleteAll".(óá¬ª8Ñíì´.
+d	java:S100Œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éˆâ£
+h
+java:S1858Ù"Q"pPER_IDPERSONA" is already a string, there's no need to call "toString()" on it.(…Çüé
+g	java:S117Ã
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ƒò
+[
+java:S3252Ó"8Use static access with "com.orm.SugarRecord" for "find".(ı¢Šéûÿÿÿÿ8Ñíì´.
+W	java:S125Ü"<This block of commented-out lines of code should be removed.(ç£íüúÿÿÿÿ
+g	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú÷¯ü
+l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù³Œ¦ıÿÿÿÿ
+l	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘˜²Úùÿÿÿÿ
+l	java:S117Ø
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ±£ìıÿÿÿÿ
+J
+java:S1481¸".Remove this unused "parDelete" local variable.(»÷æ‘ÿÿÿÿÿ
+R	java:S125Õ"<This block of commented-out lines of code should be removed.(îò¹Ì
+[
+java:S3252¾"8Use static access with "com.orm.SugarRecord" for "find".(„éñŸşÿÿÿÿ8Ñíì´.
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 52 to the 15 allowed.(¤Ó×ëıÿÿÿÿ
+U
+java:S3252ß"8Use static access with "com.orm.SugarRecord" for "find".( àôi8Ñíì´.
+[
+java:S3252”"8Use static access with "com.orm.SugarRecord" for "find".(ü–ü‹şÿÿÿÿ8Ñíì´.
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+g	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·şÇÄ
+V
+java:S3252Š"8Use static access with "com.orm.SugarRecord" for "find".(“Ñë‹8Ñíì´.
+c
+java:S3252×"@Use static access with "com.orm.SugarRecord" for "executeQuery".(ÁğÂıÿÿÿÿ8Ñíì´.
+g	java:S117é
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç­Ì
+l	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ«šüÿÿÿÿ
+g	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡…çÊ
+j
+java:S3776á"SRefactor this method to reduce its Cognitive Complexity from 282 to the 15 allowed.(ÊÒø
+n
+java:S3776ª"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.( ŠƒÏøÿÿÿÿ
+\
+java:S1155Æ">Use isEmpty() to check whether the collection is empty or not.(ŞÒ€Ø8Ñíì´.
+Ê
+java:S1192Ñ"­Define a constant instead of duplicating this literal " AND RE.PREIDPREGUNTA IN ( SELECT PRE.PREIDPREGUNTA FROM EMCPREGUNTASINSTRUMENTO PRE WHERE PREIDPREGUNTA = '" 5 times.(ÙÌ×ıÿÿÿÿ
+z
+java:S1157Û"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(şæ€ü
+g	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¼îá
+l
+java:S1858÷"U"pINS_IDINSTRUMENTO" is already a string, there's no need to call "toString()" on it.(¿ò¹×
+g	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş¯«›
+z
+java:S1157ê"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Í°Æ‹
+l	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùàéîùÿÿÿÿ
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ’ş
+[
+java:S3252ø"8Use static access with "com.orm.SugarRecord" for "find".(²‡Œ ùÿÿÿÿ8Ñíì´.
+@
+java:S1125õ")Remove the literal "false" boolean value.(º´¸Ö
+\
+java:S1155ç">Use isEmpty() to check whether the collection is empty or not.(›å”8Ñíì´.
+i	java:S100Ø
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ±£ìıÿÿÿÿ
+U
+java:S3252›"8Use static access with "com.orm.SugarRecord" for "find".(×½¡Q8Ñíì´.
+k
+java:S5669Æ"MCast this argument to 'String' to pass a single element to the vararg method.(òœù8¿¦ïí´.
+X
+java:S1858"A"valueOf" returns a string, there's no need to call "toString()".(°Õˆ
+d	java:S100å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¾Îş
+e
+java:S2153Š"IRemove the boxing to "Integer"; The argument is already of the same type.(±ìïùÿÿÿÿ
+g	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë©–¡
+V
+java:S3252É"8Use static access with "com.orm.SugarRecord" for "find".(Ûµ£á8Ñíì´.
+l	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Î™¾ıÿÿÿÿ
+X
+java:S1858Á"A"valueOf" returns a string, there's no need to call "toString()".(ÒœÕ™
+W	java:S125Ë"<This block of commented-out lines of code should be removed.(ÀÍÑıÿÿÿÿ
+g	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã«¿Í
+g	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖŸğ
+^
+java:S3252ˆ"@Use static access with "com.orm.SugarRecord" for "executeQuery".(âËÃÎ8Ñíì´.
+l	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ïÿğûÿÿÿÿ
+[
+java:S3252Ö"8Use static access with "com.orm.SugarRecord" for "find".(Ë÷şÔúÿÿÿÿ8Ñíì´.
+k
+java:S5669´"MCast this argument to 'String' to pass a single element to the vararg method.(òœù8¿¦ïí´.
+e
+java:S1858Œ"N"pHOG_CODIGO" is already a string, there's no need to call "toString()" on it.(˜Æô¸
+J
+java:S1481ñ".Remove this unused "RESULTADO" local variable.(×‘Öûúÿÿÿÿ
+W	java:S125ø"<This block of commented-out lines of code should be removed.(×Ÿû˜ùÿÿÿÿ
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞƒ
+l	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÌÌÿıÿÿÿÿ
+R	java:S125‹"<This block of commented-out lines of code should be removed.(††èÿ
+i	java:S100 
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¹’Òûÿÿÿÿ
+8
+java:S1643"Use a StringBuilder instead.(˜Ì½‡øÿÿÿÿ
+[
+java:S3252¯"8Use static access with "com.orm.SugarRecord" for "find".(¡¼›Îøÿÿÿÿ8Ñíì´.
+`
+java:S3252ı"=Use static access with "com.orm.SugarRecord" for "deleteAll".(–¬ü¿ûÿÿÿÿ8Ñíì´.
+l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†¦­êıÿÿÿÿ
+l	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÌÌÿıÿÿÿÿ
+g	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šß½È
+J
+java:S1172Ì"3Remove this unused method parameter "pTipo_valres".(Õ’ş
+b
+java:S3252c"@Use static access with "com.orm.SugarRecord" for "executeQuery".(§çµÜùÿÿÿÿ8Ñíì´.
+F
+java:S1481¢"/Remove this unused "pCONTEOVAL" local variable.(öÇ¸
+R	java:S125±"<This block of commented-out lines of code should be removed.(³ö©÷
+g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï´äü
+l	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôî¡ºùÿÿÿÿ
+g	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ÜáØ
+l	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Ùº›üÿÿÿÿ
+V
+java:S3252©"8Use static access with "com.orm.SugarRecord" for "find".(©•ñÍ8Ñíì´.
+p
+java:S5669ÿ"MCast this argument to 'String' to pass a single element to the vararg method.(ìËØŒıÿÿÿÿ8¿¦ïí´.
+R	java:S125’"<This block of commented-out lines of code should be removed.(ï’òû
+†
+java:S4165Œ"jRemove this useless assignment; "pRESPUESTASN" already holds the assigned value along all execution paths.(†ª×¸şÿÿÿÿ
+p
+java:S5669"MCast this argument to 'String' to pass a single element to the vararg method.(¨À€Œüÿÿÿÿ8¿¦ïí´.
+X
+java:S1858Á"A"valueOf" returns a string, there's no need to call "toString()".(ÒœÕ™
+R	java:S125ì"<This block of commented-out lines of code should be removed.(ûªä
+G
+java:S1481­"+Remove this unused "Existe" local variable.(ê¬÷‘øÿÿÿÿ
+t
+java:S1858Î"Q"getVal_pregunta_general" returns a string, there's no need to call "toString()".(Œ™âÀùÿÿÿÿ8Ñíì´.
+i	java:S100“"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘˜²Úùÿÿÿÿ
+W	java:S125°"<This block of commented-out lines of code should be removed.(¾¶èéüÿÿÿÿ
+g	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠŸ‰½
+l	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ŠƒÏøÿÿÿÿ
+l	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÜ·âÿÿÿÿÿ
+[
+java:S3252ó"8Use static access with "com.orm.SugarRecord" for "find".(ØÜÆûÿÿÿÿ8Ñíì´.
+P
+java:S1854‘"9Remove this useless assignment to local variable "TOTAL".(‘ÿÖ«
+@
+java:S1481õ")Remove this unused "par4" local variable.(ëô²‰
+l	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘˜²Úùÿÿÿÿ
+[
+java:S3252‡"=Use static access with "com.orm.SugarRecord" for "deleteAll".(óá¬ª8Ñíì´.
+W	java:S125û"<This block of commented-out lines of code should be removed.(ú„³şûÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×½¡Q
+l	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‡®úÿÿÿÿ
+M
+java:S1481¦"1Remove this unused "pConteoHogar" local variable.(¥¡…§şÿÿÿÿ
+c
+java:S3252’"@Use static access with "com.orm.SugarRecord" for "executeQuery".(Ìğõîøÿÿÿÿ8Ñíì´.
+g	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÒø
+V
+java:S3252š"8Use static access with "com.orm.SugarRecord" for "find".(•¦ˆ›8Ñíì´.
+g	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·Šÿ
+k
+java:S5669ä"MCast this argument to 'String' to pass a single element to the vararg method.(òœù8¿¦ïí´.
+l	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²…ùòşÿÿÿÿ
+g	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ı×ò
+V
+java:S3252ä"8Use static access with "com.orm.SugarRecord" for "find".(òèıå8Ñíì´.
+l	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö Àâÿÿÿÿÿ
+f	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×½¡Q
+2
+java:S1643å"Use a StringBuilder instead.(‰Æ¦d
+g	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œİ¯ç
+d	java:S100é
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç­Ì
+l
+java:S1192û"PDefine a constant instead of duplicating this literal "RESIDRESPUESTA " 3 times.(–‹Îßÿÿÿÿÿ
+l	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
+g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡øš×
+l	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‡®úÿÿÿÿ
+B
+java:S1172î"&Remove these unused method parameters.(­Ïÿğûÿÿÿÿ
+R	java:S125Ğ"<This block of commented-out lines of code should be removed.(‹»ïÎ
+l	java:S117€
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ë„¤ÿÿÿÿÿ
+l	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ï´Àüÿÿÿÿ
