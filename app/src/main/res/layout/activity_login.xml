@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/etPassword"
             android:layout_below="@+id/etPassword"
-            android:text="Mostrar Contraseña" />
+            android:text="Ver Contraseña" />
 
 
         </LinearLayout>

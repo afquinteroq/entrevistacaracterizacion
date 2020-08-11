@@ -16,8 +16,10 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 */
+/*
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_miembros_hogar extends SugarRecord<emc_miembros_hogar> {
 
     private String hog_codigo;
@@ -35,10 +37,26 @@ public class emc_miembros_hogar extends SugarRecord<emc_miembros_hogar> {
     public String estado;
     public String tipoPersona;
 
-    /*
+
     public emc_miembros_hogar() {
     }
-    */
+
+    public emc_miembros_hogar(String hog_codigo, String per_idpersona, String ind_jefe, String usu_usuariocreacion, String usu_fechacreacion, String tipoDoc, String documento, String nombre1, String nombre2, String apellido1, String apellido2, String fecNacimiento, String estado, String tipoPersona) {
+        this.hog_codigo = hog_codigo;
+        this.per_idpersona = per_idpersona;
+        this.ind_jefe = ind_jefe;
+        this.usu_usuariocreacion = usu_usuariocreacion;
+        this.usu_fechacreacion = usu_fechacreacion;
+        this.tipoDoc = tipoDoc;
+        this.documento = documento;
+        this.nombre1 = nombre1;
+        this.nombre2 = nombre2;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.fecNacimiento = fecNacimiento;
+        this.estado = estado;
+        this.tipoPersona = tipoPersona;
+    }
 
     public String getHog_codigo() {
         return hog_codigo;

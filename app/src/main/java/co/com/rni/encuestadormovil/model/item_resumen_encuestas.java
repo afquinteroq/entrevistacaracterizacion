@@ -8,22 +8,23 @@ import lombok.NoArgsConstructor;
 /**
  * Created by ASUS on 8/05/2017.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class item_resumen_encuestas {
 
     private String usuario;
     private String estado;
     private String total;
 
-    /*
     public item_resumen_encuestas() {
-
     }
 
-    public item_resumen_encuestas(String estado, String total) {
+    public item_resumen_encuestas(String usuario, String estado, String total) {
+        this.usuario = usuario;
         this.estado = estado;
         this.total = total;
     }
@@ -51,5 +52,4 @@ public class item_resumen_encuestas {
     public void setTotal(String total) {
         this.total = total;
     }
-    */
 }

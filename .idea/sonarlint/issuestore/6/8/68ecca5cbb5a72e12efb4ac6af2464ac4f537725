@@ -1,0 +1,92 @@
+
+R	java:S125"<This block of commented-out lines of code should be removed.(ï­ÍÃ
+T
+java:S1128"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8“Íõğ­.
+‚
+java:S1450:"eRemove the "llDescargarBaseVivanto" field and declare it as a local variable in the relevant methods.(Õ¬Ö8“Íõğ­.
+
+java:S1192î"^Define a constant instead of duplicating this literal "No tiene conexiÃ³n a internet" 4 times.(áúéÿøÿÿÿÿ8“Íõğ­.
+[
+java:S3252›"=Use static access with "com.orm.SugarRecord" for "deleteAll".(½ ‘8Öíì´.
+Y	java:S125Á"<This block of commented-out lines of code should be removed.(ä‹‡8“Íõğ­.
+x
+java:S3923³"[Remove this conditional structure or edit its code blocks so that they're not all the same.(„…±<8“Íõğ­.
+p
+java:S5669 "MCast this argument to 'String' to pass a single element to the vararg method.(÷Ïøÿÿÿÿ8´¦ïí´.
+j
+java:S5669"MCast this argument to 'String' to pass a single element to the vararg method.(é“ı8´¦ïí´.
+x
+java:S1192Ş"ZDefine a constant instead of duplicating this literal "ftp.unidadvictimas.gov.co" 4 times.(º¢¸Ğ8“Íõğ­.
+Y	java:S125·"<This block of commented-out lines of code should be removed.(Óÿæ‚8“Íõğ­.
+F
+java:S1481‘"(Remove this unused "val" local variable.(Ø­¿ş8“Íõğ­.
+‚
+java:S14509"`Remove the "llIrMenuPrincipal" field and declare it as a local variable in the relevant methods.(½³Èúÿÿÿÿ8“Íõğ­.
+R
+java:S1874>"6Remove this use of "ProgressDialog"; it is deprecated.(Ä…œ	8´¦ïí´.
+c
+java:S1128"ARemove this unused import 'com.opencsv.stream.reader.LineReader'.(Çœúûıÿÿÿÿ8“Íõğ­.
+^	java:S125‡"<This block of commented-out lines of code should be removed.(ãÚÇ–ÿÿÿÿÿ8“Íõğ­.
+Y	java:S125´"<This block of commented-out lines of code should be removed.(Óÿæ‚8“Íõğ­.
+œ
+java:S1192ò"yDefine a constant instead of duplicating this literal "Esta conectado por Datos, debe conectarse a una red WIFI" 4 times.(Ş™Ìüÿÿÿÿ8“Íõğ­.
+o
+java:S1192Ş"QDefine a constant instead of duplicating this literal "encuestadormovil" 4 times.(º¢¸Ğ8“Íõğ­.
+=	java:S131œ""Add a default case to this switch.(øå´¡ÿÿÿÿÿ
+^	java:S125É"<This block of commented-out lines of code should be removed.(ß†„™ùÿÿÿÿ8“Íõğ­.
+R	java:S125‚"<This block of commented-out lines of code should be removed.(ï­ÍÃ
+W	java:S125‹"<This block of commented-out lines of code should be removed.(ãÚÇ–ÿÿÿÿÿ
+=	java:S131÷""Add a default case to this switch.(×ö³–úÿÿÿÿ
+t
+java:S3776J"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(¨Œşÿÿÿÿ8“Íõğ­.
+u
+java:S14508"YRemove the "abActivity" field and declare it as a local variable in the relevant methods.(â»8“Íõğ­.
+a
+java:S1155¢">Use isEmpty() to check whether the collection is empty or not.(‚€†Ÿûÿÿÿÿ8Öíì´.
+}
+java:S1450B"[Remove the "usuarioLogin" field and declare it as a local variable in the relevant methods.(µØÓüÿÿÿÿ8“Íõğ­.
+g
+java:S1301÷"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ
+Y	java:S1106"=This class has 10 parents which is greater than 5 authorized.(öØ’·8´¦ïí´.
+j
+java:S5669™"MCast this argument to 'String' to pass a single element to the vararg method.(é“ı8´¦ïí´.
+[
+java:S3252 "8Use static access with "com.orm.SugarRecord" for "find".(÷Ïøÿÿÿÿ8Öíì´.
+S
+java:S1144ï"7Remove this unused private "permissionRejected" method.(Ã°¦¸ùÿÿÿÿ
+x
+java:S1450A"[Remove the "tvEnviarMail" field and declare it as a local variable in the relevant methods.(ª‚úƒ8“Íõğ­.
+^	java:S125Ÿ"<This block of commented-out lines of code should be removed.(×ÃÊÑıÿÿÿÿ8“Íõğ­.
+M
+java:S1874P"0Remove this use of "getColor"; it is deprecated.(šâŸ‚8´¦ïí´.
+U
+java:S3252"8Use static access with "com.orm.SugarRecord" for "find".(ÂÅ‰8Öíì´.
+W	java:S125ü"<This block of commented-out lines of code should be removed.(ãÚÇ–ÿÿÿÿÿ
+~
+java:S3252v"\Use static access with "android.support.v4.content.ContextCompat" for "checkSelfPermission".(™¦ïÊûÿÿÿÿ8“Íõğ­.
+€
+java:S1450;"cRemove the "llactualizarPersonas" field and declare it as a local variable in the relevant methods.(ñÛ«ğ8“Íõğ­.
+X
+java:S1874o"6Remove this use of "ProgressDialog"; it is deprecated.(ù­–’øÿÿÿÿ8´¦ïí´.
+z
+java:S3252"\Use static access with "android.support.v4.content.ContextCompat" for "checkSelfPermission".(’§«Ï8“Íõğ­.
+M
+java:S1068A"0Remove this unused "tvEnviarMail" private field.(ª‚úƒ8Öíì´.
+h
+java:S1192Ş"JDefine a constant instead of duplicating this literal "Kart3g3na" 4 times.(º¢¸Ğ8“Íõğ­.
+^	java:S125’"<This block of commented-out lines of code should be removed.(ß†„™ùÿÿÿÿ8“Íõğ­.
+[
+java:S3252—"=Use static access with "com.orm.SugarRecord" for "deleteAll".(’Ø†”8Öíì´.
+y
+java:S1450="\Remove the "llIrCardViewd" field and declare it as a local variable in the relevant methods.(¿àÍî8“Íõğ­.
+e
+java:S1871‡"IThis case's code block is the same as the block for the case on line 376.(éÛôïşÿÿÿÿ
+]	java:S125{"<This block of commented-out lines of code should be removed.(ãÚÇ–ÿÿÿÿÿ8“Íõğ­.
+u
+java:S1450<"XRemove the "llIrIndex" field and declare it as a local variable in the relevant methods.(¹ïû×8“Íõğ­.
+K
+java:S1125Ñ"(Remove the literal "true" boolean value.(åÂè›şÿÿÿÿ8“Íõğ­.
+M
+java:S1144ë"6Remove this unused private "permissionGranted" method.(³¹ˆö
+\
+java:S1161J":Add the "@Override" annotation above this method signature(¨Œşÿÿÿÿ8´¦ïí´.

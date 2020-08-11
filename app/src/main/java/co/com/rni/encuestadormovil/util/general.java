@@ -167,6 +167,94 @@ public final class general  {
 
     }
 
+    public static int CalcularEdad(String fecNacimiento){
+        int edad = 0;
+        String dianacimiento = "";
+        String mesnacimiento = "";
+        String anionacimiento = null;
+        if (fecNacimiento.equals("--") || fecNacimiento.equals("-")) {
+            dianacimiento = "01";
+            mesnacimiento = "01";
+            anionacimiento = "1970";
+
+
+        } else {
+            dianacimiento = fecNacimiento.substring(0, 2);
+            mesnacimiento = fecNacimiento.substring(3, 5);
+
+        }
+
+        if (fecNacimiento.length() == 9) {
+            String mesVnacimiento = fecNacimiento.substring(3, 6);
+
+            switch (mesVnacimiento) {
+                case "JAN":
+                    mesnacimiento = "01";
+                    break;
+                case "FEB":
+                    mesnacimiento = "02";
+                    break;
+                case "MAR":
+                    mesnacimiento = "03";
+                    break;
+                case "APR":
+                    mesnacimiento = "04";
+                    break;
+                case "MAY":
+                    mesnacimiento = "05";
+                    break;
+                case "JUN":
+                    mesnacimiento = "06";
+                    break;
+                case "JUL":
+                    mesnacimiento = "07";
+                    break;
+                case "AUG":
+                    mesnacimiento = "08";
+                    break;
+                case "SEP":
+                    mesnacimiento = "09";
+                    break;
+                case "OCT":
+                    mesnacimiento = "10";
+                    break;
+                case "NOV":
+                    mesnacimiento = "11";
+                    break;
+                case "DEC":
+                    mesnacimiento = "12";
+                    break;
+                default:
+                    mesnacimiento = "0";
+            }
+
+            anionacimiento = fecNacimiento.substring(7, 9);
+            if (Integer.valueOf(anionacimiento) > 16) {
+                anionacimiento = "19" + anionacimiento;
+            } else {
+                anionacimiento = "20" + anionacimiento;
+            }
+
+        } else if (fecNacimiento.length() == 8) {
+            mesnacimiento = fecNacimiento.substring(3, 5);
+            anionacimiento = fecNacimiento.substring(6, 8);
+            if (Integer.valueOf(anionacimiento) > 16) {
+                anionacimiento = "19" + anionacimiento;
+            } else {
+                anionacimiento = "20" + anionacimiento;
+            }
+        } else if (fecNacimiento.length() == 10) {
+            anionacimiento = fecNacimiento.substring(6, 10);
+
+        }
+        if(anionacimiento != null){
+            Integer edadnacimiento = general.CalcularEdad(Integer.valueOf(anionacimiento), Integer.valueOf(mesnacimiento), Integer.valueOf(dianacimiento));
+            edad = edadnacimiento;
+        }
+
+        return edad;
+    }
+
     public static String remoAcents(String input) {
         // Cadena de caracteres original a sustituir.
         String original = "áàäéèëíìïóòöúùuÁÀÄÉÈËÍÌÏÓÒÖÚÙÜçÇ";

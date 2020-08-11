@@ -29,10 +29,11 @@ import java.util.List;
 
 import co.com.rni.encuestadormovil.adapter.*;
 import co.com.rni.encuestadormovil.model.*;
+import co.com.rni.encuestadormovil.sqlite.DbHelper;
 import co.com.rni.encuestadormovil.util.*;
 import co.com.rni.encuestadormovil.configuracionencuestas.*;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 import static co.com.rni.encuestadormovil.util.general.borrarEncuestasDuplicadasConDiferenteEstado;
 import static co.com.rni.encuestadormovil.util.general.borrarEncuestasRepetidas;
 import static co.com.rni.encuestadormovil.util.general.isNetworkConnected;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     private listaEncuestasAdapter leAdapter;
     private LinearLayout llverAdminEncuestas;
     private LinearLayout llOpciones;
+    private DbHelper myDB;
 
 
 
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         abActivity.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
         abActivity.setTitle("Gestor de encuestas");
 
+        myDB = new DbHelper(this);
         abActivity.setDisplayHomeAsUpEnabled(true);
         abActivity.setHomeButtonEnabled(true);
         abActivity.setHomeAsUpIndicator(R.mipmap.ic_launcher);
@@ -120,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 opcionMenu idOpcionmenu =  opciones.get(position);
-                //Toast.makeText(getBaseContext(), position+" "+idOpcionmenu.getTexto(), Toast.LENGTH_SHORT).show();
                 if(idOpcionmenu.getTexto().equals("Tablas parametricas")){
                     if(usuarioLogin.getIdPerfil().equals("499")){
                         Intent renpconfe = new Intent(view.getContext(), Agregartema.class);
@@ -174,7 +176,6 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<itemEncuesta> listaEncuestas = new ArrayList<>();
         List<emc_hogares> lsHogares = emc_hogares.find(emc_hogares.class, "USUUSUARIOCREACION = '" + usuarioLogin.getNombreusuario() + "' AND ESTADO <> 'TRANSMITIDA' AND ESTADO <> 'DUPLICADA'", null);
-        //List<emc_hogares> lsHogares = emc_hogares.find(emc_hogares.class, "USUUSUARIOCREACION = '" + usuarioLogin.getNombreusuario() +"'" , null);
         for(int cHog = 0; cHog < lsHogares.size(); cHog++){
 
             emc_hogares tmHogar = lsHogares.get(cHog);
@@ -185,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
                 tmEnc.setIdPersona(tmHogarP.getNombre1()+" "+tmHogarP.getNombre2()+" "+tmHogarP.getApellido1()+" "+tmHogarP.getApellido2());
                 tmEnc.setIdHogar(tmHogar.getHog_codigo());
                 tmEnc.setFecha(tmHogar.getUsu_fechacreacion());
-                //tmEnc.setIdPersona(tmHogar.getUsu_usuariocreacion());
                 tmEnc.setEstado(tmHogar.getEstado());
                 listaEncuestas.add(tmEnc);
             }
@@ -215,24 +215,18 @@ public class MainActivity extends AppCompatActivity {
         llMensajePrimerUso = (LinearLayout) findViewById(R.id.llMensajePrimerUso);
 
         List<emc_respuestas> lsRespuetas = emc_respuestas.find(emc_respuestas.class, null, null);
-        if(lsRespuetas.size() >= 2740)
+        if(lsRespuetas.size() >= 1000)
         {
-            //llTransferidas.setBackground(getDrawable(R.drawable.border_radius_red));
             llTransferidas.setVisibility(View.VISIBLE);
-            //llTransfer.setBackground(getDrawable(R.drawable.border_radius_red));
             llTransfer.setVisibility(View.VISIBLE);
-            //llverAdminEncuestas.setBackground(getDrawable(R.drawable.border_radius_red));
             llverAdminEncuestas.setVisibility(View.VISIBLE);
-
             llAgregar.setVisibility(View.VISIBLE);
             llMensajePrimerUso.setVisibility(View.GONE);
+            llParametricas.setVisibility(View.GONE);
         }
         else{
-            //llTransferidas.setBackground(getDrawable(R.drawable.border_radius_gray));
             llTransferidas.setVisibility(View.GONE);
-            //llTransfer.setBackground(getDrawable(R.drawable.border_radius_gray));
             llTransfer.setVisibility(View.GONE);
-            //llverAdminEncuestas.setBackground(getDrawable(R.drawable.border_radius_gray));
             llverAdminEncuestas.setVisibility(View.GONE);
             llMensajePrimerUso.setVisibility(View.VISIBLE);
             llAgregar.setVisibility(View.GONE);
@@ -283,9 +277,10 @@ public class MainActivity extends AppCompatActivity {
         tvCerrarSesion = (TextView) findViewById(R.id.tvCerrarSesion);
         tvVersionBD = (TextView) findViewById(R.id.tvVersionBD);
         String[] paramsV = {"BASE"};
-        final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
+        //final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
 
-        tvVersionBD.setText("Versión base : " + Integer.parseInt(tmIdVersion.get(0).getVer_version()));
+        final int tmIdVersion = myDB.getlistaVesionBaseRuv("BASE");
+        tvVersionBD.setText("Versión base : " + tmIdVersion);
 
         tvCerrarSesion.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -330,8 +325,6 @@ public class MainActivity extends AppCompatActivity {
                                 int val = 0;
                                 val = isNetworkConnected(getBaseContext());
                                 if (val == 1) {
-                                    //pg.setMessage("Transmitir archivos al FTP");
-                                    //pg.show();
                                     responseUpload callback = new responseUpload() {
                                         @Override
                                         public void actualizaEstado(String mensaje) {
@@ -559,7 +552,5 @@ public class MainActivity extends AppCompatActivity {
         listadoOpciones.add(new opcionMenu(getResources().getString(R.string.f_config), "Configuración"));
         return listadoOpciones;
     }
-
-
 
 }

@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.github.johnkil.print.PrintView;
 
 import java.util.List;
-import java.util.Objects;
 
 import co.com.rni.encuestadormovil.R;
 import co.com.rni.encuestadormovil.model.*;

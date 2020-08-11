@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 16/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_validadores_instrumento extends SugarRecord<emc_validadores_instrumento> {
 
     String pre_idpregunta;
@@ -21,7 +23,7 @@ public class emc_validadores_instrumento extends SugarRecord<emc_validadores_ins
     String tem_idtema;
     String val_idvalidador;
     String val_idvalidador_pers;
-    /*
+
     public emc_validadores_instrumento() {
     }
 
@@ -72,5 +74,4 @@ public class emc_validadores_instrumento extends SugarRecord<emc_validadores_ins
     public void setVal_idvalidador_pers(String val_idvalidador_pers) {
         this.val_idvalidador_pers = val_idvalidador_pers;
     }
-    */
 }

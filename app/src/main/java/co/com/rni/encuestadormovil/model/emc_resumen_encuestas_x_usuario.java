@@ -10,18 +10,25 @@ import lombok.NoArgsConstructor;
 /**
  * Created by ASUS on 8/05/2017.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_resumen_encuestas_x_usuario extends SugarRecord<emc_resumen_encuestas_x_usuario> {
 
     private String usuario;
     private String estado;
     private String total;
 
-    /*
     public emc_resumen_encuestas_x_usuario() {
+    }
+
+    public emc_resumen_encuestas_x_usuario(String usuario, String estado, String total) {
+        this.usuario = usuario;
+        this.estado = estado;
+        this.total = total;
     }
 
     public String getUsuario() {
@@ -47,5 +54,4 @@ public class emc_resumen_encuestas_x_usuario extends SugarRecord<emc_resumen_enc
     public void setTotal(String total) {
         this.total = total;
     }
-    */
 }

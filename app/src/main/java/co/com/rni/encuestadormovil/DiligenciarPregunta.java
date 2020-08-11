@@ -3,12 +3,10 @@ package co.com.rni.encuestadormovil;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -19,7 +17,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -39,7 +36,6 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -47,7 +43,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
 import co.com.rni.encuestadormovil.adapter.*;
 import co.com.rni.encuestadormovil.model.*;
 import co.com.rni.encuestadormovil.util.*;
@@ -82,12 +77,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
     private LinearLayout llPreguntaTexto;
     private emc_usuarios usuarioLogin;
     private LinearLayout llDeptoMun;
+    private LinearLayout llDTDireccionTerritorial, llDTdepartamento, llDTPuntoAtencion, llDTMunicipio;
+    private TextView tituloDireccionTerritorial, tituloDTdepartamento, tituloDTPuntoAtencion, tituloDTMunicipio;
     private LinearLayout llResguardo;
     private EditText etNom1, etNom2, etApl1, etApl2;
     private LinearLayout llNomsApls;
     private Spinner spDepto;
     private Spinner spMunicipio;
     private Spinner spResguardos;
+    private Spinner spDTDireccionTerritorial, spDTdepartamento, spDTPuntoAtencion, spDTMunicipio;
     private List<emc_municipio> lsMunicipios;
     private municipiosAdapter adMunicipio;
     private String pIDJEFE = null;
@@ -106,12 +104,18 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
     private Integer contadorRespuestasRatio;
     private Integer contadorRespuestasCheck;
     private List<emc_departamento> lsDeptos;
+    private List<EMC_DTPUNTOSATENCION> lsDts;
+    private List<EMC_DTPUNTOSATENCION> lsdeptoDts, lsPuntosAtencion, lsmunsDts;
     private List<emc_resguardosindigenas> lsResguardos;
     private List<emc_ruinosas_catastroficas> lsEnfermedades;
     private List<emc_veredas> lsVeredas;
     private veredasAdapter adVeredas;
     private List<emc_comunidadesnegras> lsComunidadesNegras;
     private deptosAdapter adDepto;
+    private dtsAdapter adDTS;
+    private deptosDTAdapter adDeptosDT;
+    private puntosDTAdapter adPuntosDT;
+    private municipiosDTAdapter adMunsDT;
     private resguardosAdapter adResguardo;
     private enfermedadesAdapter adEnfermedades;
     private comunidadesnegrasAdapter adComunidadesNegras;
@@ -135,6 +139,16 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
     private Button btnbtnSalirReinicio, btnCancelarReinicio;
     private emc_hogares hogarActual;
+
+    private static final String CONS_CAPITULO_YA_FUE_DILIGENCIADO = "El capítulo ya fue diligenciado";
+    private static final String CONS_ESTADO_CERRADA = "Cerrada";
+    private static final String CONS_ESTADO_INCOMPLETA = "Incompleta";
+    private static final String CONS_ESTADO_ANULADA = "Anulada";
+    private static final String TIPO_PERSONA_AUTORIZADO = "5001";
+    private static final String TIPO_PERSONA_TUTOR = "5002";
+    private static final String TIPO_PERSONA_CUIDADOR_PERMANENTE = "5003";
+    private static final String TIPO_PERSONA_MIEMBRO_HOGAR = "5004";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -179,7 +193,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             public void onDrawerOpened(View drawerView) {
                 abActivity.setTitle("Temas  ");
                 llFinalizarEncuesta.setVisibility(View.VISIBLE);
-                //ULTIMA 13062016
+
                 llConfirmarReiniciarCapitulo.setVisibility(View.GONE);
                 invalidateOptionsMenu();
                 if(llSiguiente != null)
@@ -192,11 +206,6 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         lvDrawer = (ListView) findViewById(R.id.lvDrawer);
-
-
-        //Lista los temas por perfil
-        //listaTemas = emc_temas.find(emc_temas.class, null, null);
-        //List<emc_hogares> lsHogar = emc_hogares.find(emc_hogares.class, "UPPER(HOGCODIGO) = ? ", hogCodigo.toUpperCase() );
 
 
         List<emc_version> lsHo= emc_version.find(emc_version.class,"UPPER(VERNOMBRE) = ?",hogCodigo.toUpperCase());
@@ -314,7 +323,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                         if (lsCapTer.size() > 0) {
                             //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                            Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                             llFinalizarEncuesta.setVisibility(View.VISIBLE);
                             val = false;
 
@@ -350,7 +359,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                         if (lsCapTer.size() > 0) {
                             //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                            Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                             llFinalizarEncuesta.setVisibility(View.VISIBLE);
                             val = false;
 
@@ -386,7 +395,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                             List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                             if (lsCapTer.size() > 0) {
                                 //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                                Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                                 llFinalizarEncuesta.setVisibility(View.VISIBLE);
                                 val = false;
 
@@ -423,7 +432,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         List<emc_capitulos_terminados> lsCapTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? AND TEMIDTEMA = ?", parCap);
                         if (lsCapTer.size() > 0) {
                             //gestionEncuestas.reiniciarCapitulo(hogCodigo, temSeleccionado.getTem_idtema(), 1);
-                            Toast.makeText(getBaseContext(), "El capítulo ya fue diligenciado", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), CONS_CAPITULO_YA_FUE_DILIGENCIADO, Toast.LENGTH_LONG).show();
                             llFinalizarEncuesta.setVisibility(View.VISIBLE);
                             val = false;
 
@@ -569,15 +578,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                         String est = "";
                         if (rgEstado.getCheckedRadioButtonId() == R.id.estIncompleta)
-                            est = "Incompleta";
+                            est = CONS_ESTADO_INCOMPLETA;
                         if (rgEstado.getCheckedRadioButtonId() == R.id.estAnulada || rgEstado.getCheckedRadioButtonId() == R.id.estAnulaHogar)
-                            est = "Anulada";
+                            est = CONS_ESTADO_ANULADA;
                         if (rgEstado.getCheckedRadioButtonId() == R.id.estCerrada)
-                            est = "Cerrada";
+                            est = CONS_ESTADO_CERRADA;
 
                         if (est.equals("")) {
                             Toast.makeText(getBaseContext(), "Debe seleccionar un estado", Toast.LENGTH_SHORT).show();
-                        } else if (est.equals("Cerrada"))
+                        } else if (est.equals(CONS_ESTADO_CERRADA))
                         {
                             String[] parCapT = {hogCodigo};
                             List<emc_capitulos_terminados> lsCapTerT = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? ", parCapT);
@@ -612,7 +621,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                     final String esT = est;
 
                                     btnConfirmarSalirEncuesta.setOnClickListener(new View.OnClickListener() {
-                                        @Override
+                                            @Override
                                         public void onClick(View v) {
 
 
@@ -730,7 +739,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                     hogarActual.setEstado(esT);
                                     hogarActual.save();
                                     //modificacion javier
-                                    Intent mainI = new Intent(getBaseContext(), MainActivity.class);
+                                     Intent mainI = new Intent(getBaseContext(), MainActivity.class);
                                     startActivity(mainI);
                                     finish();
 
@@ -876,7 +885,8 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         lsComunidadesNegras = emc_comunidadesnegras.find(emc_comunidadesnegras.class,null,null);
         adComunidadesNegras = new comunidadesnegrasAdapter(getBaseContext(),R.id.valID,lsComunidadesNegras);
 
-
+        lsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class, "SELECT DISTINCT IDDT,DT FROM EMCDTPUNTOSATENCION ORDER BY IDDT");
+        adDTS = new dtsAdapter(getBaseContext(),R.id.valID, lsDts);
 
     }
 
@@ -990,6 +1000,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                     LinearLayout llRespuesta;
                     switch (tmPregPersona.getPre_tipocampo()){
                         case "DP":
+                        case "DT":
                         case "TE":
                         case "AT":
                         case "TA":
@@ -1044,6 +1055,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                         LinearLayout llRespuesta;
                         switch (tmPregPersona.getPre_tipocampo()){
                             case "DP":
+                            case "DT":
                             case "TE":
                             case "AT":
                             case "TA":
@@ -1114,12 +1126,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
 
         }else{
-            //String[] parCon = {perIdMiembro,hogCodigo};
-            tvNombrePersonaRespuesta.setVisibility(View.VISIBLE);
-            //List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ?", perIdMiembro);
-            /*List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
-            mhPer = tmMiembroHogar.get(0);*/
+
+            //tvNombrePersonaRespuesta.setVisibility(View.VISIBLE);
+
+
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
+
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -1137,11 +1152,27 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         tituloVereda = (TextView) llRespuestaTexto.findViewById(R.id.tituloVereda);
 
 
+        llDTDireccionTerritorial = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTDireccionTerritorial);
+        llDTdepartamento = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTdepartamento);
+        llDTPuntoAtencion = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTPuntoAtencion);
+        llDTMunicipio = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDTMunicipio);
+
+        tituloDireccionTerritorial = (TextView) llRespuestaTexto.findViewById(R.id.tituloDireccionTerritorial);
+        tituloDTdepartamento = (TextView) llRespuestaTexto.findViewById(R.id.tituloDTdepartamento);
+        tituloDTPuntoAtencion = (TextView) llRespuestaTexto.findViewById(R.id.tituloDTPuntoAtencion);
+        tituloDTMunicipio = (TextView) llRespuestaTexto.findViewById(R.id.tituloDTMunicipio);
 
 
         spDepto = (Spinner) llRespuestaTexto.findViewById(R.id.spDepto);
         spMunicipio = (Spinner) llRespuestaTexto.findViewById(R.id.spMunicipio);
         spResguardos = (Spinner) llRespuestaTexto.findViewById(R.id.spResguardos);
+
+        spDTDireccionTerritorial = (Spinner) llRespuestaTexto.findViewById(R.id.spDTDireccionTerritorial);
+        spDTdepartamento = (Spinner) llRespuestaTexto.findViewById(R.id.spDTdepartamento);
+        spDTPuntoAtencion = (Spinner) llRespuestaTexto.findViewById(R.id.spDTPuntoAtencion);
+        spDTMunicipio = (Spinner) llRespuestaTexto.findViewById(R.id.spDTMunicipio);
+
+
         if(tmPregPersona.getPre_tipocampo().equals("DP")){
             llResguardo.setVisibility(View.GONE);
             tituloVereda.setVisibility(View.GONE);
@@ -1174,7 +1205,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     emc_municipio munSel = lsMunicipios.get(position);
-                    etTextoPregunta.setText(munSel.getId_muni_depto().toString());
+                    etTextoPregunta.setText(munSel.getId_muni_depto());
                 }
 
                 @Override
@@ -1183,12 +1214,114 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 }
             });
 
-        }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
+        }
+        /////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.GONE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+
+
+        }
+        //////////////
+        else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
 
-            //tvNombrePersonaRespuesta.setVisibility(View.GONE);
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
             spResguardos.setAdapter(adResguardo);
 
             spResguardos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1328,7 +1461,22 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 llNomsApls.setVisibility(View.GONE);
                 etTextoPregunta.setVisibility(View.VISIBLE);
             }
+
+            if((tmPregPersona.getPre_idpregunta().equals("31"))){
+                if(!TIPO_PERSONA_MIEMBRO_HOGAR.equals(mhPer.getTipoPersona()) && mhPer.getTipoPersona() != null){
+                    etTextoPregunta.setEnabled(false);
+                }
+
+
+            }
+
+
             if(tmPregPersona.getPre_idpregunta().equals("14") || tmPregPersona.getPre_idpregunta().equals("461") ||  tmPregPersona.getPre_idpregunta().equals("912") ) {
+
+                if(tmPregPersona.getPre_idpregunta().equals("14")){
+                    etTextoPregunta.setEnabled(false);
+                }
+
 
                 if(mhPer != null){
 
@@ -1421,6 +1569,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -1477,6 +1628,103 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                 }
             });
+
+        }
+        /////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.GONE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
 
         }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
@@ -1704,6 +1952,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -1720,6 +1971,8 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
         llDeptoMun = (LinearLayout) llRespuestaTexto.findViewById(R.id.llDeptoMun);
         spDepto = (Spinner) llRespuestaTexto.findViewById(R.id.spDepto);
         spMunicipio = (Spinner) llRespuestaTexto.findViewById(R.id.spMunicipio);
+
+
         if(tmPregPersona.getPre_tipocampo().equals("DP")){
             llResguardo.setVisibility(View.GONE);
             llDeptoMun.setVisibility(View.VISIBLE);
@@ -1762,7 +2015,104 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 }
             });
 
-        }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
+        }
+        /////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.GONE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+        }
+        ///
+        else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
@@ -1946,6 +2296,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -2005,7 +2358,105 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 }
             });
 
-        }else if (tmPregPersona.getPre_tipocampo().equals("RES")){
+        }/////
+        else if (tmPregPersona.getPre_tipocampo().equals("DT")){
+            //List<EMC_DTPUNTOSATENCION> lcount = EMC_DTPUNTOSATENCION.find(EMC_DTPUNTOSATENCION.class,"IDDT = ?","7");
+            llResguardo.setVisibility(View.GONE);
+            llDeptoMun.setVisibility(View.GONE);
+            tituloVereda.setVisibility(View.GONE);
+            etTextoPregunta.setVisibility(View.GONE);
+
+            tituloDireccionTerritorial.setVisibility(View.VISIBLE);
+            tituloDTdepartamento.setVisibility(View.VISIBLE);
+            tituloDTPuntoAtencion.setVisibility(View.VISIBLE);
+            tituloDTMunicipio.setVisibility(View.VISIBLE);
+
+            llDTDireccionTerritorial.setVisibility(View.VISIBLE);
+            llDTdepartamento.setVisibility(View.VISIBLE);
+            llDTPuntoAtencion.setVisibility(View.VISIBLE);
+            llDTMunicipio.setVisibility(View.VISIBLE);
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
+
+            spDTDireccionTerritorial.setAdapter(adDTS);
+            spDTDireccionTerritorial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                    final EMC_DTPUNTOSATENCION selDTs = lsDts.get(position);
+                    lsdeptoDts  = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                            "SELECT DISTINCT IDDEPARTAMENTO, DEPARTAMENTO FROM EMCDTPUNTOSATENCION WHERE IDDT = ? ORDER BY 2",selDTs.getIddt().toString());
+                    adDeptosDT = new deptosDTAdapter(getBaseContext(), R.id.valID, lsdeptoDts);
+                    spDTdepartamento.setAdapter(adDeptosDT);
+
+                    spDTdepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            final EMC_DTPUNTOSATENCION seldeptosDTs = lsdeptoDts.get(position);
+                            lsPuntosAtencion = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                    "SELECT DISTINCT IDPUNTOATENCION, PUNTOATENCION FROM EMCDTPUNTOSATENCION WHERE IDDT = ?  AND IDDEPARTAMENTO = ? ORDER BY 1 ",
+                                    selDTs.getIddt().toString(),seldeptosDTs.getIddepartamento().toString());
+                            adPuntosDT = new puntosDTAdapter(getBaseContext(), R.id.valID, lsPuntosAtencion);
+                            spDTPuntoAtencion.setAdapter(adPuntosDT);
+
+                            spDTPuntoAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    final EMC_DTPUNTOSATENCION selpuntosADTs = lsPuntosAtencion.get(position);
+                                    String[] params = {selDTs.getIddt().toString(), seldeptosDTs.getIddepartamento().toString(), selpuntosADTs.getIdpuntoatencion().toString()};
+                                    lsmunsDts = EMC_DTPUNTOSATENCION.findWithQuery(EMC_DTPUNTOSATENCION.class,
+                                            "SELECT DISTINCT  IDMUNICIPIO, MUNICIPIO FROM EMCDTPUNTOSATENCION " +
+                                                    "WHERE IDDT = ? AND IDDEPARTAMENTO = ? AND IDPUNTOATENCION = ?  ORDER BY 2",params );
+                                    adMunsDT = new municipiosDTAdapter(getBaseContext(), R.id.valID, lsmunsDts);
+                                    spDTMunicipio.setAdapter(adMunsDT);
+                                    //12/04/2020
+                                    spDTMunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                        @Override
+                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                            if(selDTs.getIddt() > 0){
+                                                EMC_RELACIONDTPUNTO.deleteAll(EMC_RELACIONDTPUNTO.class,
+                                                        "HOGARCODIGO = '"+hogCodigo+"'");
+                                                EMC_DTPUNTOSATENCION mundtSel = lsmunsDts.get(position);
+
+                                                EMC_RELACIONDTPUNTO emc_relaciondtpunto
+                                                        = new EMC_RELACIONDTPUNTO(hogCodigo,"1",selDTs.getIddt(),seldeptosDTs.getIddepartamento(),selpuntosADTs.getIdpuntoatencion(),mundtSel.getIdmunicipio());
+                                                emc_relaciondtpunto.save();
+
+                                                etTextoPregunta.setText(mundtSel.getIdmunicipio().toString());
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+
+        }
+        ///////////
+        else if (tmPregPersona.getPre_tipocampo().equals("RES")){
             llResguardo.setVisibility(View.VISIBLE);
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
@@ -2102,7 +2553,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     emc_departamento selDepto = lsDeptos.get(position);
-                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto().toString());
+                    lsMunicipios = emc_municipio.find(emc_municipio.class, "IDDEPTO = ?", selDepto.getId_depto());
                     adMunicipio = new municipiosAdapter(getBaseContext(), R.id.valID, lsMunicipios);
                     spMunicipio.setAdapter(adMunicipio);
                 }
@@ -2235,6 +2686,10 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             emc_miembros_hogar mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
+
         }
 
         //Carga los datos adicionales a la respuesta
@@ -2328,6 +2783,10 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
             emc_miembros_hogar mhPer = tmMiembroHogar.get(0);
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
+            if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
+                tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
+            }
+
         }
 
         //Carga los datos adicionales a la respuesta
@@ -2529,6 +2988,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             TextView tvTipoCampo = (TextView) llRespuestaTexto.findViewById(R.id.tvTipoCampo);
             switch (tvTipoCampo.getText().toString()){
                 case "DP":
+                case "DT":
                 case "TE":
                 case "AT":
                 case "TA":
@@ -2555,8 +3015,6 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                         break;
 
                                     case "NU":
-
-
                                         etTextoPregunta.requestFocus();
                                         etTextoPregunta.setInputType(InputType.TYPE_CLASS_NUMBER);
                                         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
@@ -2567,7 +3025,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                         }else{
 
                                             int t = etTextoPregunta.getText().length();
-                                            double d = Double.parseDouble(tmRes.getPre_longcampo());
+                                            //double d = Double.parseDouble(tmRes.getPre_longcampo());
                                             if(etTextoPregunta.getText().length() > Double.parseDouble(tmRes.getPre_longcampo())){
                                                 Toast.makeText(this, "Logintud incorrecta", Toast.LENGTH_SHORT).show();
                                                 valida = false;
@@ -2575,20 +3033,43 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                                 if(t > 0){
 
                                                     Double valor = Double.parseDouble(etTextoPregunta.getText().toString());
-                                                    if(tmRes.getPre_validador_min() != null){
-                                                        if(valor < Double.parseDouble(tmRes.getPre_validador_min())){
-                                                            Toast.makeText(this, "Valor debe ser superior a " + tmRes.getPre_validador_min(), Toast.LENGTH_SHORT).show();
-                                                            valida = false;
+
+                                                        if(tmRes.getValidador_oridrespuesta() != null){
+                                                            if(tmRes.getTipo_tabla().equals("1")){
+                                                                List<emc_validadores_persona> tmValPersona = emc_validadores_persona.find(emc_validadores_persona.class, "PERIDPERSONA = " + p + " AND  VALIDVALIDADOR = '"+ tmRes.getValidador_oridrespuesta()+"'" + " AND HOGCODIGO = '"+ hogCodigo+"'", null);
+                                                                emc_validadores_persona valpersona = tmValPersona.get(0);
+                                                                if(valor > Integer.parseInt(valpersona.getPre_valor())){
+                                                                    Toast.makeText(this, "El valor ingresado debe ser menor o igual a " + valpersona.getPre_valor(), Toast.LENGTH_SHORT).show();
+                                                                    valida = false;
+                                                                }
+                                                            }
+
+                                                            if(tmRes.getTipo_tabla().equals("2")){
+                                                                List<emc_respuestas_encuesta> tmRespuestaEncuesta = emc_respuestas_encuesta.find(emc_respuestas_encuesta.class, "PERIDPERSONA = " + p + " AND  RESIDRESPUESTA = '"+ tmRes.getValidador_oridrespuesta()+"'"+ " AND HOGCODIGO = '"+ hogCodigo+"'", null);
+                                                                emc_respuestas_encuesta respuestas_encuesta = tmRespuestaEncuesta.get(0);
+                                                                if(valor > Integer.parseInt(respuestas_encuesta.getRxp_textorespuesta())){
+                                                                    Toast.makeText(this, "El valor ingresado debe ser menor o igual a " + respuestas_encuesta.getRxp_textorespuesta(), Toast.LENGTH_SHORT).show();
+                                                                    valida = false;
+                                                                }
+
+                                                            }
                                                         }
-                                                    }
+
+                                                        if(tmRes.getPre_validador_min() != null){
+                                                            if(valor < Double.parseDouble(tmRes.getPre_validador_min())){
+                                                                Toast.makeText(this, "Valor debe ser superior a " + tmRes.getPre_validador_min(), Toast.LENGTH_SHORT).show();
+                                                                valida = false;
+                                                            }
+                                                        }
 
 
-                                                    if(tmRes.getPre_validador_max() != null){
-                                                        if(valor > Double.parseDouble(tmRes.getPre_validador_max())){
-                                                            Toast.makeText(this, "Valor debe ser inferior o igual a " + tmRes.getPre_validador_max(), Toast.LENGTH_SHORT).show();
-                                                            valida = false;
+                                                        if(tmRes.getPre_validador_max() != null){
+                                                            if(valor > Double.parseDouble(tmRes.getPre_validador_max())){
+                                                                Toast.makeText(this, "Valor debe ser inferior o igual a " + tmRes.getPre_validador_max(), Toast.LENGTH_SHORT).show();
+                                                                valida = false;
+                                                            }
                                                         }
-                                                    }
+
                                                 }else if(t == 0){
                                                     Toast.makeText(this, "Campo esta vacio debe diligenciarlo ", Toast.LENGTH_SHORT).show();
                                                     valida = false;
@@ -2670,7 +3151,9 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                         break;
 
                                     case "TI":
-                                        if(!general.isValidPhone(etTextoPregunta.getText().toString())){
+                                        if(etTextoPregunta.getText().toString().equals("") && tmRes.getRes_obligatorio().equals("NO")){
+                                            valida = true;
+                                        }else if(!general.isValidPhone(etTextoPregunta.getText().toString())){
                                             Toast.makeText(this, "Teléfono incorrecto (#########)", Toast.LENGTH_SHORT).show();
                                             valida = false;
                                         }
@@ -2997,6 +3480,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
             switch (tvTipoCampo.getText().toString()){
                 case "DP":
+                case "DT":
                 case "TE":
                 case "AT":
                 case "TA":
@@ -3225,15 +3709,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                 public void onClick(View v) {
                     String est = "";
                     if (rgEstado.getCheckedRadioButtonId() == R.id.estIncompleta)
-                        est = "Incompleta";
+                        est = CONS_ESTADO_INCOMPLETA;
                     if (rgEstado.getCheckedRadioButtonId() == R.id.estAnulada || rgEstado.getCheckedRadioButtonId() == R.id.estAnulaHogar)
-                        est = "Anulada";
+                        est = CONS_ESTADO_ANULADA;
                     if (rgEstado.getCheckedRadioButtonId() == R.id.estCerrada)
-                        est = "Cerrada";
+                        est = CONS_ESTADO_CERRADA;
 
                     if (est.equals("")) {
                         Toast.makeText(getBaseContext(), "Debe seleccionar un estado", Toast.LENGTH_SHORT).show();
-                    } else if (est.equals("Cerrada")) {
+                    } else if (est.equals(CONS_ESTADO_CERRADA)) {
                         String[] parCapT = {hogCodigo};
                         List<emc_capitulos_terminados> lsCapTerT = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? ", parCapT);
                         if (lsCapTerT.size() > 3) {
@@ -3270,12 +3754,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                                 }});
 
-                            /*hogarActual.setEstado(est);
-                            hogarActual.save();
-                            //modificacion javier
-                            Intent mainI = new Intent(getBaseContext(), MainActivity.class);
-                            startActivity(mainI);
-                            finish();*/
+
 
                         } else {
                             Toast.makeText(getBaseContext(), "Debe diligencia los tres primeros capítulos y un capítulo adicional", Toast.LENGTH_SHORT).show();
@@ -3311,12 +3790,6 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                 llSalirEntrevista.setVisibility(View.VISIBLE);
 
                             }});
-
-                       /* hogarActual.setEstado(est);
-                        hogarActual.save();
-                        Intent mainI = new Intent(getBaseContext(), MainActivity.class);
-                        startActivity(mainI);
-                        finish();*/
                     }
                 }
             });
@@ -3383,7 +3856,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             }
         };
 
-        ansycGuardarSoporte auFTP = new ansycGuardarSoporte(getApplication(),callback,bitmap,hogCodigo,nombreFoto);
+        ansycGuardarSoporte auFTP = new ansycGuardarSoporte(getApplication(),callback,bitmap,hogCodigo,nombreFoto, "/Soportes");
         auFTP.execute();
         pgDMensaje.setCancelable(false);
         pgDMensaje.setOnCancelListener(new DialogInterface.OnCancelListener() {

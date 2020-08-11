@@ -37,8 +37,6 @@ public class drawerTemasAdapter extends ArrayAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        String Result = usuarioLogin;
-
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater)parent.getContext().
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -50,7 +48,6 @@ public class drawerTemasAdapter extends ArrayAdapter{
         TextView tvItem = (TextView) convertView.findViewById(R.id.tvItem);
 
         emc_temas itemT = (emc_temas) getItem(position);
-        Integer OrdenT = itemT.getTem_orden();
 
         //500 Encuestador
         //499 Administrador

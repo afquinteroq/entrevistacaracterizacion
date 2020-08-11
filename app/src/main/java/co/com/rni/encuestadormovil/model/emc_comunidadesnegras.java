@@ -10,16 +10,17 @@ import lombok.NoArgsConstructor;
 /**
  * Created by ASUS on 03/08/2018.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_comunidadesnegras  extends SugarRecord<emc_comunidadesnegras> {
 
     String idcomunidad;
     String nombrecomunidad;
 
-    /*
     public emc_comunidadesnegras() {
     }
 
@@ -43,5 +44,4 @@ public class emc_comunidadesnegras  extends SugarRecord<emc_comunidadesnegras> {
     public void setNombrecomunidad(String nombrecomunidad) {
         this.nombrecomunidad = nombrecomunidad;
     }
-    */
 }

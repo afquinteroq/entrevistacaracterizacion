@@ -1,0 +1,20 @@
+
+f	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îÿµ¢
+W
+java:S1075;"ARefactor your code to get this URI from a customizable parameter.(¤‹ê›
+[
+java:S1128"ERemove this unused import 'android.support.v4.content.ContextCompat'.(¹†Ç
+Y
+java:S1128">Remove this unused import 'android.content.pm.PackageManager'.(€®¥õÿÿÿÿÿ
+H
+java:S1128"-Remove this unused import 'android.Manifest'.(¦øïúÿÿÿÿ
+>
+java:S1148B"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¸›¬Æ
+]
+java:S1128
+"BRemove this unused import 'android.support.v4.app.ActivityCompat'.(Äüşÿÿÿÿ
+G
+java:S1481/"1Remove this unused "assetManager" local variable.(‹Óä
+V
+java:S1854/"@Remove this useless assignment to local variable "assetManager".(‹Óä

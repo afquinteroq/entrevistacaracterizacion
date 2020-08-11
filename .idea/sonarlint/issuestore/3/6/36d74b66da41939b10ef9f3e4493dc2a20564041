@@ -1,0 +1,59 @@
+
+j
+java:S1104("OMake hv9 a static final constant or non-public and provide accessors if needed.(È»ëóşÿÿÿÿ
+p
+java:S1104"UMake apellido2 a static final constant or non-public and provide accessors if needed.(Ò›„ƒüÿÿÿÿ
+f
+java:S1104+"PMake hv12 a static final constant or non-public and provide accessors if needed.(¨³¥‚
+n
+java:S1104"SMake nombre2 a static final constant or non-public and provide accessors if needed.(‘çäÙşÿÿÿÿ
+^	java:S1075"BConstructor has 26 parameters, which is greater than 7 authorized.(¿™€ú8ÈÃªò´.
+k
+java:S1104-"PMake hv14 a static final constant or non-public and provide accessors if needed.( ‚Íğùÿÿÿÿ
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¾İÙÏŸ.
+j
+java:S1104""OMake hv3 a static final constant or non-public and provide accessors if needed.(ÁËÇÇùÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ôŸı†ÿÿÿÿÿ
+j
+java:S1104%"OMake hv6 a static final constant or non-public and provide accessors if needed.(Üµí“ûÿÿÿÿ
+j
+java:S1104&"OMake hv7 a static final constant or non-public and provide accessors if needed.(ÁÑÄõÿÿÿÿÿ
+n
+java:S1104"SMake nombre1 a static final constant or non-public and provide accessors if needed.(¾¢¤æşÿÿÿÿ
+v
+java:S1104"YMake fecNacimiento a static final constant or non-public and provide accessors if needed.(ôÆØì8¬¡äÏŸ.
+i
+java:S1104"SMake tipoDoc a static final constant or non-public and provide accessors if needed.(Ä—¡
+j
+java:S1104$"OMake hv5 a static final constant or non-public and provide accessors if needed.(ô¨Çüÿÿÿÿ
+k
+java:S1104,"PMake hv13 a static final constant or non-public and provide accessors if needed.(ãš×çüÿÿÿÿ
+l
+java:S1104/"VMake encuestado a static final constant or non-public and provide accessors if needed.(Á»­ş
+l
+java:S1104"QMake hogar a static final constant or non-public and provide accessors if needed.(£ã›¶şÿÿÿÿ
+t
+java:S11040"YMake fechaEncuesta a static final constant or non-public and provide accessors if needed.(ÅÅ¹ãşÿÿÿÿ
+K
+java:S1128"0Remove this unused import 'com.orm.SugarRecord'.(¢Ÿşşÿÿÿÿ
+m
+java:S1104"WMake consPersona a static final constant or non-public and provide accessors if needed.(ß×ãÈ
+k
+java:S1104"UMake documento a static final constant or non-public and provide accessors if needed.(á“À¿
+f
+java:S1104)"PMake hv10 a static final constant or non-public and provide accessors if needed.(â®ô–
+p
+java:S1104"UMake apellido1 a static final constant or non-public and provide accessors if needed.(óáğÂøÿÿÿÿ
+e
+java:S1104*"PMake hv11 a static final constant or non-public and provide accessors if needed.(äì•
+e
+java:S1104!"OMake hv2 a static final constant or non-public and provide accessors if needed.(îªĞÄ
+d
+java:S1104 "OMake hv1 a static final constant or non-public and provide accessors if needed.(©í&
+m
+java:S1104."RMake estado a static final constant or non-public and provide accessors if needed.(£Óôüÿÿÿÿ
+e
+java:S1104'"OMake hv8 a static final constant or non-public and provide accessors if needed.(‰–Ë©
+j
+java:S1104#"OMake hv4 a static final constant or non-public and provide accessors if needed.(ğùóıÿÿÿÿ

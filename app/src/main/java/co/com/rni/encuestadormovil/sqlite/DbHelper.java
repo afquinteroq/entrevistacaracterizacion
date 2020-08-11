@@ -1,5 +1,6 @@
 package co.com.rni.encuestadormovil.sqlite;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -319,6 +320,34 @@ public class DbHelper extends SQLiteAssetHelper {
 
 
         return lsResultado;
+    }
+
+    public boolean setUpdateVersionBase(String newVersion){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("VERVERSION", newVersion);
+        db.update("EMCVERSION",contentValues,"VERIDVERSION = ?",new String[] {"1"});
+        return true;
+
+    }
+
+    public int  getlistaVesionBaseRuv(String paramsV){
+        int version = 0;
+        String selectQuery = "SELECT VERVERSION FROM EMCVERSION WHERE VERNOMBRE = '" + paramsV + "';";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        try {
+            if (cursor.moveToFirst()) {
+                do {
+                    version = cursor.getInt(0);
+                } while (cursor.moveToNext());
+            }
+        }finally {
+            cursor.close();
+            db.close();
+        }
+        return version;
     }
 
     public List<emc_victimas_nosugar> getlistaVictimasCons_persona(String documento,String cons_persona){

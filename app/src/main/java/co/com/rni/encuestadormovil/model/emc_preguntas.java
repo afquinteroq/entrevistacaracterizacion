@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 15/12/15.
  */
-@Data
+/*@Data
 @Builder
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor*/
 public class emc_preguntas extends SugarRecord<emc_preguntas> {
 
     String pre_idpregunta;
@@ -25,11 +25,10 @@ public class emc_preguntas extends SugarRecord<emc_preguntas> {
     String usu_usuariocreacion;
     String usu_fechacreacion;
 
-    /*
     public emc_preguntas() {
     }
 
-    public emc_preguntas(String pre_idpregunta, String pre_pregunta, String pre_observacion,String pre_activa, String usu_usuariocreacion, String usu_fechacreacion) {
+    public emc_preguntas(String pre_idpregunta, String pre_pregunta, String pre_observacion, String pre_activa, String usu_usuariocreacion, String usu_fechacreacion) {
         this.pre_idpregunta = pre_idpregunta;
         this.pre_pregunta = pre_pregunta;
         this.pre_observacion = pre_observacion;
@@ -52,6 +51,14 @@ public class emc_preguntas extends SugarRecord<emc_preguntas> {
 
     public void setPre_pregunta(String pre_pregunta) {
         this.pre_pregunta = pre_pregunta;
+    }
+
+    public String getPre_observacion() {
+        return pre_observacion;
+    }
+
+    public void setPre_observacion(String pre_observacion) {
+        this.pre_observacion = pre_observacion;
     }
 
     public String getPre_activa() {
@@ -77,14 +84,4 @@ public class emc_preguntas extends SugarRecord<emc_preguntas> {
     public void setUsu_fechacreacion(String usu_fechacreacion) {
         this.usu_fechacreacion = usu_fechacreacion;
     }
-
-
-    public String getPre_observacion() {
-        return pre_observacion;
-    }
-
-    public void setPre_observacion(String pre_observacion) {
-        this.pre_observacion = pre_observacion;
-    }
-    */
 }

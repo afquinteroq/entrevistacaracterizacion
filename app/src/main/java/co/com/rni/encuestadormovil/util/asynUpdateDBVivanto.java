@@ -24,6 +24,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 import co.com.rni.encuestadormovil.model.emc_version;
+import co.com.rni.encuestadormovil.sqlite.DbHelper;
 import it.sauronsoftware.ftp4j.FTPClient;
 
 /**
@@ -39,6 +40,8 @@ public class asynUpdateDBVivanto extends AsyncTask<String, Integer, Boolean> {
     String password;
     String remotePath;// "/EncuestasACargar";
     int newVersion;
+    private DbHelper myDB;
+
 
     public asynUpdateDBVivanto(Context ctx, responseUpdateDBVivanto callback, String ftpServer, String user, String password,String remotePath, int newVersion){
         this.ctx = ctx;
@@ -48,6 +51,7 @@ public class asynUpdateDBVivanto extends AsyncTask<String, Integer, Boolean> {
         this.password = password;
         this.remotePath = remotePath;
         this.newVersion = newVersion;
+        myDB = new DbHelper(ctx);
 
     }
 
@@ -211,8 +215,7 @@ public class asynUpdateDBVivanto extends AsyncTask<String, Integer, Boolean> {
     }
 
     private void actualizarEmcVersion()   {
-
-        emc_version.executeQuery("UPDATE EMCVERSION SET VERVERSION ="+String.valueOf(newVersion)+" WHERE VERIDVERSION = 1");
+        myDB.setUpdateVersionBase(String.valueOf(newVersion));
 
     }
 

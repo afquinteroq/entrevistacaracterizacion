@@ -13,11 +13,12 @@ import lombok.NoArgsConstructor;
  * Created by javierperez on 4/02/16.
  */
 
-
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_personas extends SugarRecord<emc_personas> {
 
     String per_idpersona;
@@ -38,7 +39,6 @@ public class emc_personas extends SugarRecord<emc_personas> {
     String per_fuente;
     String per_estado;
 
-    /*
     public emc_personas() {
     }
 
@@ -197,5 +197,4 @@ public class emc_personas extends SugarRecord<emc_personas> {
     public void setPer_estado(String per_estado) {
         this.per_estado = per_estado;
     }
-    */
 }

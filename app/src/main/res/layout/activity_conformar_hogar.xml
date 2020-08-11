@@ -129,7 +129,8 @@
                     android:id="@+id/button_filepicker"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pick a file" />
+                    android:text="Pick a file"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
@@ -661,6 +662,93 @@
                     ></ListView>
 
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llResponsable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:background="@color/emc_white"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tvTextoResponsable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/emc_red"
+                    android:textSize="15dp"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llTomarImagenTutorCuidador"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar foto del documento de soporte de Tutor o Cuidador Permanente"
+                    android:textColor="@color/emc_header"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+
+                <ImageView android:id="@+id/ivCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/btnTomarImagenSoporteTutorCuidaodr"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Tomar Foto Soporte Tutor o Cuidador Permanente"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+
+                    <Button
+                        android:id="@+id/btnSalvarImagenSoporteTutorCuidaodr"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Salvar Imagen Soporte Tutor o Cuidador Permanente"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+                    <Button
+                        android:id="@+id/btnCancelarTomarImagenSoporteTutorCuidaodr"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/emc_white"
+                        android:background="@drawable/border_radius_red"/>
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout

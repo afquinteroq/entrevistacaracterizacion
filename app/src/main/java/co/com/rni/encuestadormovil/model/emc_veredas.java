@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by ASUS on 20/08/2018.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_veredas extends SugarRecord<emc_veredas> {
 
     String cod_dpto;
@@ -23,7 +25,6 @@ public class emc_veredas extends SugarRecord<emc_veredas> {
     String nom_mpio;
     String nom_ver;
 
-    /*
     public emc_veredas() {
     }
 
@@ -42,14 +43,6 @@ public class emc_veredas extends SugarRecord<emc_veredas> {
 
     public void setCod_dpto(String cod_dpto) {
         this.cod_dpto = cod_dpto;
-    }
-
-    public String getNom_ver() {
-        return nom_ver;
-    }
-
-    public void setNom_ver(String nom_ver) {
-        this.nom_ver = nom_ver;
     }
 
     public String getDane_mpio() {
@@ -83,5 +76,12 @@ public class emc_veredas extends SugarRecord<emc_veredas> {
     public void setNom_mpio(String nom_mpio) {
         this.nom_mpio = nom_mpio;
     }
-    */
+
+    public String getNom_ver() {
+        return nom_ver;
+    }
+
+    public void setNom_ver(String nom_ver) {
+        this.nom_ver = nom_ver;
+    }
 }

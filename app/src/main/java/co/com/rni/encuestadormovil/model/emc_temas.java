@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 12/12/15.
  */
+/*
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_temas  extends SugarRecord<emc_temas> {
 
     public Integer tem_idtema;
@@ -25,7 +27,10 @@ public class emc_temas  extends SugarRecord<emc_temas> {
     public String usu_fechacreacion;
     public Integer tem_orden;
 
-    /*
+
+    public emc_temas() {
+    }
+
     public emc_temas(Integer tem_idtema, String tem_nombretema, String tem_activo, String usu_usuariocreacion, String usu_fechacreacion, Integer tem_orden) {
         this.tem_idtema = tem_idtema;
         this.tem_nombretema = tem_nombretema;
@@ -34,10 +39,6 @@ public class emc_temas  extends SugarRecord<emc_temas> {
         this.usu_fechacreacion = usu_fechacreacion;
         this.tem_orden = tem_orden;
     }
-
-    public emc_temas() {
-    }
-
 
     public Integer getTem_idtema() {
         return tem_idtema;
@@ -86,6 +87,4 @@ public class emc_temas  extends SugarRecord<emc_temas> {
     public void setTem_orden(Integer tem_orden) {
         this.tem_orden = tem_orden;
     }
-    */
-
 }

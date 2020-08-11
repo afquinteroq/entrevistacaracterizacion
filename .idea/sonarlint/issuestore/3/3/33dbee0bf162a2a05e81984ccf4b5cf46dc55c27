@@ -1,0 +1,21 @@
+
+[
+java:S18542"9Remove this useless assignment to local variable "itemT".(Ó¿÷şÿÿÿÿ8ì£ğÏŸ.
+[
+java:S1155İ">Use isEmpty() to check whether the collection is empty or not.(áà;8€Ä³º°.
+R
+java:S1068"0Remove this unused "usuarioLogin" private field.(ßá¡Ôùÿÿÿÿ8óÚïÏŸ.
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¦áòúÿÿÿÿ
+U
+java:S3252A"8Use static access with "com.orm.SugarRecord" for "find".(Ê˜Ñ8€Ä³º°.
+U
+java:S3252>"8Use static access with "com.orm.SugarRecord" for "find".(õ‹ä•8€Ä³º°.
+L
+java:S14812"*Remove this unused "itemT" local variable.(Ó¿÷şÿÿÿÿ8ì£ğÏŸ.
+f	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èí”‚
+V
+java:S3252Ú"8Use static access with "com.orm.SugarRecord" for "find".(–™Ú±8€Ä³º°.
+[
+java:S1155F">Use isEmpty() to check whether the collection is empty or not.(ªËƒ8€Ä³º°.
+m
+java:S3776&"RRefactor this method to reduce its Cognitive Complexity from 56 to the 15 allowed.(¨ÿÊÊûÿÿÿÿ

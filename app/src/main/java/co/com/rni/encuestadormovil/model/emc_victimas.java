@@ -11,10 +11,11 @@ import lombok.NoArgsConstructor;
 /**
  * Created by javierperez on 4/02/16.
  */
-@Data
+/*@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+*/
 public class emc_victimas extends SugarRecord<emc_victimas> {
 
     public Integer consPersona;
@@ -43,7 +44,7 @@ public class emc_victimas extends SugarRecord<emc_victimas> {
     public String estado;
     public Integer encuestado;
     public String fechaEncuesta;
-    /*
+
     public emc_victimas() {
     }
 
@@ -283,5 +284,5 @@ public class emc_victimas extends SugarRecord<emc_victimas> {
     public void setFechaEncuesta(String fechaEncuesta) {
         this.fechaEncuesta = fechaEncuesta;
     }
-    */
+
 }

@@ -36,6 +36,7 @@ import java.util.Calendar;
 import java.util.List;
 import co.com.rni.encuestadormovil.model.*;
 import co.com.rni.encuestadormovil.rest.*;
+import co.com.rni.encuestadormovil.sqlite.DbHelper;
 import co.com.rni.encuestadormovil.util.*;
 
 
@@ -63,6 +64,7 @@ public class Login extends AppCompatActivity {
     private ProgressDialog pgMsj;
     private String versionFTPN;
     private Context ctx;
+    private DbHelper myDB;
     CheckBox mCbShowPwd;
 
     private static final int WRITE_EXTERNAL_STORAGE_PERMISSION_REQUEST_CODE = 1;
@@ -85,6 +87,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
 
+        myDB = new DbHelper(this);
         pbEstado = (ProgressBar) findViewById(R.id.pbEstado);
         pbEstado.setMax(100000);
         tvEstado = (TextView) findViewById(R.id.tvEstado);
@@ -167,7 +170,7 @@ public class Login extends AppCompatActivity {
                 List<emc_usuarios> tmUsuarios = emc_usuarios.find(emc_usuarios.class, "UPPER(nombreusuario) = ? AND password = ? ", params);
                 if (tmUsuarios.size() > 0) {
 
-                    emc_usuarios usuarioLogin = (emc_usuarios) tmUsuarios.get(0);
+                    emc_usuarios usuarioLogin =  tmUsuarios.get(0);
                     usuarioLogin.setFeclogin(stFecValida);
                     Session.SaveCookie(getApplication(), usuarioLogin);
                     Intent main = new Intent(getBaseContext(), MainActivity.class);
@@ -178,9 +181,10 @@ public class Login extends AppCompatActivity {
 
                 }
 
-                if(prueba==false) {
+                if(!prueba) {
                     String[] paramsV = {"BASE"};
-                    final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
+                    final int tmIdVersion = myDB.getlistaVesionBaseRuv("BASE");
+                    //final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
 
                     responseValidateVersions callback = new responseValidateVersions() {
 
@@ -245,8 +249,8 @@ public class Login extends AppCompatActivity {
                 boolean prueba = false;
                 //Verifica usuario en la BD local
                 String[] params = {
-                        edUsuario.getText().toString().toUpperCase(),
-                        edPassword.getText().toString()
+                        edUsuario.getText().toString().toUpperCase().trim(),
+                        edPassword.getText().toString().trim()
 
                 };
 
@@ -489,8 +493,9 @@ public class Login extends AppCompatActivity {
                        if(exito){
                            pgMsj.hide();
                            String[] paramsV = {"BASE"};
-                           final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
-                           tvTextoVersion.setText("Base Actualizada a la versión " + Integer.parseInt(tmIdVersion.get(0).getVer_version()));
+                           //final List<emc_version> tmIdVersion = emc_version.find(emc_version.class, "vernombre = ?", paramsV);
+                           final int tmIdVersion = myDB.getlistaVesionBaseRuv("BASE");
+                           tvTextoVersion.setText("Base Actualizada a la versión " + tmIdVersion);
                            tvDescargarBase.setVisibility(View.GONE);
                            tvActualizarBase.setVisibility(View.GONE);
                            btLogin.setVisibility(View.VISIBLE);
@@ -547,14 +552,15 @@ public class Login extends AppCompatActivity {
             asPreparar.execute();
 
 
-            responsePrepararBD preparaCall = new responsePrepararBD() {
+            /*responsePrepararBD preparaCall = new responsePrepararBD() {
                 @Override
                 public void resultado(boolean exito, Integer numVictimas) {
                     pgMsj.hide();
                 }
-            };
-            asyncPrepararBD asPrepara = new asyncPrepararBD(this, preparaCall);
-            asPrepara.execute();
+            };*/
+
+            /*asyncPrepararBD asPrepara = new asyncPrepararBD(this, preparaCall);
+            asPrepara.execute();*/
             pgMsj.setMessage("Preparando base de datos");
             pgMsj.show();
             pgMsj.setCancelable(false);
@@ -565,18 +571,31 @@ public class Login extends AppCompatActivity {
                 }
             });
 
+            responsePrepararBD preparaCall = new responsePrepararBD() {
+                @Override
+                public void resultado(boolean exito, Integer numVictimas) {
+                    pgMsj.hide();
+                }
+            };
+
+            asyncPrepararBD asPrepara = new asyncPrepararBD(this, preparaCall);
+            asPrepara.execute();
+
             TextView tvVersion = (TextView) findViewById(R.id.tvVersion);
+
 
         try {
                 tvVersion.setText("Versión " + getPackageManager().getPackageInfo(this.getPackageName(), 0).versionName);
+
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
+
             }
 
         }
 
 
-    public void validarVersion(boolean valv,List<emc_version> tmIdVersion, String versionFTP)
+    public void validarVersion(boolean valv,/*List<emc_version>*/int tmIdVersion, String versionFTP)
     {
 
 
@@ -586,8 +605,8 @@ public class Login extends AppCompatActivity {
 
         if (valv != true) {
 
-            tvTextoVersion.setText("Base de datos no esta actualizada, la versión de la base de la aplicación es " + tmIdVersion.get(0).getVer_version().toString()+" "+
-                    ",la última versión disponbile es " + versionFTP );
+            tvTextoVersion.setText("Base de datos no esta actualizada, la versión de la base de la aplicación es " + tmIdVersion+" "+
+                    ",la última versión disponible es " + versionFTP );
             tvTextoVersion.setVisibility(View.VISIBLE);
             pgMsj.hide();
             btLogin.setVisibility(View.GONE);
@@ -684,6 +703,7 @@ public class Login extends AppCompatActivity {
                     src.close();
                     dst.close();
                 }
+
             }
         } catch (Exception e) {
 
