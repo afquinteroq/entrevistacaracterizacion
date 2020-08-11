@@ -86,14 +86,10 @@ public class asyncUploadFile extends AsyncTask<String, Integer, Boolean> {
 
                     if(lsHogares.size() > 0) {
                         //Crear archivo de salida
-                        //File fos = new File(Environment.getExternalStorageDirectory(),"ENCUESTADORMOVIL/" + fileName);
-                        //FileOutputStream fos = new FileOutputStream(new File(Environment.getExternalStorageDirectory(),"ENCUESTADORMOVIL/" + fileName));
-                        //File ff = new File(Environment.getExternalStorageDirectory(),"ENCUESTADORMOVIL");
                         File ff = new File(Environment.getExternalStorageDirectory(),"ENCUESTADORMOVIL");
                         ff.mkdirs();
                         File forig = new File(Environment.getExternalStorageDirectory(),"ENCUESTADORMOVIL/" + fileName);
                         FileOutputStream fos = new FileOutputStream(forig);
-                        //FileOutputStream fos = ctx.openFileOutput(fileName, Context.MODE_APPEND);
                         Writer out = new OutputStreamWriter(fos);
 
                         //Cargar datos
@@ -102,10 +98,8 @@ public class asyncUploadFile extends AsyncTask<String, Integer, Boolean> {
 
                         for(Integer conHogar = 0; conHogar < lsHogares.size(); conHogar++){
                             emc_hogares tmHogar = lsHogares.get(conHogar);
-                            //if(tmHogar.equals("Cerrada")){
+
                             String hogar = gson.toJson(tmHogar, emc_hogares.class);
-                        /*tmHogar.setEstado("TRANSMITIDA");
-                        tmHogar.save();*/
                             out.write(hogar);
 
                             List<emc_capitulos_terminados> lsCapsTer = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO ='" + tmHogar.getHog_codigo() + "'", null);
@@ -130,14 +124,20 @@ public class asyncUploadFile extends AsyncTask<String, Integer, Boolean> {
                                 String encter = gson.toJson(lsRespEnc.get(cont), emc_respuestas_encuesta.class);
                                 out.write(encter);
                             }
-                            //}
+
+                            List<emc_soporte_jefe_hogar> lsSoporteTuCu = emc_soporte_jefe_hogar.find(emc_soporte_jefe_hogar.class,"HOGCODIGO ='" + tmHogar.getHog_codigo() + "'",null);
+                            for(Integer cont = 0; cont < lsSoporteTuCu.size(); cont++){
+                                String encter = gson.toJson(lsSoporteTuCu.get(cont), emc_soporte_jefe_hogar.class);
+                                out.write(encter);
+                            }
+
                         }
-                        //callback.actualizaEstado("Guarda archivo");
+
                         out.close();
                         fos.close();
 
                         forig =  ModificarFichero(forig,"}{", "},{",forig);
-                        //File x = new File(Environment.getExternalStorageDirectory(),"DSCIENCUESTAS/Enviadas/" + forig.getName());
+
 
 
 
@@ -157,12 +157,27 @@ public class asyncUploadFile extends AsyncTask<String, Integer, Boolean> {
                                 for (Integer conHogar = 0; conHogar < lsHogares.size(); conHogar++) {
                                     emc_hogares tmCHogar = lsHogares.get(conHogar);
                                     fileNameS = tmCHogar.getHog_codigo().toString();
+
                                     File forigs = new File(Environment.getExternalStorageDirectory(), "Soportes/" + fileNameS + ".png");
                                     if(forigs.exists()) {
                                         while(!uploadFileSoporte(forigs,usuarioLogin)) {
                                             uploadFileSoporte(forigs,usuarioLogin);
                                         }
                                     }
+
+                                    List<emc_soporte_jefe_hogar> listemc_soporte_jefe_hogar = emc_soporte_jefe_hogar.find(emc_soporte_jefe_hogar.class,
+                                            "HOGCODIGO = ?",tmCHogar.getHog_codigo());
+
+                                    if(listemc_soporte_jefe_hogar.size() > 0){
+                                        File forigsSoporteTutorCuidador = new File(Environment.getExternalStorageDirectory(), "SoportesTutorCuidador/" + listemc_soporte_jefe_hogar.get(0).getUuid() + ".png");
+                                        if(forigsSoporteTutorCuidador.exists()) {
+                                            while(!uploadFileTutorCuidoadr(forigsSoporteTutorCuidador,usuarioLogin)) {
+                                                uploadFileTutorCuidoadr(forigsSoporteTutorCuidador,usuarioLogin);
+                                            }
+                                        }
+                                    }
+
+
                                 }
 
                             }
@@ -206,6 +221,27 @@ public class asyncUploadFile extends AsyncTask<String, Integer, Boolean> {
 
 
 
+    public boolean uploadFileTutorCuidoadr(File fileName, emc_usuarios usuarioLogin){
+        FTPClient client = new FTPClient();
+        try {
+            if(subirSoportesTutorCuidador(fileName,usuarioLogin)==true){
+                return true;
+
+            }else{
+                return false;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            try {
+                client.disconnect(true);
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+            return false;
+        }
+
+    }
 
     public boolean uploadFile(File fileName){
         FTPClient client = new FTPClient();
@@ -509,6 +545,103 @@ public class asyncUploadFile extends AsyncTask<String, Integer, Boolean> {
                 ftpClient.login("encuestadormovil", "Kart3g3na");
 
                 ftpClient.changeWorkingDirectory("/Soportes/");
+                ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+
+
+                buffIn=new BufferedInputStream(new FileInputStream(filename/*rutaCompleta*/));
+                ftpClient.enterLocalPassiveMode();
+                if(ftpClient.storeFile(filename.getName().replace("EcribirFicheroNuevaCarpetaSoporte",""), buffIn)){
+                    buffIn.close();
+                    ftpClient.logout();
+                    ftpClient.disconnect();
+                    EcribirFicheroNuevaCarpetaSoporte(filename,"},{");
+                    BorrarFichero(filename);
+
+                    return true;
+
+
+                }else{
+                    buffIn.close();
+                    ftpClient.logout();
+                    ftpClient.disconnect();
+                    return false;
+                }
+
+            }
+
+        } catch (Exception e){
+            Log.i("consola","Ups...");
+            return false;
+        }
+
+    }
+
+    public static boolean subirSoportesTutorCuidador(File filename, emc_usuarios usuarioLogin) throws SocketException, UnknownHostException, IOException {
+
+        try {
+
+            org.apache.commons.net.ftp.FTPClient ftpClient = new org.apache.commons.net.ftp.FTPClient();
+            BufferedInputStream buffIn=null;
+
+            if(usuarioLogin.getIdPerfil().equals("710")){
+
+
+                ftpClient.connect(InetAddress.getByName("ftp.isegoria.co"));
+                ftpClient.login("victimas@isegoria.co", "isegoFTPvictimas2019");
+
+
+                ftpClient.changeWorkingDirectory("/SoportesEncuestas/");
+                ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+
+
+                buffIn=new BufferedInputStream(new FileInputStream(filename/*rutaCompleta*/));
+                ftpClient.enterLocalPassiveMode();
+                if(ftpClient.storeFile(filename.getName().replace("EcribirFicheroNuevaCarpetaSoporte",""), buffIn)){
+                    buffIn.close();
+                    ftpClient.logout();
+                    ftpClient.disconnect();
+                    //EcribirFicheroNuevaCarpetaSoporte(filename,"},{");
+                    //BorrarFichero(filename);
+
+                    //return true;
+
+                }
+
+                ftpClient.connect(InetAddress.getByName("ftp.unidadvictimas.gov.co"));
+                ftpClient.login("encuestadormovil", "Kart3g3na");
+
+                ftpClient.changeWorkingDirectory("/Soportes/");
+                ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+
+
+                buffIn=new BufferedInputStream(new FileInputStream(filename/*rutaCompleta*/));
+                ftpClient.enterLocalPassiveMode();
+                if(ftpClient.storeFile(filename.getName().replace("EcribirFicheroNuevaCarpetaSoporte",""), buffIn)){
+                    buffIn.close();
+                    ftpClient.logout();
+                    ftpClient.disconnect();
+                    EcribirFicheroNuevaCarpetaSoporte(filename,"},{");
+                    BorrarFichero(filename);
+
+                    return true;
+
+
+                }else{
+                    buffIn.close();
+                    ftpClient.logout();
+                    ftpClient.disconnect();
+                    return false;
+                }
+
+
+
+            }else{
+
+
+                ftpClient.connect(InetAddress.getByName("ftp.unidadvictimas.gov.co"));
+                ftpClient.login("encuestadormovil", "Kart3g3na");
+
+                ftpClient.changeWorkingDirectory("/SoportesTutorCuidador/");
                 ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
 
 

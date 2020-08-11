@@ -14,21 +14,21 @@ public class asyncPrepararBD extends AsyncTask<String, Integer, Boolean> {
     private Context ctx;
     private responsePrepararBD callback;
     private DbHelper myDB;
-    //private DbHelperVivanto myDBVI;
+    private DbHelperVivanto myDBVI;
     private Integer conteo;
 
     public asyncPrepararBD(Context ctx, responsePrepararBD callback) {
         this.ctx = ctx;
         this.callback = callback;
         myDB = new DbHelper(ctx);
-        //myDBVI = new DbHelperVivanto(ctx);
+        myDBVI = new DbHelperVivanto(ctx);
     }
 
     @Override
     protected Boolean doInBackground(String... params) {
         try{
             conteo = myDB.getConteoVictimas();
-            //conteo = myDBVI.getConteoRespuesta();
+            conteo = myDBVI.getConteoRespuesta();
             return true;
         }catch (Exception e){
             e.printStackTrace();

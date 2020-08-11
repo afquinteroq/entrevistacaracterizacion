@@ -1620,9 +1620,10 @@ public final class gestionEncuestas {
                     "INSIDINSTRUMENTO = ? AND RESIDRESPUESTA IN (SELECT r.RESIDRESPUESTA FROM EMCRESPUESTAS r WHERE r.PREIDPREGUNTA = ? AND r.RESACTIVA = 'SI' )", parResIns);
             for (int conR = 0; conR < lsResIns.size(); conR++) {
                 emc_respuestas_instrumento tmRes = lsResIns.get(conR);
-                if (FN_COMPROBARVALIDACIONESRESP(pID_JEFE, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1);
+                if (FN_COMPROBARVALIDACIONESRESP(pID_JEFE, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1){
+                    lsRespuestas.add(tmRes);
+                }
 
-                lsRespuestas.add(tmRes);
             }
         } else if (pPRE_GENERAL > 0) {
             lsRespuestas = SP_GET_RESPUESTASVALXCONTEO(pPRE_IDPREGUNTA, pINS_IDINSTRUMENTO, pHOG_CODIGO, pID_JEFE);
@@ -2007,8 +2008,10 @@ public final class gestionEncuestas {
                 for (int conR = 0; conR < lsResIns.size(); conR++) {
                     emc_respuestas_instrumento tmRes = lsResIns.get(conR);
 
-                    if (FN_COMPROBARVALIDACIONESRESP(pPER_IDPERSONA, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1)
+                    if (FN_COMPROBARVALIDACIONESRESP(pPER_IDPERSONA, Integer.valueOf(tmRes.getRes_idrespuesta()), pHOG_CODIGO, pINS_IDINSTRUMENTO) == 1){
                         lsRespuesta.add(tmRes);
+                    }
+
                 }
 
             }

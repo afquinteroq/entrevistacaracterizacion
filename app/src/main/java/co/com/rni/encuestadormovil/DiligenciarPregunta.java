@@ -586,7 +586,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
 
                         if (est.equals("")) {
                             Toast.makeText(getBaseContext(), "Debe seleccionar un estado", Toast.LENGTH_SHORT).show();
-                        } else if (est.equals("CONS_ESTADO_CERRADA"))
+                        } else if (est.equals(CONS_ESTADO_CERRADA))
                         {
                             String[] parCapT = {hogCodigo};
                             List<emc_capitulos_terminados> lsCapTerT = emc_capitulos_terminados.find(emc_capitulos_terminados.class, "HOGCODIGO = ? ", parCapT);
@@ -621,7 +621,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                     final String esT = est;
 
                                     btnConfirmarSalirEncuesta.setOnClickListener(new View.OnClickListener() {
-                                        @Override
+                                            @Override
                                         public void onClick(View v) {
 
 
@@ -739,7 +739,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
                                     hogarActual.setEstado(esT);
                                     hogarActual.save();
                                     //modificacion javier
-                                    Intent mainI = new Intent(getBaseContext(), MainActivity.class);
+                                     Intent mainI = new Intent(getBaseContext(), MainActivity.class);
                                     startActivity(mainI);
                                     finish();
 
@@ -1126,16 +1126,15 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             tvNombrePersonaRespuesta.setVisibility(View.GONE);
 
         }else{
-            //String[] parCon = {perIdMiembro,hogCodigo};
-            tvNombrePersonaRespuesta.setVisibility(View.VISIBLE);
-            //List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ?", perIdMiembro);
-            /*List<emc_miembros_hogar> tmMiembroHogar = emc_miembros_hogar.find(emc_miembros_hogar.class, "PERIDPERSONA = ? AND HOGCODIGO = ? ", parCon);
-            mhPer = tmMiembroHogar.get(0);*/
+
+            //tvNombrePersonaRespuesta.setVisibility(View.VISIBLE);
+
 
             tvNombrePersonaRespuesta.setText(mhPer.getNombre1() + " " + mhPer.getNombre2() + " " + mhPer.getApellido1() + " " + mhPer.getApellido2());
             if( TIPO_PERSONA_AUTORIZADO.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_TUTOR.equals(mhPer.getTipoPersona()) || TIPO_PERSONA_CUIDADOR_PERMANENTE.equals(mhPer.getTipoPersona())){
                 tvNombrePersonaRespuesta.setBackground(this.getDrawable(R.drawable.border_radios_pink));
             }
+
 
             etNom1 = (EditText) llRespuestaTexto.findViewById(R.id.etNom1);
             etNom1.setText(mhPer.getNombre1());
@@ -1322,7 +1321,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             tituloVereda.setVisibility(View.GONE);
             etTextoPregunta.setVisibility(View.GONE);
 
-            //tvNombrePersonaRespuesta.setVisibility(View.GONE);
+            tvNombrePersonaRespuesta.setVisibility(View.GONE);
             spResguardos.setAdapter(adResguardo);
 
             spResguardos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -3857,7 +3856,7 @@ public class DiligenciarPregunta extends AppCompatActivity /* implements View.On
             }
         };
 
-        ansycGuardarSoporte auFTP = new ansycGuardarSoporte(getApplication(),callback,bitmap,hogCodigo,nombreFoto);
+        ansycGuardarSoporte auFTP = new ansycGuardarSoporte(getApplication(),callback,bitmap,hogCodigo,nombreFoto, "/Soportes");
         auFTP.execute();
         pgDMensaje.setCancelable(false);
         pgDMensaje.setOnCancelListener(new DialogInterface.OnCancelListener() {

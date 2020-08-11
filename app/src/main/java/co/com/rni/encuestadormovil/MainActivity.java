@@ -222,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
             llverAdminEncuestas.setVisibility(View.VISIBLE);
             llAgregar.setVisibility(View.VISIBLE);
             llMensajePrimerUso.setVisibility(View.GONE);
+            llParametricas.setVisibility(View.GONE);
         }
         else{
             llTransferidas.setVisibility(View.GONE);
@@ -324,8 +325,6 @@ public class MainActivity extends AppCompatActivity {
                                 int val = 0;
                                 val = isNetworkConnected(getBaseContext());
                                 if (val == 1) {
-                                    //pg.setMessage("Transmitir archivos al FTP");
-                                    //pg.show();
                                     responseUpload callback = new responseUpload() {
                                         @Override
                                         public void actualizaEstado(String mensaje) {

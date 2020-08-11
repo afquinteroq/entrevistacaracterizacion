@@ -3,10 +3,13 @@ package co.com.rni.encuestadormovil;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -42,9 +46,11 @@ import co.com.rni.encuestadormovil.model.*;
 import co.com.rni.encuestadormovil.sqlite.*;
 import co.com.rni.encuestadormovil.util.*;
 
+import static co.com.rni.encuestadormovil.DiligenciarPregunta.REQUEST_IMAGE_CAPTURE;
 import static co.com.rni.encuestadormovil.util.general.fechaActual;
 import static co.com.rni.encuestadormovil.util.general.fechaActualSinHora;
 import static co.com.rni.encuestadormovil.util.general.fechaValida;
+import static co.com.rni.encuestadormovil.util.general.redimensionarImagenMaximo;
 
 
 public class conformarHogar extends AppCompatActivity {
@@ -100,6 +106,13 @@ public class conformarHogar extends AppCompatActivity {
     ArrayList<emc_miembros_hogar> miembro = new ArrayList<emc_miembros_hogar>();
     private ProgressDialog pgMensajeCrearPersona;
     private boolean capitulo12;
+    private LinearLayout llResponsable; private TextView tvTextoResponsable;
+    private LinearLayout llTomarImagenTutorCuidador;
+    private Button btnTomarImagenSoporteTutorCuidaodr; private Button btnSalvarImagenSoporteTutorCuidaodr; private Button btnCancelarTomarImagenSoporteTutorCuidaodr;
+    private Uri imageUri; private ImageView ivCamera = null; public ProgressDialog pgDMensaje;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    String  cedula_archivo_tutor = ""; int id_tipopersona = 0;
+    private UUID uuid;
 
     private static final int ACTIVITY_CHOOSE_FILE = 3;
     private final static Logger LOGGER = Logger.getLogger("bitacora.subnivel.Control");
@@ -110,6 +123,7 @@ public class conformarHogar extends AppCompatActivity {
     private static final String CONST_NO_RESULTADO_BUSQUEDA = "No hay resultados para la busqueda, puede agregar la persona como no incluida en el RUV";
     private static final String CONST_NO_INCLUIDO = "NO INCLUIDO";
     private static final String CONST_BUSCANDO = "Buscando...";
+    private static final String CONST_TEMPORAL = "TEMPORAL";
 
 
 
@@ -118,6 +132,15 @@ public class conformarHogar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conformar_hogar);
+
+        llResponsable = (LinearLayout) findViewById(R.id.llResponsable);
+        tvTextoResponsable = (TextView) findViewById(R.id.tvTextoResponsable);
+        llTomarImagenTutorCuidador = (LinearLayout) findViewById(R.id.llTomarImagenTutorCuidador);
+        btnTomarImagenSoporteTutorCuidaodr = (Button) findViewById(R.id.btnTomarImagenSoporteTutorCuidaodr);
+        btnSalvarImagenSoporteTutorCuidaodr = (Button) findViewById(R.id.btnSalvarImagenSoporteTutorCuidaodr);
+        btnCancelarTomarImagenSoporteTutorCuidaodr = (Button) findViewById(R.id.btnCancelarTomarImagenSoporteTutorCuidaodr);
+        pgDMensaje = new ProgressDialog(this);
+        ivCamera = (ImageView) findViewById(R.id.ivCamera);
 
 
         usuarioLogin = Session.LoadCookie(getApplication());
@@ -134,6 +157,67 @@ public class conformarHogar extends AppCompatActivity {
             @Override
             public void onCancel(DialogInterface dialog) {
                 dialog.cancel();
+            }
+        });
+
+        btnTomarImagenSoporteTutorCuidaodr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                File dir = new File(Environment.getExternalStorageDirectory(), "SoportesTutorCuidador");
+
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
+
+                String filename = Environment.getExternalStorageDirectory().getPath() + "/SoportesTutorCuidador/testfile.png";
+                //imageUri = Uri.fromFile(new File(filename));
+                imageUri = FileProvider.getUriForFile(conformarHogar.this, conformarHogar.this.getApplicationContext().getPackageName() + ".co.com.rni.encuestadormovil.GenericFileProvider", new File(filename));
+
+                // start default camera
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                cameraIntent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT,
+                        imageUri);
+                startActivityForResult (cameraIntent, REQUEST_IMAGE_CAPTURE);
+            }
+        });
+
+        btnSalvarImagenSoporteTutorCuidaodr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BitmapDrawable drawable = (BitmapDrawable) ivCamera.getDrawable();
+                if(drawable == null)
+                {
+                    Toast.makeText(getApplicationContext(), "No ha tomado la imagen de soporte", Toast.LENGTH_LONG).show();
+                }else{
+
+                    Bitmap bitmap = drawable.getBitmap();
+                    bitmap = redimensionarImagenMaximo(bitmap, 1440,2560);
+                    pgDMensaje.setMessage("Guardando Soporte... ");
+                    pgDMensaje.show();
+
+                    uuid = UUID.randomUUID();
+                    hiloGuardarImagen(bitmap,uuid.toString() ,/*hogCodigo.trim() ,*/"");
+                    emc_soporte_jefe_hogar.deleteAll(emc_soporte_jefe_hogar.class,"HOGCODIGO = ?", CONST_TEMPORAL);
+                    emc_soporte_jefe_hogar emc_soporte_jefe_hogar = new emc_soporte_jefe_hogar();
+                    emc_soporte_jefe_hogar.setUuid(uuid.toString());
+                    emc_soporte_jefe_hogar.setHog_codigo(CONST_TEMPORAL);
+                    emc_soporte_jefe_hogar.setCc_jefe_hogar(cedula_archivo_tutor);
+                    emc_soporte_jefe_hogar.setUsu_usuariocreacion(usuarioLogin.getNombrePerfil());
+                    emc_soporte_jefe_hogar.setUsu_fechacreacion(fechaActual());
+                    emc_soporte_jefe_hogar.setTipo_persona(id_tipopersona);
+                    emc_soporte_jefe_hogar.save();
+                    llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                    ivCamera.setImageDrawable(null);
+                }
+            }
+        });
+
+        btnCancelarTomarImagenSoporteTutorCuidaodr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                Toast.makeText(getBaseContext(), "Se cancelo la toma de soporte", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -200,7 +284,7 @@ public class conformarHogar extends AppCompatActivity {
         myDB = new DbHelper(this);
 
         LayoutInflater mInflater = LayoutInflater.from(this);
-        View mCustomView = mInflater.inflate(R.layout.menu_hogar, null);
+        final View mCustomView = mInflater.inflate(R.layout.menu_hogar, null);
         abActivity.setCustomView(mCustomView);
         abActivity.setDisplayShowCustomEnabled(true);
 
@@ -642,7 +726,8 @@ public class conformarHogar extends AppCompatActivity {
 
             @Override
             public void onSelectJefeHogar(Integer position, Integer tipoPersona) {
-
+                cedula_archivo_tutor =  miembrosHogar.get(position).documento;
+                id_tipopersona = tipoPersona;
                 boolean hogarvalido = true;
                 int mayoresedad = 0;
                 int menoresedad = 0;
@@ -761,22 +846,36 @@ public class conformarHogar extends AppCompatActivity {
 
                                 if (anio != null) {
                                     Integer edad = general.CalcularEdad(Integer.valueOf(anio), Integer.valueOf(mes), Integer.valueOf(dia));
-
-
+                                    llResponsable.setVisibility(View.VISIBLE);
+                                    conformarHogar objvalSelJefe = new conformarHogar();
+                                    hogarvalido=objvalSelJefe.valSelJefe( edad,  tipoPersona,  position,  menoresedad,  mayoresedad,  validadorEstado,  conM,
+                                     hogarvalido,  adMiembros,  vicSeleccion,  miembrosHogar,  tvTextoResponsable,  llTomarImagenTutorCuidador,  usuarioLogin);
+                                    /*Integer edad = general.CalcularEdad(Integer.valueOf(anio), Integer.valueOf(mes), Integer.valueOf(dia));
+                                    llResponsable.setVisibility(View.VISIBLE);
                                     if (edad < 18 && (tipoPersona == 1 || tipoPersona == 2 || tipoPersona == 3)) {
                                         adMiembros.notifyDataSetChanged();
+                                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                                        tvTextoResponsable.setText("El Autorizado, Tutor y Cuidador Permanente no puede ser menor de edad");
                                         Toast.makeText(getBaseContext(), "El Autorizado, Tutor y Cuidador Permanente no puede ser menor de edad", Toast.LENGTH_SHORT).show();
-                                    } else if (miembrosHogar.get(0).getEstado().equals(CONST_NO_INCLUIDO) && tipoPersona == 1) {
+                                    } else if (miembrosHogar.get(position).getEstado().equals(CONST_NO_INCLUIDO) && tipoPersona == 1) {
                                         adMiembros.notifyDataSetChanged();
+                                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                                        tvTextoResponsable.setText("El Autorizado debe estar Incluido en el RUV");
                                         Toast.makeText(getBaseContext(), "El Autorizado debe estar Incluido en el RUV", Toast.LENGTH_SHORT).show();
                                     } else if (miembrosHogar.size() < 2 && tipoPersona == 2) {
                                         adMiembros.notifyDataSetChanged();
+                                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                                        tvTextoResponsable.setText("Para seleccionar Tutor debe haber minimo 2 miembros de hogar en el grupo familiar");
                                         Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 2 miembros de hogar en el grupo familiar", Toast.LENGTH_SHORT).show();
                                     } else if (miembrosHogar.size() > 1 && tipoPersona == 2 && menoresedad < 1) {
                                         adMiembros.notifyDataSetChanged();
+                                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                                        tvTextoResponsable.setText("Para seleccionar Tutor debe haber minimo 1 menor de edad en el grupo familiar");
                                         Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 1 menor de edad en el grupo familiar", Toast.LENGTH_SHORT).show();
                                     } else if (tipoPersona == 3 && mayoresedad < 2) {
                                         adMiembros.notifyDataSetChanged();
+                                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                                        tvTextoResponsable.setText("Para seleccionar Cuidador Permanente debe haber minimo un miembro de hogar mayor de edad diferente del Cuidador");
                                         Toast.makeText(getBaseContext(), "Para seleccionar Cuidador Permanente debe haber minimo un miembro de hogar mayor de edad diferente del Cuidador", Toast.LENGTH_SHORT).show();
                                     } else if (usuarioLogin.getIdPerfil().equals("710") && validadorEstado == false) {
 
@@ -786,11 +885,27 @@ public class conformarHogar extends AppCompatActivity {
                                             hogarvalido = false;
                                             miembrosHogar.get(conM).setInd_jefe("");
                                             adMiembros.notifyDataSetChanged();
+                                            tvTextoResponsable.setText(CONST_JEFE_MAYOR_18_ANIOS);
                                             Toast.makeText(getBaseContext(), CONST_JEFE_MAYOR_18_ANIOS, Toast.LENGTH_SHORT).show();
                                         }
 
                                     } else if (edad > 17) {
-                                        Toast.makeText(getBaseContext(), "Selecciono como responsable de hogar a : " + vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1(), Toast.LENGTH_SHORT).show();
+
+                                        String responsable = "";
+                                        if(tipoPersona == 1){
+                                            responsable = "Autorizado";
+                                            llTomarImagenTutorCuidador.setVisibility(View.GONE);
+                                        }
+                                        if(tipoPersona == 2){
+                                            responsable = "Tutor";
+                                            llTomarImagenTutorCuidador.setVisibility(View.VISIBLE);
+                                        }
+                                        if(tipoPersona == 3){
+                                            responsable = "Cuidador Permanente";
+                                            llTomarImagenTutorCuidador.setVisibility(View.VISIBLE);
+                                        }
+                                        tvTextoResponsable.setText("Seleccionó como "+responsable +" a : " + vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1());
+                                        Toast.makeText(getBaseContext(), "Seleccionó como responsable de hogar a : " + vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1(), Toast.LENGTH_SHORT).show();
 
                                         miembrosHogar.get(conM).setInd_jefe("SI");
                                         miembrosHogar.get(conM).setTipoPersona(tipoPersona.toString());
@@ -799,7 +914,7 @@ public class conformarHogar extends AppCompatActivity {
                                         adMiembros.notifyDataSetChanged();
                                         miembrosHogar.get(conM).setInd_jefe("");
                                         Toast.makeText(getBaseContext(), CONST_JEFE_MAYOR_18_ANIOS, Toast.LENGTH_SHORT).show();
-                                    }
+                                    }*/
 
                                 }
                             }
@@ -832,12 +947,15 @@ public class conformarHogar extends AppCompatActivity {
                             emc_miembros_hogar mi = lismi.get(i);
                             mi.setInd_jefe("");
                         }
+                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
                         adMiembros.notifyDataSetChanged();
-                        Toast.makeText(getBaseContext(), "Selecciono mas de un jefe de hogar", Toast.LENGTH_SHORT).show();
+                        tvTextoResponsable.setText("Seleccionó mas de un jefe de hogar");
+                        //Toast.makeText(getBaseContext(), "Seleccionó mas de un jefe de hogar", Toast.LENGTH_SHORT).show();
                     }
                 }
 
             }
+
 
             @Override
             //GRUPO FAMILIAR, NO BORRAR
@@ -869,6 +987,7 @@ public class conformarHogar extends AppCompatActivity {
                 atBVictimas.execute();*/
             }
         };
+
 
 
         miemResponse = new conformarHogarResponse() {
@@ -1020,6 +1139,8 @@ public class conformarHogar extends AppCompatActivity {
                                         llvaltApellido1.setVisibility(View.GONE);
                                         llvaletFecNac.setVisibility(View.GONE);
                                         llNuevaPersona.setVisibility(View.VISIBLE);
+                                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
+
                                     }
 
                                 } else {
@@ -1047,6 +1168,7 @@ public class conformarHogar extends AppCompatActivity {
                                         llvaltApellido1.setVisibility(View.GONE);
                                         llvaletFecNac.setVisibility(View.GONE);
                                         llNuevaPersona.setVisibility(View.VISIBLE);
+                                        llTomarImagenTutorCuidador.setVisibility(View.GONE);
                                     }
                                 }
 
@@ -1075,6 +1197,7 @@ public class conformarHogar extends AppCompatActivity {
                                     llvaltApellido1.setVisibility(View.GONE);
                                     llvaletFecNac.setVisibility(View.GONE);
                                     llNuevaPersona.setVisibility(View.VISIBLE);
+                                    llTomarImagenTutorCuidador.setVisibility(View.GONE);
                                 }
 
                             }
@@ -1108,6 +1231,7 @@ public class conformarHogar extends AppCompatActivity {
                 llvaletFecNac.setVisibility(View.GONE);
                 llNuevaPersona.setVisibility(View.VISIBLE);
                 llAgregarMHogar.setVisibility(View.GONE);
+                llTomarImagenTutorCuidador.setVisibility(View.GONE);
             }
         });
 
@@ -1353,6 +1477,121 @@ public class conformarHogar extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public boolean valSelJefe(int edad, int tipoPersona, int position, int menoresedad, int mayoresedad, boolean validadorEstado, int conM,
+                           boolean hogarvalido, miembrosHogarAdapter adMiembros,
+                              emc_miembros_hogar vicSeleccion, ArrayList<emc_miembros_hogar> miembrosHogar, TextView tvTextoResponsable, LinearLayout llTomarImagenTutorCuidador,
+                              emc_usuarios usuarioLogin){
+
+        if (edad < 18 && (tipoPersona == 1 || tipoPersona == 2 || tipoPersona == 3)) {
+            adMiembros.notifyDataSetChanged();
+            llTomarImagenTutorCuidador.setVisibility(View.GONE);
+            tvTextoResponsable.setText("El Autorizado, Tutor y Cuidador Permanente no puede ser menor de edad");
+            //Toast.makeText(getBaseContext(), "El Autorizado, Tutor y Cuidador Permanente no puede ser menor de edad", Toast.LENGTH_SHORT).show();
+        } else if (miembrosHogar.get(position).getEstado().equals(CONST_NO_INCLUIDO) && tipoPersona == 1) {
+            adMiembros.notifyDataSetChanged();
+            llTomarImagenTutorCuidador.setVisibility(View.GONE);
+            tvTextoResponsable.setText("El Autorizado debe estar Incluido en el RUV");
+            //Toast.makeText(getBaseContext(), "El Autorizado debe estar Incluido en el RUV", Toast.LENGTH_SHORT).show();
+        } else if (miembrosHogar.size() < 2 && tipoPersona == 2) {
+            adMiembros.notifyDataSetChanged();
+            llTomarImagenTutorCuidador.setVisibility(View.GONE);
+            tvTextoResponsable.setText("Para seleccionar Tutor debe haber minimo 2 miembros de hogar en el grupo familiar");
+            //Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 2 miembros de hogar en el grupo familiar", Toast.LENGTH_SHORT).show();
+        } else if (miembrosHogar.size() > 1 && tipoPersona == 2 && menoresedad < 1) {
+            adMiembros.notifyDataSetChanged();
+            llTomarImagenTutorCuidador.setVisibility(View.GONE);
+            tvTextoResponsable.setText("Para seleccionar Tutor debe haber minimo 1 menor de edad en el grupo familiar");
+            //Toast.makeText(getBaseContext(), "Para seleccionar Tutor debe haber minimo 1 menor de edad en el grupo familiar", Toast.LENGTH_SHORT).show();
+        } else if (tipoPersona == 3 && mayoresedad < 2) {
+            adMiembros.notifyDataSetChanged();
+            llTomarImagenTutorCuidador.setVisibility(View.GONE);
+            tvTextoResponsable.setText("Para seleccionar Cuidador Permanente debe haber minimo un miembro de hogar mayor de edad diferente del Cuidador");
+            //Toast.makeText(getBaseContext(), "Para seleccionar Cuidador Permanente debe haber minimo un miembro de hogar mayor de edad diferente del Cuidador", Toast.LENGTH_SHORT).show();
+        } else if (usuarioLogin.getIdPerfil().equals("710") && validadorEstado == false) {
+
+            if (edad >= 18) {
+                miembrosHogar.get(conM).setInd_jefe("SI");
+            } else {
+                hogarvalido = false;
+                miembrosHogar.get(conM).setInd_jefe("");
+                adMiembros.notifyDataSetChanged();
+                tvTextoResponsable.setText(CONST_JEFE_MAYOR_18_ANIOS);
+                //Toast.makeText(getBaseContext(), CONST_JEFE_MAYOR_18_ANIOS, Toast.LENGTH_SHORT).show();
+            }
+
+        } else if (edad > 17) {
+
+            String responsable = "";
+            if(tipoPersona == 1){
+                responsable = "Autorizado";
+                llTomarImagenTutorCuidador.setVisibility(View.GONE);
+            }
+            if(tipoPersona == 2){
+                responsable = "Tutor";
+                llTomarImagenTutorCuidador.setVisibility(View.VISIBLE);
+            }
+            if(tipoPersona == 3){
+                responsable = "Cuidador Permanente";
+                llTomarImagenTutorCuidador.setVisibility(View.VISIBLE);
+            }
+            tvTextoResponsable.setText("Seleccionó como "+responsable +" a : " + vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1());
+            //Toast.makeText(getBaseContext(), "Seleccionó como responsable de hogar a : " + vicSeleccion.getNombre1() + " " + vicSeleccion.getApellido1(), Toast.LENGTH_SHORT).show();
+
+            miembrosHogar.get(conM).setInd_jefe("SI");
+            miembrosHogar.get(conM).setTipoPersona(String.valueOf(tipoPersona));
+        } else {
+            hogarvalido = false;
+            adMiembros.notifyDataSetChanged();
+            miembrosHogar.get(conM).setInd_jefe("");
+            //Toast.makeText(getBaseContext(), CONST_JEFE_MAYOR_18_ANIOS, Toast.LENGTH_SHORT).show();
+
+        }
+        return hogarvalido;
+    }
+
+
+    public void hiloGuardarImagen(Bitmap bitmap,String nombreFoto ,String  esT){
+
+
+
+        responseGuardarSoporte callback = new responseGuardarSoporte() {
+
+
+            @Override
+            public void resultado(boolean exito, String ruta) {
+                ///26092018
+                try{
+                    pgDMensaje.dismiss();
+                }catch (Exception e){
+                    e.getMessage();
+                }
+
+                if(exito){
+                    //https://leandrotemperoni.wordpress.com/2013/05/17/como-implementar-progress-dialog/
+                    Toast.makeText(getApplicationContext(), ruta.trim(), Toast.LENGTH_LONG).show();
+
+
+                }else{
+                    Toast.makeText(getApplicationContext(), "No se pudo guardar la imagen", Toast.LENGTH_LONG).show();
+
+                }
+            }
+        };
+
+        ansycGuardarSoporte auFTP = new ansycGuardarSoporte(getApplication(),callback,bitmap,"",nombreFoto,"/SoportesTutorCuidador");
+        auFTP.execute();
+        pgDMensaje.setCancelable(false);
+        pgDMensaje.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                pgDMensaje.show();
+            }
+        });
+
+
+    }
+
+
     public boolean crearHogar() {
 
         emc_hogares hogar = new emc_hogares();
@@ -1519,6 +1758,10 @@ public class conformarHogar extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            ImageView img = (ImageView) findViewById(R.id.ivCamera);
+            img.setImageURI(imageUri);
+        }
 
         if (resultCode == RESULT_CANCELED) {
             //Cancelado por el usuario

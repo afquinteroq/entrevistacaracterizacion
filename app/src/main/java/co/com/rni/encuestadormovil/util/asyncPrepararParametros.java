@@ -21,7 +21,7 @@ public class asyncPrepararParametros extends AsyncTask<String, Integer, Boolean>
     @Override
     protected Boolean doInBackground(String... params) {
         try{
-            parametros.CargaInicial(ctx);
+            //parametros.CargaInicial(ctx);
             Log.i(TAG, "MyClass.getView() — "+"ok") ;
             return true;
         }catch (Exception e){
